@@ -1389,7 +1389,11 @@ Short (using Defaults)..<br / ><textarea readonly="true" cols="61" rows="2">
 
 <h1><p id="clock_time">clock_time</p></h1>
 
-Compares the current time with a float value in the range (0.0, 1.0).0.0= Noon0.25= Sunset0.5= Midnight0.75= Sunrise</br><h2></h2>
+Compares the current time with a float value in the range (0.0, 1.0).
+0.0= Noon
+0.25= Sunset
+0.5= Midnight
+0.75= Sunrise</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Default</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
@@ -13169,13 +13173,13 @@ Allows the mob to float around like the Ghast.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">xz_dist</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">10</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks on ground that the mob will look for a new spot to move to. Must be at least 1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物在地面上寻找新位置移动的距离（以方块为单位）。必须至少为 1</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">y_dist</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">7</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks that the mob will look up or down for a new spot to move to. Must be at least 1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物将向上或向下查找要移动到的新位置的距离（以方块为单位）。必须至少为 1</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">y_offset</td>
@@ -13496,7 +13500,7 @@ Allows the mob to move back to the position they were spawned.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">120</td>
-<td style="border-style:solid; border-width:2; padding:8px">A random value to determine when to randomly move somewhere. This has a 1/interval chance to choose this goal.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">一个随机值，用于确定何时随机移动到某个位置。这有概率为此值分之一的机会选择此目标.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">on_failed</td>
@@ -14084,13 +14088,13 @@ Allows mobs to lay down at times</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">120</td>
-<td style="border-style:solid; border-width:2; padding:8px">A random value to determine at what intervals something can occur. This has a 1/interval chance to choose this goal</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">A random value to determine at what intervals something can occur. This has a 概率为此值分之一 chance to choose this goal</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">random_stop_interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">120</td>
-<td style="border-style:solid; border-width:2; padding:8px">a random value in which the goal can use to pull out of the behavior. This is a 1/interval chance to play the sound</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">a random value in which the goal can use to pull out of the behavior. This is a 概率为此值分之一 chance to play the sound</br></td>
 </tr>
 </table>
 <a href="#Index">Back to top</a><br><br>
@@ -16198,7 +16202,7 @@ Allows the mob to randomly break surface of the water.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">120</td>
-<td style="border-style:solid; border-width:2; padding:8px">A random value to determine when to randomly move somewhere. This has a 1/interval chance to choose this goal</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">一个随机值，用于确定何时随机移动到某个位置。这有概率为此值分之一的机会选择此目标</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
@@ -16210,13 +16214,13 @@ Allows the mob to randomly break surface of the water.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">xz_dist</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">10</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks on ground that the mob will look for a new spot to move to. Must be at least 1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物在地面上寻找新位置移动的距离（以方块为单位）。必须至少为 1</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">y_dist</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">7</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks that the mob will look up or down for a new spot to move to. Must be at least 1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物将向上或向下查找要移动到的新位置的距离（以方块为单位）。必须至少为 1</br></td>
 </tr>
 </table>
 <a href="#Index">Back to top</a><br><br>
@@ -16243,13 +16247,13 @@ Allows a mob to randomly fly around.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">xz_dist</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">10</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks on ground that the mob will look for a new spot to move to. Must be at least 1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物在地面上寻找新位置移动的距离（以方块为单位）。必须至少为 1</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">y_dist</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">7</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks that the mob will look up or down for a new spot to move to. Must be at least 1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物将向上或向下查找要移动到的新位置的距离（以方块为单位）。必须至少为 1</br></td>
 </tr>
 </table>
 <a href="#Index">Back to top</a><br><br>
@@ -16270,7 +16274,7 @@ Allows the mob to hover around randomly, close to the surface</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">120</td>
-<td style="border-style:solid; border-width:2; padding:8px">A random value to determine when to randomly move somewhere. This has a 1/interval chance to choose this goal</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">一个随机值，用于确定何时随机移动到某个位置。这有概率为此值分之一的机会选择此目标</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
@@ -16282,13 +16286,13 @@ Allows the mob to hover around randomly, close to the surface</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">xz_dist</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">10</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks on ground that the mob will look for a new spot to move to. Must be at least 1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物在地面上寻找新位置移动的距离（以方块为单位）。必须至少为 1</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">y_dist</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">7</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks that the mob will look up or down for a new spot to move to. Must be at least 1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物将向上或向下查找要移动到的新位置的距离（以方块为单位）。必须至少为 1</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">y_offset</td>
@@ -16530,7 +16534,7 @@ Allows the mob to randomly sit for a duration.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">10</td>
 <td style="border-style:solid; border-width:2; padding:8px">The minimum amount of time in seconds before the mob can stand back up</br></td>
 </tr>
-<tr>
+<tr>这是生物开始这个目标的几率，从 0 到 1
 <td style="border-style:solid; border-width:2; padding:8px">start_chance</td>
 <td style="border-style:solid; border-width:2; padding:8px">Decimal</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.1</td>
@@ -16540,7 +16544,7 @@ Allows the mob to randomly sit for a duration.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">stop_chance</td>
 <td style="border-style:solid; border-width:2; padding:8px">Decimal</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.3</td>
-<td style="border-style:solid; border-width:2; padding:8px">This is the chance that the mob will stop this goal, from 0 to 1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">这是生物停止此目标的几率，从 0 到 1</br></td>
 </tr>
 </table>
 <a href="#Index">Back to top</a><br><br>
@@ -16555,7 +16559,7 @@ Allows a mob to randomly stroll around.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">120</td>
-<td style="border-style:solid; border-width:2; padding:8px">A random value to determine when to randomly move somewhere. This has a 1/interval chance to choose this goal</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">一个随机值，用于确定何时随机移动到某个位置。这有概率为此值分之一的机会选择此目标</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
@@ -16567,13 +16571,13 @@ Allows a mob to randomly stroll around.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">xz_dist</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">10</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks on ground that the mob will look for a new spot to move to. Must be at least 1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物在地面上寻找新位置移动的距离（以方块为单位）。必须至少为 1</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">y_dist</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">7</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks that the mob will look up or down for a new spot to move to. Must be at least 1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物将向上或向下查找要移动到的新位置的距离（以方块为单位）。必须至少为 1</br></td>
 </tr>
 </table>
 <a href="#Index">Back to top</a><br><br>
@@ -16594,7 +16598,7 @@ Allows an entity to randomly move through water</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">120</td>
-<td style="border-style:solid; border-width:2; padding:8px">A random value to determine when to randomly move somewhere. This has a 1/interval chance to choose this goal</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">一个随机值，用于确定何时随机移动到某个位置。这有概率为此值分之一的机会选择此目标</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
@@ -16606,13 +16610,13 @@ Allows an entity to randomly move through water</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">xz_dist</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">10</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks on ground that the mob will look for a new spot to move to. Must be at least 1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物在地面上寻找新位置移动的距离（以方块为单位）。必须至少为 1</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">y_dist</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">7</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks that the mob will look up or down for a new spot to move to. Must be at least 1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物将向上或向下查找要移动到的新位置的距离（以方块为单位）。必须至少为 1</br></td>
 </tr>
 </table>
 <a href="#Index">Back to top</a><br><br>
@@ -17685,7 +17689,7 @@ Allows this mob to stomp turtle eggs</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">Integer</td>
 <td style="border-style:solid; border-width:2; padding:8px">120</td>
-<td style="border-style:solid; border-width:2; padding:8px">A random value to determine when to randomly move somewhere. This has a 1/interval chance to choose this goal</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">一个随机值，用于确定何时随机移动到某个位置。这有概率为此值分之一的机会选择此目标</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">search_height</td>
@@ -17738,7 +17742,7 @@ Allows the mob to move into a random location within a village within the search
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
 <td style="border-style:solid; border-width:2; padding:8px">Movement speed multiplier of the mob when using this AI Goal</br></td>
 </tr>
-<tr>
+<tr>这是生物开始这个目标的几率，从 0 到 1
 <td style="border-style:solid; border-width:2; padding:8px">start_chance</td>
 <td style="border-style:solid; border-width:2; padding:8px">Decimal</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.1</td>
