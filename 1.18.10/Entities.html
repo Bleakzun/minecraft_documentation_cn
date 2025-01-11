@@ -11270,7 +11270,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">sound_event</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">此步骤发生时要播放的 sound 事件</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">此步骤发生时要播放的声音事件</br></td>
 </tr>
 </table>
 </td>
@@ -11749,25 +11749,25 @@
 <td style="border-style:solid; border-width:2; padding:8px">summon_choices</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of spells for the mob to use to summon entities. Each spell has the following parameters:</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">生物用来召唤实体的法术列表。每个法术都有以下参数：</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">cast_duration</td>
 <td style="border-style:solid; border-width:1; padding:9px">小数</td>
-<td style="border-style:solid; border-width:1; padding:9px">Total delay of the steps</td>
-<td style="border-style:solid; border-width:1; padding:9px">Time in seconds the spell casting will take</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">步骤的总延迟</td>
+<td style="border-style:solid; border-width:1; padding:9px">施法需要的时间（以秒为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">cooldown_time</td>
 <td style="border-style:solid; border-width:1; padding:9px">小数</td>
 <td style="border-style:solid; border-width:1; padding:9px">0.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">Time in seconds the mob has to wait before using the spell again</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">生物在再次使用该法术之前必须等待的时间（以秒为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">do_casting</td>
 <td style="border-style:solid; border-width:1; padding:9px">布尔值</td>
 <td style="border-style:solid; border-width:1; padding:9px">true</td>
-<td style="border-style:solid; border-width:1; padding:9px">If true, the mob will do the casting animations and render spell particles</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">如果为 true，则生物将执行施法动画并渲染法术粒子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">filters</td>
@@ -11779,91 +11779,91 @@
 <td style="border-style:solid; border-width:1; padding:9px">max_activation_range</td>
 <td style="border-style:solid; border-width:1; padding:9px">小数</td>
 <td style="border-style:solid; border-width:1; padding:9px">32.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">Upper bound of the activation distance in blocks for this spell, must not be negative.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">此法术的激活距离上限（以方块为单位）不得为负数。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">min_activation_range</td>
 <td style="border-style:solid; border-width:1; padding:9px">小数</td>
 <td style="border-style:solid; border-width:1; padding:9px">1.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">Lower bound of the activation distance in blocks for this spell, must not be negative.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">此法术的激活距离的下限（以方块为单位）不得为负数。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">particle_color</td>
 <td style="border-style:solid; border-width:1; padding:9px">整数</td>
 <td style="border-style:solid; border-width:1; padding:9px">0</td>
-<td style="border-style:solid; border-width:1; padding:9px">The color of the particles for this spell</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">此法术的粒子颜色</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">sequence</td>
 <td style="border-style:solid; border-width:1; padding:9px">List</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">List of steps for the spell. Each step has the following parameters:</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:1; padding:9px">法术的步骤列表。每个步骤都有以下参数：</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">base_delay</td>
 <td style="border-style:solid; border-width:1; padding:10px">小数</td>
 <td style="border-style:solid; border-width:1; padding:10px">0.0</td>
-<td style="border-style:solid; border-width:1; padding:10px">Amount of time in seconds to wait before this step starts</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">开始前等待的时间（以秒为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">delay_per_summon</td>
 <td style="border-style:solid; border-width:1; padding:10px">小数</td>
 <td style="border-style:solid; border-width:1; padding:10px">0.0</td>
-<td style="border-style:solid; border-width:1; padding:10px">Amount of time in seconds before each entity is summoned in this step</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">召唤每个实体需要的时间（以秒为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">entity_lifespan</td>
 <td style="border-style:solid; border-width:1; padding:10px">小数</td>
 <td style="border-style:solid; border-width:1; padding:10px">-1.0</td>
-<td style="border-style:solid; border-width:1; padding:10px">Amount of time in seconds that the spawned entity will be alive for. A value of -1.0 means it will remain alive for as long as it can</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">生成的实体将处于活动状态的时间（以秒为单位）。值 -1.0 表示它将尽可能长时间地保持活动状态</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">entity_type</td>
 <td style="border-style:solid; border-width:1; padding:10px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:10px"></td>
-<td style="border-style:solid; border-width:1; padding:10px">The entity type of the entities we will spawn in this step</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">生成的实体类型</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">num_entities_spawned</td>
 <td style="border-style:solid; border-width:1; padding:10px">整数</td>
 <td style="border-style:solid; border-width:1; padding:10px">1</td>
-<td style="border-style:solid; border-width:1; padding:10px">Number of entities that will be spawned in this step</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">生成的实体数量</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">shape</td>
 <td style="border-style:solid; border-width:1; padding:10px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:10px">line</td>
-<td style="border-style:solid; border-width:1; padding:10px">The base shape of this step. Valid values are circle and line</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">基本形状。有效值为 circle 和 line</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">size</td>
 <td style="border-style:solid; border-width:1; padding:10px">小数</td>
 <td style="border-style:solid; border-width:1; padding:10px">1.0</td>
-<td style="border-style:solid; border-width:1; padding:10px">The base size of the entity</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">生成实体的体型</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">sound_event</td>
 <td style="border-style:solid; border-width:1; padding:10px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:10px"></td>
-<td style="border-style:solid; border-width:1; padding:10px">The sound event to play for this step</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">要播放的声音事件</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">summon_cap</td>
 <td style="border-style:solid; border-width:1; padding:10px">整数</td>
 <td style="border-style:solid; border-width:1; padding:10px">0</td>
-<td style="border-style:solid; border-width:1; padding:10px">Maximum number of summoned entities at any given time</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">召唤出来的实体同时存在的最大数量</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">summon_cap_radius</td>
 <td style="border-style:solid; border-width:1; padding:10px">小数</td>
 <td style="border-style:solid; border-width:1; padding:10px">0.0</td>
-<td style="border-style:solid; border-width:1; padding:10px"></td>
+<td style="border-style:solid; border-width:1; padding:10px">召唤范围半径</td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">target</td>
 <td style="border-style:solid; border-width:1; padding:10px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:10px">self</td>
-<td style="border-style:solid; border-width:1; padding:10px">The target of the spell. This is where the spell will start (line will start here, circle will be centered here)</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">法术的目标。这是咒语开始的地方（line 从这里开始，circle 在这里居中）</br></td>
 </tr>
 </table>
 </td>
@@ -11872,13 +11872,13 @@
 <td style="border-style:solid; border-width:1; padding:9px">start_sound_event</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">The sound event to play when using this spell</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">使用此法术时要播放的声音事件</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">weight</td>
 <td style="border-style:solid; border-width:1; padding:9px">小数</td>
 <td style="border-style:solid; border-width:1; padding:9px">0.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">The weight of this spell. Controls how likely the mob is to choose this spell when casting one</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">这个咒语的权重。</br></td>
 </tr>
 </table>
 </td>
