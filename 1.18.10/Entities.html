@@ -90,8 +90,8 @@
 <tr> <th><a href="#Server Entity Documentation">Server Entity Documentation（服务端实体文档）</a></th> </tr>
 <tr> <td> <a href="#AI Goals">AI意向</a> </tr> </td>
 <tr> <td> <a href="#Attributes"> 特性</a> </tr> </td>
-<tr> <td> <a href="#Built-in Events"> Built-in Events</a> </tr> </td>
-<tr> <td> <a href="#Components"> Components</a> </tr> </td>
+<tr> <td> <a href="#Built-in Events"> Built-in Events（内置事件）</a> </tr> </td>
+<tr> <td> <a href="#Components"> Components（组件）</a> </tr> </td>
 <tr> <td> <a href="#Entity Definition Properties"> Entity Definition Properties</a> </tr> </td>
 <tr> <td> <a href="#Entity Description Properties"> Entity Description Properties</a> </tr> </td>
 <tr> <td> <a href="#ID Lists"> ID Lists</a> </tr> </td>
@@ -11888,7 +11888,7 @@
 
 <h2><p id="minecraft:behavior.swell">minecraft:behavior.swell</p></h2>
 
-Allows the creeper to swell up when a player is nearby. It can only be used by Creepers.</br><h3></h3>
+允许苦力怕在附近有玩家时膨胀。它只能由苦力怕使用。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -11896,24 +11896,24 @@ Allows the creeper to swell up when a player is nearby. It can only be used by C
 <td style="border-style:solid; border-width:2; padding:8px">start_distance</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">10.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">This mob starts swelling when a target is at least this many blocks away</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">开始膨胀的距离</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">stop_distance</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">2.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">This mob stops swelling when a target has moved away at least this many blocks</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">停止膨胀的距离</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:behavior.take_flower">minecraft:behavior.take_flower</p></h2>
 
-Can only be used by Villagers. Allows the mob to accept flowers from Iron Golems.</br><a href="#Index">返回顶部</a><br><br>
+只能由村民使用。允许生物接受铁傀儡的花。</br><a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:behavior.tempt">minecraft:behavior.tempt</p></h2>
 
-Allows the mob to be tempted by food they like.</br><h3></h3>
+允许生物被他们喜欢的食物诱惑。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -11921,31 +11921,31 @@ Allows the mob to be tempted by food they like.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">can_get_scared</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the mob can stop being tempted if the player moves too fast while close to this mob</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则如果玩家靠近该生物时移动得太快，该生物可以停止受到诱惑</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_tempt_vertically</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, vertical distance to the player will be considered when tempting.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则在诱惑时将考虑与玩家的垂直距离。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_tempt_while_ridden</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the mob can be tempted even if it has a passenger (i.e. if being ridden).</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则即使该生物有乘客（即被骑乘）也会受到诱惑。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">items</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of items this mob is tempted by</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物受到诱惑的物品列表</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">sound_interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">范围 [a, b]	</td>
 <td style="border-style:solid; border-width:2; padding:8px">[0.0, 0.0]</td>
-<td style="border-style:solid; border-width:2; padding:8px">Range of random ticks to wait between tempt sounds.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在 tempt 声音之间等待的随机刻度范围。<br>（原文：Range of random ticks to wait between tempt sounds.）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
@@ -11957,20 +11957,20 @@ Allows the mob to be tempted by food they like.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">tempt_sound</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Sound to play while the mob is being tempted.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">	当生物受到诱惑时播放的声音。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">within_radius</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks this mob can get tempted by a player holding an item they like</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">这个生物可能会受到手持他们喜欢的物品的玩家的诱惑的距离（以方块为单位）</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:behavior.trade_interest">minecraft:behavior.trade_interest</p></h2>
 
-Allows the mob to look at a player that is holding a tradable item.</br><h3></h3>
+允许生物看着持有可交易物品的玩家。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -11978,42 +11978,42 @@ Allows the mob to look at a player that is holding a tradable item.</br><h3></h3
 <td style="border-style:solid; border-width:2; padding:8px">carried_item_switch_time</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">2.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The max time in seconds that the trader will hold an item before attempting to switch for a different item that takes the same trade</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">交易者在尝试切换到进行相同交易的不同物品之前持有物品的最长时间（以秒为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">cooldown</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">2.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The time in seconds before the trader can use this goal again</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">再次查看的冷却时间（以秒为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">interest_time</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">45.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The max time in seconds that the trader will be interested with showing its trade items</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">交易者有兴趣显示其交易项目的最长时间（以秒为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">remove_item_time</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The max time in seconds that the trader will wait when you no longer have items to trade</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当您不再有物品可交易时，交易者将等待的最长时间（以秒为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">within_radius</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks this mob can be interested by a player holding an item they like</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">感兴趣的距离（以方块为单位）</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:behavior.trade_with_player">minecraft:behavior.trade_with_player</p></h2>
 
-Allows the player to trade with this mob.</br><a href="#Index">返回顶部</a><br><br>
+允许玩家与此生物进行交易。</br><a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:behavior.vex_copy_owner_target">minecraft:behavior.vex_copy_owner_target</p></h2>
 
-Allows the mob to target the same entity its owner is targeting.</br><h3></h3>
+允许生物将其所有者所敌对的同一实体作为目标。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12021,7 +12021,7 @@ Allows the mob to target the same entity its owner is targeting.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">entity_types</td>
 <td style="border-style:solid; border-width:2; padding:8px">JSON对象</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of entities this mob can copy the owner from</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">此生物可以复制所有者敌意的实体列表</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">filters</td>
@@ -12067,15 +12067,15 @@ Allows the mob to target the same entity its owner is targeting.</br><h3></h3>
 
 <h2><p id="minecraft:behavior.vex_random_move">minecraft:behavior.vex_random_move</p></h2>
 
-Allows the mob to move around randomly like the Vex.</br><a href="#Index">返回顶部</a><br><br>
+允许生物像 Vex 一样随机移动。</br><a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:behavior.wither_random_attack_pos_goal">minecraft:behavior.wither_random_attack_pos_goal</p></h2>
 
-Allows the wither to launch random attacks. Can only be used by the Wither Boss.</br><a href="#Index">返回顶部</a><br><br>
+允许凋灵发动随机攻击。只能由凋灵使用。</br><a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:behavior.wither_target_highest_damage">minecraft:behavior.wither_target_highest_damage</p></h2>
 
-Allows the wither to focus its attacks on whichever mob has dealt the most damage to it.</br><h3></h3>
+允许凋灵集中攻击对它造成最大伤害的生物。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12083,7 +12083,7 @@ Allows the wither to focus its attacks on whichever mob has dealt the most damag
 <td style="border-style:solid; border-width:2; padding:8px">entity_types</td>
 <td style="border-style:solid; border-width:2; padding:8px">JSON对象</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of entity types the wither takes into account to find who dealt the most damage to it</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">凋灵考虑的实体类型列表，以找出对其造成最大伤害的人</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">filters</td>
@@ -12192,7 +12192,7 @@ Allows the wither to focus its attacks on whichever mob has dealt the most damag
 
 <h2><p id="minecraft:attack">minecraft:attack</p></h2>
 
-Defines an entity's melee attack and any additional effects on it.</br><h3></h3>
+定义实体的近战攻击及其上的状态效果。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12200,26 +12200,26 @@ Defines an entity's melee attack and any additional effects on it.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">damage</td>
 <td style="border-style:solid; border-width:2; padding:8px">范围 [a, b]	</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Range of the random amount of damage the melee attack deals. A negative value can heal the entity instead of hurting it</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">近战攻击造成的随机伤害量的范围。负值可以治愈实体而不是伤害实体</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">effect_duration</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Duration in seconds of the status ailment applied to the damaged entity</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">施加于受击实体的状态效果的持续时间（以秒为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">effect_name</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Identifier of the status ailment to apply to an entity attacked by this entity's melee attack</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">攻击附加的状态效果的标识符</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:spell_effects">minecraft:spell_effects</p></h2>
 
-Defines what mob effects to add and remove to the entity when adding this component.</br><h3></h3>
+定义在添加此组件时要向实体添加和删除的生物效果。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12227,13 +12227,13 @@ Defines what mob effects to add and remove to the entity when adding this compon
 <td style="border-style:solid; border-width:2; padding:8px">add_effects</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of effects to add to this entity after adding this component</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">要添加到此实体的效果列表</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">effect</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">Effect to add to this entity. Includes 'duration' in seconds, 'amplifier' level, 'ambient' if it is to be considered an ambient effect, and 'visible' if the effect should be visible</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">添加到此实体的状态效果。可用参数有"duration"持续时间（以秒为单位）、"amplifier"效果等级、"ambient"药水粒子是否受环境光照影响、"visible"粒子可见性</br></td>
 </tr>
 </table>
 </td>
@@ -12242,14 +12242,14 @@ Defines what mob effects to add and remove to the entity when adding this compon
 <td style="border-style:solid; border-width:2; padding:8px">remove_effects</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of identifiers of effects to be removed from this entity after adding this component</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">添加此组件后要从此实体中删除的效果标识符列表</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:strength">minecraft:strength</p></h2>
 
-Defines the entity's strength to carry items.</br><h3></h3>
+定义实体携带物品的耐久度。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12257,20 +12257,20 @@ Defines the entity's strength to carry items.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">max</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">5</td>
-<td style="border-style:solid; border-width:2; padding:8px">The maximum strength of this entity</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">最大耐久</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">value</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1</td>
-<td style="border-style:solid; border-width:2; padding:8px">The initial value of the strength</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">耐久的初始值</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
-<h1><p id="Built-in Events">Built-in Events</p></h1>
+<h1><p id="Built-in Events">Built-in Events（内置事件）</p></h1>
 
 <h2></h2>
 
@@ -12278,24 +12278,24 @@ Defines the entity's strength to carry items.</br><h3></h3>
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:entity_born</td>
-<td style="border-style:solid; border-width:3; padding:7px">Event called on an entity that is spawned through two entities breeding.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">Event 对通过两个实体繁殖生成的实体调用。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:entity_spawned</td>
-<td style="border-style:solid; border-width:3; padding:7px">Event called on an entity that is placed in the level.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">对生成在世界内的实体调用的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:entity_transformed</td>
-<td style="border-style:solid; border-width:3; padding:7px">Event called on an entity that transforms into another entity.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">对转换为另一个实体的实体调用的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:on_prime</td>
-<td style="border-style:solid; border-width:3; padding:7px">Event called on an entity whose fuse is lit and is ready to explode.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">对其准备爆炸的实体调用的事件。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Components">Components</p></h1>
+<h1><p id="Components">Components（组件）</p></h1>
 
 <h2></h2>
 
@@ -12303,7 +12303,7 @@ Defines the entity's strength to carry items.</br><h3></h3>
 
 <h2><p id="minecraft:addrider">minecraft:addrider</p></h2>
 
-Adds a rider to the entity. Requires minecraft:rideable.</br><h3></h3>
+将骑手添加到实体。需要 minecraft：rideable。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12311,20 +12311,20 @@ Adds a rider to the entity. Requires minecraft:rideable.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">entity_type</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The entity type that will be riding this entity.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">将骑乘此实体的实体类型。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">spawn_event</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The spawn event that will be used when the riding entity is created.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">创建乘骑实体时将使用的 spawn 事件。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:admire_item">minecraft:admire_item</p></h2>
 
-Causes the mob to ignore attackable targets for a given duration.</br><h3></h3>
+使生物在特定时间内无视可攻击的目标。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12332,20 +12332,20 @@ Causes the mob to ignore attackable targets for a given duration.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">cooldown_after_being_attacked</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Duration, in seconds, for which mob won't admire items if it was hurt</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">持续时间，以秒为单位，如果生物受伤，生物不会欣赏物品</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">duration</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">10</td>
-<td style="border-style:solid; border-width:2; padding:8px">Duration, in seconds, that the mob is pacified.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">平息生物的持续时间（以秒为单位）。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:ageable">minecraft:ageable</p></h2>
 
-Adds a timer for the entity to grow up. It can be accelerated by giving the entity the items it likes as defined by feedItems.</br><h3></h3>
+为实体添加一个计时器，以便其增长。可以通过为实体提供它喜欢的"feed_items"定义的项来加速它。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12353,38 +12353,38 @@ Adds a timer for the entity to grow up. It can be accelerated by giving the enti
 <td style="border-style:solid; border-width:2; padding:8px">drop_items</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of items that the entity drops when it grows up.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体长大后掉落的项列表。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">duration</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1200.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Amount of time before the entity grows up, -1 for always a baby.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体长大需要的时间，-1 表示始终是婴儿。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">feed_items</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of items that can be fed to the entity. Includes 'item' for the item name and 'growth' to define how much time it grows up by</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">可喂食到实体的项目列表。包括 'item' 作为项目名称，包括 'growth' 来定义它增长的时间</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">grow_up</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to run when this entity grows up.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">长大时运行的事件</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">transform_to_item</td>
 <td style="border-style:solid; border-width:2; padding:8px">Item 描述 Properties</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The feed item used will transform to this item upon successful interaction. Format: itemName:auxValue</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">交互成功后，使用的物品将转换为此项。格式：物品名:数据值</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:angry">minecraft:angry</p></h2>
 
-Defines the entity's 'angry' state using a timer.</br><h3></h3>
+使用计时器定义实体的 'angry' 状态。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12392,25 +12392,25 @@ Defines the entity's 'angry' state using a timer.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">angry_sound</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The sound event to play when the mob is angry</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当生物生气时要播放的声音事件</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">broadcast_anger</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, other entities of the same entity definition within the broadcastRange will also become angry</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则 broadcast_range 中具有相同实体定义的其他实体也会变得生气</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">broadcast_anger_on_attack</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, other entities of the same entity definition within the broadcastRange will also become angry whenever this mob attacks</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则 broadcast_range 中具有相同实体定义的其他实体也会在该生物攻击时变得愤怒</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">broadcast_anger_on_being_attacked</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, other entities of the same entity definition within the broadcastRange will also become angry whenever this mob is attacked</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则 broadcast_range 中具有相同实体定义的其他实体也会在该生物受到攻击时变得愤怒</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">broadcast_filters</td>
@@ -12422,50 +12422,50 @@ Defines the entity's 'angry' state using a timer.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">broadcast_range</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">20</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks within which other entities of the same entity definition will become angry</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">同一实体定义的其他实体将变得生气的距离（以方块为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">broadcast_targets</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">A list of entity families to broadcast anger to</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要向其广播愤怒的实体族列表</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">calm_event</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to run after the number of seconds specified in duration expires (when the entity stops being 'angry')</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在 duration 中指定的秒数过期后运行的事件（当实体停止“生气”时）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">duration</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">25</td>
-<td style="border-style:solid; border-width:2; padding:8px">The amount of time in seconds that the entity will be angry</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体生气的时间（以秒为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">duration_delta</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Variance in seconds added to the duration [-delta, delta]</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">添加到持续时间的秒数变化 [-delta, delta]（区间范围）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">filters</td>
 <td style="border-style:solid; border-width:2; padding:8px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Filter out mob types that it should not attack while angry (other Piglins)</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">过滤掉它在生气时不应该攻击的生物类型（其他猪灵）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">sound_interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">范围 [a, b]	</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The range of time in seconds to randomly wait before playing the sound again</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在再次播放声音之前随机等待的时间范围（以秒为单位）</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:annotation.break_door">minecraft:annotation.break_door</p></h2>
 
-Allows the actor to break doors assuming that that flags set up for the component to use in navigation</br><h3></h3>
+允许生物打破门，假设为组件设置了要在导航中使用的标志</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12473,24 +12473,24 @@ Allows the actor to break doors assuming that that flags set up for the componen
 <td style="border-style:solid; border-width:2; padding:8px">break_time</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">12.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The time in seconds required to break through doors.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">破门而入所需的时间（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">min_difficulty</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px">hard</td>
-<td style="border-style:solid; border-width:2; padding:8px">The minimum difficulty that the world must be on for this entity to break doors.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此实体破门必须达到的最低游戏难度。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:annotation.open_door">minecraft:annotation.open_door</p></h2>
 
-Allows the actor to open doors assuming that that flags set up for the component to use in navigation</br><a href="#Index">返回顶部</a><br><br>
+允许生物打开门，前提是为组件设置了要在导航中使用的标志</br><a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:area_attack">minecraft:area_attack</p></h2>
 
-A component that does damage to entities that get within range.</br><h3></h3>
+对范围内的实体造成伤害的组件。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12498,25 +12498,25 @@ A component that does damage to entities that get within range.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">cause</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The type of damage that is applied to entities that enter the damage range.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">应用于进入伤害范围的实体的伤害类型。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">damage_per_tick</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">2</td>
-<td style="border-style:solid; border-width:2; padding:8px">How much damage per tick is applied to entities that enter the damage range.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">每刻对进入伤害范围的实体施加多少伤害。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">damage_range</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.2</td>
-<td style="border-style:solid; border-width:2; padding:8px">How close a hostile entity must be to have the damage applied.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">敌对实体必须离多近才能施加伤害。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">entity_filter</td>
 <td style="border-style:solid; border-width:2; padding:8px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The set of entities that are valid to apply the damage to when within range.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在范围内时可有效施加伤害的实体集。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -13037,7 +13037,7 @@ Specifies hunt celebration behaviour.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">sound_interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">范围 [a, b]	</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The range of time in seconds to randomly wait before playing the sound again</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在再次播放声音之前随机等待的时间范围（以秒为单位）</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -17257,7 +17257,7 @@ Sets the mapping of internal animation controller references to actual animation
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
-<h2><p id="Components">Components</p></h2>
+<h2><p id="Components">Components（组件）</p></h2>
 
 <h3></h3>
 
