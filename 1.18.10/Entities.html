@@ -12324,7 +12324,7 @@
 
 <h2><p id="minecraft:admire_item">minecraft:admire_item</p></h2>
 
-使生物在特定时间内无视可攻击的目标。</br><h3></h3>
+使生物在特定时间内无视可攻击的目标。（例：猪灵）</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12345,7 +12345,7 @@
 
 <h2><p id="minecraft:ageable">minecraft:ageable</p></h2>
 
-为实体添加一个计时器，以便其增长。可以通过为实体提供它喜欢的"feed_items"定义的项来加速它。</br><h3></h3>
+为实体添加一个计时器，以便其成长。可以通过为实体提供它喜欢的"feed_items"定义的项来加速它。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12523,7 +12523,7 @@
 
 <h2><p id="minecraft:attack_cooldown">minecraft:attack_cooldown</p></h2>
 
-Adds a cooldown to a mob. The intention of this cooldown is to be used to prevent the mob from attempting to aquire new attack targets.</br><h3></h3>
+为生物添加冷却时间。此冷却时间的目的是防止生物试图获取新的攻击目标。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12531,20 +12531,20 @@ Adds a cooldown to a mob. The intention of this cooldown is to be used to preven
 <td style="border-style:solid; border-width:2; padding:8px">attack_cooldown_complete_event</td>
 <td style="border-style:solid; border-width:2; padding:8px">触发器</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to be runned when the cooldown is complete.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">冷却时间完成时要运行的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">attack_cooldown_time</td>
 <td style="border-style:solid; border-width:2; padding:8px">范围 [a, b]	</td>
 <td style="border-style:solid; border-width:2; padding:8px">[0.0, 1.0]</td>
-<td style="border-style:solid; border-width:2; padding:8px">Amount of time in seconds for the cooldown. Can be specified as a number or a pair of numbers (min and max).</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">冷却时间（以秒为单位）。可以指定为一个数字或一对数字（最小值和最大值）。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:barter">minecraft:barter</p></h2>
 
-Enables the component to drop an item as a barter exchange.</br><h3></h3>
+使组件能够以易物交换的形式掉落物品。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12552,24 +12552,24 @@ Enables the component to drop an item as a barter exchange.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">barter_table</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Loot table that's used to drop a random item.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">用于掉落随机物品的战利品表。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">cooldown_after_being_attacked</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Duration, in seconds, for which mob won't barter items if it was hurt</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">持续时间，以秒为单位，如果生物受伤，它会停止以物易物</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:block_climber">minecraft:block_climber</p></h2>
 
-Allows the player to detect and maneuver on the scaffolding block.</br><a href="#Index">返回顶部</a><br><br>
+允许玩家在脚手架上进行检测和机动。（原文：Allows the player to detect and maneuver on the scaffolding block.）</br><a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:block_sensor">minecraft:block_sensor</p></h2>
 
-Fires off a specified event when a block in the block list is broken within the sensor range.</br><h3></h3>
+当阻止列表中的方块在传感器范围内被破坏时触发指定事件。（原文：Fires off a specified event when a block in the block list is broken within the sensor range.）</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12577,20 +12577,20 @@ Fires off a specified event when a block in the block list is broken within the 
 <td style="border-style:solid; border-width:2; padding:8px">on_break</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of blocks to watch for being broken to fire off a specified event. If a block is in multiple lists, multiple events will fire.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要监视被破坏以触发指定事件的方块列表。如果一个方块位于多个列表中，则会触发多个事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">sensor_radius</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">16.00</td>
-<td style="border-style:solid; border-width:2; padding:8px">The maximum radial distance in which a specified block can be detected. The biggest radius is 32.0.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">可以检测到指定方块的最大距离。最大半径为 32.0。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:boostable">minecraft:boostable</p></h2>
 
-Defines the conditions and behavior of a rideable entity's boost.</br><h3></h3>
+定义可骑乘实体的加速的条件和行为。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12598,25 +12598,25 @@ Defines the conditions and behavior of a rideable entity's boost.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">boost_items</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of items that can be used to boost while riding this entity. Each item has the following properties:</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">骑乘此实体时可用于提速的物品列表。每个项都具有以下属性：</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">damage</td>
 <td style="border-style:solid; border-width:1; padding:9px">整数</td>
 <td style="border-style:solid; border-width:1; padding:9px">1</td>
-<td style="border-style:solid; border-width:1; padding:9px">This is the damage that the item will take each time it is used.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">这是该物品每次使用时受到的耐久损伤。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">item</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">Name of the item that can be used to boost.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">可用于提速的物品名称。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">replace_item</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">The item used to boost will become this item once it is used up.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">用于提速的物品一旦用完就会变成这个物品。</br></td>
 </tr>
 </table>
 </td>
@@ -12625,20 +12625,20 @@ Defines the conditions and behavior of a rideable entity's boost.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">duration</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">3.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Time in seconds for the boost.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">提速的时间（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Factor by which the entity's normal speed increases. E.g. 2.0 means go twice as fast.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体的正常速度增加的系数。例如，2.0 意味着速度翻倍。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:boss">minecraft:boss</p></h2>
 
-The current state of the boss for updating the boss HUD.</br><h3></h3>
+用于更新 Boss 血条 的 Boss 的当前状态。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12646,26 +12646,26 @@ The current state of the boss for updating the boss HUD.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">hud_range</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">55</td>
-<td style="border-style:solid; border-width:2; padding:8px">The max distance from the boss at which the boss's health bar is present on the players screen.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">玩家屏幕上显示 Boss 的生命条时，与 Boss 的最大距离。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">name</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The name that will be displayed above the boss's health bar.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">将显示在 Boss 生命条上方的名称。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">should_darken_sky</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether the sky should darken in the presence of the boss.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在 Boss 在场时，天空是否应该变暗。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:break_blocks">minecraft:break_blocks</p></h2>
 
-Specifies the blocks that this entity can break as it moves around.</br><h3></h3>
+指定此实体在四处移动时可以破坏的方块。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12673,14 +12673,14 @@ Specifies the blocks that this entity can break as it moves around.</br><h3></h3
 <td style="border-style:solid; border-width:2; padding:8px">breakable_blocks</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">A list of the blocks that can be broken as this entity moves around</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此实体移动时可以破坏的方块的列表</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:breathable">minecraft:breathable</p></h2>
 
-Defines what blocks this entity can breathe in and gives them the ability to suffocate.</br><h3></h3>
+定义此实体可以呼吸的方块。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12688,68 +12688,68 @@ Defines what blocks this entity can breathe in and gives them the ability to suf
 <td style="border-style:solid; border-width:2; padding:8px">breathe_blocks</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of blocks this entity can breathe in, in addition to the other "breathes" parameters.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此实体可以呼吸的方块列表，以及其他 “breathes” 参数。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">breathes_air</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, this entity can breathe in air.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则此实体可以呼吸空气。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">breathes_lava</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, this entity can breathe in lava.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则此实体可以在熔岩内呼吸。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">breathes_solids</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, this entity can breathe in solid blocks.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则此实体可以在实心方块中呼吸。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">breathes_water</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, this entity can breathe in water.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则此实体可以在水中呼吸。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">generates_bubbles</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, this entity will have visible bubbles while in water.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则此实体在水中时将具有可见的气泡。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">inhale_time</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Time in seconds to recover breath to maximum.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">将呼吸恢复到最大状态的时间（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">non_breathe_blocks</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of blocks this entity can't breathe in, in addition to the other "breathes" parameters.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此实体不能呼吸的方块列表，以及其他 “breathes” 参数。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">suffocate_time</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">-20</td>
-<td style="border-style:solid; border-width:2; padding:8px">Time in seconds between suffocation damage.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">窒息伤害的时间间隔（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">total_supply</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">15</td>
-<td style="border-style:solid; border-width:2; padding:8px">Time in seconds the entity can hold its breath.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体可以屏住呼吸的时间（以秒为单位）。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:breedable">minecraft:breedable</p></h2>
 
-Defines the way an entity can get into the 'love' state.</br><h3></h3>
+定义实体进入 'love' 状态的方式。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12757,49 +12757,49 @@ Defines the way an entity can get into the 'love' state.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">allow_sitting</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, entities can breed while sitting</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则实体可以在坐着时繁殖</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">blend_attributes</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the entities will blend their attributes in the offspring after they breed. For example, horses blend their health, movement, and jump_strength in their offspring.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则实体将在繁殖后将其属性混合到后代中。例如，马将它们的生命值、移速和跳跃高度混合到它们的后代中。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">breed_cooldown</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">60</td>
-<td style="border-style:solid; border-width:2; padding:8px">Time in seconds before the Entity can breed again.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体可以再次繁殖之前的时间（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">breed_items</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The list of items that can be used to get the entity into the 'love' state</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">可用于使实体进入 'love' 状态的物品列表</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">breeds_with</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The list of entity definitions that this entity can breed with.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">可以与之繁殖的实体列表。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">baby_type</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">The entity definition of this entity's babies.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">此实体的婴儿的实体定义。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">breed_event</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">Event to run when this entity breeds.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">此实体繁殖时运行的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">mate_type</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">The entity definition of this entity's mate.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">此实体交配的对象定义。</br></td>
 </tr>
 </table>
 </td>
@@ -12808,31 +12808,31 @@ Defines the way an entity can get into the 'love' state.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">causes_pregnancy</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the entity will become pregnant instead of spawning a baby.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则实体将怀孕，而不是生成婴儿。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">deny_parents_variant</td>
 <td style="border-style:solid; border-width:2; padding:8px">JSON对象</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Determines how likely the baby of parents with the same variant will deny that variant and take a random variant within the given range instead.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">确定具有相同变体的父母的婴儿采用给定范围内的随机变体的可能性。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">chance</td>
 <td style="border-style:solid; border-width:1; padding:9px">小数</td>
 <td style="border-style:solid; border-width:1; padding:9px">0</td>
-<td style="border-style:solid; border-width:1; padding:9px">The percentage chance of denying the parents' variant.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">否定父级变体的百分比几率。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">max_variant</td>
 <td style="border-style:solid; border-width:1; padding:9px">整数</td>
 <td style="border-style:solid; border-width:1; padding:9px">0</td>
-<td style="border-style:solid; border-width:1; padding:9px">The inclusive maximum of the variant range.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">变体范围的包含最大值。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">min_variant</td>
 <td style="border-style:solid; border-width:1; padding:9px">整数</td>
 <td style="border-style:solid; border-width:1; padding:9px">0</td>
-<td style="border-style:solid; border-width:1; padding:9px">The inclusive minimum of the variant range.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">变体范围的包含最小值。</br></td>
 </tr>
 </table>
 </td>
@@ -12841,17 +12841,17 @@ Defines the way an entity can get into the 'love' state.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">environment_requirements</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The list of nearby block requirements to get the entity into the 'love' state.</br><h5><p id="blocks">blocks</p></h5>
+<td style="border-style:solid; border-width:2; padding:8px">使实体进入 'love' 状态的附近区块要求列表。</br><h5><p id="blocks">blocks</p></h5>
 
-The block types required nearby for the entity to breed.</br><a href="#Index">返回顶部</a><br><br>
+实体繁殖所需的附近方块类型。</br><a href="#Index">返回顶部</a><br><br>
 
 <h5><p id="count">count</p></h5>
 
-The number of the required block types nearby for the entity to breed.</br><a href="#Index">返回顶部</a><br><br>
+实体繁殖所需的附近方块类型的数量。</br><a href="#Index">返回顶部</a><br><br>
 
 <h5><p id="radius">radius</p></h5>
 
-How many blocks radius from the mob's center to search in for the required blocks. Bounded between 0 and 16.</br><a href="#Index">返回顶部</a><br><br>
+从生物中心开始，半径内有多少个方块可以搜索到所需的方块。边界在 0 和 16 之间。</br><a href="#Index">返回顶部</a><br><br>
 
 </td>
 </tr>
@@ -12859,43 +12859,43 @@ How many blocks radius from the mob's center to search in for the required block
 <td style="border-style:solid; border-width:2; padding:8px">extra_baby_chance</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Chance that up to 16 babies will spawn between 0.0 and 1.0, where 1.0 is 100%.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">最多 16 个婴儿的几率在 0.0 到 1.0 之间生成，其中 1.0 是 100%。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">inherit_tamed</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the babies will be automatically tamed if its parents are</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则如果其父母被驯服，则婴儿将自动被驯服</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">love_filters</td>
 <td style="border-style:solid; border-width:2; padding:8px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The filters to run when attempting to fall in love.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">尝试坠入爱河时要运行的过滤器。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">mutation_factor</td>
 <td style="border-style:solid; border-width:2; padding:8px">JSON对象</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Determines how likely the babies are to NOT inherit one of their parent's variances. Values are between 0.0 and 1.0, with a higher number meaning more likely to mutate.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">确定婴儿不继承其父级变体之一的可能性。值介于 0.0 和 1.0 之间，数字越大意味着越有可能发生突变。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">color</td>
 <td style="border-style:solid; border-width:1; padding:9px">小数</td>
 <td style="border-style:solid; border-width:1; padding:9px">0</td>
-<td style="border-style:solid; border-width:1; padding:9px">The percentage chance of a mutation on the entity's color.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">实体颜色发生突变的百分比几率。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">extra_variant</td>
 <td style="border-style:solid; border-width:1; padding:9px">小数</td>
 <td style="border-style:solid; border-width:1; padding:9px">0</td>
-<td style="border-style:solid; border-width:1; padding:9px">The percentage chance of a mutation on the entity's extra variant type.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">实体的额外变体类型发生突变的百分比几率。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">variant</td>
 <td style="border-style:solid; border-width:1; padding:9px">小数</td>
 <td style="border-style:solid; border-width:1; padding:9px">0</td>
-<td style="border-style:solid; border-width:1; padding:9px">The percentage chance of a mutation on the entity's variant type.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">实体的变体类型发生突变的百分比几率。</br></td>
 </tr>
 </table>
 </td>
@@ -12904,26 +12904,26 @@ How many blocks radius from the mob's center to search in for the required block
 <td style="border-style:solid; border-width:2; padding:8px">require_full_health</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the entity needs to be at full health before it can breed.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则实体需要处于满生命值才能繁殖。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">require_tame</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the entities need to be tamed first before they can breed.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则必须先驯服实体，然后才能繁殖。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">transform_to_item</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The breed item used will transform to this item upon successful interaction. Format: itemName:auxValue</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">使用的物品将在成功交互后转换为此物品。格式：物品名:数据值</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:bribeable">minecraft:bribeable</p></h2>
 
-Defines the way an entity can get into the 'bribed' state.</br><h3></h3>
+定义实体进入 '贿赂' 状态的方式。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12931,20 +12931,20 @@ Defines the way an entity can get into the 'bribed' state.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">bribe_cooldown</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">2.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Time in seconds before the Entity can be bribed again.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体可以再次被贿赂之前的时间（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">bribe_items</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The list of items that can be used to bribe the entity.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">可用于贿赂实体的物品列表。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:buoyant">minecraft:buoyant</p></h2>
 
-Enables an entity to float on the specified liquid blocks.</br><h3></h3>
+使实体能够漂浮在指定的液体方块上。（波浪模拟：船一上一下地浮动）</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12952,54 +12952,54 @@ Enables an entity to float on the specified liquid blocks.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">apply_gravity</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Applies gravity each tick. Causes more of a wave simulation, but will cause more gravity to be applied outside liquids.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在每刻应用重力。导致更多的波浪模拟，但会导致在液体外部应用更多的重力。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">base_buoyancy</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Base buoyancy used to calculate how much will a mob float.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">基础浮力用于计算生物会漂浮多少。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">big_wave_probability</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.03</td>
-<td style="border-style:solid; border-width:2; padding:8px">Probability for a big wave hitting the entity. Only used if `simulate_waves` is true.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">大浪击中实体的概率。仅在 'simulate_waves' 为 true 时使用。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">big_wave_speed</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">10.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Multiplier for the speed to make a big wave. Triggered depending on 'big_wave_probability'.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">掀起的速度乘数。触发时间取决于 'big_wave_probability'</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">drag_down_on_buoyancy_removed</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">How much an actor will be dragged down when the Buoyancy Component is removed.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">删除 Buoyancy Component （浮力组件） 时，角色将被拖拽多少。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">liquid_blocks</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of blocks this entity can float on. Must be a liquid block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此实体可以漂浮的方块列表。必须是液体块。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">simulate_waves</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Should the movement simulate waves going through.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">运动是否应该模拟波浪通过。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:burns_in_daylight">minecraft:burns_in_daylight</p></h2>
 
-Specifies if/how a mob burns in daylight.</br><a href="#Index">返回顶部</a><br><br>
+指定生物是否/如何在白天燃烧。</br><a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:celebrate_hunt">minecraft:celebrate_hunt</p></h2>
 
-Specifies hunt celebration behaviour.</br><h3></h3>
+指定狩猎庆祝行为。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13007,31 +13007,31 @@ Specifies hunt celebration behaviour.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">broadcast</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, celebration will be broadcasted to other entities in the radius.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则 庆祝 将广播到半径内的其他实体。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">celeberation_targets</td>
 <td style="border-style:solid; border-width:2; padding:8px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The list of conditions that target of hunt must satisfy to initiate celebration.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">庆祝前必须满足的条件列表。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">celebrate_sound</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The sound event to play when the mob is celebrating</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当生物庆祝时要播放的声音事件</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">duration</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">4</td>
-<td style="border-style:solid; border-width:2; padding:8px">Duration, in seconds, of celebration</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">庆祝的持续时间（以秒为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">radius</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">16</td>
-<td style="border-style:solid; border-width:2; padding:8px">If broadcast is enabled, specifies the radius in which it will notify other entities for celebration.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果启用了 broadcast，则指定它将通知其他实体进行庆祝的半径。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">sound_interval</td>
@@ -13044,7 +13044,7 @@ Specifies hunt celebration behaviour.</br><h3></h3>
 
 <h2><p id="minecraft:combat_regeneration">minecraft:combat_regeneration</p></h2>
 
-Gives Regeneration I and removes Mining Fatigue from the mob that kills the Actor's attack target.</br><h3></h3>
+提供再生1并消除杀死生物攻击目标的生物的采矿疲劳。（例：蝾螈）</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13052,26 +13052,26 @@ Gives Regeneration I and removes Mining Fatigue from the mob that kills the Acto
 <td style="border-style:solid; border-width:2; padding:8px">apply_to_family</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Determines if the mob will grant mobs of the same type combat buffs if they kill the target.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">决定当生物杀死目标时，生物是否会给予相同类型的生物战斗增益。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">apply_to_self</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Determines if the mob will grant itself the combat buffs if it kills the target.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">决定如果生物杀死了目标，它是否会给予自己战斗增益。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">regeneration_duration</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">5</td>
-<td style="border-style:solid; border-width:2; padding:8px">The duration in seconds of Regeneration I added to the mob.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">添加到生物中的再生持续时间（以秒为单位）。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:conditional_bandwidth_optimization">minecraft:conditional_bandwidth_optimization</p></h2>
 
-Defines the Conditional Spatial Update Bandwidth Optimizations of this entity.</br><h3></h3>
+定义此实体的条件空间更新带宽优化。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13079,21 +13079,21 @@ Defines the Conditional Spatial Update Bandwidth Optimizations of this entity.</
 <td style="border-style:solid; border-width:2; padding:8px">conditional_values</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The object containing the conditional bandwidth optimization values.</br><h5><p id="conditional_values">conditional_values</p></h5>
+<td style="border-style:solid; border-width:2; padding:8px">包含条件带宽优化值的对象</br><h5><p id="conditional_values">conditional_values</p></h5>
 
-Conditions that must be met for these optimization values to be used.</br><a href="#Index">返回顶部</a><br><br>
+使用这些优化值必须满足的条件。</br><a href="#Index">返回顶部</a><br><br>
 
 <h5><p id="max_dropped_ticks">max_dropped_ticks</p></h5>
 
-In relation to the optimization value, determines the maximum ticks spatial update packets can be not sent.</br><a href="#Index">返回顶部</a><br><br>
+相对于优化值，确定空间更新数据包不能发送的最大时间周期</br><a href="#Index">返回顶部</a><br><br>
 
 <h5><p id="max_optimized_distance">max_optimized_distance</p></h5>
 
-The maximum distance considered during bandwidth optimizations. Any value below the max is interpolated to find optimization, and any value greater than or equal to this max results in max optimization.</br><a href="#Index">返回顶部</a><br><br>
+带宽优化期间考虑的最大距离。任何低于 max 的值都会值以找到优化，任何大于或等于此 max 的值都会导致 max 优化。</br><a href="#Index">返回顶部</a><br><br>
 
 <h5><p id="use_motion_prediction_hints">use_motion_prediction_hints</p></h5>
 
-When set to true, smaller motion packets will be sent during drop packet intervals, resulting in the same amount of packets being sent as without optimizations but with much less data being sent. This should be used when actors are travelling very quickly or teleporting to prevent visual oddities.</br><a href="#Index">返回顶部</a><br><br>
+当设置为 true 时，将在丢弃数据包间隔期间发送较小的运动数据包，从而发送的数据包数量与未进行优化时相同，但发送的数据要少得多。当行为者非常快速地移动或传送时，应该使用此方法，以防止视觉异常。</br><a href="#Index">返回顶部</a><br><br>
 
 </td>
 </tr>
@@ -13101,17 +13101,17 @@ When set to true, smaller motion packets will be sent during drop packet interva
 <td style="border-style:solid; border-width:2; padding:8px">default_values</td>
 <td style="border-style:solid; border-width:2; padding:8px">JSON对象</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The object containing the default bandwidth optimization values.</br><h5><p id="max_dropped_ticks">max_dropped_ticks</p></h5>
+<td style="border-style:solid; border-width:2; padding:8px">包含默认带宽优化值的对象。</br><h5><p id="max_dropped_ticks">max_dropped_ticks</p></h5>
 
-In relation to the optimization value, determines the maximum ticks spatial update packets can be not sent.</br><a href="#Index">返回顶部</a><br><br>
+相对于优化值，确定空间更新数据包不能发送的最大时间周期。</br><a href="#Index">返回顶部</a><br><br>
 
 <h5><p id="max_optimized_distance">max_optimized_distance</p></h5>
 
-The maximum distance considered during bandwidth optimizations. Any value below the max is interpolated to find optimization, and any value greater than or equal to this max results in max optimization.</br><a href="#Index">返回顶部</a><br><br>
+带宽优化期间考虑的最大距离。任何低于 max 的值都会值以找到优化，任何大于或等于此 max 的值都会导致 max 优化。</br><a href="#Index">返回顶部</a><br><br>
 
 <h5><p id="use_motion_prediction_hints">use_motion_prediction_hints</p></h5>
 
-When set to true, smaller motion packets will be sent during drop packet intervals, resulting in the same amount of packets being sent as without optimizations but with much less data being sent. This should be used when actors are travelling very quickly or teleporting to prevent visual oddities.</br><a href="#Index">返回顶部</a><br><br>
+当设置为 true 时，将在丢弃数据包间隔期间发送较小的运动数据包，从而发送的数据包数量与未进行优化时相同，但发送的数据要少得多。当行为者非常快速地移动或传送时，应该使用此方法，以防止视觉异常。</br><a href="#Index">返回顶部</a><br><br>
 
 </td>
 </tr>
@@ -13120,7 +13120,7 @@ When set to true, smaller motion packets will be sent during drop packet interva
 
 <h2><p id="minecraft:custom_hit_test">minecraft:custom_hit_test</p></h2>
 
-List of hitboxes for melee and ranged hits against the entity.</br><h3></h3>
+对实体的近战和远程命中框列表。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13128,14 +13128,14 @@ List of hitboxes for melee and ranged hits against the entity.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">hitboxes</td>
 <td style="border-style:solid; border-width:2; padding:8px">数组</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Comma seperated list of hitboxes.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">以逗号分隔的碰撞箱列表。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:damage_over_time">minecraft:damage_over_time</p></h2>
 
-Applies defined amount of damage to the entity at specified intervals.</br><h3></h3>
+按指定的时间间隔对实体应用定义的伤害量。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13143,20 +13143,20 @@ Applies defined amount of damage to the entity at specified intervals.</br><h3><
 <td style="border-style:solid; border-width:2; padding:8px">damage_per_hurt</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1</td>
-<td style="border-style:solid; border-width:2; padding:8px">Amount of damage caused each hurt.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">每次受伤造成的伤害量。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">time_between_hurt</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Time in seconds between damage.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">伤害间隔时间（以秒为单位）。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:damage_sensor">minecraft:damage_sensor</p></h2>
 
-Defines what events to call when this entity is damaged by specific entities or items.</br><h3></h3>
+定义当此实体被特定实体或物品攻击时要调用的事件。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13164,43 +13164,43 @@ Defines what events to call when this entity is damaged by specific entities or 
 <td style="border-style:solid; border-width:2; padding:8px">triggers</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of triggers with the events to call when taking specific kinds of damage.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">包含受到特定类型伤害时要调用的事件的触发器列表。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">cause</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px">none</td>
-<td style="border-style:solid; border-width:1; padding:9px">类型 of damage that triggers the events.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">触发事件的伤害类型。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">damage_modifier</td>
 <td style="border-style:solid; border-width:1; padding:9px">小数</td>
 <td style="border-style:solid; border-width:1; padding:9px">0.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">A modifier that adds to/removes from the base damage from the damage cause. It does not reduce damage to less than 0.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">一个修改，用于增加/消除伤害来源的基础伤害。它不会将伤害降低到 0 以下。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">damage_multiplier</td>
 <td style="border-style:solid; border-width:1; padding:9px">小数</td>
 <td style="border-style:solid; border-width:1; padding:9px">1.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">A multiplier that modifies the base damage from the damage cause. If deals_damage is true the multiplier can only reduce the damage the entity will take to a minimum of 1.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">一个乘数，用于修改伤害来源的基础伤害。如果 deals_damage 为 true，则乘数只能将实体将受到的伤害降低到最低 1。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">deals_damage</td>
 <td style="border-style:solid; border-width:1; padding:9px">布尔值</td>
 <td style="border-style:solid; border-width:1; padding:9px">true</td>
-<td style="border-style:solid; border-width:1; padding:9px">If true, the damage dealt to the entity will take away health from it, set to false to make the entity ignore that damage.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">如果为 true，则对实体造成的伤害会带走实体的生命值，设置为 false 可使实体忽略该伤害。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">on_damage</td>
 <td style="border-style:solid; border-width:1; padding:9px">JSON对象</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">Specifies filters for entity definitions and events.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">指定实体定义和事件的筛选器。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">on_damage_sound_event</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">Defines what sound to play, if any, when the on_damage filters are met.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">定义在满足 on_damage 过滤器时要播放的声音（如果有）。</br></td>
 </tr>
 </table>
 </td>
@@ -13210,7 +13210,7 @@ Defines what events to call when this entity is damaged by specific entities or 
 
 <h2><p id="minecraft:despawn">minecraft:despawn</p></h2>
 
-Despawns the Actor when the despawn rules or optional filters evaluate to true.</br><h3></h3>
+当消失规则或可选过滤器的计算结果为 true 时，刷新掉实体</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13218,25 +13218,25 @@ Despawns the Actor when the despawn rules or optional filters evaluate to true.<
 <td style="border-style:solid; border-width:2; padding:8px">despawn_from_chance</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Determines if "min_range_random_chance" is used in the standard despawn rules</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">确定是否在标准消失规则中使用 “min_range_random_chance”</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">despawn_from_distance</td>
 <td style="border-style:solid; border-width:2; padding:8px">JSON对象</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Specifies if the "min_distance" and "max_distance" are used in the standard despawn rules.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">指定是否在标准消失规则中使用 “min_distance” 和 “max_distance”。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">max_distance</td>
 <td style="border-style:solid; border-width:1; padding:9px">整数</td>
 <td style="border-style:solid; border-width:1; padding:9px">128</td>
-<td style="border-style:solid; border-width:1; padding:9px">maximum distance for standard despawn rules to instantly despawn the mob.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">标准消失规则立即使生物消失的最大距离。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">min_distance</td>
 <td style="border-style:solid; border-width:1; padding:9px">整数</td>
 <td style="border-style:solid; border-width:1; padding:9px">32</td>
-<td style="border-style:solid; border-width:1; padding:9px">minimum distance for standard despawn rules to try to despawn the mob.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">标准消失规则尝试使生物消失的最小距离。</br></td>
 </tr>
 </table>
 </td>
@@ -13245,44 +13245,44 @@ Despawns the Actor when the despawn rules or optional filters evaluate to true.<
 <td style="border-style:solid; border-width:2; padding:8px">despawn_from_inactivity</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Determines if the "min_range_inactivity_timer" is used in the standard despawn rules.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">确定是否在标准消失规则中使用 “min_range_inactivity_timer”。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">despawn_from_simulation_edge</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Determines if the mob is instantly despawned at the edge of simulation distance in the standard despawn rules.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">确定在标准消失规则中，生物是否在模拟距离的边缘立即消失。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">filters</td>
 <td style="border-style:solid; border-width:2; padding:8px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The list of conditions that must be satisfied before the Actor is despawned. If a filter is defined then standard despawn rules are ignored.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在实体消失之前必须满足的条件列表。如果定义了此过滤器，则忽略标准消失规则。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">min_range_inactivity_timer</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">30</td>
-<td style="border-style:solid; border-width:2; padding:8px">The amount of time in seconds that the mob must be inactive.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物必须处于非活动状态的时间（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">min_range_random_chance</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">800</td>
-<td style="border-style:solid; border-width:2; padding:8px">A random chance between 1 and the given value.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">介于 1 和给定值之间的随机机会。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">remove_child_entities</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, all entities linked to this entity in a child relationship (eg. leashed) will also be despawned.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则在子关系中链接到此实体的所有实体（例如拴绳）也将消失。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:drying_out_timer">minecraft:drying_out_timer</p></h2>
 
-Adds a timer for drying out that will count down and fire 'dried_out_event' or will stop as soon as the entity will get under rain or water and fire 'stopped_drying_out_event'</br><h3></h3>
+添加了一个用于干燥的计时器，该将倒计时结束时触发“dried_out_event”，或者在实体被雨或水冲刷后触发“stopped_drying_out_event”</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13290,38 +13290,38 @@ Adds a timer for drying out that will count down and fire 'dried_out_event' or w
 <td style="border-style:solid; border-width:2; padding:8px">dried_out_event</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to fire when the drying out time runs out.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当倒计时结束时触发的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">recover_after_dried_out_event</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to fire when entity was already dried out but received increase in water supply.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当实体已经干涸但供水增加时触发的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">stopped_drying_out_event</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to fire when entity stopped drying out, for example got into water or under rain.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当实体停止干燥时触发的事件，例如进入水中或下雨。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">total_time</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Amount of time in seconds to dry out fully.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">完全干燥的时间（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">water_bottle_refill_time</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Optional amount of additional time in seconds given by using splash water bottle on entity.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">通过在实体上使用喷溅水瓶提供的可选额外时间量（以秒为单位）。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:economy_trade_table">minecraft:economy_trade_table</p></h2>
 
-Defines this entity's ability to trade with players.</br><h3></h3>
+定义此实体与玩家交易的能力。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
