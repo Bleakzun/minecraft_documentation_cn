@@ -11,6 +11,5 @@ minecraft基岩版文档中文翻译，文档来源：[bedrock-samples](https://
 - 本文档适合配合[learn.microsoft.com](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/componentlist?view=minecraft-bedrock-stable)进行查阅
 ## 注意
 - 文档**原文**就存在些许问题
-
-例：`minecraft:equippable`中的`on_equip`和`on_unequip`的类型是`json对象`，但在文档原文中显示的类型却是`字符串`。
-- 请在**Issue**中帮我们找出类似的其它问题
+  - 例：`minecraft:equippable`中的`on_equip`和`on_unequip`的类型是`json对象`，但在文档原文中显示的类型却是`字符串`。
+  - 想帮我们找出类似的其它问题？请发**Issue**
