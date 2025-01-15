@@ -13604,7 +13604,7 @@
 
 <h2><p id="minecraft:flocking">minecraft:flocking</p></h2>
 
-Allows entities to flock in groups in water or not.</br><h3></h3>
+允许实体在水中成群结队地聚集。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13612,25 +13612,25 @@ Allows entities to flock in groups in water or not.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">block_distance</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The amount of blocks away the entity will look at to push away from.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体将查看要推开的方块数量。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">block_weight</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The weight of the push back away from blocks.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">从方块上推回的重量。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">breach_influence</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The amount of push back given to a flocker that breaches out of the water.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">对冲出水面的集群实体的反击量。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">cohesion_threshold</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1</td>
-<td style="border-style:solid; border-width:2; padding:8px">The threshold in which to start applying cohesion.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">The threshold in which to start applying cohesion.</br></td><!-- 未翻译 -->
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">cohesion_weight</td>
@@ -13721,7 +13721,7 @@ Allows entities to flock in groups in water or not.</br><h3></h3>
 
 <h2><p id="minecraft:genetics">minecraft:genetics</p></h2>
 
-Defines the way a mob's genes and alleles are passed on to its offspring, and how those traits manifest in the child. Compatible parent genes are crossed together, the alleles are handed down from the parents to the child, and any matching genetic variants fire off JSON events to modify the child and express the traits.</br><h3></h3>
+定义生物的基因和等位基因传递给其后代的方式，以及这些特征如何在孩子身上表现出来。相容的亲本基因杂交在一起，等位基因从父母传给孩子，任何匹配的遗传变异都会触发 JSON 事件来修改孩子并表达性状。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13729,25 +13729,25 @@ Defines the way a mob's genes and alleles are passed on to its offspring, and ho
 <td style="border-style:solid; border-width:2; padding:8px">genes</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The list of genes that this entity has and will cross with a partner during breeding.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">此实体在育种过程中拥有并将与伴侣杂交的基因列表。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">allele_range</td>
 <td style="border-style:solid; border-width:1; padding:9px">整数</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">The range of positive integer allele values for this gene. Spawned mobs will have a random number in this range assigned to them.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:1; padding:9px">该基因的正整数等位基因值的范围。生成的生物将在此范围内分配一个随机数。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">range_max</td>
 <td style="border-style:solid; border-width:1; padding:10px">整数</td>
 <td style="border-style:solid; border-width:1; padding:10px">0</td>
-<td style="border-style:solid; border-width:1; padding:10px">Upper bound of the allele values for this gene.</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">该基因的等位基因值的上限。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">range_min</td>
 <td style="border-style:solid; border-width:1; padding:10px">整数</td>
 <td style="border-style:solid; border-width:1; padding:10px">0</td>
-<td style="border-style:solid; border-width:1; padding:10px">Lower bound of the allele values for this gene.</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">该基因的等位基因值的下限。</br></td>
 </tr>
 </table>
 </td>
@@ -13756,37 +13756,37 @@ Defines the way a mob's genes and alleles are passed on to its offspring, and ho
 <td style="border-style:solid; border-width:1; padding:9px">genetic_variants</td>
 <td style="border-style:solid; border-width:1; padding:9px">List</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">The list of genetic variants for this gene. These check for particular allele combinations and fire events when all of them are satisfied.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:1; padding:9px">该基因的遗传变异列表。这些检查特定等位基因组合，并在满足所有等位基因组合时触发事件。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">birth_event</td>
 <td style="border-style:solid; border-width:1; padding:10px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:10px"></td>
-<td style="border-style:solid; border-width:1; padding:10px">Event to run when this mob is created and matches the allele conditions.</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">此生物出生并匹配等位基因条件时运行的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">both_allele</td>
 <td style="border-style:solid; border-width:1; padding:10px">整数</td>
 <td style="border-style:solid; border-width:1; padding:10px">-1</td>
-<td style="border-style:solid; border-width:1; padding:10px">If this value is non-negative, compare both the mob's main and hidden alleles with this value for a match with both. Can also be a range of integers.</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">如果此值为非负数，则将生物的主等位基因和隐藏等位基因与此值进行比较，以便与两者匹配。也可以是整数范围。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">either_allele</td>
 <td style="border-style:solid; border-width:1; padding:10px">整数</td>
 <td style="border-style:solid; border-width:1; padding:10px">-1</td>
-<td style="border-style:solid; border-width:1; padding:10px">If this value is non-negative, compare both the mob's main and hidden alleles with this value for a match with either. Can also be a range of integers.</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">如果此值为非负数，则将生物的主等位基因和隐藏等位基因与此值进行比较，以便与其中任何一个匹配。也可以是整数范围。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">hidden_allele</td>
 <td style="border-style:solid; border-width:1; padding:10px">整数</td>
 <td style="border-style:solid; border-width:1; padding:10px">-1</td>
-<td style="border-style:solid; border-width:1; padding:10px">If this value is non-negative, compare the mob's hidden allele with this value for a match. Can also be a range of integers.</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">如果此值为非负数，则将 mob 的隐藏等位基因与此值进行比较以进行匹配。也可以是整数范围。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">main_allele</td>
 <td style="border-style:solid; border-width:1; padding:10px">整数</td>
 <td style="border-style:solid; border-width:1; padding:10px">-1</td>
-<td style="border-style:solid; border-width:1; padding:10px">If this value is non-negative, compare the mob's main allele with this value for a match. Can also be a range of integers.</br></td>
+<td style="border-style:solid; border-width:1; padding:10px">如果此值为非负数，则将 mob 的主要等位基因与此值进行比较以进行匹配。也可以是整数范围。</br></td>
 </tr>
 </table>
 </td>
@@ -13795,13 +13795,13 @@ Defines the way a mob's genes and alleles are passed on to its offspring, and ho
 <td style="border-style:solid; border-width:1; padding:9px">mutation_rate</td>
 <td style="border-style:solid; border-width:1; padding:9px">小数</td>
 <td style="border-style:solid; border-width:1; padding:9px">-1</td>
-<td style="border-style:solid; border-width:1; padding:9px">If this value is non-negative, overrides the chance for this gene that an allele will be replaced with a random one instead of the parent's allele during birth. Non-negative values greater than `1` will be the same as the value `1`.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">如果该值为非负值，则覆盖该基因在出生期间等位基因被随机等位基因替换而不是父母等位基因的几率。大于 '1' 的非负值将与值 '1' 相同。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">name</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">The name of the gene.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">基因的名称。</br></td>
 </tr>
 </table>
 </td>
@@ -13810,14 +13810,14 @@ Defines the way a mob's genes and alleles are passed on to its offspring, and ho
 <td style="border-style:solid; border-width:2; padding:8px">mutation_rate</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.03125</td>
-<td style="border-style:solid; border-width:2; padding:8px">Chance that an allele will be replaced with a random one instead of the parent's allele during birth.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在出生过程中，等位基因被随机等位基因替换而不是父母等位基因的几率。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:giveable">minecraft:giveable</p></h2>
 
-Defines sets of items that can be used to trigger events when used on this entity. The item will also be taken and placed in the entity's inventory.</br><h3></h3>
+定义在此实体上使用时可用于触发事件的物品集。该物品也将被拿走并放置在实体的背包中。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13825,26 +13825,26 @@ Defines sets of items that can be used to trigger events when used on this entit
 <td style="border-style:solid; border-width:2; padding:8px">cooldown</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">An optional cool down in seconds to prevent spamming interactions.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">可选的冷却，以防止反复交互。（以秒为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">items</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The list of items that can be given to the entity to place in their inventory.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">可以提供给实体以放置在其背包中的物品列表。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">on_give</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to fire when the correct item is given.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在提供正确的物品时触发的事件。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:group_size">minecraft:group_size</p></h2>
 
-Keeps track of entity group size in the given radius.</br><h3></h3>
+跟踪给定半径内的实体组大小。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13852,20 +13852,20 @@ Keeps track of entity group size in the given radius.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">filters</td>
 <td style="border-style:solid; border-width:2; padding:8px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The list of conditions that must be satisfied for other entities to be counted towards group size.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">其他实体必须满足的条件列表才能计入组大小。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">radius</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">16</td>
-<td style="border-style:solid; border-width:2; padding:8px">Radius from center of entity.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">距实体中心的半径。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:grows_crop">minecraft:grows_crop</p></h2>
 
-Could increase crop growth when entity walks over crop</br><h3></h3>
+当实体走过农作物时，可能会增加农作物生长</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13873,20 +13873,20 @@ Could increase crop growth when entity walks over crop</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">chance</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Value between 0-1. Chance of success per tick.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">值介于 0-1 之间。每游戏刻的成功几率。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">charges</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">10</td>
-<td style="border-style:solid; border-width:2; padding:8px">Number of charges</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">Number of charges</br></td><!-- 未翻译 -->
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:healable">minecraft:healable</p></h2>
 
-Defines the interactions with this entity for healing it.</br><h3></h3>
+定义与此实体的交互以修复它。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13894,31 +13894,31 @@ Defines the interactions with this entity for healing it.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">filters</td>
 <td style="border-style:solid; border-width:2; padding:8px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The filter group that defines the conditions for using this item to heal the entity.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">定义使用此项修复实体的条件的筛选器组。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">force_use</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Determines if item can be used regardless of entity being at full health.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">不管实体是否处于满生命值，都可以对其使用物品。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">items</td>
 <td style="border-style:solid; border-width:2; padding:8px">数组</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The array of items that can be used to heal this entity.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">可用于修复此实体的物品数组。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">heal_amount</td>
 <td style="border-style:solid; border-width:1; padding:9px">整数</td>
 <td style="border-style:solid; border-width:1; padding:9px">1</td>
-<td style="border-style:solid; border-width:1; padding:9px">The amount of health this entity gains when fed this item.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">此实体在喂食此物品时获得的生命值。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">item</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">Item identifier that can be used to heal this entity.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">可用于修复此实体的物品标识符。</br></td>
 </tr>
 </table>
 </td>
@@ -13928,7 +13928,7 @@ Defines the interactions with this entity for healing it.</br><h3></h3>
 
 <h2><p id="minecraft:home">minecraft:home</p></h2>
 
-Saves a home pos for when the the entity is spawned.</br><h3></h3>
+保存生成实体时的起始位置。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13936,20 +13936,20 @@ Saves a home pos for when the the entity is spawned.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">home_block_list</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Optional block list that the home position will be associated with. If any of the blocks no longer exist at that position, the home restriction is removed. Example syntax: minecraft:sand.  Not supported: minecraft:sand:1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">可被视为有效 home 的可选方块列表。如果该位置不再存在此类方块，则删除 home 限制。语法示例：minecraft:sand。不支持：minecraft:sand:1。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">restriction_radius</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">-1</td>
-<td style="border-style:solid; border-width:2; padding:8px">The radius that the entity will be restricted to in relation to its home</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体相对于其 home 将被限制的半径</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:hurt_on_condition">minecraft:hurt_on_condition</p></h2>
 
-Defines a set of conditions under which an entity should take damage.</br><h3></h3>
+定义实体应受到伤害的一组条件。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13957,9 +13957,9 @@ Defines a set of conditions under which an entity should take damage.</br><h3></
 <td style="border-style:solid; border-width:2; padding:8px">damage_conditions</td>
 <td style="border-style:solid; border-width:2; padding:8px">数组</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of damage conditions that when met can cause damage to the entity.</br><h5><p id="cause">cause</p></h5>
+<td style="border-style:solid; border-width:2; padding:8px">对实体造成伤害的条件列表。</br><h5><p id="cause">cause</p></h5>
 
-The kind of damage that is caused to the entity. Various armors and spells use this to determine if the entity is immune.</br><h6></h6>
+对实体造成的伤害类型。各种盔甲和法术都使用它来判断实体是否免疫。</br><h6></h6>
 <br / ><textarea readonly="true" cols="5" rows="2">
 none
 </textarea> </br>
@@ -13967,11 +13967,11 @@ none
 
 <h5><p id="damage_per_tick">damage_per_tick</p></h5>
 
-The amount of damage done each tick that the conditions are met.</br><a href="#Index">返回顶部</a><br><br>
+满足条件时每刻造成的伤害。</br><a href="#Index">返回顶部</a><br><br>
 
 <h5><p id="filters">filters</p></h5>
 
-The set of conditions that must be satisfied before the entity takes the defined damage.</br><a href="#Index">返回顶部</a><br><br>
+在实体受到定义的伤害之前必须满足的一组条件。</br><a href="#Index">返回顶部</a><br><br>
 
 </td>
 </tr>
@@ -13980,7 +13980,7 @@ The set of conditions that must be satisfied before the entity takes the defined
 
 <h2><p id="minecraft:inside_block_notifier">minecraft:inside_block_notifier</p></h2>
 
-Verifies whether the entity is inside any of the listed blocks.</br><h3></h3>
+验证实体是否位于列出的任何方块内。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13988,7 +13988,7 @@ Verifies whether the entity is inside any of the listed blocks.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">block_list</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of blocks, with certain block states, that we are monitoring to see if the entity is inside.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">具有特定方块状态的方块列表，这些方块被监控以查看实体是否在内部</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
