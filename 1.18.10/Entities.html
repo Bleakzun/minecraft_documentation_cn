@@ -12219,7 +12219,7 @@
 
 <h2><p id="minecraft:spell_effects">minecraft:spell_effects</p></h2>
 
-定义在添加此组件时要向实体添加和删除的生物效果。</br><h3></h3>
+定义在添加此组件时要向实体添加和删除的状态效果。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -12976,7 +12976,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">drag_down_on_buoyancy_removed</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">删除 Buoyancy Component （浮力组件） 时，角色将被拖拽多少。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">删除 Buoyancy Component （浮力组件） 时，实体将被拖拽多少。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">liquid_blocks</td>
@@ -13502,13 +13502,13 @@
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">on_equip</td>
-<td style="border-style:solid; border-width:1; padding:9px">json对象</td>
+<td style="border-style:solid; border-width:1; padding:9px">JSON对象</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
 <td style="border-style:solid; border-width:1; padding:9px">当此实体装备此物品时触发的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">on_unequip</td>
-<td style="border-style:solid; border-width:1; padding:9px">json对象</td>
+<td style="border-style:solid; border-width:1; padding:9px">JSON对象</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
 <td style="border-style:solid; border-width:1; padding:9px">从此实体中移除此物品时触发的事件。</br></td>
 </tr>
@@ -13817,7 +13817,7 @@
 
 <h2><p id="minecraft:giveable">minecraft:giveable</p></h2>
 
-定义在此实体上使用时可用于触发事件的物品集。该物品也将被拿走并放置在实体的背包中。</br><h3></h3>
+定义在此实体上使用时可用于触发事件的物品集。该物品也将被拿走并放置在实体的物品栏中。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -13831,7 +13831,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">items</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">可以提供给实体以放置在其背包中的物品列表。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">可以提供给实体以放置在其物品栏中的物品列表。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">on_give</td>
@@ -13995,7 +13995,7 @@ none
 
 <h2><p id="minecraft:insomnia">minecraft:insomnia</p></h2>
 
-Adds a timer since last rested to see if phantoms should spawn.</br><h3></h3>
+添加自上次睡觉以来的计时器，以查看是否应该生成幻翼。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14003,14 +14003,14 @@ Adds a timer since last rested to see if phantoms should spawn.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">days_until_insomnia</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">3.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Number of days the mob has to stay up until the insomnia effect begins.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物熬夜直到幻翼生成的天数。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:instant_despawn">minecraft:instant_despawn</p></h2>
 
-Despawns the Actor immediately.</br><h3></h3>
+让生物立即消失。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14018,14 +14018,14 @@ Despawns the Actor immediately.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">remove_child_entities</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, all entities linked to this entity in a child relationship (eg. leashed) will also be despawned.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则在子关系中链接到此实体的所有实体（例如拴绳）也将消失。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:interact">minecraft:interact</p></h2>
 
-Defines interactions with this entity.</br><h3></h3>
+定义与此实体的交互。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14033,13 +14033,13 @@ Defines interactions with this entity.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">add_items</td>
 <td style="border-style:solid; border-width:2; padding:8px">JSON对象</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Loot table with items to add to the player's inventory upon successful interaction.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">战利品表，其中包含成功互动后可添加到玩家库存中的物品。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">table</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">File path, relative to the Behavior Pack's path, to the loot table file.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">文件路径（相对于 Behavior Pack 的路径）指向战利品表文件。</br></td>
 </tr>
 </table>
 </td>
@@ -14048,53 +14048,53 @@ Defines interactions with this entity.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">cooldown</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Time in seconds before this entity can be interacted with again.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">可以再次与此实体交互之前的时间（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">cooldown_after_being_attacked</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Time in seconds before this entity can be interacted with after being attacked.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此实体在受到攻击后可以与之交互的时间（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">health_amount</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The amount of health this entity will recover or hurt when interacting with this item. Negative values will harm the entity.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此实体在与此物品交互时将增加或减少的生命值。负值将伤害实体。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">hurt_item</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The amount of damage the item will take when used to interact with this entity. A value of 0 means the item won't lose durability.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">物品在与此实体交互时将损失的耐久度。值为 0 表示项目不会失去耐久度。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">interact_text</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Text to show when the player is able to interact in this way with this entity when playing with Touch-screen controls.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">显示玩家在玩触摸屏控件时何时能够以这种方式与此实体交互的按钮文本。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">on_interact</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to fire when the interaction occurs.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">交互时触发的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">particle_on_start</td>
 <td style="border-style:solid; border-width:2; padding:8px">JSON对象</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Particle effect that will be triggered at the start of the interaction.</br><h5><p id="particle_offset_towards_interactor">particle_offset_towards_interactor</p></h5>
+<td style="border-style:solid; border-width:2; padding:8px">将在交互开始时触发的粒子特效。</br><h5><p id="particle_offset_towards_interactor">particle_offset_towards_interactor</p></h5>
 
-Whether or not the particle will appear closer to who performed the interaction.</br><a href="#Index">返回顶部</a><br><br>
+粒子是否看起来更接近执行交互的用户。</br><a href="#Index">返回顶部</a><br><br>
 
 <h5><p id="particle_type">particle_type</p></h5>
 
-The type of particle that will be spawned.</br><a href="#Index">返回顶部</a><br><br>
+将生成的粒子类型。</br><a href="#Index">返回顶部</a><br><br>
 
 <h5><p id="particle_y_offset">particle_y_offset</p></h5>
 
-Will offset the particle this amount in the y direction.</br><a href="#Index">返回顶部</a><br><br>
+此粒子在 y 方向上偏移的量。</br><a href="#Index">返回顶部</a><br><br>
 
 </td>
 </tr>
@@ -14102,25 +14102,25 @@ Will offset the particle this amount in the y direction.</br><a href="#Index">�
 <td style="border-style:solid; border-width:2; padding:8px">play_sounds</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of sounds to play when the interaction occurs.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">交互发生时要播放的声音列表。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">spawn_entities</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of entities to spawn when the interaction occurs.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">交互发生时要生成的实体列表。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">spawn_items</td>
 <td style="border-style:solid; border-width:2; padding:8px">JSON对象</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Loot table with items to drop on the ground upon successful interaction.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">战利品表，互动成功后会掉落在地上的物品。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">table</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">File path, relative to the Behavior Pack's path, to the loot table file.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">文件路径（相对于 Behavior Pack 的路径）指向战利品表文件。</br></td>
 </tr>
 </table>
 </td>
@@ -14129,26 +14129,26 @@ Will offset the particle this amount in the y direction.</br><a href="#Index">�
 <td style="border-style:solid; border-width:2; padding:8px">swing</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the player will do the 'swing' animation when interacting with this entity.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则玩家将在与此实体交互时执行 'swing' 动画。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">transform_to_item</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The item used will transform to this item upon successful interaction. Format: itemName:auxValue</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">交互成功后，使用的物品将转换为此物品。格式：物品名:数据值</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">use_item</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the interaction will use an item.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则交互将使用物品。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:inventory">minecraft:inventory</p></h2>
 
-Defines this entity's inventory properties.</br><h3></h3>
+定义此实体的物品栏属性。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14156,52 +14156,52 @@ Defines this entity's inventory properties.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">additional_slots_per_strength</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Number of slots that this entity can gain per extra strength</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此实体每增加一倍力量所能获得的槽位数量</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_be_siphoned_from</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the contents of this inventory can be removed by a hopper</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则此物品栏的内容可以通过漏斗漏出</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">container_type</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px">none</td>
-<td style="border-style:solid; border-width:2; padding:8px">类型 of container this entity has. Can be horse, minecart_chest, minecart_hopper, inventory, container or hopper</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此实体具有的容器类型。可以是马、箱子矿车、漏斗矿车、物品栏、箱子或漏斗</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">inventory_size</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">5</td>
-<td style="border-style:solid; border-width:2; padding:8px">Number of slots the container has</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">容器具有的槽位数</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">private</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the entity will not drop its inventory on death</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则实体在死亡时不会掉落其物品栏</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">restrict_to_owner</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the entity's inventory can only be accessed by its owner or itself</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则实体的物品栏只能由其所有者或自身访问</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:item_hopper">minecraft:item_hopper</p></h2>
 
-Determines that this entity is an item hopper.</br><a href="#Index">返回顶部</a><br><br>
+确定此实体是物品漏斗。（原版实例：漏斗矿车）</br><a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:jump.dynamic">minecraft:jump.dynamic</p></h2>
 
-Defines a dynamic type jump control that will change jump properties based on the speed modifier of the mob.</br><a href="#Index">返回顶部</a><br><br>
+定义一个动态类型的跳跃控件，该控件将根据生物的速度更改跳跃属性。</br><a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:jump.static">minecraft:jump.static</p></h2>
 
-Gives the entity the ability to jump.</br><h3></h3>
+使实体能够跳跃。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14209,14 +14209,14 @@ Gives the entity the ability to jump.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">jump_power</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.42</td>
-<td style="border-style:solid; border-width:2; padding:8px">The initial vertical velocity for the jump</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">跳跃的初始垂直速度</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:leashable">minecraft:leashable</p></h2>
 
-Allows this entity to be leashed and defines the conditions and events for this entity when is leashed.</br><h3></h3>
+允许此实体被拴住，并定义此实体在被束缚时的条件和事件。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14224,44 +14224,44 @@ Allows this entity to be leashed and defines the conditions and events for this 
 <td style="border-style:solid; border-width:2; padding:8px">can_be_stolen</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, players can leash this entity even if it is already leashed to another mob.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则玩家可以拴住此实体，即使它已经拴在另一个生物上。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">hard_distance</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">6</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks at which the leash stiffens, restricting movement.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">以方块为单位的距离，拴绳变硬，限制运动。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">max_distance</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">10</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks at which the leash breaks.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">拴绳断裂的距离（以方块为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">on_leash</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to call when this entity is leashed.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当此实体被拴住时要调用的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">on_unleash</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to call when this entity is unleashed.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">释放此实体时调用的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">soft_distance</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">4</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance in blocks at which the 'spring' effect starts acting to keep this entity close to the entity that leashed it.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">以方块为单位的距离，开始使该实体靠近拴住它的实体。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:lookat">minecraft:lookat</p></h2>
 
-Defines the behavior when another entity looks at this entity.</br><h3></h3>
+定义其他实体看此实体时的行为。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14269,48 +14269,48 @@ Defines the behavior when another entity looks at this entity.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">allow_invulnerable</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, invulnerable entities (e.g. Players in creative mode) are considered valid targets.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则无敌实体（例如处于创造模式的玩家）被视为有效目标。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">filters</td>
 <td style="border-style:solid; border-width:2; padding:8px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Defines the entities that can trigger this component.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">定义可以触发此组件的实体。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">look_cooldown</td>
 <td style="border-style:solid; border-width:2; padding:8px">范围 [a, b]	</td>
 <td style="border-style:solid; border-width:2; padding:8px">[0, 0]</td>
-<td style="border-style:solid; border-width:2; padding:8px">The range for the random amount of time during which the entity is 'cooling down' and won't get angered or look for a target.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体“冷却”并且不会生气或寻找目标的随机时间范围。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">look_event</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The event identifier to run when the entities specified in filters look at this entity.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当筛选条件中指定的实体查看此实体时要运行的事件标识符。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">search_radius</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">10</td>
-<td style="border-style:solid; border-width:2; padding:8px">Maximum distance this entity will look for another entity looking at it.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此实体将寻找另一个正在注视它的实体的最大距离。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">set_target</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, this entity will set the attack target as the entity that looked at it.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则此实体会攻击看它的实体。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:managed_wandering_trader">minecraft:managed_wandering_trader</p></h2>
 
-This component is used to implement part of the Wandering Trader behavior</br><a href="#Index">返回顶部</a><br><br>
+此组件用于实现流浪商人行为的一部分，只能由流浪商人使用</br><a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:mob_effect">minecraft:mob_effect</p></h2>
 
-A component that applies a mob effect to entities that get within range.</br><h3></h3>
+将状态效果应用于范围内的实体的组件。（原版实例：河豚）</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14318,32 +14318,32 @@ A component that applies a mob effect to entities that get within range.</br><h3
 <td style="border-style:solid; border-width:2; padding:8px">effect_range</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.2</td>
-<td style="border-style:solid; border-width:2; padding:8px">How close a hostile entity must be to have the mob effect applied.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">敌对实体必须离多近才能应用状态效果。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">effect_time</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">10</td>
-<td style="border-style:solid; border-width:2; padding:8px">How long the applied mob effect lasts in seconds.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">应用的状态效果持续多长时间（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">entity_filter</td>
 <td style="border-style:solid; border-width:2; padding:8px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The set of entities that are valid to apply the mob effect to.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">可有效应用状态效果的实体集。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">mob_effect</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The mob effect that is applied to entities that enter this entities effect range.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">施加的状态效果。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:movement.amphibious">minecraft:movement.amphibious</p></h2>
 
-This move control allows the mob to swim in water and walk on land.</br><h3></h3>
+此移动控件允许生物在水中游泳并在陆地上行走。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14351,14 +14351,14 @@ This move control allows the mob to swim in water and walk on land.</br><h3></h3
 <td style="border-style:solid; border-width:2; padding:8px">max_turn</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">30.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The maximum number in degrees the mob can turn per tick.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物每刻可以转动的最大度数。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:movement.basic">minecraft:movement.basic</p></h2>
 
-This component accents the movement of an entity.</br><h3></h3>
+此移动控件允许实体走动。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14366,14 +14366,14 @@ This component accents the movement of an entity.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">max_turn</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">30.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The maximum number in degrees the mob can turn per tick.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体每刻可以转动的最大度数。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:movement.fly">minecraft:movement.fly</p></h2>
 
-This move control causes the mob to fly.</br><h3></h3>
+此移动控件允许生物飞行。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14381,14 +14381,14 @@ This move control causes the mob to fly.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">max_turn</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">30.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The maximum number in degrees the mob can turn per tick.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物每刻可以转动的最大度数。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:movement.generic">minecraft:movement.generic</p></h2>
 
-This move control allows a mob to fly, swim, climb, etc.</br><h3></h3>
+此移动控件允许生物飞行、游泳、攀爬等。（原版实例：溺尸）</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14396,14 +14396,14 @@ This move control allows a mob to fly, swim, climb, etc.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">max_turn</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">30.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The maximum number in degrees the mob can turn per tick.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物每刻可以转动的最大度数。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:movement.hover">minecraft:movement.hover</p></h2>
 
-This move control causes the mob to hover.</br><h3></h3>
+此移动控件使生物悬停。（原版实例：蜜蜂）</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14411,14 +14411,14 @@ This move control causes the mob to hover.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">max_turn</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">30.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The maximum number in degrees the mob can turn per tick.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物每刻可以转动的最大度数。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:movement.jump">minecraft:movement.jump</p></h2>
 
-Move control that causes the mob to jump as it moves with a specified delay between jumps.</br><h3></h3>
+移动控件，使生物在移动时以指定的跳跃延迟跳跃。（原版实例：史莱姆、岩浆怪）</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14426,20 +14426,20 @@ Move control that causes the mob to jump as it moves with a specified delay betw
 <td style="border-style:solid; border-width:2; padding:8px">jump_delay</td>
 <td style="border-style:solid; border-width:2; padding:8px">范围 [a, b]	</td>
 <td style="border-style:solid; border-width:2; padding:8px">[0.0, 0.0]</td>
-<td style="border-style:solid; border-width:2; padding:8px">Delay after landing when using the slime move control.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">使用史莱姆移动控件时着陆后的延迟。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">max_turn</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">30.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The maximum number in degrees the mob can turn per tick.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物每刻可以转动的最大度数。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:movement.skip">minecraft:movement.skip</p></h2>
 
-This move control causes the mob to hop as it moves.</br><h3></h3>
+此移动控件允许生物在移动时跳跃。（原版实例：兔子）</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14447,14 +14447,14 @@ This move control causes the mob to hop as it moves.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">max_turn</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">30.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The maximum number in degrees the mob can turn per tick.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物每刻可以转动的最大度数。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:movement.sway">minecraft:movement.sway</p></h2>
 
-This move control causes the mob to sway side to side giving the impression it is swimming.</br><h3></h3>
+这个移动控制使生物左右摇晃，给人一种它在游泳的印象。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14462,26 +14462,26 @@ This move control causes the mob to sway side to side giving the impression it i
 <td style="border-style:solid; border-width:2; padding:8px">max_turn</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">30.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The maximum number in degrees the mob can turn per tick.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物每刻可以转动的最大度数。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">sway_amplitude</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.05</td>
-<td style="border-style:solid; border-width:2; padding:8px">Strength of the sway movement.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">摇摆运动的强度。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">sway_frequency</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.5</td>
-<td style="border-style:solid; border-width:2; padding:8px">Multiplier for the frequency of the sway movement.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">摇摆运动频率的乘数。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:nameable">minecraft:nameable</p></h2>
 
-Allows this entity to be named (e.g. using a name tag).</br><h3></h3>
+允许命名此实体（例如使用命名牌）。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14489,37 +14489,37 @@ Allows this entity to be named (e.g. using a name tag).</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">allow_name_tag_renaming</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, this entity can be renamed with name tags</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则可以使用 name 标签重命名此实体</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">always_show</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the name will always be shown</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则始终显示名称</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">default_trigger</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Trigger to run when the entity gets named</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在实体命名时运行的触发器</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">name_actions</td>
 <td style="border-style:solid; border-width:2; padding:8px">JSON对象</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Describes the special names for this entity and the events to call when the entity acquires those names</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">描述此实体的特殊名称以及实体获取这些名称时要调用的事件</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">name_filter</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">List of special names that will cause the events defined in 'on_named' to fire</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">触发 'on_named' 中定义的事件的特殊名称列表</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">on_named</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">Event to be called when this entity acquires the name specified in 'name_filter'</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">当此实体获取 'name_filter' 中指定的名称时要调用的事件</br></td>
 </tr>
 </table>
 </td>
@@ -14529,7 +14529,7 @@ Allows this entity to be named (e.g. using a name tag).</br><h3></h3>
 
 <h2><p id="minecraft:navigation.climb">minecraft:navigation.climb</p></h2>
 
-Allows this entity to generate paths that include vertical walls like the vanilla Spiders do.</br><h3></h3>
+允许此实体生成包含垂直墙的路径，就像原版的蜘蛛那样。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14537,122 +14537,122 @@ Allows this entity to generate paths that include vertical walls like the vanill
 <td style="border-style:solid; border-width:2; padding:8px">avoid_damage_blocks</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid blocks that cause damage when finding a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开造成伤害的方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_portals</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid portals (like nether portals) when finding a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开传送门（如下界传送门）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_sun</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether or not the pathfinder should avoid tiles that are exposed to the sun when creating paths</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在创建路径时是否应避开阳光</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_water</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid water when creating a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开水</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">blocks_to_avoid</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder which blocks to avoid when creating a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在创建路径时要避开哪些方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_breach</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can jump out of water (like a dolphin)</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以跳出水面（像海豚一样）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_break_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed door and break it</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的门并打破它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_jump</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can jump up blocks</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以跳上方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_open_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed door assuming the AI will open the door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的门并打开它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_open_iron_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed iron door assuming the AI will open the door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的铁门并打开它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_pass_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether a path can be created through a door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过门</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_from_air</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can start pathing when in the air</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当它在空中时可以开始寻路</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_over_lava</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel on the surface of the lava</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">它是否可以在熔岩表面创建路径</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_over_water</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel on the surface of the water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">它是否可以在水面创建路径</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_sink</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it will be pulled down by gravity while in water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在水中时是否会被重力拉下</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_swim</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can path anywhere through water and plays swimming animation along that path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水中的任何位置移动，并沿该路径播放游泳动画</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_walk</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can walk on the ground outside water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水外的地面上行走</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_walk_in_lava</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel in lava like walking on ground</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以像在地面上行走一样在熔岩中移动</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">is_amphibious</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can walk on the ground underwater</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水下的地面上行走</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:navigation.float">minecraft:navigation.float</p></h2>
 
-Allows this entity to generate paths by flying around the air like the regular Ghast.</br><h3></h3>
+允许此实体像恶魂一样通过在空中飞行来生成路径。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14660,122 +14660,122 @@ Allows this entity to generate paths by flying around the air like the regular G
 <td style="border-style:solid; border-width:2; padding:8px">avoid_damage_blocks</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid blocks that cause damage when finding a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开造成伤害的方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_portals</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid portals (like nether portals) when finding a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开传送门（如下界传送门）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_sun</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether or not the pathfinder should avoid tiles that are exposed to the sun when creating paths</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在创建路径时是否应避开阳光</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_water</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid water when creating a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开水</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">blocks_to_avoid</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder which blocks to avoid when creating a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在创建路径时要避开哪些方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_breach</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can jump out of water (like a dolphin)</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以跳出水面（像海豚一样）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_break_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed door and break it</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的门并打破它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_jump</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can jump up blocks</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以跳上方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_open_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed door assuming the AI will open the door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的门并打开它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_open_iron_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed iron door assuming the AI will open the door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的铁门并打开它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_pass_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether a path can be created through a door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过门</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_from_air</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can start pathing when in the air</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当它在空中时可以开始寻路</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_over_lava</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel on the surface of the lava</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">它是否可以在熔岩表面创建路径</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_over_water</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel on the surface of the water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">它是否可以在水面创建路径</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_sink</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it will be pulled down by gravity while in water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在水中时是否会被重力拉下</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_swim</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can path anywhere through water and plays swimming animation along that path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水中的任何位置移动，并沿该路径播放游泳动画</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_walk</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can walk on the ground outside water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水外的地面上行走</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_walk_in_lava</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel in lava like walking on ground</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以像在地面上行走一样在熔岩中移动</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">is_amphibious</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can walk on the ground underwater</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水下的地面上行走</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:navigation.fly">minecraft:navigation.fly</p></h2>
 
-Allows this entity to generate paths in the air like the vanilla Parrots do.</br><h3></h3>
+允许此实体像原版鹦鹉一样在空中生成路径。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14783,122 +14783,122 @@ Allows this entity to generate paths in the air like the vanilla Parrots do.</br
 <td style="border-style:solid; border-width:2; padding:8px">avoid_damage_blocks</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid blocks that cause damage when finding a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开造成伤害的方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_portals</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid portals (like nether portals) when finding a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开传送门（如下界传送门）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_sun</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether or not the pathfinder should avoid tiles that are exposed to the sun when creating paths</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在创建路径时是否应避开阳光</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_water</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid water when creating a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开水</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">blocks_to_avoid</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder which blocks to avoid when creating a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在创建路径时要避开哪些方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_breach</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can jump out of water (like a dolphin)</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以跳出水面（像海豚一样）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_break_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed door and break it</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的门并打破它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_jump</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can jump up blocks</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以跳上方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_open_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed door assuming the AI will open the door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的门并打开它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_open_iron_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed iron door assuming the AI will open the door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的铁门并打开它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_pass_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether a path can be created through a door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过门</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_from_air</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can start pathing when in the air</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当它在空中时可以开始寻路</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_over_lava</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel on the surface of the lava</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">它是否可以在熔岩表面创建路径</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_over_water</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel on the surface of the water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">它是否可以在水面创建路径</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_sink</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it will be pulled down by gravity while in water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在水中时是否会被重力拉下</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_swim</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can path anywhere through water and plays swimming animation along that path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水中的任何位置移动，并沿该路径播放游泳动画</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_walk</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can walk on the ground outside water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水外的地面上行走</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_walk_in_lava</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel in lava like walking on ground</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以像在地面上行走一样在熔岩中移动</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">is_amphibious</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can walk on the ground underwater</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水下的地面上行走</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:navigation.generic">minecraft:navigation.generic</p></h2>
 
-Allows this entity to generate paths by walking, swimming, flying and/or climbing around and jumping up and down a block.</br><h3></h3>
+允许此实体通过行走、游泳、飞行、攀爬或上下跳跃来生成路径</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -14906,122 +14906,122 @@ Allows this entity to generate paths by walking, swimming, flying and/or climbin
 <td style="border-style:solid; border-width:2; padding:8px">avoid_damage_blocks</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid blocks that cause damage when finding a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开造成伤害的方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_portals</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid portals (like nether portals) when finding a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开传送门（如下界传送门）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_sun</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether or not the pathfinder should avoid tiles that are exposed to the sun when creating paths</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在创建路径时是否应避开阳光</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_water</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid water when creating a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开水</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">blocks_to_avoid</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder which blocks to avoid when creating a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在创建路径时要避开哪些方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_breach</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can jump out of water (like a dolphin)</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以跳出水面（像海豚一样）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_break_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed door and break it</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的门并打破它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_jump</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can jump up blocks</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以跳上方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_open_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed door assuming the AI will open the door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的门并打开它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_open_iron_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed iron door assuming the AI will open the door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的铁门并打开它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_pass_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether a path can be created through a door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过门</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_from_air</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can start pathing when in the air</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当它在空中时可以开始寻路</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_over_lava</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel on the surface of the lava</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">它是否可以在熔岩表面创建路径</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_over_water</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel on the surface of the water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">它是否可以在水面创建路径</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_sink</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it will be pulled down by gravity while in water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在水中时是否会被重力拉下</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_swim</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can path anywhere through water and plays swimming animation along that path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水中的任何位置移动，并沿该路径播放游泳动画</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_walk</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can walk on the ground outside water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水外的地面上行走</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_walk_in_lava</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel in lava like walking on ground</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以像在地面上行走一样在熔岩中移动</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">is_amphibious</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can walk on the ground underwater</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水下的地面上行走</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:navigation.hover">minecraft:navigation.hover</p></h2>
 
-Allows this entity to generate paths in the air like the vanilla Bees do. Keeps them from falling out of the skies and doing predictive movement.</br><h3></h3>
+允许此实体像原版蜜蜂一样在空中生成路径。防止他们从天空中掉下来并进行预测性运动。（原文：Allows this entity to generate paths in the air like the vanilla Bees do. Keeps them from falling out of the skies and doing predictive movement.）</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -15029,122 +15029,122 @@ Allows this entity to generate paths in the air like the vanilla Bees do. Keeps 
 <td style="border-style:solid; border-width:2; padding:8px">avoid_damage_blocks</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid blocks that cause damage when finding a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开造成伤害的方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_portals</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid portals (like nether portals) when finding a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开传送门（如下界传送门）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_sun</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether or not the pathfinder should avoid tiles that are exposed to the sun when creating paths</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在创建路径时是否应避开阳光</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_water</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid water when creating a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开水</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">blocks_to_avoid</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder which blocks to avoid when creating a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在创建路径时要避开哪些方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_breach</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can jump out of water (like a dolphin)</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以跳出水面（像海豚一样）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_break_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed door and break it</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的门并打破它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_jump</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can jump up blocks</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以跳上方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_open_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed door assuming the AI will open the door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的门并打开它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_open_iron_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed iron door assuming the AI will open the door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的铁门并打开它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_pass_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether a path can be created through a door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过门</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_from_air</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can start pathing when in the air</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当它在空中时可以开始寻路</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_over_lava</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel on the surface of the lava</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">它是否可以在熔岩表面创建路径</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_over_water</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel on the surface of the water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">它是否可以在水面创建路径</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_sink</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it will be pulled down by gravity while in water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在水中时是否会被重力拉下</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_swim</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can path anywhere through water and plays swimming animation along that path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水中的任何位置移动，并沿该路径播放游泳动画</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_walk</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can walk on the ground outside water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水外的地面上行走</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_walk_in_lava</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel in lava like walking on ground</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以像在地面上行走一样在熔岩中移动</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">is_amphibious</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can walk on the ground underwater</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水下的地面上行走</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:navigation.swim">minecraft:navigation.swim</p></h2>
 
-Allows this entity to generate paths that include water.</br><h3></h3>
+允许此实体生成包含水的路径。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -15152,122 +15152,122 @@ Allows this entity to generate paths that include water.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_damage_blocks</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid blocks that cause damage when finding a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开造成伤害的方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_portals</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid portals (like nether portals) when finding a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开传送门（如下界传送门）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_sun</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether or not the pathfinder should avoid tiles that are exposed to the sun when creating paths</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在创建路径时是否应避开阳光</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_water</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid water when creating a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开水</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">blocks_to_avoid</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder which blocks to avoid when creating a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在创建路径时要避开哪些方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_breach</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can jump out of water (like a dolphin)</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以跳出水面（像海豚一样）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_break_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed door and break it</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的门并打破它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_jump</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can jump up blocks</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以跳上方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_open_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed door assuming the AI will open the door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的门并打开它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_open_iron_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed iron door assuming the AI will open the door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的铁门并打开它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_pass_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether a path can be created through a door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过门</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_from_air</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can start pathing when in the air</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当它在空中时可以开始寻路</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_over_lava</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel on the surface of the lava</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">它是否可以在熔岩表面创建路径</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_over_water</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel on the surface of the water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">它是否可以在水面创建路径</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_sink</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it will be pulled down by gravity while in water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在水中时是否会被重力拉下</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_swim</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can path anywhere through water and plays swimming animation along that path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水中的任何位置移动，并沿该路径播放游泳动画</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_walk</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can walk on the ground outside water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水外的地面上行走</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_walk_in_lava</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel in lava like walking on ground</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以像在地面上行走一样在熔岩中移动</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">is_amphibious</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can walk on the ground underwater</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水下的地面上行走</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:navigation.walk">minecraft:navigation.walk</p></h2>
 
-Allows this entity to generate paths by walking around and jumping up and down a block like regular mobs.</br><h3></h3>
+允许此实体像普通生物一样通过四处走动和在方块上跳来生成路径。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -15275,126 +15275,126 @@ Allows this entity to generate paths by walking around and jumping up and down a
 <td style="border-style:solid; border-width:2; padding:8px">avoid_damage_blocks</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid blocks that cause damage when finding a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开造成伤害的方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_portals</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid portals (like nether portals) when finding a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开传送门（如下界传送门）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_sun</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether or not the pathfinder should avoid tiles that are exposed to the sun when creating paths</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在创建路径时是否应避开阳光</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_water</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder to avoid water when creating a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在寻找路径时避开水</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">blocks_to_avoid</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder which blocks to avoid when creating a path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在创建路径时要避开哪些方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_breach</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can jump out of water (like a dolphin)</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以跳出水面（像海豚一样）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_break_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed door and break it</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的门并打破它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_jump</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can jump up blocks</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以跳上方块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_open_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed door assuming the AI will open the door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的门并打开它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_open_iron_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can path through a closed iron door assuming the AI will open the door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过一扇关闭的铁门并打开它</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_pass_doors</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether a path can be created through a door</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以穿过门</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_from_air</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder that it can start pathing when in the air</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当它在空中时可以开始寻路</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_over_lava</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel on the surface of the lava</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">它是否可以在熔岩表面创建路径</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_path_over_water</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel on the surface of the water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">它是否可以在水面创建路径</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_sink</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it will be pulled down by gravity while in water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在水中时是否会被重力拉下</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_swim</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can path anywhere through water and plays swimming animation along that path</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水中的任何位置移动，并沿该路径播放游泳动画</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_walk</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can walk on the ground outside water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水外的地面上行走</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">can_walk_in_lava</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can travel in lava like walking on ground</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以像在地面上行走一样在熔岩中移动</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">is_amphibious</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">Tells the pathfinder whether or not it can walk on the ground underwater</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">是否可以在水下的地面上行走</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:out_of_control">minecraft:out_of_control</p></h2>
 
-Defines the entity's 'out of control' state.</br><a href="#Index">返回顶部</a><br><br>
+定义实体的 “失控” 状态。（原版实例：船）</br><a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:peek">minecraft:peek</p></h2>
 
-Defines the entity's 'peek' behavior, defining the events that should be called during it.</br><h3></h3>
+定义实体的 '偷看' 行为，定义在操作期间应调用的事件。（原版实例：潜影贝）</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -15402,30 +15402,30 @@ Defines the entity's 'peek' behavior, defining the events that should be called 
 <td style="border-style:solid; border-width:2; padding:8px">on_close</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to call when the entity is done peeking.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体完成偷看时调用的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">on_open</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to call when the entity starts peeking.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当实体开始窥视时调用的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">on_target_open</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to call when the entity's target entity starts peeking.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当实体的目标实体开始窥视时调用的事件。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:persistent">minecraft:persistent</p></h2>
 
-Defines whether an entity should be persistent in the game world.</br><a href="#Index">返回顶部</a><br><br>
+定义实体是否应在世界中持久化。（永远不会刷新掉）</br><a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:physics">minecraft:physics</p></h2>
 
-Defines physics properties of an actor, including if it is affected by gravity or if it collides with objects.</br><h3></h3>
+定义实体的物理属性，包括它是否受重力影响或是否与对象碰撞。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -15433,20 +15433,20 @@ Defines physics properties of an actor, including if it is affected by gravity o
 <td style="border-style:solid; border-width:2; padding:8px">has_collision</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether or not the object collides with things.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">对象是否与事物发生碰撞。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">has_gravity</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether or not the entity is affected by gravity.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体是否受重力影响。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:preferred_path">minecraft:preferred_path</p></h2>
 
-Specifies costing information for mobs that prefer to walk on preferred paths.</br><h3></h3>
+指定喜欢在首选路径上行走的生物的成本信息。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -15454,32 +15454,32 @@ Specifies costing information for mobs that prefer to walk on preferred paths.</
 <td style="border-style:solid; border-width:2; padding:8px">default_block_cost</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Cost for non-preferred blocks</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">非首选方块的成本</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">jump_cost</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Added cost for jumping up a node</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">跳跃的成本</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">max_fall_blocks</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">3</td>
-<td style="border-style:solid; border-width:2; padding:8px">Distance mob can fall without taking damage</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物不会受到掉落伤害的最大高度</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">preferred_path_blocks</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">A list of blocks with their associated cost</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">方块及其相关成本的列表</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:projectile">minecraft:projectile</p></h2>
 
-Allows the entity to be a thrown entity.</br><h3></h3>
+允许实体成为弹射物。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -15487,182 +15487,182 @@ Allows the entity to be a thrown entity.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">angle_offset</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Determines the angle at which the projectile is thrown</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">改变弹丸垂直射击的角度。游戏中的许多喷溅药水都使用它来将其角度偏移 -20 度。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">catch_fire</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the entity hit will be set on fire</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则弹射物是着火的。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">crit_particle_on_hurt</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the projectile will produce additional particles when a critical hit happens</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则当暴击发生时，弹道将产生额外的粒子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">destroy_on_hurt</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, this entity will be destroyed when hit</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当此弹射物造成伤害时，是否立即摧毁此弹射物</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">filter</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Entity Definitions defined here can't be hurt by the projectile</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此处定义的实体不会受到弹射物的伤害。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">fire_affected_by_griefing</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, whether the projectile causes fire is affected by the mob griefing game rule</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则弹射物是否引起火灾受生物破坏游戏规则的影响。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">gravity</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.05</td>
-<td style="border-style:solid; border-width:2; padding:8px">The gravity applied to this entity when thrown. The higher the value, the faster the entity falls</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">投掷时应用于此实体的重力。当此实体不在地面上时，每个tick内从实体的垂直位置变化中减去此数量。值越高，实体下落的速度就越快。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">hit_sound</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The sound that plays when the projectile hits something</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">击中某物时播放的声音</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">homing</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the projectile homes in to the nearest entity</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则弹射物会追踪到最近的实体。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">inertia</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.99</td>
-<td style="border-style:solid; border-width:2; padding:8px">The fraction of the projectile's speed maintained every frame while traveling in air</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在空中飞行时，弹射物的速度每帧都保持不变</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">is_dangerous</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the projectile will be treated as dangerous to the players</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则弹射物将被视为对玩家构成危险。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">knockback</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the projectile will knock back the entity it hits</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则弹射物将击退它击中的实体</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">lightning</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the entity hit will be struck by lightning</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则被击中的实体将被闪电击中</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">liquid_inertia</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.6</td>
-<td style="border-style:solid; border-width:2; padding:8px">The fraction of the projectile's speed maintained every frame while traveling in water</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在水中飞行时，弹射物的速度每帧都保持不变</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">multiple_targets</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the projectile can hit multiple entities per flight</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则弹射物每次飞行可以击中多个实体</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">offset</td>
 <td style="border-style:solid; border-width:2; padding:8px">向量 [a, b, c]</td>
 <td style="border-style:solid; border-width:2; padding:8px">[0, 0, 0]</td>
-<td style="border-style:solid; border-width:2; padding:8px">The offset from the entity's anchor where the projectile will spawn</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">与将生成弹射物的实体锚点的偏移量。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">on_fire_time</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">5</td>
-<td style="border-style:solid; border-width:2; padding:8px">Time in seconds that the entity hit will be on fire for</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体命中将着火的时间（以秒为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">particle</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px">iconcrack</td>
-<td style="border-style:solid; border-width:2; padding:8px">Particle to use upon collision</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">击中时使用的粒子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">potion_effect</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">-1</td>
-<td style="border-style:solid; border-width:2; padding:8px">Defines the effect the arrow will apply to the entity it hits</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">定义弹射物击中的实体施加的状态效果</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">power</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.3</td>
-<td style="border-style:solid; border-width:2; padding:8px">Determines the velocity of the projectile</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">确定弹射物的速度</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">reflect_on_hurt</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, this entity will be reflected back when hit</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则此实体将在被命中时反射回来</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">semi_random_diff_damage</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, damage will be randomized based on damage and speed</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则最终伤害将根据伤害数值和速度随机化</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">shoot_sound</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The sound that plays when the projectile is shot</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">射击时播放的声音</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">shoot_target</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the projectile will be shot towards the target of the entity firing it</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则弹射物将射向发射它的实体的目标</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">should_bounce</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the projectile will bounce upon hit</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则弹射物会在命中时弹跳</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">splash_potion</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, the projectile will be treated like a splash potion</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则弹射物将被视为喷溅药水</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">splash_range</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">4</td>
-<td style="border-style:solid; border-width:2; padding:8px">Radius in blocks of the 'splash' effect</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">喷溅效果的的半径（以方块为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">uncertainty_base</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The base accuracy. Accuracy is determined by the formula uncertaintyBase - difficultyLevel * uncertaintyMultiplier</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">基本精度。准确率由公式“uncertainty_base - 难度等级 * uncertainty_multiplier”决定</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">uncertainty_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Determines how much difficulty affects accuracy. Accuracy is determined by the formula uncertaintyBase - difficultyLevel * uncertaintyMultiplier</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">确定难度对准确性的影响程度。准确率由公式“uncertainty_base - 难度等级 * uncertainty_multiplier”决定</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:pushable">minecraft:pushable</p></h2>
 
-Defines what can push an entity between other entities and pistons.</br><h3></h3>
+定义是否可以被被其他实体或被活塞推动。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -15670,20 +15670,20 @@ Defines what can push an entity between other entities and pistons.</br><h3></h3
 <td style="border-style:solid; border-width:2; padding:8px">is_pushable</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether the entity can be pushed by other entities.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体是否可以被其他实体推动。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">is_pushable_by_piston</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Whether the entity can be pushed by pistons safely.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体是否可以被活塞推动。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:raid_trigger">minecraft:raid_trigger</p></h2>
 
-Attempts to trigger a raid at the entity's location.</br><h3></h3>
+尝试在实体的位置触发袭击。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -15691,14 +15691,14 @@ Attempts to trigger a raid at the entity's location.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">triggered_event</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to run we attempt to trigger a raid on the village.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要运行的事件，触发对村庄的突袭。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:rail_movement">minecraft:rail_movement</p></h2>
 
-Defines the entity's movement on the rails. An entity with this component is only allowed to move on the rail.</br><h3></h3>
+定义实体在轨道上的移动。具有此组件的实体只允许在轨道上移动。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -15706,14 +15706,14 @@ Defines the entity's movement on the rails. An entity with this component is onl
 <td style="border-style:solid; border-width:2; padding:8px">max_speed</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.4</td>
-<td style="border-style:solid; border-width:2; padding:8px">Maximum speed that this entity will move at when on the rail.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此实体在铁轨上移动的最大速度。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:rail_sensor">minecraft:rail_sensor</p></h2>
 
-<h3></h3>
+定义实体在通过已激活或已停用的轨道时的行为<h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -15721,50 +15721,50 @@ Defines the entity's movement on the rails. An entity with this component is onl
 <td style="border-style:solid; border-width:2; padding:8px">check_block_types</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, on tick this entity will trigger its on_deactivate behavior</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则在tick更新时，此实体将触发其on_deactivate行为</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">eject_on_activate</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, this entity will eject all of its riders when it passes over an activated rail</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则此实体将在经过激活的铁轨时弹出其所有乘客</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">eject_on_deactivate</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, this entity will eject all of its riders when it passes over a deactivated rail</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则此实体将在经过未激活的铁轨时弹出其所有乘客</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">on_activate</td>
-<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
+<td style="border-style:solid; border-width:2; padding:8px">JSON对象</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to call when the rail is activated</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">铁轨是激活状态时要调用的事件</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">on_deactivate</td>
-<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
+<td style="border-style:solid; border-width:2; padding:8px">JSON对象</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to call when the rail is deactivated</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">铁轨是未激活状态时要调用的事件</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">tick_command_block_on_activate</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, command blocks will start ticking when passing over an activated rail</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则命令方块将在通过激活的铁轨时开始被激活</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">tick_command_block_on_deactivate</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If false, command blocks will stop ticking when passing over a deactivated rail</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 false，则命令方块将在通过未激活的铁轨时停止激活</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:ravager_blocked">minecraft:ravager_blocked</p></h2>
 
-Defines the ravager's response to their melee attack being blocked.</br><h3></h3>
+定义劫掠兽对近战攻击被格挡的反应。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -15772,20 +15772,20 @@ Defines the ravager's response to their melee attack being blocked.</br><h3></h3
 <td style="border-style:solid; border-width:2; padding:8px">knockback_strength</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">3.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The strength with which blocking entities should be knocked back</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">击退实体的强度</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">reaction_choices</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px">[ ]</td>
-<td style="border-style:solid; border-width:2; padding:8px">A list of weighted responses to the melee attack being blocked</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">对被格挡的近战攻击的加权响应列表</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:rideable">minecraft:rideable</p></h2>
 
-Determines whether this entity can be ridden. Allows specifying the different seat positions and quantity.</br><h3></h3>
+确定是否可以骑乘此实体。允许指定不同的座椅位置和数量。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -15793,85 +15793,85 @@ Determines whether this entity can be ridden. Allows specifying the different se
 <td style="border-style:solid; border-width:2; padding:8px">controlling_seat</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The seat that designates the driver of the entity. This is only observed by the horse/boat styles of riding; minecarts/entities with "minecraft:controlled_by_player" give control to any player in any seat.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">指定实体驾驶员的座位。这仅通过马/船的骑行方式观察到;带有 “minecraft:controlled_by_player” 的矿车/实体可以将控制权交给任何座位上的任何玩家。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">crouching_skip_interact</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, this entity can't be interacted with if the entity interacting with it is crouching</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则如果与该实体交互的实体处于潜行状态，则无法与该实体交互</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">family_types</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of entities that can ride this entity</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">可以骑乘此实体的实体列表</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">interact_text</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The text to display when the player can interact with the entity when playing with Touch-screen controls</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当玩家在使用触摸屏控件玩游戏时可以与实体交互时显示的按钮文本</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">priority</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">This field may exist in old data but isn't used by minecraft:rideable.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此字段可能存在于旧数据中，但未被 minecraft:rideable 使用。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">pull_in_entities</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, this entity will pull in entities that are in the correct family_types into any available seats</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则此实体会将位于正确family_types中的实体拉到任何可用席位中</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">rider_can_interact</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">If true, this entity will be picked when looked at by the rider</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果为 true，则骑手查看时将选择此实体（原文：If true, this entity will be picked when looked at by the rider）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">seat_count</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1</td>
-<td style="border-style:solid; border-width:2; padding:8px">The number of entities that can ride this entity at the same time</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">可以同时骑乘此实体的实体数量</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">seats</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The list of positions and number of riders for each position for entities riding this entity</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">骑乘此实体的实体的位置列表和每个位置的骑手数量</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">lock_rider_rotation</td>
 <td style="border-style:solid; border-width:1; padding:9px">小数</td>
 <td style="border-style:solid; border-width:1; padding:9px">181</td>
-<td style="border-style:solid; border-width:1; padding:9px">Angle in degrees that a rider is allowed to rotate while riding this entity. Omit this property for no limit</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">允许骑手在骑乘此实体时旋转的角度（以度为单位）。无限制地省略此属性（原文：Angle in degrees that a rider is allowed to rotate while riding this entity. Omit this property for no limit）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">max_rider_count</td>
 <td style="border-style:solid; border-width:1; padding:9px">整数</td>
 <td style="border-style:solid; border-width:1; padding:9px">seat_count</td>
-<td style="border-style:solid; border-width:1; padding:9px">Defines the maximum number of riders that can be riding this entity for this seat to be valid</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">定义此座位有效时可以乘坐此实体的最大骑手数</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">min_rider_count</td>
 <td style="border-style:solid; border-width:1; padding:9px">整数</td>
 <td style="border-style:solid; border-width:1; padding:9px">0</td>
-<td style="border-style:solid; border-width:1; padding:9px">Defines the minimum number of riders that need to be riding this entity before this seat can be used</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">定义在使用此座位之前需要乘坐此实体的最小骑手数</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">position</td>
 <td style="border-style:solid; border-width:1; padding:9px">向量 [a, b, c]</td>
 <td style="border-style:solid; border-width:1; padding:9px">[0, 0, 0]</td>
-<td style="border-style:solid; border-width:1; padding:9px">Position of this seat relative to this entity's position</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">此座位相对于此实体位置的位置</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">rotate_rider_by</td>
 <td style="border-style:solid; border-width:1; padding:9px">Molang</td>
 <td style="border-style:solid; border-width:1; padding:9px">0</td>
-<td style="border-style:solid; border-width:1; padding:9px">Offset to rotate riders by</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">偏移以旋转骑手</br></td>
 </tr>
 </table>
 </td>
@@ -15881,7 +15881,7 @@ Determines whether this entity can be ridden. Allows specifying the different se
 
 <h2><p id="minecraft:scale_by_age">minecraft:scale_by_age</p></h2>
 
-Defines the entity's size interpolation based on the entity's age.</br><h3></h3>
+根据实体的年龄定义实体的大小。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -15889,20 +15889,20 @@ Defines the entity's size interpolation based on the entity's age.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">end_scale</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1</td>
-<td style="border-style:solid; border-width:2; padding:8px">Ending scale of the entity when it's fully grown.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">实体完全增长时的大小。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">start_scale</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1</td>
-<td style="border-style:solid; border-width:2; padding:8px">Initial scale of the newborn entity.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">婴儿实体的初始大小。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:scheduler">minecraft:scheduler</p></h2>
 
-Fires off scheduled mob events at time of day events.</br><h3></h3>
+在一天中的时间触发预定的生物事件 。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -15910,14 +15910,14 @@ Fires off scheduled mob events at time of day events.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">scheduled_events</td>
 <td style="border-style:solid; border-width:2; padding:8px">List</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The list of triggers that fire when the conditions match the given filter criteria. If any filter criteria overlap the first defined event will be picked.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当条件与给定筛选条件匹配时触发的触发器列表。如果任何筛选条件重叠，则将选取第一个定义的事件。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:shareables">minecraft:shareables</p></h2>
 
-Defines a list of items the mob wants to share or pick up. Each item must have the following parameters:</br><h3></h3>
+定义生物想要分享或拾取的物品列表。每个物品必须具有以下参数：</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -16000,7 +16000,7 @@ Number of this item this entity wants to have.</br><a href="#Index">返回顶部
 
 <h2><p id="minecraft:shooter">minecraft:shooter</p></h2>
 
-Defines the entity's ranged attack behavior.</br><h3></h3>
+定义实体的远程攻击行为。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -16008,20 +16008,20 @@ Defines the entity's ranged attack behavior.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">aux_val</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">-1</td>
-<td style="border-style:solid; border-width:2; padding:8px">ID of the Potion effect to be applied on hit</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">命中时要应用的药水效果的 ID</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">def</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Actor definition to use as projectile for the ranged attack. The actor definition must have the projectile component to be able to be shot as a projectile</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">用作远程攻击的弹射物的定义。定义必须具有 projectile 组件才能作为弹射物进行射击</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="minecraft:sittable">minecraft:sittable</p></h2>
 
-Defines the entity's 'sit' state.</br><h3></h3>
+定义实体的坐下状态。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -16029,13 +16029,13 @@ Defines the entity's 'sit' state.</br><h3></h3>
 <td style="border-style:solid; border-width:2; padding:8px">sit_event</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to run when the entity enters the 'sit' state</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当实体进入坐下状态时运行的事件</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">stand_event</td>
 <td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Event to run when the entity exits the 'sit' state</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">当实体退出坐下状态时运行的事件</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
