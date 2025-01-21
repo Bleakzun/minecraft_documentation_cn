@@ -1,5 +1,5 @@
 <h1>ADDONS DOCUMENTATION </br>Version: 1.21.50.7</h1>
-<h2><p id="Index">Index</p></h2>
+<h2><p id="Index">索引</p></h2>
 <table border="1">
 <tr> <th><a href="#Blocks">Blocks</a></th> </tr>
 <tr> <td> <a href="#AuxValueToBlockStatesMap"> AuxValueToBlockStatesMap（数据值到方块状态图）</a> </tr> </td>
@@ -24435,7 +24435,7 @@
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">enabled_states</td>
-<td style="border-style:solid; border-width:2; padding:8px">Array</td>
+<td style="border-style:solid; border-width:2; padding:8px">数组</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
 <td style="border-style:solid; border-width:2; padding:8px">要启用的状态。必须至少指定一个。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
@@ -24443,13 +24443,13 @@
 <td style="border-style:solid; border-width:1; padding:9px">minecraft:cardinal_direction</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px">north, south, east, west</td>
-<td style="border-style:solid; border-width:1; padding:9px">Defines the cardinal placement direction of a block.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">定义方块的放置方向。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">minecraft:facing_direction</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px">down, up, north, south, east, west</td>
-<td style="border-style:solid; border-width:1; padding:9px">Defines all placement directions of a block.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">定义方块的所有放置方向。</br></td>
 </tr>
 </table>
 </td>
@@ -24458,7 +24458,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">y_rotation_offset</td>
 <td style="border-style:solid; border-width:2; padding:8px">Decimal</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0 - 360.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The y rotation offset to apply to the block. Must be [0.0, 90.0, 180.0, 270.0]. Default is 0, meaning if the player is facing north, the "minecraft:cardinal_direction" and/or minecraft:facing_direction state will be north.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要应用于块的 y 旋转偏移量。必须为 [0.0， 90.0， 180.0， 270.0]。默认值为 0，这意味着如果玩家朝北，则 "minecraft:cardinal_direction" 和/或 "minecraft:facing_direction" 状态将为北。</br></td>
 </tr>
 </table>
 </td>
@@ -24466,25 +24466,25 @@
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">"minecraft:placement_position"</td>
 <td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
-<td style="border-style:solid; border-width:3; padding:7px">Adds the "minecraft:block_face" and/or "minecraft:vertical_half" BlockStates. The value of these state(s) are set when the block is placed.</br>Experimental toggles required: Upcoming Creator Features (in format versions before 1.20.20)</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<td style="border-style:solid; border-width:3; padding:7px">添加 "minecraft:block_face" 和/或 "minecraft:vertical_half" 方块状态。这些状态的值是在放置块时设置的。</br>需要打开的实验性玩法：即将推出的创作者功能（1.20.20 之前的格式版本）</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">enabled_states</td>
-<td style="border-style:solid; border-width:2; padding:8px">Array</td>
+<td style="border-style:solid; border-width:2; padding:8px">数组</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Which states to enable. Must specify at least one.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:2; padding:8px">要启用的状态。必须至少指定一个。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">minecraft:block_face</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px">down, up, north, south, east, west</td>
-<td style="border-style:solid; border-width:1; padding:9px">Which blockface the player placed the block on.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">玩家将块放置在方块的哪个面上。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">minecraft:vertical_half</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px">bottom, top</td>
-<td style="border-style:solid; border-width:1; padding:9px">Which vertical half of the space the block is placed in.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">半砖放置在哪个垂直半部分的空间。</br></td>
 </tr>
 </table>
 </td>
@@ -37982,151 +37982,151 @@
 
 <h1><p id="manifest.json">manifest.json</p></h1>
 
-The manifest file contains all the basic information about the pack that Minecraft needs to identify it. The tables below contain all the components of the manifest, their individual properties, and what they mean.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:4;">
+清单文件包含了Minecraft须要对包进行识别时所需的所有基本信息。下表包含清单的所有组件、它们各自的属性以及它们的含义。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:4;">
 <tr> <th style="border-style:solid; border-width:4;">名称</th> <th style="border-style:solid; border-width:4;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:4; padding:6px">capabilities</td>
-<td style="border-style:solid; border-width:4; padding:6px">These are the different features that the pack makes use of that aren't necessarily enabled by default.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<td style="border-style:solid; border-width:4; padding:6px">这些是包能够利用的不同功能，它们在默认情况下不必启用。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">chemistry</td>
-<td style="border-style:solid; border-width:3; padding:7px">Allows the pack to add, change or replace Chemistry functionality</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">允许该包加入、更改或替换化学功能</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">editorExtension</td>
-<td style="border-style:solid; border-width:3; padding:7px">Indicates that this pack contains extensions for editing</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">指示此包包含用于编辑的扩展</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">experimental_custom_ui</td>
-<td style="border-style:solid; border-width:3; padding:7px">Allows HTML files in the pack to be used for custom UI, and scripts in the pack to call and manipulate custom UI</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">允许将该包中的HTML文件用于自定义UI，并允许包中的脚本调用和操纵自定义UI</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">raytraced</td>
-<td style="border-style:solid; border-width:3; padding:7px">Indicates that this pack contains Raytracing Enhanced or Physical Based Materials for rendering</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">表示该包包含用于渲染的光线追踪增强的材质或基于物理的材质</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:4; padding:6px">dependencies</td>
-<td style="border-style:solid; border-width:4; padding:6px">This section describes the packs that this pack depends on in order to work. Any packs defined here will be automatically added to the world when this one is added if they are present, or an error will be shown if they aren't. Each entry has the following parameters:</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<td style="border-style:solid; border-width:4; padding:6px">本段落描述了该包为了能够工作而需要依赖的包。此处定义的任何包如果存在，都将在该包添加到世界中时自动添加到世界中，如果不存在，则将显示一个错误。其中每一项都有以下参数：</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">uuid</td>
 <td style="border-style:solid; border-width:3; padding:7px">字符串</td>
-<td style="border-style:solid; border-width:3; padding:7px">This is the unique identifier of the pack that this pack depends on. It needs to be the exact same UUID that the pack has defined in the header section of it's manifest file</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">这是该包所依赖的包的唯一标识符。它需要与所依赖的包在清单文件的header段落中定义的UUID完全相同</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">version</td>
-<td style="border-style:solid; border-width:3; padding:7px">Vector [a, b, c]</td>
-<td style="border-style:solid; border-width:3; padding:7px">This is the specific version of the pack that your pack depends on. Should match the version the other pack has in its manifest file</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">向量 [a, b, c]</td>
+<td style="border-style:solid; border-width:3; padding:7px">这是你的包所依赖的包的特定版本。应该与所依赖的包在其清单文件中的版本匹配</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:4; padding:6px">format_version</td>
-<td style="border-style:solid; border-width:4; padding:6px">This defines the current version of the manifest. Don't change this unless you have a good reason to</br></td>
+<td style="border-style:solid; border-width:4; padding:6px">这里定义了清单的当前版本。除非你有充分的理由，否则请不要更改此设置</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:4; padding:6px">header</td>
-<td style="border-style:solid; border-width:4; padding:6px">This is the heading of the manifest and is required for the manifest to be valid.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<td style="border-style:solid; border-width:4; padding:6px">这里是该清单的头，是使该清单有效所必需的段落。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">allow_random_seed</td>
 <td style="border-style:solid; border-width:3; padding:7px">布尔值</td>
-<td style="border-style:solid; border-width:3; padding:7px">This option will generate a random seed every time a template is loaded and allow the player to change the seed before creating a new world.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">此选项将在每次加载模板时生成一个随机种子，并允许玩家在创建新世界之前更改种子。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">base_game_version</td>
-<td style="border-style:solid; border-width:3; padding:7px">Vector [a, b, c]</td>
-<td style="border-style:solid; border-width:3; padding:7px">This is the version of the base game your world template requires, specified as [majorVersion, minorVersion, revision].</br>We use this to determine what version of the base game resource and behavior packs to apply when your content is used.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">向量 [a, b, c]</td>
+<td style="border-style:solid; border-width:3; padding:7px">这是你的世界模板所需要的基游戏的版本，格式为[主要版本, 次要版本, 修订版本]。</br>我们使用该字段来确定在应用你的内容时应该使用什么版本的基游戏资源包和基游戏行为包。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">description</td>
 <td style="border-style:solid; border-width:3; padding:7px">字符串</td>
-<td style="border-style:solid; border-width:3; padding:7px">This is a short description of the pack. It will appear in the game below the name of the pack. We recommend keeping it to 1-2 lines.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">这是对该包的简短描述。它会出现在游戏中包的名字的下面。我们建议保持在1-2行之内。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">lock_template_options</td>
 <td style="border-style:solid; border-width:3; padding:7px">布尔值</td>
-<td style="border-style:solid; border-width:3; padding:7px">This option is required for any world templates. This will lock the player from modifying the options of the world.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">任何世界模板都必须选择这个选项。设置为true将阻止玩家修改游戏世界的选项。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">min_engine_version</td>
 <td style="border-style:solid; border-width:3; padding:7px">字符串</td>
-<td style="border-style:solid; border-width:3; padding:7px">This is the minimum version of the game that this pack was written for.  This is a required field for resource and behavior packs. This helps the game identify whether any backwards compatibility is needed for your pack. You should always use the highest version currently available when creating packs</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">这是该包编写适用于的游戏的最低版本。它是资源包和行为包的必须字段。该字段可以帮助游戏识别你的包是否需要向后兼容。在创建包时，你应该始终使用当前可用的最高版本</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">name</td>
 <td style="border-style:solid; border-width:3; padding:7px">字符串</td>
-<td style="border-style:solid; border-width:3; padding:7px">This is the name of the pack as it appears within Minecraft. This is a required field.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">这是该包将在Minecraft中出现的名字。它是必须字段。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">uuid</td>
 <td style="border-style:solid; border-width:3; padding:7px">字符串</td>
-<td style="border-style:solid; border-width:3; padding:7px">This is a special type of identifier that uniquely identifies this pack from any other pack. UUIDs are written in the format xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx where each x is a hexadecimal value (0-9 or a-f). We recommend using an online service to generate this and guarantee their uniqueness (just bing UUID Generator to find some)</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">这是一种特殊类型的标识符，它可以将此包与其他包惟一标识开来。UUID均写作xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx格式，其中每个x为一个十六进制值（0-9或a-f）。我们建议使用在线服务来生成它，以保证其唯一性（只需必应一下“UUID生成器”就可以找到一些在线生成网站）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">version</td>
-<td style="border-style:solid; border-width:3; padding:7px">Vector [a, b, c]</td>
-<td style="border-style:solid; border-width:3; padding:7px">This is the version of your pack in the format [majorVersion, minorVersion, revision].</br>The version number is used when importing a pack that has been imported before. The new pack will replace the old one if the version is higher, and ignored if it's the same or lower</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">向量 [a, b, c]</td>
+<td style="border-style:solid; border-width:3; padding:7px">这是你的包的版本，格式为[主要版本, 次要版本, 修订版本]。</br>该版本号主要在于之前导入过该包的旧版本时起作用。在导入新包时，如果新包版本更高，新包将取代旧包；如果版本相同或新包更低，则不进行导入操作</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:4; padding:6px">metadata</td>
-<td style="border-style:solid; border-width:4; padding:6px">This section contains additional data about your pack and is otherwise optional.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<td style="border-style:solid; border-width:4; padding:6px">该段落包含有关你的包的额外数据，是另行可选的。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">authors</td>
-<td style="border-style:solid; border-width:3; padding:7px">Array</td>
-<td style="border-style:solid; border-width:3; padding:7px">Name of the author(s) of the pack</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">数组</td>
+<td style="border-style:solid; border-width:3; padding:7px">该包的作者的名字</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">license</td>
 <td style="border-style:solid; border-width:3; padding:7px">字符串</td>
-<td style="border-style:solid; border-width:3; padding:7px">The license of the pack</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">该包的许可证</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">url</td>
 <td style="border-style:solid; border-width:3; padding:7px">字符串</td>
-<td style="border-style:solid; border-width:3; padding:7px">The home website of your pack</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">你的包的主页网站</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:4; padding:6px">modules</td>
-<td style="border-style:solid; border-width:4; padding:6px">This section describes the modules that comprise the pack. Each entry here defines one of the kinds of contents of the pack.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<td style="border-style:solid; border-width:4; padding:6px">本段落描述了组成该包的模块。这里的每一项都定义了包的一种内容。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">description</td>
 <td style="border-style:solid; border-width:3; padding:7px">字符串</td>
-<td style="border-style:solid; border-width:3; padding:7px">This is a short description of the module. This is not user-facing at the moment but is a good place to remind yourself why the module is defined</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">这是对该模块的简短描述。这个值当前不是用户可见的，但这是一个提醒自己为什么定义了这个模块的好地方</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">type</td>
 <td style="border-style:solid; border-width:3; padding:7px">字符串</td>
-<td style="border-style:solid; border-width:3; padding:7px">This is the type of the module. Can be any of the following: resources, data, client_data, interface, world_template</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">这是该模块的类型，可以是以下任何一种：resources，data，client_data，interface，world_template</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">uuid</td>
 <td style="border-style:solid; border-width:3; padding:7px">字符串</td>
-<td style="border-style:solid; border-width:3; padding:7px">This is a unique identifier for the module in the same format as the pack's UUID in the header. This should be different from the pack's UUID, and different for every module</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">这是该模块的唯一标识符，格式与包在header中的UUID相同。模块的UUID不应与包的UUID相同，并且模块之间也不应相同</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">version</td>
-<td style="border-style:solid; border-width:3; padding:7px">Vector [a, b, c]</td>
-<td style="border-style:solid; border-width:3; padding:7px">This is the version of the module in the same format as the pack's version in the header. This can be used to further identify changes in your pack</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">向量 [a, b, c]</td>
+<td style="border-style:solid; border-width:3; padding:7px">这是该模块的版本，格式与包在header中的版本相同。这可以用来进一步标识包中的更改</br></td>
 </tr>
 </table>
 </td>
 </tr>
 </table>
 <h2>Examples</h2>
-Behavior Pack<br / ><textarea readonly="true" cols="60" rows="32">
+行为包<br / ><textarea readonly="true" cols="60" rows="32">
 
 {
     "format_version": 1,
@@ -38159,7 +38159,7 @@ Behavior Pack<br / ><textarea readonly="true" cols="60" rows="32">
 }
 
 </textarea> </br>
-Resource Pack<br / ><textarea readonly="true" cols="60" rows="22">
+资源包<br / ><textarea readonly="true" cols="60" rows="22">
 
 {
     "format_version": 1,
