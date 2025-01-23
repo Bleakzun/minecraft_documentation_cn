@@ -11,21 +11,21 @@
 <tr> <td> <a href="#Referencing Texture Resources"> Referencing Texture Resources</a> </tr> </td>
 </table>
 <a href="#Index">Back to top</a>
-<h1><p id="Texture Sets">Texture Sets</p></h1>
+<h1><p id="Texture Sets">纹理集</p></h1>
 
-Minecraft supports a Physically Based Rendering (PBR) color pipeline (e.g. used for Ray Tracing). 		This uses more texture data than simply 'color' to enable richer, more realistic visuals. 		With the PBR approach, you can have layers for different specular reflections, emissivity, normal maps, etc. which goes beyond the Classic color pipeline for Vanilla Minecraft. 		Texture Sets have been added as the feature for defining multiple PBR layers for a texture resource. Texture sets are data driven from json files.</br><h1><p id="Texture Set Json Schema">Texture Set Json Schema</p></h1>
+Minecraft 支持基于物理的渲染 （PBR） 颜色管道（例如，用于光线追踪）。这使用更多的纹理数据，而不仅仅是“颜色”，以实现更丰富、更逼真的视觉效果。使用 PBR 方法，您可以为不同的镜面反射、发射率、法线贴图等创建图层，这超出了原版Minecraft的经典颜色管道。添加了纹理集作为为纹理资源定义多个 PBR 图层的功能。纹理集是从 json 文件驱动的数据。</br><h1><p id="Texture Set Json Schema">纹理集 Json 架构</p></h1>
 
-<h2>Texture Set Json Schema</h2>
+<h2>纹理集 Json 架构</h2>
 
 ```</br>--------</br>{</br>    version "format_version"</br>    object "minecraft:texture_set"</br>    {</br>        color "color" : opt // Fill RGBA channels of a textureset layer with the specified values in an array or hex string</br>        string "color" : opt // The texture name of a textureset layer</br>        string "normal" : opt // The texture name of a textureset layer</br>        string "heightmap" : opt // The texture name of a textureset layer</br>        color "metalness_emissive_roughness" : opt // Fill RGB channels of a textureset layer with the specified values in an array or hex string</br>        string "metalness_emissive_roughness" : opt // The texture name of a textureset layer</br>    }</br>}</br></br>----------</br>```</br><a href="#Index">Back to top</a><br><br>
 
-<h1><p id="Layers">Layers</p></h1>
+<h1><p id="Layers">图层</p></h1>
 
-A texture_set.json file may specify several layers.</br>Layers are references to texture image resources. they can also be defined in .json as values for uniform solid values as an alternative to referencing texture images in a pack.</br></br><h2></h2>
+texture_set.json 文件可以指定多个图层。</br>图层是对纹理图像资源的引用。它们也可以在 .json 中定义为 Uniform Solid 值的值，作为在包中引用纹理图像的替代方法。</br></br><h2></h2>
 
 <h2><p id="Color">Color</p></h2>
 
-- This is an RGB 3-channel image (defaults to uniform alpha of 1.0), or an RGBA 4-channel image, or a 4 value array for a uniform color with alpha.</br>- This is the only required layer.</br>- It is the only layer used by the Classic pipeline.</br>- Typically there is lighting baked in the color image.</br><a href="#Index">Back to top</a><br><br>
+- 这是 RGB 3 通道图像（默认为统一 Alpha 为 1.0），或 RGBA 4 通道图像，或具有 Alpha 的统一颜色的 4 值数组。</br>- 这是唯一必需的图层。</br>- It is the only layer used by the Classic pipeline.</br>- Typically there is lighting baked in the color image.</br><a href="#Index">Back to top</a><br><br>
 
 <h2><p id="Normal">Normal</p></h2>
 
