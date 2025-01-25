@@ -2033,7 +2033,7 @@ CoordinateEvaluationOrder enumerator, supported values are: "xyz", "xzy", "yxz",
 Represents the scatter distrubution over a coordinate (x/y/z), can also be built by an expression.</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">distribution</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
@@ -2049,13 +2049,13 @@ Represents the scatter distrubution over a coordinate (x/y/z), can also be built
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">grid_offset</td>
 <td style="border-style:solid; border-width:3; padding:7px">Integer</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">When the distribution type is grid, defines the offset along this axis.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">step_size</td>
 <td style="border-style:solid; border-width:3; padding:7px">Integer</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">When the distribution type is grid, defines the distance between steps along this axis.</br></td>
 </tr>
 </table>
@@ -2066,11 +2066,11 @@ Represents the scatter distrubution over a coordinate (x/y/z), can also be built
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:biome_filter</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">List of filter tests to determine which biomes this rule will attach to.</br></td>
 </tr>
 <tr>
@@ -2087,7 +2087,7 @@ Represents the scatter distrubution over a coordinate (x/y/z), can also be built
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">conditions</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type Feature Rule Conditions</td>
@@ -2103,7 +2103,7 @@ Represents the scatter distrubution over a coordinate (x/y/z), can also be built
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">distribution</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type Scatter Params</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">Parameters controlling the initial scatter of the feature.</br></td>
 </tr>
 </table>
@@ -2114,7 +2114,7 @@ Represents the scatter distrubution over a coordinate (x/y/z), can also be built
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">identifier</td>
 <td style="border-style:solid; border-width:3; padding:7px">String</td>
@@ -2135,53 +2135,53 @@ Represents the scatter distrubution over a coordinate (x/y/z), can also be built
 Filters allow data objects to specify test criteria which allows their use. Filters can be defined by a single object of type (Filter Test), an array of tests, collection groups, or a combination of these objects.</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">AND</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">Evaluates all tests in the group, all must pass in order for the group to pass.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">NOT</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">Evaluates all tests in the group, all must fail in order for the group to pass.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">OR</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">Evaluates tests in the group, one or more must pass in order for the group to pass.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">all</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">Evaluates all tests in the group, all must pass in order for the group to pass.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">all_of</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">Evaluates all tests in the group, all must pass in order for the group to pass.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">any</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">Evaluates tests in the group, one or more must pass in order for the group to pass.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">any_of</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">Evaluates tests in the group, one or more must pass in order for the group to pass.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">none_of</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">Evaluates all tests in the group, all must fail in order for the group to pass.</br></td>
 </tr>
 </table>
@@ -2192,23 +2192,23 @@ Filters allow data objects to specify test criteria which allows their use. Filt
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">domain</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">The domain the test should be performed in.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">operator</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">The comparison to apply with 'value'.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">subject</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">The subject of this filter test.</br></td>
 </tr>
 <tr>
@@ -2220,7 +2220,7 @@ Filters allow data objects to specify test criteria which allows their use. Filt
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">value</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">The value being compared with the test.</br></td>
 </tr>
 </table>
@@ -2235,7 +2235,7 @@ RandomDistributionType enumerator, supported values are: "uniform", "gaussian", 
 Scatter probability represented by an expression or an object with a numerator and denominator.</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">denominator</td>
 <td style="border-style:solid; border-width:3; padding:7px">Integer</td>
@@ -2256,11 +2256,11 @@ Scatter probability represented by an expression or an object with a numerator a
 Controls the scatter distribution of a particular object.</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">coordinate_eval_order</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">The order in which coordinates will be evaluated. Should be used when a coordinate depends on another. If omitted, defaults to "xzy". Supported orders are defined by "Coordinate Evaluation Order".</br></td>
 </tr>
 <tr>
@@ -2272,7 +2272,7 @@ Controls the scatter distribution of a particular object.</br><h2></h2>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">scatter_chance</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type Scatter Chance</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">Probability that this scatter will occur. Not evaluated each iteration; either no iterations will run, or all will.</br></td>
 </tr>
 <tr>
