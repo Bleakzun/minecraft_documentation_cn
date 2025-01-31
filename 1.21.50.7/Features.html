@@ -440,8 +440,8 @@
 
 <h1><p id="minecraft:search_feature">minecraft:search_feature</p></h1>
 
-'minecraft:search_feature' sweeps a volume searching for a valid placement location for its referenced feature. The 'search_volume' field specifies the axis-aligned bounding box that defines the boundaries of the search. The search sweeps along the axis defined by the 'search_axis' field, layer by layer. For example, if 'search_axis' = '-x', blocks with greater x values will be checked before blocks with lower x values. Each layer is searched from the bottom-left to the top-right before moving to the next layer along the axis. By default, only one valid position must be found, but this can be altered by specifying the 'required_successes' field. If fewer than the required successes are found, no placement will occur.</br>Succeeds if: The number of valid positions is equal to the value specified by 'required_successes'.</br>Fails if: The number of valid positions is less than the value specified by 'required_successes'.</br><h2></h2>
-Example use: Attaching apples to a tree canopy<br / ><textarea readonly="true" cols="56" rows="16">
+'minecraft：search_feature' 扫描一个卷，为其引用的地物搜索有效的放置位置。'search_volume' 字段指定定义搜索边界的轴对齐边界框。搜索将沿 'search_axis' 字段定义的轴逐层扫描。例如，如果 'search_axis' = '-x'，则 x 值较大的块将在 x 值较小的块之前被检查。在沿轴移动到下一层之前，将从左下角到右上角搜索每层。默认情况下，只能找到一个有效位置，但这可以通过指定 'required_successes' 字段来更改。如果找到的成功数少于所需的成功数，则不会发生放置。</br>如果出现以下情况，则成功：有效位置的数量等于 'required_successes' 指定的值。</br>如果出现以下情况，则失败：有效位置的数量小于 'required_successes' 指定的值。</br><h2></h2>
+示例：将苹果连接到树冠上<br / ><textarea readonly="true" cols="56" rows="16">
 {
   "format_version": "1.13.0",
   "minecraft:search_feature": {
@@ -462,8 +462,8 @@ Example use: Attaching apples to a tree canopy<br / ><textarea readonly="true" c
 
 <h1><p id="minecraft:single_block_feature">minecraft:single_block_feature</p></h1>
 
-'minecraft:single_block_feature' places a single block in the world. The 'places_block' field supports a single block or a list of weighted blocks, where the weight defines how likely it is for that block to be selected. The 'may_attach_to' and 'may_replace' fields are allowlists which specify where the block can be placed. If these fields are omitted, the block can be placed anywhere. The 'may_not_attach_to' field is a denylist that specifies what blocks can't be close to the placement location. The 'randomize_rotation' field will randomize the block's cardinal orientation. The block's internal survivability and placement rules can optionally be enforced with the 'enforce_survivability_rules' and 'enforce_placement_rules' fields. These rules are specified per-block and are typically designed to produce high quality gameplay or natural behavior. However, enabling this enforcement may make it harder to debug placement failures.</br>Succeeds if: The block is successfully placed in the world.</br>Fails if: The block fails to be placed.</br><h2></h2>
-Example use: Placing a single pumpkin or carved pumpkin block where carved pumpkins are less likely to appear.<br / ><textarea readonly="true" cols="53" rows="32">
+'Minecraft：single_block_feature' 在世界中放置一个方块。'places_block' 字段支持单个方块或加权方块列表，其中权重定义该方块被选中的可能性。'may_attach_to' 和 'may_replace' 字段是允许列表，用于指定可以放置阻止的位置。如果省略这些字段，则可以将块放置在任何位置。'may_not_attach_to' 字段是一个拒绝列表，用于指定哪些方块不能靠近放置位置。'randomize_rotation' 字段将随机化方块的基数方向。方块的内部生存能力和放置规则可以选择使用 'enforce_survivability_rules' 和 'enforce_placement_rules' 字段来强制执行。这些规则是按方块指定的，通常旨在生成高质量的游戏或自然行为。但是，启用此强制可能会使调试放置失败变得更加困难。</br>如果出现以下情况，则成功：方块已成功放置在世界中。</br>如果出现以下情况，则失败 ：放置方块失败。</br><h2></h2>
+示例：将单个南瓜或雕刻南瓜放置在雕刻南瓜不太可能出现的地方。<br / ><textarea readonly="true" cols="53" rows="32">
 {
   "format_version": "1.21.40",
   "minecraft:single_block_feature": {
@@ -506,8 +506,8 @@ Example use: Placing a single pumpkin or carved pumpkin block where carved pumpk
 
 <h1><p id="minecraft:snap_to_surface_feature">minecraft:snap_to_surface_feature</p></h1>
 
-'minecraft:snap_to_surface_feature' snaps the y-value of a feature placement pos to the floor or the ceiling within the provided 'vertical_search_range'. The placement biome is preserved. If the snap position goes outside of the placement biome, placement will fail.</br><h2></h2>
-Example use: Define a feature that snaps the 'cave_vine_feature' to the ceiling.<br / ><textarea readonly="true" cols="71" rows="17">
+Minecraft：snap_to_surface_feature' 将地物放置 pos 的 y 值捕捉到提供的 'vertical_search_range' 内的地板或天花板。放置生物群系被保留。如果对齐位置超出放置生物群系，则放置将失败。</br><h2></h2>
+示例：定义一个将“cave_vine_feature”捕捉到天花板的功能。<br / ><textarea readonly="true" cols="71" rows="17">
 {
         "format_version": "1.13.0",
         "minecraft:snap_to_surface_feature": {

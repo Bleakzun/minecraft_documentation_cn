@@ -1,8 +1,10 @@
 # minecraft addons 文档中文翻译
 minecraft基岩版文档中文翻译，文档来源：[Mojang/bedrock-samples](https://github.com/Mojang/bedrock-samples)、[bedrock-dot-dev/docs](https://github.com/bedrock-dot-dev/docs)
 ## 文档版本索引
-[1.18.10.4](1.18.10/Index.html)
-[1.21.50.7](1.21.50.7/index.html)
+- [1.18.10.4](1.18.10/Index.html)
+- [1.21.50.7](1.21.50.7/index.html)
+## 本仓库托管的GitHub pages
+[minecraft_documentation_cn](https://bleakzun.github.io/minecraft_documentation_cn/)
 ## 作者
 - 此文档由[CMWither](https://github.com/DrCMWither)与[FLORA](https://github.com/Bleakzun)一同翻译(可加入翻译组)
 - 部分翻译取自[bedrock.dev](https://bedrock.dev/zh)
