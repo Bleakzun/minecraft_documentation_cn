@@ -115,7 +115,7 @@
 
 <h1><p id="Events">事件</p></h1>
 
-</br>事件由三个类别组成，均由字符串表示：</br>- Entity events（实体事件）</br>- Slash Commands（斜杠命令）</br>- Molang Expressions（MoLang表达式）</br></br>详细地：</br></br>实体事件：仅限服务端（行为包）。目前，我们只支持实体事件 self，这些事件采用 “@s event” 的形式。这些是在实体定义文件的 events 部分中声明的事件。例如，在cat.json中，“minecraft：ageable_grow_up”事件会导致小猫长大。这将采用 “@s minecraft：ageable_grow_up” 的形式</br></br>斜杠命令：仅限服务端（行为包）。可以调用任何斜杠命令，例如 “/particle minecraft：example_smoke_puff ~ ~ ~”。斜杠命令的假定实体是调用实体，因此此特定斜杠命令将在实体的位置生成烟雾喷气效果。</br></br>Molang 表达式：这将执行 Molang 表达式。主要用途是设置以后可以使用的 Molang 变量。例如，状态转换可能正在查看一个特定的 Molang 变量，而此表达式可能会更改该变量。实体上的粒子效果可能会因效果用于颜色色调的 Molang 变量而更改颜色。用于移动手臂的动画可能会使用由动画事件设置的 Molang 变量。</br><h2></h2>
+</br>事件由三个类别组成，均由字符串表示：</br>- Entity events（实体事件）</br>- Slash Commands（斜杠命令）</br>- Molang Expressions（MoLang表达式）</br></br>详细地：</br></br>实体事件：仅限服务端（行为包）。目前，我们只支持实体事件 self，这些事件采用 “@s event” 的形式。这些是在实体定义文件的 events 部分中声明的事件。例如，在cat.json中，“minecraft:ageable_grow_up”事件会导致小猫长大。这将采用 “@s minecraft:ageable_grow_up” 的形式</br></br>斜杠命令：仅限服务端（行为包）。可以调用任何斜杠命令，例如 “/particle minecraft:example_smoke_puff ~ ~ ~”。斜杠命令的假定实体是调用实体，因此此特定斜杠命令将在实体的位置生成烟雾喷气效果。</br></br>Molang 表达式：这将执行 Molang 表达式。主要用途是设置以后可以使用的 Molang 变量。例如，状态转换可能正在查看一个特定的 Molang 变量，而此表达式可能会更改该变量。实体上的粒子效果可能会因效果用于颜色色调的 Molang 变量而更改颜色。用于移动手臂的动画可能会使用由动画事件设置的 Molang 变量。</br><h2></h2>
 <br / ><textarea readonly="true" cols="95" rows="12">
 
 // entity event (behavior packs only), put the particular event name after the @s

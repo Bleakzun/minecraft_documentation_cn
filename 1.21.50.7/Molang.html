@@ -1,11 +1,11 @@
 <h1>MOLANG DOCUMENTATION </br>Version: 1.21.50.7</h1>
-<h2><p id="Index">Index</p></h2>
+<h2><p id="Index">索引</p></h2>
 <table border="1">
-<tr> <th><a href="#Why Does Molang Exist?">Why Does Molang Exist?</a></th> </tr>
-<tr> <th><a href="#Lexical Structure">Lexical Structure</a></th> </tr>
-<tr> <td> <a href="#Case Sensitivity"> Case Sensitivity</a> </tr> </td>
-<tr> <td> <a href="#Keywords"> Keywords</a> </tr> </td>
-<tr> <td> <a href="#Operator Precedence"> Operator Precedence</a> </tr> </td>
+<tr> <th><a href="#Why Does Molang Exist?">Molang 为什么存在？</a></th> </tr>
+<tr> <th><a href="#Lexical Structure">词汇结构</a></th> </tr>
+<tr> <td> <a href="#Case Sensitivity">区分大小写</a> </tr> </td>
+<tr> <td> <a href="#Keywords">关键字</a> </tr> </td>
+<tr> <td> <a href="#Operator Precedence">运算符优先级</a> </tr> </td>
 <tr> <td> <a href="#Variables"> Variables</a> </tr> </td>
 <tr> <td> <a href="#Values"> Values</a> </tr> </td>
 <tr> <td> <a href="#Query Functions"> Query Functions</a> </tr> </td>
@@ -34,128 +34,128 @@
 <tr> <th><a href="#Versioned Changes">Versioned Changes</a></th> </tr>
 <tr> <td> <a href="#Versioned Change Versions"> Versioned Change Versions</a> </tr> </td>
 </table>
-<a href="#Index">Back to top</a>
-<h1><p id="Why Does Molang Exist?">Why Does Molang Exist?</p></h1>
+<a href="#Index">返回顶部</a>
+<h1><p id="Why Does Molang Exist?">Molang 为什么存在？</p></h1>
 
-Molang is a simple expression-based language designed for fast, data-driven calculation of values at run-time, and with a direct connection to in-game values and systems.  Its focus is to enable low-level systems like animation to support flexible data-driven behavior for both internal and external creators, while staying highly performant.</br><a href="#Index">Back to top</a><br><br>
+Molang 是一种简单的基于表达式的语言，旨在在运行时快速、数据驱动地计算值，并与游戏中的值和系统直接连接。其重点是使动画等低级系统能够为内部和外部创作者支持灵活的数据驱动行为，同时保持高性能。</br><a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Lexical Structure">Lexical Structure</p></h1>
+<h1><p id="Lexical Structure">词汇结构</p></h1>
 
-The language structure is largely based on simple 'C' language family style syntax.  An expression can be made of either one simple value or math calculation, or can be made of several sub-expressions where more complicated code is required.</br></br> In simple cases, the terminating `;` is omitted and the expression result is returned. </br> In complex cases, multiple sub-expressions are each terminated with a semicolon `;`.  Complex expressions evaluate to `0.0` unless there is a `return` statement, in which case the evaluated value of the `return`'s sub-expression will be returned out of the current scope.</br><h1><p id="Case Sensitivity">Case Sensitivity</p></h1>
+语言结构主要基于简单的“C”语言系列样式语法。表达式可以由一个简单的值或数学计算组成，也可以由需要更复杂的代码的多个子表达式组成。</br></br>在简单情况下，省略终止 ';' 并返回表达式结果。</br>在复杂情况下，多个子表达式都以分号 ';' 结尾。复杂表达式的计算结果为 '0.0'，除非有 'return' 语句，在这种情况下，'return' 的子表达式的计算值将返回当前范围之外。</br><h1><p id="Case Sensitivity">区分大小写</p></h1>
 
-All things in Molang are case-INsensitive, with the exception of strings, which maintain the case provided.</br><a href="#Index">Back to top</a><br><br>
+Molang 中的所有内容都不区分大小写，但字符串除外，它们保持提供的大小写。</br><a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Keywords">Keywords</p></h1>
+<h1><p id="Keywords">关键字</p></h1>
 
-All identifiers not in a scope listed below are reserved for future use</br><h2></h2>
+所有不在下面列出的范围内的标识符均保留供将来使用</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Keyword</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">关键字</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`1.23`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Numerical constant value</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">常数值</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`! && || < <= >= > == !=`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Logical operators</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">逻辑运算符</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`* / + -`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Basic math operators</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">基本数学运算符</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`(` `)`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Parentheses for expression term evaluation control</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">用于表达项评估控制的括号</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`{` `}`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Braces for execution scope</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">执行范围的大括号</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`??`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Null coalescing operator, for handling missing variables or stale actor references</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">Null 合并运算符，用于处理缺失的变量或过时的 actor 引用</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`geometry.texture_name`</td>
-<td style="border-style:solid; border-width:3; padding:7px">A reference to a geometry named in the entity definition</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">对实体定义中命名的几何体的引用</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`material.texture_name`</td>
-<td style="border-style:solid; border-width:3; padding:7px">A reference to a material named in the entity definition</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">对实体定义中命名的材质的引用</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`texture.texture_name`</td>
-<td style="border-style:solid; border-width:3; padding:7px">A reference to a texture named in the entity definition</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">对实体定义中命名的纹理的引用</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.function_name`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Various math functions</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">各种数学函数</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`query.function_name`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Access to an entity's properties</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">访问实体的属性</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`variable.variable_name`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Read/write storage on an actor</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">Actor 上的读/写存储</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`temp.variable_name`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Read/write temporary storage</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">读/写临时存储</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`context.variable_name`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Read-only storage provided by the game in certain scenarios</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">游戏在某些场景下提供的只读存储</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`<test> ? <if true>`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Binary conditional operator</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">二元条件运算符</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`<test> ? <if true> : <if false>`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Ternary conditional operator - NOTE: Nested ternary expressions without parentheses were incorrectly parsed before a Versioned Change was made to fix it (see 'Versioned Changes' below)</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">三元条件运算符 - 注意：在进行版本控制更改以修复它之前，不带括号的嵌套三元表达式被错误地解析（请参阅下面的'Versioned Changes(版本控制更改)'）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`this`</td>
-<td style="border-style:solid; border-width:3; padding:7px">The current value that this expression will ultimately write to (context specific)</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">此表达式最终将写入的当前值（特定于上下文）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`return`</td>
-<td style="border-style:solid; border-width:3; padding:7px">For complex expressions, this evaluates the following statement and stops execution of the expression, returns the value computed</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">对于复杂表达式，这将计算以下语句并停止执行表达式，返回计算的值</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`->`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Arrow operator, for accessing data from a different entity</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">Arrow 运算符，用于从其他实体访问数据</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`loop`</td>
-<td style="border-style:solid; border-width:3; padding:7px">For repeating one or more commands 'n' times</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">用于重复一个或多个命令 'n' 次</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`for_each`</td>
-<td style="border-style:solid; border-width:3; padding:7px">For iterating over an array of entities</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">用于迭代实体数组</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`break`</td>
-<td style="border-style:solid; border-width:3; padding:7px">For early exiting a loop/for_each scope</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">提前退出 loop/for_each 范围</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`continue`</td>
-<td style="border-style:solid; border-width:3; padding:7px">For skipping the rest of the set of statements of a loop/for_each iteration and moving to the next iteration</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">跳过 loop/for_each 迭代的其余语句集并移动到下一次迭代</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`[` `]`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Brackets for array access</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">用于数组访问的括号</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Operator Precedence">Operator Precedence</p></h1>
+<h1><p id="Operator Precedence">运算符优先级</p></h1>
 
-Molang Operators follow this order to determine which thing is evaluated first when no parentheses are used. This should match the behavior of C or C++. Operators that are higher in this table are evaluated first, while operators on the same row are evaluated with the same priority. When operators have the same priority, they are evaluated left-to-right, except for the Ternary conditional operator, which is evaluated right-to-left. Using parentheses will allow direct control of order of evaluation, and is recommended for more complex expressions. </br><h2></h2>
+Molang 运算符按照此顺序来确定在不使用括号时首先评估哪个事物。这应该与 C 或 C++ 的行为相匹配。首先评估此表中排名较高的运算符，而以相同的优先级评估同一行上的运算符。当运算符具有相同的优先级时，它们将按从左到右的计算方式进行计算，但 Ternary 条件运算符除外，该运算符按从右到左的计算方式进行计算。使用括号将允许直接控制计算顺序，建议用于更复杂的表达式。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Operator Precedence Groups</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">Operator Precedence Groups</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">(Highest Precedence)</td>
 <td style="border-style:solid; border-width:3; padding:7px">Higher precedence operators are evaluated first when no parentheses are used to control evaluation order</br></td>
@@ -201,17 +201,17 @@ Molang Operators follow this order to determine which thing is evaluated first w
 <td style="border-style:solid; border-width:3; padding:7px">Lower precedence operators are evaluated last when no parentheses are used to control evaluation order</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Variables">Variables</p></h1>
 
-There are three variable lifetimes a variable may belong to: Temporary, Entity, and Context:</br>- Temporary variables (eg: `temp.moo = 1;`) are read/write and valid for the scope they are defined in, as per C rules.  For performance reasons their lifetime is global to the current expression execution and may return a valid value outside of the outermost scope they are defined in for an expression.  Be careful in complex expressions.  We will be adding content errors for invalid accesses as soon as possible.</br>- Entity variables (eg: `variable.moo = 1;`) are read/write and store their value on the entity for the lifetime of that entity.  Note that these are currently not saved, so quitting and reloading the world will re-initialize these.  In the same way, if the entity is despawned, any variables on the entity will be lost.</br>- Context variables (eg: `context.moo`) are read-only and specified by the game in certain situations. Details on what variables are specified and when will be available in the documentation of the area where that Molang expression is used (such as behaviors defining what context variables they expose).</br><a href="#Index">Back to top</a><br><br>
+There are three variable lifetimes a variable may belong to: Temporary, Entity, and Context:</br>- Temporary variables (eg: `temp.moo = 1;`) are read/write and valid for the scope they are defined in, as per C rules.  For performance reasons their lifetime is global to the current expression execution and may return a valid value outside of the outermost scope they are defined in for an expression.  Be careful in complex expressions.  We will be adding content errors for invalid accesses as soon as possible.</br>- Entity variables (eg: `variable.moo = 1;`) are read/write and store their value on the entity for the lifetime of that entity.  Note that these are currently not saved, so quitting and reloading the world will re-initialize these.  In the same way, if the entity is despawned, any variables on the entity will be lost.</br>- Context variables (eg: `context.moo`) are read-only and specified by the game in certain situations. Details on what variables are specified and when will be available in the documentation of the area where that Molang expression is used (such as behaviors defining what context variables they expose).</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Values">Values</p></h1>
 
 <h2></h2>
 
-</br>- All numerical values are floats.</br>- Boolean values such as actor flags are converted and stored as a float value of either 0.0 or 1.0 for values of false or true respectively.</br>- For boolean tests, a float value equivalent to 0.0 is false, and anything not equal to 0.0 is true.</br>- For array indices, floats are C-style-cast to ints, and clamped at zero for negative values or wrapped by the array size for large values.</br>- Other supported types are:</br><a href="#Index">Back to top</a><br><br>
+</br>- All numerical values are floats.</br>- Boolean values such as actor flags are converted and stored as a float value of either 0.0 or 1.0 for values of false or true respectively.</br>- For boolean tests, a float value equivalent to 0.0 is false, and anything not equal to 0.0 is true.</br>- For array indices, floats are C-style-cast to ints, and clamped at zero for negative values or wrapped by the array size for large values.</br>- Other supported types are:</br><a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="37" rows="8">
@@ -223,15 +223,15 @@ Actor Reference Array
 String
 Struct (see 'structs' section below)
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-- Errors (such as divide by zero, missing variables, null references, etc) generally return a value of 0.0.</br><a href="#Index">Back to top</a><br><br>
+- Errors (such as divide by zero, missing variables, null references, etc) generally return a value of 0.0.</br><a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
 <h1><p id="Query Functions">Query Functions</p></h1>
 
-Query functions (eg: `query.is_baby` or `query.is_item_equipped('main_hand')`) allow expressions to read game data.  If a query function takes no arguments, do not use parentheses. Otherwise, use parentheses and separate arguments with commas. For a full list of query functions, see below.</br><a href="#Index">Back to top</a><br><br>
+Query functions (eg: `query.is_baby` or `query.is_item_equipped('main_hand')`) allow expressions to read game data.  If a query function takes no arguments, do not use parentheses. Otherwise, use parentheses and separate arguments with commas. For a full list of query functions, see below.</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Aliases">Aliases</p></h1>
 
@@ -260,31 +260,31 @@ To reduce typing burden and increase clarity when reading and writing Molang, th
 <td style="border-style:solid; border-width:2; padding:8px">`v.moo`</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-As an example...</br><a href="#Index">Back to top</a><br><br>
+As an example...</br><a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="102" rows="2">
 math.cos(query.anim_time * 38) * variable.rotation_scale + variable.x * variable.x * query.life_time;
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-...can also be written as:</br><a href="#Index">Back to top</a><br><br>
+...can also be written as:</br><a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="72" rows="2">
 math.cos(q.anim_time * 38) * v.rotation_scale + v.x * v.x * q.life_time
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-Either syntax will work, and can be intermixed as desired. eg:</br><a href="#Index">Back to top</a><br><br>
+Either syntax will work, and can be intermixed as desired. eg:</br><a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="90" rows="2">
 math.cos(q.anim_time * 38) * variable.rotation_scale + v.x * variable.x * query.life_time
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
@@ -299,54 +299,54 @@ v.location.y = 2;
 v.location.z = 3;
 v.another_mobs_location = v.another_mob_set_elsewhere->v.location;
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-For some more usage examples, each of the following expressions return 1.23</br><a href="#Index">Back to top</a><br><br>
+For some more usage examples, each of the following expressions return 1.23</br><a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="97" rows="2">
 v.cowcow.friend = v.pigpig; v.pigpig->v.test.a.b.c = 1.23; return v.cowcow.friend->v.test.a.b.c;
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="112" rows="2">
 v.cowcow.friend = v.pigpig; v.pigpig->v.test.a.b.c = 1.23; v.moo = v.cowcow.friend->v.test; return v.moo.a.b.c;
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="112" rows="2">
 v.cowcow.friend = v.pigpig; v.pigpig->v.test.a.b.c = 1.23; v.moo = v.cowcow.friend->v.test.a; return v.moo.b.c;
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="112" rows="2">
 v.cowcow.friend = v.pigpig; v.pigpig->v.test.a.b.c = 1.23; v.moo = v.cowcow.friend->v.test.a.b; return v.moo.c;
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="112" rows="2">
 v.cowcow.friend = v.pigpig; v.pigpig->v.test.a.b.c = 1.23; v.moo = v.cowcow.friend->v.test.a.b.c; return v.moo;
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-Note that structures can be arbitrarily deep in their nesting/recursiveness.  That said, it is recommended that you don't copy full structures inside other structures to avoid exploding memory, and not making structures too deep as there is a slight performance cost for each layer.</br><a href="#Index">Back to top</a><br><br>
+Note that structures can be arbitrarily deep in their nesting/recursiveness.  That said, it is recommended that you don't copy full structures inside other structures to avoid exploding memory, and not making structures too deep as there is a slight performance cost for each layer.</br><a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
 <h1><p id="Strings">Strings</p></h1>
 
-Strings in Molang are surrounded by single quotes, eg: `'minecraft:pig'` or `'hello world!'`. An empty string is defined as two consecutive single quotes.  String operations only support `==` and `!=` at this time.</br>Note: strings don't support the ' character as there is no support for escape characters at this time.</br><a href="#Index">Back to top</a><br><br>
+Strings in Molang are surrounded by single quotes, eg: `'minecraft:pig'` or `'hello world!'`. An empty string is defined as two consecutive single quotes.  String operations only support `==` and `!=` at this time.</br>Note: strings don't support the ' character as there is no support for escape characters at this time.</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Math Functions">Math Functions</p></h1>
 
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Function</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">Function</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.abs(value)`</td>
 <td style="border-style:solid; border-width:3; padding:7px">Absolute value of value</br></td>
@@ -460,7 +460,7 @@ Strings in Molang are surrounded by single quotes, eg: `'minecraft:pig'` or `'he
 <td style="border-style:solid; border-width:3; padding:7px">Round value towards zero</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="->  Arrow Operator">->  Arrow Operator</p></h1>
 
@@ -475,7 +475,7 @@ for_each(v.pig, query.get_nearby_entities(4, 'minecraft:pig'), {
 });"
 
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="Public Variables">Public Variables</p></h2>
 
@@ -504,7 +504,7 @@ In general, variables of a mob are considered private to that mob and cannot be 
 }
 
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
@@ -524,7 +524,7 @@ One can group a series of statements into a single group by wrapping them in `{`
 }
 
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Conditionals">Conditionals</p></h1>
 
@@ -536,7 +536,7 @@ v.should_reset_a ? { v.a = 0; }
 v.larger_value = (v.a > v.b) ? v.a : v.b;
 
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="loop">loop</p></h1>
 
@@ -552,7 +552,7 @@ loop(10, {
 });
 
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="for_each">for_each</p></h1>
 
@@ -565,13 +565,13 @@ for_each(t.pig, query.get_nearby_entities(4, 'minecraft:pig'), {
 });"
 
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="break">break</p></h1>
 
 <h2></h2>
 
-This will exit out of a `loop` or `for_each` early.  Eg:</br><a href="#Index">Back to top</a><br><br>
+This will exit out of a `loop` or `for_each` early.  Eg:</br><a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="72" rows="6">
@@ -581,9 +581,9 @@ v.y = 1;
 loop(10, {t.x = v.x + v.y; v.x = v.y; v.y = t.x; (v.y > 20) ? break;});
 
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-This will immediately exit the inner-most active loop, as per C-style language rules.  If you have:</br><a href="#Index">Back to top</a><br><br>
+This will immediately exit the inner-most active loop, as per C-style language rules.  If you have:</br><a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="60" rows="5">
@@ -592,9 +592,9 @@ v.x = 0;
 loop(10, {loop(10, {v.x = v.x + 1; (v.x > 5) ? break;});});
 
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-The `break` statement will terminate the inner loop when `v.x > 5`, and continue processing the outer loop's expression.  Note that as v.x is not reset between the outer loops, the second time into the inner loop this will add one more to `v.x` and then exit the inner loop again, resulting in a final value of `v.x` of `6 + 1 + 1 + 1 + ... + 1` = `15`.)</br><a href="#Index">Back to top</a><br><br>
+The `break` statement will terminate the inner loop when `v.x > 5`, and continue processing the outer loop's expression.  Note that as v.x is not reset between the outer loops, the second time into the inner loop this will add one more to `v.x` and then exit the inner loop again, resulting in a final value of `v.x` of `6 + 1 + 1 + 1 + ... + 1` = `15`.)</br><a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
@@ -612,7 +612,7 @@ loop(10, {
 });
 
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
@@ -624,9 +624,9 @@ Similar to how the null-coalescing operator works in C#, one can now reference a
 <br / ><textarea readonly="true" cols="40" rows="2">
 variable.x = (variable.x ?? 1.2) + 0.3;
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-</br>This will use the value of `variable.x` if it is valid, or else 1.2 if `variable.x`:</br>- has not yet been initialized</br>- is a reference to a deleted entity</br>- is an invalid reference</br>- holds an error</br></br>Note that the `??` operator will work with `variable.`s, `temp.`s, and `context.`s that hold numbers or entity references, but not resources such as materials, textures, or geometries (as those must exist and be valid else it's a content error).  If the first argument would result in something that can't be resolved, it will return the second argument.</br></br>_Reminder: the standing rule of thumb in Molang is that if something would error or be a bad value, it is converted to 0.0 (and generally throw a content error on screen in non-publish builds.  Note that content errors may prevent uploading content to the Marketplace, so please ensure expressions aren't going to do bad things such as dividing by zero)._</br><a href="#Index">Back to top</a><br><br>
+</br>This will use the value of `variable.x` if it is valid, or else 1.2 if `variable.x`:</br>- has not yet been initialized</br>- is a reference to a deleted entity</br>- is an invalid reference</br>- holds an error</br></br>Note that the `??` operator will work with `variable.`s, `temp.`s, and `context.`s that hold numbers or entity references, but not resources such as materials, textures, or geometries (as those must exist and be valid else it's a content error).  If the first argument would result in something that can't be resolved, it will return the second argument.</br></br>_Reminder: the standing rule of thumb in Molang is that if something would error or be a bad value, it is converted to 0.0 (and generally throw a content error on screen in non-publish builds.  Note that content errors may prevent uploading content to the Marketplace, so please ensure expressions aren't going to do bad things such as dividing by zero)._</br><a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
@@ -638,7 +638,7 @@ A simple expression is a single statement, the value of which is returned to the
 <br / ><textarea readonly="true" cols="33" rows="2">
 math.sin(query.anim_time * 1.23)
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 A complex expression is one with multiple statements, each ending in a ';'.  Each statement is evaluated in order.  In the current implementation, the last statement requires the use of the return keyword and defines the resulting value of the expression.  eg:</br><h3></h3>
 <br / ><textarea readonly="true" cols="45" rows="4">
@@ -646,9 +646,9 @@ temp.moo = math.sin(query.anim_time * 1.23);
 temp.baa = math.cos(query.life_time + 2.0);
 return temp.moo * temp.moo + temp.baa;
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-Note that in a simple expression, `;` is not allowed, whereas in a complex expression, each statement requires a `;` including the last.  Also, note that if you don't `return` a value from a complex expression, the expression will evaluate to 0.0.</br><a href="#Index">Back to top</a><br><br>
+Note that in a simple expression, `;` is not allowed, whereas in a complex expression, each statement requires a `;` including the last.  Also, note that if you don't `return` a value from a complex expression, the expression will evaluate to 0.0.</br><a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
@@ -667,11 +667,11 @@ In the definition file there is a section for pre-computing values.  These are e
     ]
   },
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Animation and Animation Controller Files">Animation and Animation Controller Files</p></h1>
 
-These are numerical operations to control which animations are playing and how to animate bones.  "variable.variable_name" and "query.function_name" refer to the entity currently being rendered.  They have access to everything in the language except material, texture, and geometry types.</br><a href="#Index">Back to top</a><br><br>
+These are numerical operations to control which animations are playing and how to animate bones.  "variable.variable_name" and "query.function_name" refer to the entity currently being rendered.  They have access to everything in the language except material, texture, and geometry types.</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Render Controllers">Render Controllers</p></h1>
 
@@ -695,13 +695,13 @@ For each of the three resource types (materials, textures, and geometry), you ca
     ...
   },
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 Note that all elements of an array must be of the same type.  eg: a texture array must only contain textures.</br></br>An array can reference any combination of zero or more arrays (including duplicates if desired) and/or zero or more materials (again, including duplicates if you like), and you can have as many arrays as you like, each with as many elements as you like.  If an array includes arrays in its members, they do not need to be the same length.  When indexing into an array in the resource usage section, you use numerical expressions.  If the resulting number is negative, it will use zero as the index.  Any non - negative index will converted to an integer, and will wrap based on the size of the array:</br><h4></h4>
 <br / ><textarea readonly="true" cols="47" rows="2">
 index = max(0, expression_result) % array_size
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
@@ -720,7 +720,7 @@ Use a specific geometry<br / ><textarea readonly="true" cols="30" rows="2">
 Use specific geo when sleeping, otherwise flip through an array based on a cosine curve, using index zero for almost half the time while the cosine curve is negative<br / ><textarea readonly="true" cols="127" rows="2">
 "geometry": "query.is_sleeping ? geometry.my_sleeping_geo : array.my_geos[math.cos(query.anim_time * 12.3 + 41.9) * 10 + 0.6]"
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="Resource Sections">Resource Sections</p></h2>
 
@@ -728,7 +728,7 @@ Use specific geo when sleeping, otherwise flip through an array based on a cosin
 
 <h3><p id="Geometry">Geometry</p></h3>
 
-The geometry section specifies which geometry to use when rendering.  As you can specify as many render controllers as you like in the definition file, a single render controller is only concerned with how to render a single geometry.  Note that a geometry can be arbitrarily complex using any number of bones and polygons.</br><a href="#Index">Back to top</a><br><br>
+The geometry section specifies which geometry to use when rendering.  As you can specify as many render controllers as you like in the definition file, a single render controller is only concerned with how to render a single geometry.  Note that a geometry can be arbitrarily complex using any number of bones and polygons.</br><a href="#Index">返回顶部</a><br><br>
 
 <h3><p id="Materials">Materials</p></h3>
 
@@ -743,9 +743,9 @@ The materials section specifies how to map what material to what bone of the geo
       { "*Saddle*": "variable.is_leather_saddle ? material.leather_saddle : material.iron_saddle" }
     ],
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-- This will start by applying Material.default to all model parts.</br>- Next, it will set the material on a model part named "TailA" to the result of the expression "Array.hairColors[variable.hair_color]".  This will look up some previously created variable on the entity named hair_color and use that to index into a material array called "array.hair_colors" defined in this render controller.  This will overwrite the Material.default material set in the line above.</br>- Third, it will look up the same material as the expression is identical, and apply it to the "Mane" model part.</br>- Lastly, if will find any model part starting with, ending with, or containing "Saddle" (case sensitive) and change its material to either material.leather_saddle or material.iron_saddle depending on the previously set entity variable variable.is_leather_saddle.</br><a href="#Index">Back to top</a><br><br>
+- This will start by applying Material.default to all model parts.</br>- Next, it will set the material on a model part named "TailA" to the result of the expression "Array.hairColors[variable.hair_color]".  This will look up some previously created variable on the entity named hair_color and use that to index into a material array called "array.hair_colors" defined in this render controller.  This will overwrite the Material.default material set in the line above.</br>- Third, it will look up the same material as the expression is identical, and apply it to the "Mane" model part.</br>- Lastly, if will find any model part starting with, ending with, or containing "Saddle" (case sensitive) and change its material to either material.leather_saddle or material.iron_saddle depending on the previously set entity variable variable.is_leather_saddle.</br><a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
@@ -761,14 +761,14 @@ Query Functions are operators that access a wide variety of information. They ca
 <br / ><textarea readonly="true" cols="79" rows="2">
 "position": [ 0.0, "query.is_baby ? -8.0 : 0.0", "query.is_baby ? 4.0 : 0.0" ]
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="List of Entity Queries">List of Entity Queries</p></h1>
 
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.above_top_solid</td>
 <td style="border-style:solid; border-width:3; padding:7px">Returns the height of the block immediately above the highest solid block at the input (x,z) position</br></td>
@@ -1950,14 +1950,14 @@ Query Functions are operators that access a wide variety of information. They ca
 <td style="border-style:solid; border-width:3; padding:7px">Returns the entity's yaw speed</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="List of Experimental Entity Queries">List of Experimental Entity Queries</p></h1>
 
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.last_input_mode_is_any</td>
 <td style="border-style:solid; border-width:3; padding:7px">(EXPERIMENTAL. Enable 'Upcoming Creator Features' to use.) Takes one or more arguments ('keyboard_and_mouse', 'touch', 'gamepad', or 'motion_controller'). If the last input used is any of the specified string values, returns 1.0. Otherwise returns 0.0. Available on the Client (Resource Packs) only.</br></td>
@@ -1967,13 +1967,13 @@ Query Functions are operators that access a wide variety of information. They ca
 <td style="border-style:solid; border-width:3; padding:7px">(EXPERIMENTAL. Enable 'Upcoming Creator Features' to use.) Returns 1.0 if the touch input only affects the touchbar, otherwise returns 0.0. Available on the Client (Resource Packs) only.</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
 <h1><p id="Experimental Operators">Experimental Operators</p></h1>
 
-Some operators may be behind experimental gameplay toggles (see list below).  After getting feedback, we can adjust them further or move them into general availability.</br></br>- (There are currently no Experimental Operators)</br><a href="#Index">Back to top</a><br><br>
+Some operators may be behind experimental gameplay toggles (see list below).  After getting feedback, we can adjust them further or move them into general availability.</br></br>- (There are currently no Experimental Operators)</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Versioned Changes">Versioned Changes</p></h1>
 
@@ -1982,7 +1982,7 @@ Molang uses the `"min_engine_version"` from the `manifest.json` of the resource 
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Pack min_engine_version</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">Pack min_engine_version</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.17.0</td>
 <td style="border-style:solid; border-width:3; padding:7px">Initial support for Versioned Changes added. (Not actually a Versioned Change)</br></td>
@@ -2032,7 +2032,7 @@ Molang uses the `"min_engine_version"` from the `manifest.json` of the resource 
 <td style="border-style:solid; border-width:3; padding:7px">Queries surface_particle_texture_size, surface_particle_texture_coordinate, and surface_particle_texture_size now register leaf blocks as supporting for step particles</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
