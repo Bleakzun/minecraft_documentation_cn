@@ -6,13 +6,13 @@
 <tr> <td> <a href="#Case Sensitivity">区分大小写</a> </tr> </td>
 <tr> <td> <a href="#Keywords">关键字</a> </tr> </td>
 <tr> <td> <a href="#Operator Precedence">运算符优先级</a> </tr> </td>
-<tr> <td> <a href="#Variables"> Variables</a> </tr> </td>
-<tr> <td> <a href="#Values"> Values</a> </tr> </td>
-<tr> <td> <a href="#Query Functions"> Query Functions</a> </tr> </td>
-<tr> <td> <a href="#Aliases"> Aliases</a> </tr> </td>
-<tr> <td> <a href="#Structs"> Structs</a> </tr> </td>
-<tr> <td> <a href="#Strings"> Strings</a> </tr> </td>
-<tr> <td> <a href="#Math Functions"> Math Functions</a> </tr> </td>
+<tr> <td> <a href="#Variables">变量</a> </tr> </td>
+<tr> <td> <a href="#Values">值</a> </tr> </td>
+<tr> <td> <a href="#Query Functions">查询函数</a> </tr> </td>
+<tr> <td> <a href="#Aliases">别名</a> </tr> </td>
+<tr> <td> <a href="#Structs">结构体</a> </tr> </td>
+<tr> <td> <a href="#Strings">字符串</a> </tr> </td>
+<tr> <td> <a href="#Math Functions">数学函数</a> </tr> </td>
 <tr> <td> <a href="#->  Arrow Operator"> ->  Arrow Operator</a> </tr> </td>
 <tr> <td> <a href="#{ } Brace Scope Delimiters"> { } Brace Scope Delimiters</a> </tr> </td>
 <tr> <td> <a href="#Conditionals"> Conditionals</a> </tr> </td>
@@ -155,63 +155,63 @@ Molang 中的所有内容都不区分大小写，但字符串除外，它们保�
 Molang 运算符按照此顺序来确定在不使用括号时首先评估哪个事物。这应该与 C 或 C++ 的行为相匹配。首先评估此表中排名较高的运算符，而以相同的优先级评估同一行上的运算符。当运算符具有相同的优先级时，它们将按从左到右的计算方式进行计算，但 Ternary 条件运算符除外，该运算符按从右到左的计算方式进行计算。使用括号将允许直接控制计算顺序，建议用于更复杂的表达式。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Operator Precedence Groups</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">运算符优先级组</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
-<td style="border-style:solid; border-width:3; padding:7px">(Highest Precedence)</td>
-<td style="border-style:solid; border-width:3; padding:7px">Higher precedence operators are evaluated first when no parentheses are used to control evaluation order</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">（最高优先级）</td>
+<td style="border-style:solid; border-width:3; padding:7px">当不使用括号来控制计算顺序时，首先计算优先级较高的运算符</br></td>
 </tr>
 <tr>
-<td style="border-style:solid; border-width:3; padding:7px">Logical Not</td>
-<td style="border-style:solid; border-width:3; padding:7px">The Logical Not '!' operator</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">逻辑非</td>
+<td style="border-style:solid; border-width:3; padding:7px">逻辑非 '!' 运算符</br></td>
 </tr>
 <tr>
-<td style="border-style:solid; border-width:3; padding:7px">Multiplication and Division</td>
-<td style="border-style:solid; border-width:3; padding:7px">Multiplication '*' and Division '/'</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">乘法和除法</td>
+<td style="border-style:solid; border-width:3; padding:7px">乘法 '*' 和除法 '/'</br></td>
 </tr>
 <tr>
-<td style="border-style:solid; border-width:3; padding:7px">Addition and Subtraction</td>
-<td style="border-style:solid; border-width:3; padding:7px">Addition '+' and Subtraction '-'</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">加法和减法</td>
+<td style="border-style:solid; border-width:3; padding:7px">加法 '+' 和减法 '-'</br></td>
 </tr>
 <tr>
-<td style="border-style:solid; border-width:3; padding:7px">Comparisons</td>
-<td style="border-style:solid; border-width:3; padding:7px">Comparison operators '<' '<=' '>' '>=' (See 'Versioned Changes' below)</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">比较</td>
+<td style="border-style:solid; border-width:3; padding:7px">比较运算符 '<' '<=' '>' '>=' （参见下面的'版本化更改'）</br></td>
 </tr>
 <tr>
-<td style="border-style:solid; border-width:3; padding:7px">Equality checks</td>
-<td style="border-style:solid; border-width:3; padding:7px">Equality checking operators '==' '!=' (See 'Versioned Changes' below)</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">相等性检查</td>
+<td style="border-style:solid; border-width:3; padding:7px">相等性检查运算符 '==' '！=' （请参阅下面的 '版本化更改'）</br></td>
 </tr>
 <tr>
-<td style="border-style:solid; border-width:3; padding:7px">Logical AND</td>
-<td style="border-style:solid; border-width:3; padding:7px">The Logical AND '&&' operator (See 'Versioned Changes' below)</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">逻辑与</td>
+<td style="border-style:solid; border-width:3; padding:7px">逻辑与 '&&' 运算符（请参阅下面的“版本化更改”）</br></td>
 </tr>
 <tr>
-<td style="border-style:solid; border-width:3; padding:7px">Logical OR</td>
-<td style="border-style:solid; border-width:3; padding:7px">The Logical OR '||' operator (See 'Versioned Changes' below)</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">逻辑或</td>
+<td style="border-style:solid; border-width:3; padding:7px">逻辑或 '||' 运算符（请参阅下面的“版本化更改”）</br></td>
 </tr>
 <tr>
-<td style="border-style:solid; border-width:3; padding:7px">Ternary Conditional</td>
-<td style="border-style:solid; border-width:3; padding:7px">Ternary conditional operators using '? :'. Evaluated right-to-left when there are multiple ternary operators. (See 'Versioned Changes' below)</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">三元条件</td>
+<td style="border-style:solid; border-width:3; padding:7px">使用 '? :'.当有多个三元运算符时，从右到左计算。（请参阅下面的'版本更改'）</br></td>
 </tr>
 <tr>
-<td style="border-style:solid; border-width:3; padding:7px">Null Coalescing</td>
-<td style="border-style:solid; border-width:3; padding:7px">Null coalescing operator '??'</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">空合并</td>
+<td style="border-style:solid; border-width:3; padding:7px">空合并运算符 '??'</br></td>
 </tr>
 <tr>
-<td style="border-style:solid; border-width:3; padding:7px">(Lowest Precedence)</td>
-<td style="border-style:solid; border-width:3; padding:7px">Lower precedence operators are evaluated last when no parentheses are used to control evaluation order</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">（最低优先级）</td>
+<td style="border-style:solid; border-width:3; padding:7px">当不使用括号来控制计算顺序时，最后计算低优先级运算符</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Variables">Variables</p></h1>
+<h1><p id="Variables">变量</p></h1>
 
-There are three variable lifetimes a variable may belong to: Temporary, Entity, and Context:</br>- Temporary variables (eg: `temp.moo = 1;`) are read/write and valid for the scope they are defined in, as per C rules.  For performance reasons their lifetime is global to the current expression execution and may return a valid value outside of the outermost scope they are defined in for an expression.  Be careful in complex expressions.  We will be adding content errors for invalid accesses as soon as possible.</br>- Entity variables (eg: `variable.moo = 1;`) are read/write and store their value on the entity for the lifetime of that entity.  Note that these are currently not saved, so quitting and reloading the world will re-initialize these.  In the same way, if the entity is despawned, any variables on the entity will be lost.</br>- Context variables (eg: `context.moo`) are read-only and specified by the game in certain situations. Details on what variables are specified and when will be available in the documentation of the area where that Molang expression is used (such as behaviors defining what context variables they expose).</br><a href="#Index">返回顶部</a><br><br>
+变量可能属于三个变量生命周期：Temporary、Entity 和 Context：</br>- 根据 C 规则，临时（Temporary）变量（例如：'temp.moo = 1;'）是读/写的，并且在定义它们的范围内有效。出于性能原因，它们的生命周期对于当前表达式执行是全局的，并且可能会返回为表达式定义它们的最外层范围之外的有效值。在复杂表达式中要小心。我们将尽快为无效访问添加内容错误。</br>- 实体（Entity）变量（例如：'variable.moo = 1;'）是读/写的，并在该实体的生命周期内将其值存储在实体上。请注意，这些当前未保存，因此退出并重新加载世界将重新初始化这些。同样，如果实体消失，则实体上的任何变量都将丢失。</br>- 上下文（Context）变量（例如：'context.moo'）是只读的，在某些情况下由游戏指定。有关指定哪些变量以及何时指定的详细信息将在使用 Molang 表达式的区域的文档中找到（例如，定义它们公开的上下文变量的行为）。</br><a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Values">Values</p></h1>
+<h1><p id="Values">值</p></h1>
 
 <h2></h2>
 
-</br>- All numerical values are floats.</br>- Boolean values such as actor flags are converted and stored as a float value of either 0.0 or 1.0 for values of false or true respectively.</br>- For boolean tests, a float value equivalent to 0.0 is false, and anything not equal to 0.0 is true.</br>- For array indices, floats are C-style-cast to ints, and clamped at zero for negative values or wrapped by the array size for large values.</br>- Other supported types are:</br><a href="#Index">返回顶部</a><br><br>
+</br>- 所有数值均为浮点数。</br>- 对于值 false或 true，布尔值（如角色标志）将转换并存储为 0.0 或 1.0 的浮点值。</br>- 对于布尔测试，等于 0.0 的浮点值为 false，不等于 0.0 的浮点值为 true。</br>- 对于数组索引，浮点数以 C 语言风格转换为整数，对于负值，以 0 为钳位，对于较大值，以数组大小为包裹。</br>- 其他支持的类型包括：</br><a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="37" rows="8">
@@ -225,24 +225,24 @@ Struct (see 'structs' section below)
 </textarea> </br>
 <a href="#Index">返回顶部</a><br><br>
 
-- Errors (such as divide by zero, missing variables, null references, etc) generally return a value of 0.0.</br><a href="#Index">返回顶部</a><br><br>
+- 错误（例如除以零、缺少变量、空引用等）通常返回值 0.0。</br><a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
-<h1><p id="Query Functions">Query Functions</p></h1>
+<h1><p id="Query Functions">查询函数</p></h1>
 
-Query functions (eg: `query.is_baby` or `query.is_item_equipped('main_hand')`) allow expressions to read game data.  If a query function takes no arguments, do not use parentheses. Otherwise, use parentheses and separate arguments with commas. For a full list of query functions, see below.</br><a href="#Index">返回顶部</a><br><br>
+查询函数（例如：'query.is_baby' 或 'query.is_item_equipped('main_hand')'）允许表达式读取游戏数据。如果查询函数不带任何参数，请不要使用括号。否则，请使用括号和带逗号的单独参数。有关查询函数的完整列表，请参阅下文。</br><a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Aliases">Aliases</p></h1>
+<h1><p id="Aliases">别名</p></h1>
 
-To reduce typing burden and increase clarity when reading and writing Molang, the following keyword aliases can make life a bit easier.  Note that left and right sides function identically.</br><h2></h2>
+为了减少打字负担并提高读写 Molang 的清晰度，以下关键字别名可以让生活更轻松一些。请注意，左侧和右侧的功能相同。</br><h2></h2>
 
-<h2><p id="Alias Mapping">Alias Mapping</p></h2>
+<h2><p id="Alias Mapping">别名映射</p></h2>
 
 <h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Full Name</th> <th style="border-style:solid; border-width:2;">Aliased Name</th> </tr>
+<tr> <th style="border-style:solid; border-width:2;">全名</th> <th style="border-style:solid; border-width:2;">别名</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">`context.moo`</td>
 <td style="border-style:solid; border-width:2; padding:8px">`c.moo`</br></td>
@@ -262,7 +262,7 @@ To reduce typing burden and increase clarity when reading and writing Molang, th
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
-As an example...</br><a href="#Index">返回顶部</a><br><br>
+举个例子...</br><a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="102" rows="2">
@@ -270,7 +270,7 @@ math.cos(query.anim_time * 38) * variable.rotation_scale + variable.x * variable
 </textarea> </br>
 <a href="#Index">返回顶部</a><br><br>
 
-...can also be written as:</br><a href="#Index">返回顶部</a><br><br>
+...也可以写成：</br><a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="72" rows="2">
@@ -278,7 +278,7 @@ math.cos(q.anim_time * 38) * v.rotation_scale + v.x * v.x * q.life_time
 </textarea> </br>
 <a href="#Index">返回顶部</a><br><br>
 
-Either syntax will work, and can be intermixed as desired. eg:</br><a href="#Index">返回顶部</a><br><br>
+两种语法都可以使用，并且可以根据需要混合使用。例如：</br><a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="90" rows="2">
@@ -288,9 +288,9 @@ math.cos(q.anim_time * 38) * variable.rotation_scale + v.x * variable.x * query.
 
 <br><br>
 
-<h1><p id="Structs">Structs</p></h1>
+<h1><p id="Structs">结构体</p></h1>
 
-Structures of data, unlike C, are implicitly defined by usage.  Their purpose is to more efficiently pass data around, such as passing `v.location` rather than `v.x`, `v.y`, and `v.z`.  eg:</br><h2></h2>
+与 C 不同，数据结构是由用途隐式定义的。它们的目的是更有效地传递数据，例如传递 'v.location' 而不是 'v.x'、'v.y' 和 'v.z'。例如：</br><h2></h2>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="67" rows="5">
@@ -301,7 +301,7 @@ v.another_mobs_location = v.another_mob_set_elsewhere->v.location;
 </textarea> </br>
 <a href="#Index">返回顶部</a><br><br>
 
-For some more usage examples, each of the following expressions return 1.23</br><a href="#Index">返回顶部</a><br><br>
+有关更多用法示例，以下每个表达式都返回 1.23</br><a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="97" rows="2">
@@ -333,63 +333,63 @@ v.cowcow.friend = v.pigpig; v.pigpig->v.test.a.b.c = 1.23; v.moo = v.cowcow.frie
 </textarea> </br>
 <a href="#Index">返回顶部</a><br><br>
 
-Note that structures can be arbitrarily deep in their nesting/recursiveness.  That said, it is recommended that you don't copy full structures inside other structures to avoid exploding memory, and not making structures too deep as there is a slight performance cost for each layer.</br><a href="#Index">返回顶部</a><br><br>
+请注意，结构体的嵌套/递归可以是任意深的。也就是说，建议您不要在其他结构体中复制完整的结构体，以避免内存爆炸，并且不要使结构体太深，因为每一层的性能成本都很小。</br><a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
-<h1><p id="Strings">Strings</p></h1>
+<h1><p id="Strings">字符串</p></h1>
 
-Strings in Molang are surrounded by single quotes, eg: `'minecraft:pig'` or `'hello world!'`. An empty string is defined as two consecutive single quotes.  String operations only support `==` and `!=` at this time.</br>Note: strings don't support the ' character as there is no support for escape characters at this time.</br><a href="#Index">返回顶部</a><br><br>
+Molang 中的字符串用单引号括起来，例如：'minecraft:pig' 或 'hello world!'。空字符串定义为两个连续的单引号。字符串作目前仅支持 '==' 和 '!='。</br>注意：字符串不支持 ' 字符，因为目前不支持转义字符。</br><a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Math Functions">Math Functions</p></h1>
+<h1><p id="Math Functions">数学函数</p></h1>
 
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Function</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">函数</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.abs(value)`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Absolute value of value</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">值的绝对值</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.acos(value)`</td>
-<td style="border-style:solid; border-width:3; padding:7px">arccos of value</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">值的反余弦函数</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.asin(value)`</td>
-<td style="border-style:solid; border-width:3; padding:7px">arcsin of value</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">值的反正弦函数</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.atan(value)`</td>
-<td style="border-style:solid; border-width:3; padding:7px">arctan of value</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">值的反正切函数</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.atan2(y, x)`</td>
-<td style="border-style:solid; border-width:3; padding:7px">arctan of y/x.  NOTE: the order of arguments!</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">Y/X 的反正切函数。注意：参数的顺序！</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.ceil(value)`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Round value up to nearest integral number</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">值向上舍入到最接近的整数</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.clamp(value, min, max)`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Clamp value to between min and max inclusive</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">把大于或小于范围的值限制在这个范围内（包括最小值和最大值）注释：如果值在两者之间则输出不变，比最小值小就输出最小值，比最大值大输出最大值</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.cos(value)`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Cosine (in degrees) of value</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">值的余弦（以度为单位）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.die_roll(num, low, high)`</td>
-<td style="border-style:solid; border-width:3; padding:7px">returns the sum of 'num' random numbers, each with a value from low to high`.  Note: the generated random numbers are not integers like normal dice.  For that, use `math.die_roll_integer`.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回 'num' 个随机数的总和，每个随机数的值从 'low' 到 'high'。注意：生成的随机数不是像普通骰子那样的整数。为此，请使用 'math.die_roll_integer'。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.die_roll_integer(num, low, high)`</td>
-<td style="border-style:solid; border-width:3; padding:7px">returns the sum of 'num' random integer numbers, each with a value from low to high`.  Note: the generated random numbers are integers like normal dice.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回 'num' 个随机整数的总和，每个整数都有一个从 'low' 到 'high' 的值。注意：生成的随机数是整数，就像普通骰子一样。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.exp(value)`</td>
-<td style="border-style:solid; border-width:3; padding:7px">Calculates e to the value'th power</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">计算 e 的值的第 x 次方</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.floor(value)`</td>
