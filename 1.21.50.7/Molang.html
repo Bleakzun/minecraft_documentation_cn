@@ -113,7 +113,7 @@ Molang 中的所有内容都不区分大小写，但字符串除外，它们保�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`<test> ? <if true> : <if false>`</td>
-<td style="border-style:solid; border-width:3; padding:7px">三元条件运算符 - 注意：在进行版本控制更改以修复它之前，不带括号的嵌套三元表达式被错误地解析（请参阅下面的'版本化变更'）</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">三元条件运算符 - 注意：在进行版本化变更以修复它之前，不带括号的嵌套三元表达式被错误地解析（请参阅下面的'版本化变更'）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`this`</td>
@@ -528,7 +528,7 @@ for_each(v.pig, query.get_nearby_entities(4, 'minecraft:pig'), {
 
 <h1><p id="Conditionals">条件符</p></h1>
 
-条件 '?' 运算符允许两种便捷的方式来实现简单的分支逻辑。</br>第一种方法是使用 '?' 本身有条件地执行表达式的一部分，例如 'A ? B`.仅当 '?' 后面的部分的计算结果为 true 布尔值时，才会运行 '?' 后面的部分。</br>第二种方法是使用 '?' 和 ':' 作为 '条件三元'，例如 'A ? B : C'.如果 '?' 之前的部分被评估为 true，则返回 ':' 之前的部分。否则，将返回之后的部分。</br> 注意：在进行版本控制更改以修复它之前，没有括号的嵌套三元表达式被错误地解析（请参阅下面的“版本化变更”）。</br><h2></h2>
+条件 '?' 运算符允许两种便捷的方式来实现简单的分支逻辑。</br>第一种方法是使用 '?' 本身有条件地执行表达式的一部分，例如 'A ? B`.仅当 '?' 后面的部分的计算结果为 true 布尔值时，才会运行 '?' 后面的部分。</br>第二种方法是使用 '?' 和 ':' 作为 '条件三元'，例如 'A ? B : C'.如果 '?' 之前的部分被评估为 true，则返回 ':' 之前的部分。否则，将返回之后的部分。</br> 注意：在进行版本化变更以修复它之前，没有括号的嵌套三元表达式被错误地解析（请参阅下面的“版本化变更”）。</br><h2></h2>
 条件示例<br / ><textarea readonly="true" cols="42" rows="6">
 
 v.should_reset_a ? { v.a = 0; }
@@ -671,15 +671,15 @@ return temp.moo * temp.moo + temp.baa;
 
 <h1><p id="Animation and Animation Controller Files">动画和动画控制器文件</p></h1>
 
-These are numerical operations to control which animations are playing and how to animate bones.  "variable.variable_name" and "query.function_name" refer to the entity currently being rendered.  They have access to everything in the language except material, texture, and geometry types.</br><a href="#Index">返回顶部</a><br><br>
+这些是用于控制哪些动画正在播放以及如何对骨骼进行动画处理的数值操作。"variable.variable_name" 和 "query.function_name" 指的是当前正在渲染的实体。它们可以访问语言中除材质、纹理和模型之外的所有内容。</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Render Controllers">渲染控制器</p></h1>
 
-There are a few different kinds of expressions here, where context implies what is allowed.  As with animations, the entity accessors refer to the current entity, however depending on the context one also has access to materials, textures, and geometries.  There are two sections in a render controller:</br>-Array definitions (optional)</br>-Resource usage (required)</br>The array definition section allows you to create arrays of resources by resource type if you so desire.  These can then be referenced in the resource usage section.</br><h2></h2>
+这里存在几种不同类型的表达式，其上下文暗示了哪些是允许的。与动画一样，实体访问器指的是当前实体，然而根据上下文的不同，还可以访问材质、纹理和几何体。渲染控制器中有两个部分：</br>-数组定义（可选）</br>-资源使用（必需）</br>数组定义部分允许您根据需要按资源类型创建资源数组。这些数组随后可以在资源使用部分中引用。</br><h2></h2>
 
 <h2><p id="Array Expressions">数组表达式</p></h2>
 
-For each of the three resource types (materials, textures, and geometry), you can define an array of resources.  The name of the resource is the nice-name from the definition file.  Using materials as an example:</br><h3></h3>
+对于三种资源类型（材质、纹理和几何体），您可以定义一个资源数组。资源的名称是定义文件中的友好名称。以材质为例：</br><h3></h3>
 
 <h4></h4>
 <br / ><textarea readonly="true" cols="93" rows="12">
@@ -697,7 +697,7 @@ For each of the three resource types (materials, textures, and geometry), you ca
 </textarea> </br>
 <a href="#Index">返回顶部</a><br><br>
 
-Note that all elements of an array must be of the same type.  eg: a texture array must only contain textures.</br></br>An array can reference any combination of zero or more arrays (including duplicates if desired) and/or zero or more materials (again, including duplicates if you like), and you can have as many arrays as you like, each with as many elements as you like.  If an array includes arrays in its members, they do not need to be the same length.  When indexing into an array in the resource usage section, you use numerical expressions.  If the resulting number is negative, it will use zero as the index.  Any non - negative index will converted to an integer, and will wrap based on the size of the array:</br><h4></h4>
+请注意，数组中的所有元素必须是同一类型。例如：纹理数组必须仅包含纹理。</br></br>一个数组可以引用零个或多个数组的任意组合（如果需要，可以包括重复项）和/或零个或多个材质（同样，如果愿意，也可以包括重复项），并且您可以根据需要定义任意数量的数组，每个数组可以包含任意数量的元素。如果数组的成员中包含其他数组，这些数组的长度不需要相同。在资源使用部分中索引数组时，您可以使用数值表达式。如果结果数字为负数，则将使用零作为索引。任何非负索引都将转换为整数，并根据数组的大小进行循环：</br><h4></h4>
 <br / ><textarea readonly="true" cols="47" rows="2">
 index = max(0, expression_result) % array_size
 </textarea> </br>
@@ -707,17 +707,17 @@ index = max(0, expression_result) % array_size
 
 <h2><p id="Resource Expression">资源表达式</p></h2>
 
-A resource expression must return a single resource of a specific type depending on the context.</br>For example, in the "geometry" section, you must produce an expression that will result in a single geometry.  Some examples:</br><h3></h3>
-Cycle through an array of geometries at a rate of one per second<br / ><textarea readonly="true" cols="51" rows="2">
+资源表达式必须根据上下文返回特定类型的单个资源。</br>例如，在“geometry”部分中，您必须生成一个表达式，该表达式将产生单个几何体。以下是一些示例：</br><h3></h3>
+以每秒一个几何体的速度循环遍历几何体数组<br / ><textarea readonly="true" cols="51" rows="2">
 "geometry": "array.my_geometries[query.anim_time]"
 </textarea> </br>
-Pick a geo based on an entity flag<br / ><textarea readonly="true" cols="68" rows="2">
+根据实体标志选择一个几何体<br / ><textarea readonly="true" cols="68" rows="2">
 "geometry": "query.is_sheared ? geometry.sheared : geometry.woolly"
 </textarea> </br>
-Use a specific geometry<br / ><textarea readonly="true" cols="30" rows="2">
+使用特定的几何体<br / ><textarea readonly="true" cols="30" rows="2">
 "geometry": "geometry.my_geo"
 </textarea> </br>
-Use specific geo when sleeping, otherwise flip through an array based on a cosine curve, using index zero for almost half the time while the cosine curve is negative<br / ><textarea readonly="true" cols="127" rows="2">
+在休眠时使用特定的几何体，否则根据余弦曲线在数组中循环切换，当余弦曲线为负时，几乎一半时间使用索引零<br / ><textarea readonly="true" cols="127" rows="2">
 "geometry": "query.is_sleeping ? geometry.my_sleeping_geo : array.my_geos[math.cos(query.anim_time * 12.3 + 41.9) * 10 + 0.6]"
 </textarea> </br>
 <a href="#Index">返回顶部</a><br><br>
@@ -728,11 +728,11 @@ Use specific geo when sleeping, otherwise flip through an array based on a cosin
 
 <h3><p id="Geometry">Geometry</p></h3>
 
-The geometry section specifies which geometry to use when rendering.  As you can specify as many render controllers as you like in the definition file, a single render controller is only concerned with how to render a single geometry.  Note that a geometry can be arbitrarily complex using any number of bones and polygons.</br><a href="#Index">返回顶部</a><br><br>
+geometry 部分指定渲染时要使用的几何体。由于您可以在定义文件中指定任意数量的渲染控制器，因此单个渲染控制器只关心如何渲染单个几何体。请注意，几何体可以任意复杂，使用任意数量的骨骼和多边形。</br><a href="#Index">返回顶部</a><br><br>
 
 <h3><p id="Materials">Materials</p></h3>
 
-The materials section specifies how to map what material to what bone of the geometry.  A single material is mapped to a whole bone.  Material expressions are evaluated in the order listed.  The first part of each statement is the name of the model part to apply the material to, and the second part is the material to use.  The model part name can use * for wild - card matching of characters.  For example: </br><h4></h4>
+materials 部分指定了如何将材质映射到几何体的骨骼上。单个材质会映射到整个骨骼。材质表达式按列出的顺序进行评估。每条语句的第一部分是要应用材质的模型部件名称，第二部分是要使用的材质。模型部件名称可以使用 * 进行通配符匹配。例如：</br><h4></h4>
 
 <h6></h6>
 <br / ><textarea readonly="true" cols="100" rows="7">
@@ -745,7 +745,7 @@ The materials section specifies how to map what material to what bone of the geo
 </textarea> </br>
 <a href="#Index">返回顶部</a><br><br>
 
-- This will start by applying Material.default to all model parts.</br>- Next, it will set the material on a model part named "TailA" to the result of the expression "Array.hairColors[variable.hair_color]".  This will look up some previously created variable on the entity named hair_color and use that to index into a material array called "array.hair_colors" defined in this render controller.  This will overwrite the Material.default material set in the line above.</br>- Third, it will look up the same material as the expression is identical, and apply it to the "Mane" model part.</br>- Lastly, if will find any model part starting with, ending with, or containing "Saddle" (case sensitive) and change its material to either material.leather_saddle or material.iron_saddle depending on the previously set entity variable variable.is_leather_saddle.</br><a href="#Index">返回顶部</a><br><br>
+- 首先将 Material.default 应用于所有模型部件。</br>- 接下来，它将名为“TailA”的模型部件的材质设置为表达式“Array.hairColors[variable.hair_color]”的结果。这将查找实体上先前创建的名为 hair_color 的变量，并使用该变量索引到在此渲染控制器中定义的名为“array.hair_colors”的材质数组。这将覆盖上一行中设置的 Material.default 材质。</br>- 第三，它将查找与表达式相同的材质，并将其应用到“Mane”模型部件。</br>- 最后，它将查找任何以“Saddle”开头、结尾或包含“Saddle”（区分大小写）的模型部件，并根据先前设置的实体变量 variable.is_leather_saddle 将其材质更改为 material.leather_saddle 或 material.iron_saddle。</br><a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
@@ -757,7 +757,7 @@ The materials section specifies how to map what material to what bone of the geo
 
 <h1><p id="Query Functions">查询函数</p></h1>
 
-Query Functions are operators that access a wide variety of information. They can return simple true or false values (1.0 or 0.0) or more complex data. See the list of functions below for per-query documentation. Query Functions might not take any parameters. In that case, just `query.function_name` is used. Otherwise parentheses with commas separating arguments should be used, ie `query.function_name(1, 2, 'three')`. For example:</br><h2></h2>
+查询函数是访问各种信息的操作符。它们可以返回简单的 true 或 false 值（1.0 或 0.0）或更复杂的数据。有关每个查询的文档，请参阅下面的函数列表。查询函数可能不需要任何参数。在这种情况下，只需使用 `query.function_name`。否则，应使用括号并用逗号分隔参数，例如 `query.function_name(1, 2, 'three')`。例如：</br><h2></h2>
 <br / ><textarea readonly="true" cols="79" rows="2">
 "position": [ 0.0, "query.is_baby ? -8.0 : 0.0", "query.is_baby ? 4.0 : 0.0" ]
 </textarea> </br>
