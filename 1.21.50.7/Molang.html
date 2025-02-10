@@ -768,126 +768,126 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.above_top_solid</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the height of the block immediately above the highest solid block at the input (x,z) position</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回输入 (x,z) 位置处最高固体方块上方方块的高度</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.actor_count</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the number of actors rendered in the last frame.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回上一帧中渲染的活动对象的数量。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.all</td>
-<td style="border-style:solid; border-width:3; padding:7px">Requires at least 3 arguments. Evaluates the first argument, then returns 1.0 if all of the following arguments evaluate to the same value as the first. Otherwise it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">至少需要 3 个参数。评估第一个参数，如果所有后续参数评估结果与第一个参数相同，则返回 1.0。否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.all_animations_finished</td>
-<td style="border-style:solid; border-width:3; padding:7px">Only valid in an animation controller.  Returns 1.0 if all animations in the current animation controller state have played through at least once, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">仅在动画控制器中有效。如果当前动画控制器状态中的所有动画都至少播放了一次，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.all_tags</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns if the item or block has all of the tags specified.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果物品或方块具有指定的所有标签，则返回。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.anger_level</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the anger level of the actor [0,n). On errors or if the actor has no anger level, returns 0. Available on the Server only.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回活动对象的愤怒级别 [0,n)。如果出错或活动对象没有愤怒级别，则返回 0。仅在服务器上可用。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.anim_time</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the time in seconds since the current animation started, else 0.0 if not called within an animation.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回当前动画开始以来的时间（以秒为单位），如果不在动画中调用则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.any</td>
-<td style="border-style:solid; border-width:3; padding:7px">Requires at least 3 arguments. Evaluates the first argument, then returns 1.0 if any of the following arguments evaluate to the same value as the first. Otherwise it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">至少需要 3 个参数。评估第一个参数，如果任何后续参数评估结果与第一个参数相同，则返回 1.0。否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.any_animation_finished</td>
-<td style="border-style:solid; border-width:3; padding:7px">Only valid in an animation controller.  Returns 1.0 if any animation in the current animation controller state has played through at least once, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">仅在动画控制器中有效。如果当前动画控制器状态中的任何动画至少播放了一次，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.any_tag</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns if the item or block has any of the tags specified.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果物品或方块具有指定的任何标签，则返回此值。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.approx_eq</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if all of the arguments are within 0.000000 of each other, else 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果所有参数彼此相差在 0.000000 以内，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.armor_color_slot</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes the armor slot index as a parameter, and returns the color of the armor in the requested slot. The valid values for the armor slot index are 0 (head), 1 (chest), 2 (legs), 3 (feet) and 4 (body).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">以护甲槽索引作为参数，并返回指定槽中护甲的颜色。护甲槽索引的有效值为 0（头部）、1（胸部）、2（腿部）、3（脚部）和 4（身体）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.armor_damage_slot</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes the armor slot index as a parameter, and returns the damage value of the requested slot. The valid values for the armor slot index are 0 (head), 1 (chest), 2 (legs), 3 (feet) and 4 (body). Support for entities other than players may be limited, as the damage value is not always available on clients.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">以护甲槽索引作为参数，并返回指定槽的伤害值。护甲槽索引的有效值为 0（头部）、1（胸部）、2（腿部）、3（脚部）和 4（身体）。由于伤害值并不总是在客户端上可用，因此对玩家以外的实体的支持可能有限。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.armor_material_slot</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes the armor slot index as a parameter, and returns the armor material type in the requested armor slot. The valid values for the armor slot index are 0 (head), 1 (chest), 2 (legs) and 3 (feet).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">以护甲槽索引作为参数，并返回指定护甲槽中的护甲材质类型。护甲槽索引的有效值为 0（头部）、1（胸部）、2（腿部）和 3（脚部）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.armor_texture_slot</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes the armor slot index as a parameter, and returns the texture type of the requested slot. The valid values for the armor slot index are 0 (head), 1 (chest), 2 (legs), 3 (feet) and 4 (body).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">以护甲槽索引作为参数，并返回指定护甲槽中的护甲纹理类型。护甲槽索引的有效值为 0（头部）、1（胸部）、2（腿部）和 3（脚部）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.average_frame_time</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the time in *seconds* of the average frame time over the last 'n' frames.  If an argument is passed, it is assumed to be the number of frames in the past that you wish to query.  'query.average_frame_time' (or the equivalent 'query.average_frame_time(0)') will return the frame time of the frame before the current one.  'query.average_frame_time(1)' will return the average frame time of the previous two frames.  Currently we store the history of the last 30 frames, although note that this may change in the future.  Asking for more frames will result in only sampling the number of frames stored.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回过去 'n' 帧的平均帧时间（以*秒*为单位）。如果传递了一个参数，则假定它是您希望查询的过去帧数。'query.average_frame_time'（或等效的 'query.average_frame_time(0)'）将返回当前帧之前的那一帧的帧时间。'query.average_frame_time(1)' 将返回前两帧的平均帧时间。目前我们存储了过去 30 帧的历史记录，但请注意，这在未来可能会发生变化。请求更多帧将仅对存储的帧数进行采样。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.block_face</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the block face for this (only valid for certain triggers such as placing blocks, or interacting with block) (Down=0.0, Up=1.0, North=2.0, South=3.0, West=4.0, East=5.0, Undefined=6.0).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回此方块的面（仅对某些触发器有效，例如放置方块或与方块交互）（下 = 0.0，上 = 1.0，北 = 2.0，南 = 3.0，西 = 4.0，东 = 5.0，未定义 = 6.0）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.block_has_all_tags</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes a world-origin-relative position and one or more tag names, and returns either 0 or 1 based on if the block at that position has all of the tags provided.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">采用世界原点相对位置和一个或多个标签名称，并根据该位置的方块是否具有提供的所有标签返回 0 或 1。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.block_has_any_tag</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes a world-origin-relative position and one or more tag names, and returns either 0 or 1 based on if the block at that position has any of the tags provided.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">采用世界原点相对位置和一个或多个标签名称，并根据该位置的方块是否具有提供的任何标签返回 0 或 1。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.block_neighbor_has_all_tags</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes a block-relative position and one or more tag names, and returns either 0 or 1 based on if the block at that position has all of the tags provided.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">采用方块相对位置和一个或多个标签名称，并根据该位置的块是否具有提供的所有标签返回 0 或 1。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.block_neighbor_has_any_tag</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes a block-relative position and one or more tag names, and returns either 0 or 1 based on if the block at that position has any of the tags provided.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">采用方块相对位置和一个或多个标签名称，并根据该位置的块是否具有提供的任何标签返回 0 或 1。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.block_property</td>
-<td style="border-style:solid; border-width:3; padding:7px">(No longer available in pack min_engine_version 1.20.40.) Returns the value of the associated block's Block State.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">（在 min_engine_version 1.20.40包中不再可用）返回关联方块的方块状态的值。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.block_state</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the value of the associated block's Block State.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回关联方块的方块状态的值。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.blocking</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is blocking, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体正在格挡，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.body_x_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the body pitch rotation if called on an actor, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果在活动对象上调用，则返回躯体俯仰旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.body_y_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the body yaw rotation if called on an actor, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果在活动对象上调用，则返回身体偏转旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.bone_aabb</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the axis aligned bounding box of a bone as a struct with members '.min', '.max', along with '.x', '.y', and '.z' values for each.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">将骨骼的轴对齐边界框作为结构体返回，其中包含成员 '.min'、'.max'，以及每个成员的 '.x'、'.y' 和 '.z'值。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.bone_orientation_matrix</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes the name of the bone as an argument. Returns the bone orientation (as a matrix) of the desired bone provided it exists in the queryable geometry of the mob, else this returns the identity matrix and throws a content error.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">以骨骼名称作为参数。如果所需骨骼存在于可查询的几何体中，则返回该骨骼的方向（作为矩阵），否则返回单位矩阵并抛出内容错误。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.bone_orientation_trs</td>
-<td style="border-style:solid; border-width:3; padding:7px">TRS stands for Translate/Rotate/Scale.  Takes the name of the bone as an argument.  Returns the bone orientation matrix decomposed into the component translation/rotation/scale parts of the desired bone provided it exists in the queryable geometry of the mob, else this returns the identity matrix and throws a content error.  The returned value is returned as a variable of type 'struct' with members '.t', '.r', and '.s', each with members '.x', '.y', and '.z', and can be accessed as per the following example: v.my_variable = q.bone_orientation_trs('rightarm'); return v.my_variable.r.x;</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">TRS 代表平移/旋转/缩放。以骨骼名称作为参数。如果所需骨骼存在于可查询的几何体中，则返回分解为平移/旋转/缩放部分的骨骼方向矩阵，否则返回单位矩阵并抛出内容错误。返回值作为类型为 'struct' 的变量返回，成员包括 '.t'、'.r' 和 '.s'，每个成员又包含 '.x'、'.y' 和 '.z'，可以按照以下示例访问：v.my_variable = q.bone_orientation_trs('rightarm'); return v.my_variable.r.x;</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.bone_origin</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the initial (from the .geo) pivot of a bone as a struct with members '.x', '.y', and '.z'.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">将骨骼的初始（来自 .geo）枢轴作为结构体返回，其中包含成员 '.x'、'.y' 和 '.z'。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.bone_rotation</td>
