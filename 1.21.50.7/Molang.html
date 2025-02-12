@@ -1147,11 +1147,11 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.head_y_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes one argument as a parameter.  Returns the nth head y rotation of the entity if it makes sense, else it returns 0.0. Horses, zombie horses, skeleton horses, donkeys and mules require a second parameter that clamps rotation in degrees.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">以一个参数作为参数。如果适用，则返回实体的第 n 个头部 Y 轴旋转角度，否则返回 0.0。马、僵尸马、骷髅马、驴和骡子需要第二个参数来限制旋转角度（以度为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.health</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the health of the entity, or 0.0 if it doesn't make sense to call on this entity.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的生命值，如果对该实体调用此函数不适用，则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.heartbeat_interval</td>
@@ -1957,14 +1957,14 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.last_input_mode_is_any</td>
-<td style="border-style:solid; border-width:3; padding:7px">(EXPERIMENTAL. Enable 'Upcoming Creator Features' to use.) Takes one or more arguments ('keyboard_and_mouse', 'touch', 'gamepad', or 'motion_controller'). If the last input used is any of the specified string values, returns 1.0. Otherwise returns 0.0. Available on the Client (Resource Packs) only.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">（实验性。启用“即将推出的创作者功能”以使用。）接受一个或多个参数（'keyboard_and_mouse'、'touch'、'gamepad' 或 'motion_controller'）。如果最后使用的输入是任何指定的字符串值，则返回 1.0。否则返回 0.0。仅在客户端（资源包）上可用。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.touch_only_affects_hotbar</td>
-<td style="border-style:solid; border-width:3; padding:7px">(EXPERIMENTAL. Enable 'Upcoming Creator Features' to use.) Returns 1.0 if the touch input only affects the touchbar, otherwise returns 0.0. Available on the Client (Resource Packs) only.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">（实验性。启用“即将推出的创作者功能”以使用。）如果触摸输入仅影响触摸栏，则返回 1.0，否则返回 0.0。仅在客户端（资源包）上可用。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -1973,11 +1973,11 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 
 <h1><p id="Experimental Operators">实验性运算符</p></h1>
 
-Some operators may be behind experimental gameplay toggles (see list below).  After getting feedback, we can adjust them further or move them into general availability.</br></br>- (There are currently no Experimental Operators)</br><a href="#Index">返回顶部</a><br><br>
+一些运算符可能位于实验性游戏玩法开关之后（见下文列表）。在获得反馈后，我们可以进一步调整它们或将它们移至正式可用状态。</br></br>- （目前没有实验性运算符）</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Versioned Changes">版本化变更</p></h1>
 
-Molang uses the `"min_engine_version"` from the `manifest.json` of the resource or behavior pack that contains each Molang expression to determine which version of the rules to apply. This allows for changes to how Molang works without breaking existing content. </br></br>Molang Versioned Change versions apply to each expression separately, so it's possible to have different versions active if multiple packs are loaded. </br></br>This is a list of the Versioned Changes that have been added, along with the corresponding game version. </br></br>To know which Versioned Changes are in effect, look at the `"min_engine_version"` of the `manifest.json` of the resource or behavior pack that contains your Molang expression. Any Versioned Change with a version less than or equal to that version number will be in effect. </br><h1><p id="Versioned Change Versions">版本化变更版本</p></h1>
+Molang 使用包含每个 Molang 表达式的资源或行为包的 'manifest.json' 中的 'min_engine_version' 来确定要应用的规则版本。这允许在不破坏现有内容的情况下更改 Molang 的工作方式。 </br></br>Molang 版本化变更版本分别应用于每个表达式，因此如果加载了多个包，则可能会激活不同的版本。</br></br>这是已添加的版本化变更的列表，以及相应的游戏版本。</br></br>要了解哪些版本化变更有效，请查看包含 Molang 表达式的资源或行为包的 'manifest.json' 的 'min_engine_version'。版本小于或等于该版本号的任何版本化变更都将生效。</br><h1><p id="Versioned Change Versions">版本化变更版本</p></h1>
 
 <h2></h2>
 
@@ -1985,51 +1985,51 @@ Molang uses the `"min_engine_version"` from the `manifest.json` of the resource 
 <tr> <th style="border-style:solid; border-width:3;">包的min_engine_version</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.17.0</td>
-<td style="border-style:solid; border-width:3; padding:7px">Initial support for Versioned Changes added. (Not actually a Versioned Change)</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">添加了对版本控制更改的初始支持。（实际上不是版本化的更改）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.17.30</td>
-<td style="border-style:solid; border-width:3; padding:7px">Fixed query.item_remaining_use_duration conversion from ticks to seconds (multiplied by 20 instead of dividing). Also fixed normalization logic in that query to go from 1 down to 0 instead of 0 up to 1.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">修复了从刻到秒的 query.item_remaining_use_duration 转换（乘以 20 而不是除以）。此外，还修复了该查询中的规范化逻辑，从 1 下降到 0，而不是从 0 到 1。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.17.40</td>
-<td style="border-style:solid; border-width:3; padding:7px">Added some new error messages for invalid expressions which previously ran with probably unexpected results. For example "'text' + 1" will now cause a content error.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">为无效表达式添加了一些新的错误消息，这些表达式以前运行时可能会产生意外结果。例如，“'text' + 1” 现在将导致内容错误。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.17.40</td>
-<td style="border-style:solid; border-width:3; padding:7px">Added error detection for too many operators in parentheses or brackets, for example: `1+(2 3)`. Also added more explicit error detection for when an unknown token is encountered.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">新增了对括号或方括号中过多运算符的错误检测，例如：'1+（2 3）'。此外，还添加了更明确的错误检测，用于遇到未知令牌时。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.18.10</td>
-<td style="border-style:solid; border-width:3; padding:7px">Fixed conditional (ternary) operator associativity. Previously nested conditional expressions like `A ? B : C ? D : E` would evaluate as `(A ? B : C) ? D : E`. Now they evaluate as `A ? B : (C ? D : E)`.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">修复了条件（三元）运算符的结合性。以前嵌套的条件表达式，如`A ? B : C ? D : E`的计算结果为`(A ? B : C) ? D : E`。现在他们计算为`A ? B : (C ? D : E)`。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.18.20</td>
-<td style="border-style:solid; border-width:3; padding:7px">Fixed Logical AND to evaluate before Logical OR, and for comparison operators to evaluate before equality operators. For example `A && B || C` now evaluates as `(A && B) || C` instead of `A && (B || C)`. And `A < B == C > D` now evalutes as `(A < B) == (C > D)` instead of `((A < B) == C) > D`.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">修复了逻辑 AND 在逻辑 OR 之前评估，以及比较运算符在相等运算符之前评估的问题。例如，`A && B || C` 现在评估为 `(A && B) || C` 而不是 `A && (B || C)`。而 `A < B == C > D` 现在评估为 `(A < B) == (C > D)` 而不是 `((A < B) == C) > D`。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.19.60</td>
-<td style="border-style:solid; border-width:3; padding:7px">Fixed error where dividing by a dynamically determined negative variable resulted in a division by the absolute (positive) value of the number instead.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">修复了除以动态确定的负变量时，结果变为除以该数字的绝对值（正数）的错误。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.20.0</td>
-<td style="border-style:solid; border-width:3; padding:7px">Fixed query.cape_flap_amount using the wrong player rotation (head rotation instead of body rotation).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">修复了query.cape_flap_amount使用了错误的玩家旋转（头部旋转而不是身体旋转）的问题。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.20.10</td>
-<td style="border-style:solid; border-width:3; padding:7px">Renamed block_property and has_block_property to block_state and has_block_state post this version.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">此版本将 block_property 和 has_block_property 重命名为 block_state 和 has_block_state。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.20.40</td>
-<td style="border-style:solid; border-width:3; padding:7px">Deprecated block_property and has_block_property.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">弃用 block_property 和 has_block_property。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.20.50</td>
-<td style="border-style:solid; border-width:3; padding:7px">dash_cooldown_progress is no longer supported, as that logic is done in the animation. Additionally is_scenting, is_rising, and is_feelingHappy queries are no longer available, and timer_flag_1, timer_flag_2, and timer_flag_3 can be used instead.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">dash_cooldown_progress不再受支持，因为该逻辑是在动画中完成的。此外，is_scenting、is_rising 和 is_feelingHappy 查询不再可用，可以改用 timer_flag_1、timer_flag_2 和 timer_flag_3。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.20.70</td>
-<td style="border-style:solid; border-width:3; padding:7px">Queries surface_particle_texture_size, surface_particle_texture_coordinate, and surface_particle_texture_size now register leaf blocks as supporting for step particles</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">查询 surface_particle_texture_size、surface_particle_texture_coordinate 和 surface_particle_texture_size 现在将树叶方块注册为支持脚步粒子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
