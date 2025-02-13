@@ -3,9 +3,10 @@ minecraft基岩版文档中文翻译，文档来源：[Mojang/bedrock-samples](h
 ## 文档版本索引
 - [1.18.10.4](1.18.10/Index.html)
 - [1.21.50.7](1.21.50.7/index.html)
+- [1.21.60.10](1.21.60.10/index.html)
 ## 本仓库托管的GitHub pages
 [minecraft_documentation_cn](https://bleakzun.github.io/minecraft_documentation_cn/)
-## 作者
+## 贡献者
 - 此文档由[CMWither](https://github.com/DrCMWither)与[FLORA](https://github.com/Bleakzun)一同翻译(可加入翻译组)
 - 部分翻译取自[bedrock.dev](https://bedrock.dev/zh)
 ## 许可证

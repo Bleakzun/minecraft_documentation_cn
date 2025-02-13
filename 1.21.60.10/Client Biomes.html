@@ -1,0 +1,317 @@
+<h1>CLIENT BIOMES DOCUMENTATION </br>Version: 1.21.60.10</h1>
+<h2><p id="Index">索引</p></h2>
+<table border="1">
+  <tr> <th><a href="#Overview">概述</a></th> </tr>
+  <tr> <th><a href="#JSON Format">JSON 格式</a></th> </tr>
+  <tr> <th><a href="#Schema">纲要</a></th> </tr>
+  <tr> <td> <a href="#Client Biome Components">客户端生物群系组件</a> </tr> </td>
+  <tr> <td> <a href="#Client Biome Definition">客户端生物群系定义</a> </tr> </td>
+  <tr> <td> <a href="#Client Biome Description">客户端生物群系描述</a> </tr> </td>
+  <tr> <td> <a href="#Client Biome JSON File">客户端生物群系 JSON 文件</a> </tr> </td>
+<tr> <td> <a href="#Foliage Color Map">树叶颜色贴图</a> </tr> </td>
+<tr> <td> <a href="#Grass Color Map">草地颜色贴图</a> </tr> </td>
+<tr> <td> <a href="#minecraft:ambient_sounds"> minecraft:ambient_sounds</a> </tr> </td>
+<tr> <td> <a href="#minecraft:biome_music"> minecraft:biome_music</a> </tr> </td>
+<tr> <td> <a href="#minecraft:fog_appearance"> minecraft:fog_appearance</a> </tr> </td>
+<tr> <td> <a href="#minecraft:foliage_appearance"> minecraft:foliage_appearance</a> </tr> </td>
+<tr> <td> <a href="#minecraft:grass_appearance"> minecraft:grass_appearance</a> </tr> </td>
+<tr> <td> <a href="#minecraft:sky_color"> minecraft:sky_color</a> </tr> </td>
+<tr> <td> <a href="#minecraft:water_appearance"> minecraft:water_appearance</a> </tr> </td>
+</table>
+<a href="#Index">返回顶部</a>
+<h1><p id="Overview">概述</p></h1>
+
+Minecraft client_biome 文件定义资源包中生物群系的客户端设置。</br>这是过去在 biomes_client.json 中按生物群系设置的新首选位置。</br>（从基础游戏版本 1.21.40 开始，biomes_client.json不再从内置的原版资源包加载。无论版本如何，该文件仍会为其他内容加载，并且使用旧版基础游戏的世界也仍会使用它。）</br>这些文件不是“自定义生物群系”实验玩法的一部分，不会导致生物群系定义独立存在，但它们可用于自定义生物群系的客户端设置。</br><a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="JSON Format">JSON 格式</p></h1>
+
+<h2></h2>
+下面是一个 client_biome 的示例文件。<br / ><textarea readonly="true" cols="50" rows="21">
+{
+  "format_version": "1.21.40",
+  "minecraft:client_biome": {
+    "description": {
+      "identifier": "the_end"
+    },
+    "components": {
+      "minecraft:sky_color": {
+        "sky_color": "#000000"
+      },
+      "minecraft:fog_appearance": {
+        "fog_identifier": "minecraft:fog_the_end"
+      },
+      "minecraft:water_appearance": {
+        "surface_color": "#62529e"
+      }
+    }
+  }
+}
+
+</textarea> </br>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="Schema">纲要</p></h1>
+
+<h1><p id="Client Biome Components">客户端生物群系组件</p></h1>
+
+此客户端生物群系使用的任何组件</br><h2></h2>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:ambient_sounds</td>
+<td style="border-style:solid; border-width:3; padding:7px">对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">设置生物群系的环境声音。这些声音必须位于“sounds.json”文件的“individual_named_sounds”中。</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:biome_music</td>
+<td style="border-style:solid; border-width:3; padding:7px">对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">音乐在生物群系中的播放方式</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:fog_appearance</td>
+<td style="border-style:solid; border-width:3; padding:7px">对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">设置渲染期间使用的迷雾设置。没有此组件的生物群系将使用默认的雾设置。</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:foliage_appearance</td>
+<td style="border-style:solid; border-width:3; padding:7px">对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">设置渲染期间使用的树叶颜色或颜色贴图。没有此组件的生物群系将具有默认的树叶外观。</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:grass_appearance</td>
+<td style="border-style:solid; border-width:3; padding:7px">对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">设置渲染期间使用的草地颜色或颜色贴图。没有此组件的生物群系将具有默认的草外观。</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:sky_color</td>
+<td style="border-style:solid; border-width:3; padding:7px">对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">设置渲染期间使用的天空颜色。没有此组件的生物群系将使用默认的天空颜色。</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:water_appearance</td>
+<td style="border-style:solid; border-width:3; padding:7px">对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">设置渲染期间使用的水面颜色。没有此组件的生物群系将使用默认的水面颜色。</br></td>
+</tr>
+</table>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="Client Biome Definition">客户端生物群系定义</p></h1>
+
+包含用于定义客户端生物群系的描述和组件。</br><h2></h2>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">components</td>
+<td style="border-style:solid; border-width:3; padding:7px">客户端生物群系组件类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">此客户端生物群系的组件。</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">description</td>
+<td style="border-style:solid; border-width:3; padding:7px">客户端生物群系组件类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">非组件设置，包括客户端生物群系名称。</br></td>
+</tr>
+</table>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="Client Biome Description">客户端生物群系描述</p></h1>
+
+包含客户端生物群系的非组件设置。</br><h2></h2>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">identifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">字符串</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">客户端生物群系的名称，由其他功能（如 '/locate biome' 命令）使用。必须与游戏或行为包定义的生物群系的名称匹配。</br></td>
+</tr>
+</table>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="Client Biome JSON File">客户端生物群系 JSON 文件</p></h1>
+
+包含格式版本和客户端生物群系定义</br><h2></h2>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">format_version</td>
+<td style="border-style:solid; border-width:3; padding:7px">字符串</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">此文件使用的 JSON 架构的版本</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:client_biome</td>
+<td style="border-style:solid; border-width:3; padding:7px">客户端生物群系定义类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">单个客户端生物群系定义，包含与游戏或行为包定义的生物群系相关的渲染或声音设置</br></td>
+</tr>
+</table>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="Foliage Color Map">树叶颜色贴图</p></h1>
+
+对象，用于指定树叶颜色映射表，而不是特定颜色。</br><h2></h2>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">color_map</td>
+<td style="border-style:solid; border-width:3; padding:7px">"foliage", "birch", "evergreen", "mangrove_swamp_foliage", "swamp_foliage"</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">来自 textures/colormap 的颜色映射，用于确定树叶的颜色。</br></td>
+</tr>
+</table>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="Grass Color Map">草地颜色贴图</p></h1>
+
+对象，用于指定草地的颜色映射表，而不是特定颜色。</br><h2></h2>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">color_map</td>
+<td style="border-style:solid; border-width:3; padding:7px">"grass", "swamp_grass"</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">来自 textures/colormap 的颜色图，用于确定草的颜色。</br></td>
+</tr>
+</table>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="minecraft:ambient_sounds">minecraft:ambient_sounds</p></h1>
+
+设置生物群系的环境声音。这些声音必须位于“sounds.json”文件的“individual_named_sounds”中。</br><h2></h2>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">addition</td>
+<td style="border-style:solid; border-width:3; padding:7px">字符串</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">偶尔在听者位置播放的声音</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">loop</td>
+<td style="border-style:solid; border-width:3; padding:7px">字符串</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">当听者位置位于生物群系内时循环的声音</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">mood</td>
+<td style="border-style:solid; border-width:3; padding:7px">字符串</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">当光照水平较低时，很少在附近的空气方块位置播放的声音。没有环境声音的生物群系将使用 'ambient.cave' 声音。</br></td>
+</tr>
+</table>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="minecraft:biome_music">minecraft:biome_music</p></h1>
+
+音乐在生物群系中的播放方式</br><h2></h2>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">volume_multiplier</td>
+<td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">在此生物群系中时，会暂时并逐渐应用于音乐音量的乘数。必须是介于 0 和 1 之间的值（包括 0 和 1）。</br></td>
+</tr>
+</table>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="minecraft:fog_appearance">minecraft:fog_appearance</p></h1>
+
+设置渲染期间使用的迷雾设置。没有此组件的生物群系将使用默认的迷雾设置。</br><h2></h2>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">fog_identifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">字符串</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">要使用的迷雾的标识符</br></td>
+</tr>
+</table>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="minecraft:foliage_appearance">minecraft:foliage_appearance</p></h1>
+
+设置渲染期间使用的树叶颜色或颜色贴图。没有此组件的生物群系将具有默认的树叶外观。</br><h2></h2>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">color</td>
+<td style="border-style:solid; border-width:3; padding:7px">255RGB色彩类型的对象或树叶颜色映射类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">树叶的 RGB 颜色，或树叶颜色映射对象。</br></td>
+</tr>
+</table>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="minecraft:grass_appearance">minecraft:grass_appearance</p></h1>
+
+设置渲染期间使用的草地颜色或颜色贴图。没有此组件的生物群系将具有默认的草外观。</br><h2></h2>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">color</td>
+<td style="border-style:solid; border-width:3; padding:7px">255RGB色彩类型的对象或草地颜色映射类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">草方块的 RGB 颜色</br></td>
+</tr>
+</table>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="minecraft:sky_color">minecraft:sky_color</p></h1>
+
+设置渲染期间使用的天空颜色。没有此组件的生物群系将使用默认的天空颜色。</br><h2></h2>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">sky_color</td>
+<td style="border-style:solid; border-width:3; padding:7px">255RGB色彩类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">天空的 RGB 颜色</br></td>
+</tr>
+</table>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="minecraft:water_appearance">minecraft:water_appearance</p></h1>
+
+设置渲染期间使用的水面颜色。没有此组件的生物群系将使用默认的水面颜色。</br><h2></h2>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">surface_color</td>
+<td style="border-style:solid; border-width:3; padding:7px">255RGB色彩类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">水面的 RGB 颜色</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">surface_opacity</td>
+<td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">水面的不透明度，必须介于 0 （不可见）和 1（不透明） 之间（包括 0 和 1）</br></td>
+</tr>
+</table>
+<a href="#Index">返回顶部</a><br><br>
+
+<br><br>
+
