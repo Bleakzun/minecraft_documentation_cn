@@ -88,8 +88,8 @@
 <tr> <td> <a href="#weather"> weather</a> </tr> </td>
 <tr> <td> <a href="#weather_at_position"> weather_at_position</a> </tr> </td>
 <tr> <th><a href="#Server Entity Documentation">Server Entity Documentation（服务端实体文档）</a></th> </tr>
-<tr> <td> <a href="#AI Goals">AI意向</a> </tr> </td>
-<tr> <td> <a href="#Attributes"> 特性</a> </tr> </td>
+<tr> <td> <a href="#AI Goals">AI Goals（AI意向）</a> </tr> </td>
+<tr> <td> <a href="#Attributes"> Attributes（特性）</a> </tr> </td>
 <tr> <td> <a href="#Built-in Events"> Built-in Events（内置事件）</a> </tr> </td>
 <tr> <td> <a href="#Components"> Components（组件）</a> </tr> </td>
 <tr> <td> <a href="#Entity Definition Properties"> Entity Definition Properties</a> </tr> </td>
@@ -101,7 +101,7 @@
 <a href="#Index">返回顶部</a>
 <h1><p id="Client Entity Documentation">Client Entity Documentation（客户端实体文档）</p></h1>
 
-客户端实体文档包含在一个资源包中。 </br>首先，在资源包的根目录下创建一个新的文件夹并将其命名为 "entity"，在实体文件夹中创建一个JSON文件并给它一个名字。JSON文件需要一个版本格式和 minecraft:client_entity 信息。</br></br>minecraft:client_entity 部分包含实体的描述。在这个部分，你可以设置许多关于实体的东西。一般来说，这个文件定义了一个生物需要哪些资源，并给每个资源一个*友好*的名字，这样以便其他文件的实用。</br><h2></h2>
+客户端实体文档包含在一个资源包中。 </br>首先，在资源包的根目录下创建一个新的文件夹并将其命名为 "entity"，在实体文件夹中创建一个JSON文件并给它一个名字。JSON文件需要一个版本格式和 minecraft:client_entity 信息。</br></br>minecraft:client_entity 部分包含实体的描述。在该部分，你可以设置许多关于实体的东西。一般来说，该文件定义了一个生物需要哪些资源，并给每个资源一个*友好*的名字，这样以便其他文件的实用。</br><h2></h2>
 猪的客户端实体定义JSON示例<br / ><textarea readonly="true" cols="62" rows="32">
 "format_version": "1.8.0",
   "minecraft:client_entity": {
@@ -143,7 +143,7 @@
 
 <h1><p id="Spawn Egg">Spawn Egg（生物蛋）</p></h1>
 
-这将设置实体刷怪蛋的颜色或纹理。有两种方法可以做到这一点。第一种是使用 HEX 来设置基础色（底色）和覆盖色。</br><h2></h2>
+设置实体刷怪蛋的颜色或纹理。有两种方法可以做到这一点。第一种是使用 HEX 来设置基础色（底色）和覆盖色。</br><h2></h2>
 
 当一个纹理名称有一个以上的纹理时，你可以使用一个特殊值来选择你想要的那个。如果没有指定特殊值，则假定其为0，并使用列表中的第一个纹理。<br / >指定了一个纹理的刷怪蛋示例<br / ><textarea readonly="true" cols="27" rows="5">
 "spawn_egg": {
@@ -163,7 +163,7 @@
 
 <h1><p id="animation_controllers">animation_controllers（动画控制器）</p></h1>
 
-动画控制器决定何时播放哪些动画。每个控制器包含一个会播放一个或多个动画的状态列表，允许玩家指定名称来引用动画控制器的完整名称。每个控制器名称是必需的，并且需要与该生物的其他动画控制器名称不同。玩家可以参考原版 Minecraft 资源包中的动画控制器，或者创建一个自己的。自定义动画控制器应该在资源包根部的 animation_controllers 文件夹中。</br><a href="#Index">返回顶部</a><br><br>
+决定何时播放哪些动画。每个控制器包含一个会播放一个或多个动画的状态列表，允许玩家指定名称来引用动画控制器的完整名称。每个控制器名称是必需的，并且需要与该生物的其他动画控制器名称不同。玩家可以参考原版 Minecraft 资源包中的动画控制器，或者创建一个自己的。自定义动画控制器应该在资源包根部的 animation_controllers 文件夹中。</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="animations">animations（动画）</p></h1>
 
@@ -171,7 +171,7 @@
 
 <h1><p id="enable_attachables">enable_attachables（允许附着物）</p></h1>
 
-这决定了实体是否可以装备身体部件。当值为"true"时，实体可以渲染盔甲和武器。</br><h2></h2>
+决定实体是否可以装备身体部件。当值为"true"时，实体可以渲染盔甲和武器。</br><h2></h2>
 <br / ><textarea readonly="true" cols="27" rows="2">
 "enable_attachables": true
 </textarea> </br>
@@ -179,7 +179,7 @@
 
 <h1><p id="hide_armor">hide_armor（隐藏盔甲）</p></h1>
 
-这决定了实体的盔甲是否该被隐藏。当值为"true"时，实体身上盔甲会被隐藏。且会覆盖 enable_attachables 所指定的渲染设置。</br><h2></h2>
+决定了实体的盔甲是否该被隐藏。当值为"true"时，实体身上盔甲会被隐藏。且会覆盖 enable_attachables 所指定的渲染设置。</br><h2></h2>
 <br / ><textarea readonly="true" cols="19" rows="2">
 "hide_armor": true
 </textarea> </br>
@@ -201,23 +201,23 @@
 
 <h1><p id="materials, textures, animations">materials, textures, animations（材质，纹理，动画）</p></h1>
 
-玩家可以在本部分中设置实体使用的材质、纹理和模型。玩家可以设置一个或多个材质、纹理和模型，供生物使用。玩家必须为他们设置自定义的名字。这些名称在渲染控制器JSON中使用。玩家可以从原版Minecraft资源包中调用材质、纹理和模型，或者创建自己的自定义材质、纹理和模型应位于资源包根目录下的相应文件夹中。</br><a href="#Index">返回顶部</a><br><br>
+设置实体使用的材质、纹理和模型。玩家可以设置一个或多个材质、纹理和模型，供生物使用。玩家必须为他们设置自定义的名字。这些名称在渲染控制器 JSON 中使用。玩家可以从原版 Minecraft 资源包中调用材质、纹理和模型，或者创建自己的自定义材质、纹理和模型应位于资源包根目录下的相应文件夹中。</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="min_engine_version">min_engine_version（最小引擎版本）</p></h1>
 
-当存在时，玩家可以设置允许解析 JSON 所需的最小版本。文档内的版本会与与构建最高优先级的资源包的引擎版本进行比较，如果定义的 min_engine_version 比该包的 engine 版本更新，则不解析该定义。 多个定义文件可能使用相同的标识符，在这种情况下，将只加载其中一个定义。与最高优先级的资源包的引擎版本相比，具有相同或最接近且不大于 min_engine_version 的定义将被解析，具有相同标识符的所有其他定义则不会被解析。当在资源包组顶部使用较旧的资源包时，这对于继续支持较旧版本的实体非常有用，同时在所有其他情况下也支持较新版本的实体。</br><a href="#Index">返回顶部</a><br><br>
+当存在时，可以设置允许解析 JSON 所需的最小版本。文档内的版本会与与构建最高优先级的资源包的引擎版本进行比较，如果定义的 min_engine_version 比该包的 engine 版本更新，则不解析该定义。 多个定义文件可能使用相同的标识符，在这种情况下，将只加载其中一个定义。与最高优先级的资源包的引擎版本相比，具有相同或最接近且不大于 min_engine_version 的定义将被解析，具有相同标识符的所有其他定义则不会被解析。当在资源包组顶部使用较旧的资源包时，这对于继续支持较旧版本的实体非常有用，同时在所有其他情况下也支持较新版本的实体。</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="particle">particle（粒子）</p></h1>
 
-允许玩家指定一个键来引用粒子的完整名称。当键和实体都存在时，粒子就会在实体生成时被创建。键是必需的，并且需要与该生物的其他动画控制器的键名称不同。玩家可以参考原版 Minecraft 资源包中的粒子，或者创建自己的。自定义粒子应该在资源包根部的 particle 文件夹中。</br><a href="#Index">返回顶部</a><br><br>
+允许指定一个键来引用粒子的完整名称。当键和实体都存在时，粒子就会在实体生成时被创建。键是必需的，并且需要与该生物的其他动画控制器的键名称不同。玩家可以参考原版 Minecraft 资源包中的粒子，或者创建自己的。自定义粒子应该在资源包根部的 particle 文件夹中。</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="render_controllers">render_controllers（渲染控制器）</p></h1>
 
-指定渲染控制器的名称。这个名称需要与位于 Render Controllers 文件夹中的相应 JSON 的名称相匹配。玩家可以参考原版 Minecraft 资源包中的渲染控制器，或者创建自己的。自定义渲染控制器应该在资源包根部的 textures 文件夹中。</br><a href="#Index">返回顶部</a><br><br>
+指定渲染控制器的名称。该名称需要与位于 Render Controllers 文件夹中的相应 JSON 的名称相匹配。玩家可以参考原版 Minecraft 资源包中的渲染控制器，或者创建自己的。自定义渲染控制器应该在资源包根部的 textures 文件夹中。</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="scripts">scripts（脚本）</p></h1>
 
-脚本允许玩家使用Molang 来进行一次计算并存储该结果值。这个值可以被反复使用，而不需要反复重新计算。脚本目前支持预动画和缩放，更多的脚本类型将在以后添加。</br>-预动画脚本可以在处理动画之前立即被评估。</br>-缩放脚本可以批量设置生物的模型大小。</br>*该特性已被删除*</br><h2></h2>
+脚本允许玩家使用 Molang 来进行一次计算并存储该结果值。该值可以被反复使用，而不需要反复重新计算。脚本目前支持预动画和缩放，更多的脚本类型将在以后添加。</br>-预动画脚本可以在处理动画之前立即被评估。</br>-缩放脚本可以批量设置生物的模型大小。</br>*该特性已被删除*</br><h2></h2>
 鳕鱼的动画脚本示例<br / ><textarea readonly="true" cols="125" rows="7">
 "scripts": {
   "pre_animation": [
@@ -237,7 +237,7 @@
 
 <h1><p id="Data-Driven Spawning">Data-Driven Spawning（数据驱动生成）</p></h1>
 
-数据驱动生成允许你调整生物的生成条件，包括添加到游戏中的新生物在生物群系中的自然生成，添加 / 移除 生物刷怪蛋 到创造模式物品栏并设置生物刷怪蛋，并添加 / 移除 到 /summon 命令中</br>
+数据驱动生成允许玩家调整生物的生成条件，包括添加到游戏中的新生物在生物群系中的自然生成，添加/移除生物刷怪蛋到创造模式物品栏并设置生物刷怪蛋，并添加/移除到 /summon 命令中。</br>
 
 <h1><p id="Spawn Rules">Spawn Rules（生成规则）</p></h1>
 
@@ -245,7 +245,7 @@
 
 <h2><p id="Biome Tags">Biome Tags（生物群系标签）</p></h2>
 
-游戏中的每个生物群系都有一个或多个标签。这些标签用于确定生物在哪些生物群系中生成。下面是可以使用的生物群系标签的列表：
+游戏中的每个生物群系都有一个或多个标签，这些标签用于确定生物在哪些生物群系中生成。下面是可以使用的生物群系标签的列表：
 </br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
@@ -369,7 +369,7 @@
 环境包含不同的组成部分，玩家可以使用这些部分来定义生物在群系的生成。
 </br><h3></h3>
 
-<h3><p id="Components">Components（组件）</p></h3>
+<h3><p id="Components">组件</p></h3>
 
 <h4></h4>
 
@@ -377,11 +377,11 @@
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">minecraft:biome_filter</td>
-<td style="border-style:solid; border-width:1; padding:9px">这个组件允许玩家指定生物在哪些生物群系中生成。生物群系标签的信息见下文。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">该组件允许玩家指定生物在哪些生物群系中生成。生物群系标签的信息见下文。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">minecraft:brightness_filter</td>
-<td style="border-style:solid; border-width:1; padding:9px">这个组件允许玩家设置生成生物的光照强度范围。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:1; padding:9px">该组件允许玩家设置生成生物的光照强度范围。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">adjust_for_weather</td>
@@ -427,7 +427,7 @@
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">minecraft:difficulty_filter</td>
-<td style="border-style:solid; border-width:1; padding:9px">这个组件允许玩家决定生物会在在设置特定难度的情况下生成。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:1; padding:9px">该组件允许玩家决定生物会在在设置特定难度的情况下生成。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">max</td>
@@ -446,7 +446,7 @@
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">minecraft:herd</td>
-<td style="border-style:solid; border-width:1; padding:9px">这个组件允许玩家决定一次生成一个生物群的大小。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:1; padding:9px">该组件允许玩家决定一次生成一个生物群的大小。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">event</td>
@@ -477,15 +477,15 @@
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">minecraft:spawns_on_surface</td>
-<td style="border-style:solid; border-width:1; padding:9px">这个组件允许生物在地表生成。添加该组件即起效，移除该组件使生物停止在地表生成。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">该组件允许生物在地表生成。添加该组件即起效，移除该组件使生物停止在地表生成。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">minecraft:spawns_underwater</td>
-<td style="border-style:solid; border-width:1; padding:9px">这个组件允许生物在水中生成。添加该组件即起效，移除该组件使生物停止在水中生成。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">该组件允许生物在水中生成。添加该组件即起效，移除该组件使生物停止在水中生成。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">minecraft:weight</td>
-<td style="border-style:solid; border-width:1; padding:9px">这个组件允许玩家对该生物的生成频率赋权。权重较高的生物比权重较低的生物有更大的机会生成。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
+<td style="border-style:solid; border-width:1; padding:9px">该组件允许玩家对该生物的生成频率赋权。权重较高的生物比权重较低的生物有更大的机会生成。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
 <tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:10px">default</td>
@@ -506,7 +506,7 @@
 新的生成规则包含在一个行为包中。首先，在您想添加新生物群系生成规则的行为包根部创建一个名为"spawn_rules"的新文件夹。在 spawn_rule 文件夹中，创建一个 JSON 文件，并给它一个名字。该 JSON 文件需要一个格式、描述和条件。生成规则包含描述和条件所有生成规则 JSON 需要有一个 ID （位于描述部分下）。与其他标识符类似，它遵循命名法则"namespace:name（命名空间:名称）"。 minecraft 命名空间是为原版 Minecraft 规则保留的。当改变一个现有的生物时，使用出现在该实体 JSON 中的 ID 。当创建你自己的生物时，请确保生物在所有实体的 JSON 文件中具有相同的 ID 。</br></br>生成规则还需要定义用于数量控制的生物组。每组都有自己的生成限制，通过将一个实体设置到一个生物组，只要该组没有达到生成限制，它就会生成。
 </br></br>有三个可供实体分配的生物组：</br>-animal</br>-water_animal</br>-monster</br><a href="#Index">返回顶部</a><br><br>
 
-<h2><p id="Tagged Biomes">Tagged Biomes</p></h2>
+<h2><p id="Tagged Biomes">群系条件表</p></h2>
 
 <h3></h3>
 
@@ -836,7 +836,7 @@
 
 <h1><p id="Filters">Filters（过滤器）</p></h1>
 
-过滤器允许数据对象使用指定的检测标准。</br></br>例如，一个包含过滤器的模型只有在过滤器标准值为 true 时才会被使用。</br></br></br></br>一个典型的过滤器由四个参数组成：</br></br>name（名称）：要应用的检测的名称。</br></br>domain（域）：检测应该在哪个域中进行。例如一个装甲槽；这个参数只被少数检测使用。</br></br>operator（操作符）：与数值的比较，例如 “equal（等于）”或“greater（大于）”。</br></br>value（值）：与检测进行比较的值。</br></br></br></br>一个典型的过滤器看起来像下面这样：</br></br> { "test" : "moon_intensity", "subject" : "self", "operator" : "greater", "value" : "0.5" } </br></br>其结果是调用实体（self）计算其位置的moon_intensity，如果结果大于 0.5 ，则返回 true 。
+过滤器允许数据对象使用指定的检测标准。</br></br>例如，一个包含过滤器的模型只有在过滤器标准值为 true 时才会被使用。</br></br></br></br>一个典型的过滤器由四个参数组成：</br></br>name（名称）：要应用的检测的名称。</br></br>domain（域）：检测应该在哪个域中进行。例如一个装甲槽；该参数只被少数检测使用。</br></br>operator（操作符）：与数值的比较，例如 “equal（等于）”或“greater（大于）”。</br></br>value（值）：与检测进行比较的值。</br></br></br></br>一个典型的过滤器看起来像下面这样：</br></br> { "test" : "moon_intensity", "subject" : "self", "operator" : "greater", "value" : "0.5" } </br></br>其结果是调用实体（self）计算其位置的moon_intensity，如果结果大于 0.5 ，则返回 true 。
 </br></br></br></br>检测可以使用集合"all_of"、"any_of "或"none_of "组合成组。</br></br>"all_of"中的所有检测都必须通过，该组通才会过。</br></br>"any_of"中的一个或多个检测必须通过，该组才会通过。</br></br>none_of"中的所有检测都必须不通过，该组才会通过。</br></br>
 
 <h1><p id="clock_time">clock_time</p></h1>
@@ -1058,7 +1058,7 @@
 
 <h1><p id="has_ability">has_ability</p></h1>
 
-当主体实体具有命名能力时，返回true。</br><h2></h2>
+当主体实体具有命名能力时，返回 true。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">默认值</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
@@ -8755,7 +8755,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -8788,7 +8788,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">filters</td>
 <td style="border-style:solid; border-width:1; padding:9px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">使列表中的这个条目有效的条件。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">使列表中的该条目有效的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">max_dist</td>
@@ -8806,7 +8806,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">must_see_forget_duration</td>
 <td style="border-style:solid; border-width:1; padding:9px">布尔值</td>
 <td style="border-style:solid; border-width:1; padding:9px">3.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">决定这个生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">决定该生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">sprint_speed_multiplier</td>
@@ -8833,7 +8833,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">must_see_forget_duration</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">3.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">决定这个生物在失去一个目标并在目标不再可见时寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">决该生物在失去一个目标并在目标不再可见时寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">within_radius</td>
@@ -8949,7 +8949,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">wait_time</td>
@@ -8976,7 +8976,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -9036,7 +9036,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">stop_distance</td>
@@ -9057,7 +9057,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -9134,7 +9134,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">filters</td>
 <td style="border-style:solid; border-width:1; padding:9px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">使列表中的这个标签有效的条件。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">使列表中的该标签有效的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">max_dist</td>
@@ -9152,7 +9152,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">must_see_forget_duration</td>
 <td style="border-style:solid; border-width:1; padding:9px">布尔值</td>
 <td style="border-style:solid; border-width:1; padding:9px">3.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">决定这个生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">决定该生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">sprint_speed_multiplier</td>
@@ -9173,7 +9173,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -9194,7 +9194,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">stop_distance</td>
@@ -9215,13 +9215,13 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">start_distance</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">10.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">在生物开始跟踪主人之前，主人可以离开这个生物的最远距离（以方块为单位）。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在生物开始跟踪主人之前，主人可以离开该生物的最远距离（以方块为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">stop_distance</td>
@@ -9242,7 +9242,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -9284,7 +9284,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">120</td>
-<td style="border-style:solid; border-width:2; padding:8px">一个随机值，决定何时随机移动到某处。这有概率为此值分之一的机会来选择这个目标。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">一个随机值，决定何时随机移动到某处。这有概率为此值分之一的机会来选择该目标。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">on_home</td>
@@ -9296,7 +9296,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -9311,7 +9311,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">duration</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物反应的时间的数量（以秒为单位）。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物反应的时间的数量（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">poi_type</td>
@@ -9323,13 +9323,13 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">timeout_cooldown</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">8.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">在该意向于一个内部错误或超时条件之后被再次使用之前的冷却时间（以秒为单位）。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在此意向于一个内部错误或超时条件之后被再次使用之前的冷却时间（以秒为单位）。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -9356,7 +9356,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">min_radius</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">10.0f</td>
-<td style="border-style:solid; border-width:2; padding:8px">生物跑向这个目标所必须达到的最小距离。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">生物跑向该目标所必须达到的最小距离。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">within_radius_event</td>
@@ -9389,7 +9389,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">filters</td>
 <td style="border-style:solid; border-width:1; padding:9px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">使列表中的这个条目有效的条件。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">使列表中的该条目有效的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">max_dist</td>
@@ -9407,7 +9407,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">must_see_forget_duration</td>
 <td style="border-style:solid; border-width:1; padding:9px">布尔值</td>
 <td style="border-style:solid; border-width:1; padding:9px">3.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">决定这个生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">决定该生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">sprint_speed_multiplier</td>
@@ -9467,7 +9467,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -9539,13 +9539,13 @@
 <td style="border-style:solid; border-width:2; padding:8px">interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">120</td>
-<td style="border-style:solid; border-width:2; padding:8px">一个随机值，决定会发生什么随机事件。这有概率为此值分之一的机会来选择这个目标。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">一个随机值，决定会发生什么随机事件。这有概率为此值分之一的机会来选择该目标。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">random_stop_interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">120</td>
-<td style="border-style:solid; border-width:2; padding:8px">一个随机值，决定会结束随机事件。这有概率为此值分之一的机会来选择这个目标。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">一个随机值，决定会结束随机事件。这有概率为此值分之一的机会来选择该目标。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -9608,7 +9608,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target_blocks</td>
@@ -9680,7 +9680,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">filters</td>
 <td style="border-style:solid; border-width:2; padding:8px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">决定这个生物查看实体的条件的过滤器</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">决定该生物查看实体的条件的过滤器</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">look_distance</td>
@@ -9858,7 +9858,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -9873,7 +9873,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target_dist</td>
@@ -9906,7 +9906,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -9951,13 +9951,13 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">start_chance</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">开始这个行为的概率（在每个随机刻更新后应用）。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">开始该行为的概率（在每个随机刻更新后应用）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">stay_duration</td>
@@ -10026,7 +10026,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -10065,7 +10065,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -10110,7 +10110,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -10131,7 +10131,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -10185,7 +10185,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -10224,7 +10224,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -10266,13 +10266,13 @@
 <td style="border-style:solid; border-width:2; padding:8px">mob_detect_dist</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">6.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">这个生物将要检测的生物在X和Z轴中的距离（以方块为单位）。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">该生物将要检测的生物在X和Z轴中的距离（以方块为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">mob_detect_height</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">6.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">这个生物将要检测的生物在Y轴中的距离（以方块为单位）。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">该生物将要检测的生物在Y轴中的距离（以方块为单位）。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -10305,7 +10305,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">entity_types</td>
 <td style="border-style:solid; border-width:2; padding:8px">JSON对象</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">过滤哪些类型的目标对这个实体有效。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<td style="border-style:solid; border-width:2; padding:8px">过滤哪些类型的目标对该实体有效。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">默认值</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">filters</td>
@@ -10317,7 +10317,7 @@
 <td style="border-style:solid; border-width:3; padding:7px">max_dist</td>
 <td style="border-style:solid; border-width:3; padding:7px">小数</td>
 <td style="border-style:solid; border-width:3; padding:7px">16</td>
-<td style="border-style:solid; border-width:3; padding:7px">为了成为一个有效的目标选择，目标类型不能离实体远与"max_dist"这个距离。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">为了成为一个有效的目标选择，目标距离实体的距离不得大于该值。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">must_see</td>
@@ -10356,7 +10356,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">persist_time</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">在目标不再有效后，这个实体可以继续攻击目标的时间（以秒为单位）。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在目标不再有效后，该实体可以继续攻击目标的时间（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">reselect_targets</td>
@@ -10398,7 +10398,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">within_radius</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">这个实体在跟随目标时可以与目标的最大距离，否则目标会失效。这个值只在实体没有声明"minecraft:follow_range"时使用。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">该实体在跟随目标时可以与目标的最大距离，否则目标会失效。该值只在实体没有声明"minecraft:follow_range"时使用。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -10425,7 +10425,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">filters</td>
 <td style="border-style:solid; border-width:1; padding:9px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">使列表中的这个条目有效的条件。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">使列表中的该条目有效的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">max_dist</td>
@@ -10443,7 +10443,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">must_see_forget_duration</td>
 <td style="border-style:solid; border-width:1; padding:9px">布尔值</td>
 <td style="border-style:solid; border-width:1; padding:9px">3.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">决定这个生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">决定该生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">sprint_speed_multiplier</td>
@@ -10476,13 +10476,13 @@
 <td style="border-style:solid; border-width:2; padding:8px">must_see_forget_duration</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">3.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">决定这个生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">决定该生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">persist_time</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0f</td>
-<td style="border-style:solid; border-width:2; padding:8px">在目标不再有效后，这个实体可以继续攻击目标的时间（以秒为单位）。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">在目标不再有效后，该实体可以继续攻击目标的时间（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">priority</td>
@@ -10533,7 +10533,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -10573,7 +10573,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">filters</td>
 <td style="border-style:solid; border-width:1; padding:9px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">使列表中的这个条目有效的条件。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">使列表中的该条目有效的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">max_dist</td>
@@ -10591,7 +10591,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">must_see_forget_duration</td>
 <td style="border-style:solid; border-width:1; padding:9px">布尔值</td>
 <td style="border-style:solid; border-width:1; padding:9px">3.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">决定这个生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">决定该生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">sprint_speed_multiplier</td>
@@ -10627,7 +10627,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">filters</td>
 <td style="border-style:solid; border-width:1; padding:9px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">使列表中的这个条目有效的条件。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">使列表中的该条目有效的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">max_dist</td>
@@ -10645,7 +10645,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">must_see_forget_duration</td>
 <td style="border-style:solid; border-width:1; padding:9px">布尔值</td>
 <td style="border-style:solid; border-width:1; padding:9px">3.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">决定这个生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">决定该生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">sprint_speed_multiplier</td>
@@ -10681,7 +10681,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">force</td>
 <td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">false</td>
-<td style="border-style:solid; border-width:2; padding:8px">如果值为"true"，这个生物将不会停止恐慌，直到它不能再移动或意向从它身上移走。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">如果值为"true"，该生物将不会停止恐慌，直到它不能再移动或意向从它身上移走。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">ignore_mob_damage</td>
@@ -10699,7 +10699,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -10736,7 +10736,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -10787,7 +10787,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">track_target</td>
@@ -10808,7 +10808,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -10839,7 +10839,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">full_delay</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">100</td>
-<td style="border-style:solid; border-width:2; padding:8px">这个生物吃饱后，想再吃/抢夺的时间（以秒为单位）。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">该生物吃饱后，想再吃/抢夺的时间（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">goal_radius</td>
@@ -10857,7 +10857,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">max_to_eat</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">6</td>
-<td style="border-style:solid; border-width:2; padding:8px">这个实体想吃/抢夺的作物的最大数量。如果设置为0或更少，那么它就没有最大数量。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">该实体想吃/抢夺的作物的最大数量。如果设置为0或更少，那么它就没有最大数量。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">search_range</td>
@@ -10869,7 +10869,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -10890,13 +10890,13 @@
 <td style="border-style:solid; border-width:2; padding:8px">interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">120</td>
-<td style="border-style:solid; border-width:2; padding:8px">一个随机值，决定何时随机移动到某处。这有概率为此值分之一的机会来选择这个目标。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">一个随机值，决定何时随机移动到某处。这有概率为此值分之一的机会来选择该目标。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">xz_dist</td>
@@ -10958,13 +10958,13 @@
 <td style="border-style:solid; border-width:2; padding:8px">interval</td>
 <td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">120</td>
-<td style="border-style:solid; border-width:2; padding:8px">一个随机值，决定何时随机移动到某处。这有概率为此值分之一的机会来选择这个目标。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">一个随机值，决定何时随机移动到某处。这有概率为此值分之一的机会来选择该目标。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">xz_dist</td>
@@ -11063,7 +11063,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">start_chance</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.1</td>
-<td style="border-style:solid; border-width:2; padding:8px">这是生物开始这个目标的几率，从 0 到 1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">这是生物开始该目标的几率，从 0 到 1</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">stop_chance</td>
@@ -11090,7 +11090,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">xz_dist</td>
@@ -11129,7 +11129,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">xz_dist</td>
@@ -11210,7 +11210,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -11294,7 +11294,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">filters</td>
 <td style="border-style:solid; border-width:1; padding:9px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">使列表中的这个条目有效的条件。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">使列表中的该条目有效的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">max_dist</td>
@@ -11312,7 +11312,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">must_see_forget_duration</td>
 <td style="border-style:solid; border-width:1; padding:9px">布尔值</td>
 <td style="border-style:solid; border-width:1; padding:9px">3.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">决定这个生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">决定该生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">sprint_speed_multiplier</td>
@@ -11345,7 +11345,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -11413,7 +11413,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">timeout_cooldown</td>
@@ -11500,7 +11500,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">filters</td>
 <td style="border-style:solid; border-width:1; padding:9px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">使列表中的这个条目有效的条件。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">使列表中的该条目有效的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">max_dist</td>
@@ -11518,7 +11518,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">must_see_forget_duration</td>
 <td style="border-style:solid; border-width:1; padding:9px">布尔值</td>
 <td style="border-style:solid; border-width:1; padding:9px">3.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">决定这个生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">决定该生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">sprint_speed_multiplier</td>
@@ -11695,7 +11695,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -11728,13 +11728,13 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">start_chance</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.1</td>
-<td style="border-style:solid; border-width:2; padding:8px">这是生物开始这个目标的几率，从 0 到 1</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">这是生物开始该目标的几率，从 0 到 1</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -11878,7 +11878,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">weight</td>
 <td style="border-style:solid; border-width:1; padding:9px">小数</td>
 <td style="border-style:solid; border-width:1; padding:9px">0.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">这个咒语的权重。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">该咒语的权重。</br></td>
 </tr>
 </table>
 </td>
@@ -11951,7 +11951,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">tempt_sound</td>
@@ -11963,7 +11963,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">within_radius</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">这个生物可能会受到手持他们喜欢的物品的玩家的诱惑的距离（以方块为单位）</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">该生物可能会受到手持他们喜欢的物品的玩家的诱惑的距离（以方块为单位）</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -12027,7 +12027,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">filters</td>
 <td style="border-style:solid; border-width:1; padding:9px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">使列表中的这个条目有效的条件。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">使列表中的该条目有效的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">max_dist</td>
@@ -12045,7 +12045,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">must_see_forget_duration</td>
 <td style="border-style:solid; border-width:1; padding:9px">布尔值</td>
 <td style="border-style:solid; border-width:1; padding:9px">3.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">决定这个生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">决定该生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">sprint_speed_multiplier</td>
@@ -12089,7 +12089,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">filters</td>
 <td style="border-style:solid; border-width:1; padding:9px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">使列表中的这个条目有效的条件。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">使列表中的该条目有效的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">max_dist</td>
@@ -12107,7 +12107,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">must_see_forget_duration</td>
 <td style="border-style:solid; border-width:1; padding:9px">布尔值</td>
 <td style="border-style:solid; border-width:1; padding:9px">3.0</td>
-<td style="border-style:solid; border-width:1; padding:9px">决定这个生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">决定该生物在失去一个目标并在目标不再可见时重新寻找一个新的目标之前所需的时间（单位为秒）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">sprint_speed_multiplier</td>
@@ -12173,7 +12173,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">speed_multiplier</td>
 <td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">1.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">该生物使用该AI意向时的移动速度乘子</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">此生物使用该AI意向时的移动速度乘子</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">work_in_rain_tolerance</td>
@@ -12416,7 +12416,7 @@
 <td style="border-style:solid; border-width:2; padding:8px">broadcast_filters</td>
 <td style="border-style:solid; border-width:2; padding:8px">Minecraft 类型</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">使列表中的这个条目有效的条件。</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">使列表中的该条目有效的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">broadcast_range</td>
@@ -12616,7 +12616,7 @@
 <td style="border-style:solid; border-width:1; padding:9px">replace_item</td>
 <td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">用于提速的物品一旦用完就会变成这个物品。</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">用于提速的物品一旦用完就会变成该物品。</br></td>
 </tr>
 </table>
 </td>
@@ -14454,7 +14454,7 @@ none
 
 <h2><p id="minecraft:movement.sway">minecraft:movement.sway</p></h2>
 
-这个移动控制使生物左右摇晃，给人一种它在游泳的印象。</br><h3></h3>
+该移动控制使生物左右摇晃，给人一种它在游泳的印象。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -16775,7 +16775,7 @@ Example<br / ><textarea readonly="true" cols="29" rows="10">
 
 <h2></h2>
 
-<h2><p id="AI Goals">AI意向</p></h2>
+<h2><p id="AI Goals">AI Goals （AI意向）</p></h2>
 
 <h3></h3>
 
@@ -17236,7 +17236,7 @@ Example<br / ><textarea readonly="true" cols="29" rows="10">
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
-<h2><p id="Attributes">特性</p></h2>
+<h2><p id="Attributes"> Attributes（特性）</p></h2>
 
 <h3></h3>
 
@@ -18531,7 +18531,7 @@ Example<br / ><textarea readonly="true" cols="29" rows="10">
 
 <h2><p id="minecraft:on_target_escape">minecraft:on_target_escape</p></h2>
 
-添加一个触发器，当此实体丢失其当前拥有的目标时要调用。</br><h3></h3>
+添加一个触发器，当此实体丢失其当前拥有的目标时调用。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
@@ -18558,7 +18558,7 @@ Example<br / ><textarea readonly="true" cols="29" rows="10">
 
 <h2><p id="minecraft:on_wake_with_owner">minecraft:on_wake_with_owner</p></h2>
 
-添加一个触发器，当此宠物的主人在与宠物一起睡觉后醒来时要调用。</br><h3></h3>
+添加一个触发器，当此宠物的主人在与宠物一起睡觉后醒来时调用。</br><h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
 <tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
