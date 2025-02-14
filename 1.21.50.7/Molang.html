@@ -1155,99 +1155,99 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.heartbeat_interval</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the heartbeat interval of the actor in seconds. Returns 0 when the actor has no heartbeat.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回活动对象的检测信号间隔（以秒为单位）。当活动对象没有检测信号时，返回 0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.heartbeat_phase</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the heartbeat phase of the actor. 0.0 if at start of current heartbeat, 1.0 if at the end. Returns 0 on errors or when the actor has no heartbeat. Available on the Client (Resource Packs) only.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回活动对象的检测信号阶段。如果在当前检测信号开始时为 0.0，如果在结束时为 1.0。在出现错误或执行组件没有检测信号时返回 0。仅在客户端（资源包）上可用。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.heightmap</td>
-<td style="border-style:solid; border-width:3; padding:7px">Queries Height Map</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">查询高度贴图</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.hurt_direction</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the hurt direction for the actor, otherwise returns 0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回活动对象的伤害方向，否则返回 0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.hurt_time</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the hurt time for the actor, otherwise returns 0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回活动对象的受伤时间，否则返回 0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.in_range</td>
-<td style="border-style:solid; border-width:3; padding:7px">Requires 3 numerical arguments: some value, a minimum, and a maximum. If the first argument is between the minimum and maximum (inclusive), returns 1.0. Otherwise returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">Requires 3 numerical arguments: some value, a minimum, and a maximum. If the first argument is between the minimum and maximum (inclusive), returns 1.0. Otherwise returns 0.0.</br></td><!-- 未翻译 -->
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.invulnerable_ticks</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the number of ticks of invulnerability the entity has left if it makes sense, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果适用，则返回实体剩余的无敌刻数，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_admiring</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is admiring, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体正在欣赏，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_alive</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is alive, and 0.0 if it's dead.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体活着，则返回 1.0，如果实体死了，则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_angry</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is angry, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体生气，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_attached</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is attached to another entity (such as being held or worn), else it will return 0.0. Available only with resource packs.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体附加到另一个实体（例如被手持或穿戴），则返回 1.0，否则将返回 0.0。仅适用于资源包。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_attached_to_entity</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the actor is attached to an entity, else it will return 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果活动对象附加到实体，则返回 1.0，否则将返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_avoiding_block</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is fleeing from a block, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体正在逃离方块，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_avoiding_mobs</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is fleeing from mobs, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体正在逃离生物，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_baby</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is a baby, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体是婴儿，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_breathing</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is breathing, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体正在呼吸，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_bribed</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity has been bribed, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体已被贿赂，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_carrying_block</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is carrying a block, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体携带方块，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_casting</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is casting, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体正在转换，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_celebrating</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is celebrating, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体正在庆祝，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_celebrating_special</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is doing a special celebration, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体正在进行特殊庆祝活动，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_charged</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is charged, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体已充能，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_charging</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is charging, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体正在充能，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_chested</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity has chests attached to it, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体附加了箱子，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_cooldown_type</td>
@@ -1255,7 +1255,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_crawling</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is crawling, else it returns 0.0</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体正在爬行，则返回 1.0，否则返回 0.0</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_critical</td>
