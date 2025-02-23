@@ -1,0 +1,78 @@
+[
+    {
+        "comment": [
+            {
+            "source": "source",
+            "translations": {
+                "zh-CN": "原文"
+            },
+            "context": "Terms from original language (English)."
+            },
+            {
+            "source": "translations",
+            "translations": {
+                "zh-CN": "翻译"
+            },
+            "context": "Translations in different languages, use different language codes (e.g. zh-CN is for Chinese (Simplified)) for the keys."
+            },
+            {
+            "source": "context",
+            "translations": {
+                "zh-CN": "定义"
+            },
+            "context": "Explanations and definitions of a term to help translators understand the meaning of the term."
+            },
+            {
+            "source": "notes",
+            "translations": {
+                "zh-CN": "备注"
+            },
+            "context": "Additonal notes."
+            }
+        ]
+    },
+    {
+        "terms": [
+            {
+            "source": "Virtual Machine",
+            "translations": {
+                "zh-CN": "虚拟机"
+            },
+            "context": "A virtualized instance of a computer that can run an operating system and applications.",
+            "notes": "Commonly abbreviated as VM."
+            },
+            {
+            "source": "Storage Account",
+            "translations": {
+                "zh-CN": "存储账户"
+            },
+            "context": "A container for storing data in Azure.",
+            "notes": "Different types of storage accounts exist, such as Blob storage, Queue storage, etc."
+            },
+            {
+            "source": "Resource Group",
+            "translations": {
+                "zh-CN": "资源组"
+            },
+            "context": "A logical container for grouping Azure resources for management.",
+            "notes": "Resources within a resource group can be of different types."
+            },
+            {
+            "source": "Azure Active Directory",
+            "translations": {
+                "zh-CN": "Azure 活动目录"
+            },
+            "context": "Microsoft's cloud-based identity and access management service.",
+            "notes": "Often abbreviated as Azure AD."
+            },
+            {
+            "source": "Key Vault",
+            "translations": {
+                "zh-CN": "密钥库"
+            },
+            "context": "A service for securely storing and managing secrets, keys, and certificates.",
+            "notes": "Used for protecting sensitive information."
+            }
+        ]
+    }
+]
