@@ -867,11 +867,11 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.body_x_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">如果在活动对象上调用，则返回躯体俯仰旋转，否则返回 0.0。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果在活动对象上调用，则返回躯体俯仰角旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.body_y_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">如果在活动对象上调用，则返回身体偏转旋转，否则返回 0.0。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果在活动对象上调用，则返回身体偏航角旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.bone_aabb</td>
@@ -1139,7 +1139,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.head_roll_angle</td>
-<td style="border-style:solid; border-width:3; padding:7px">如果适用，则返回实体头部的滚动角度，否则返回 0.0。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果适用，则返回实体头部的翻滚角角度，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.head_x_rotation</td>
@@ -1751,203 +1751,203 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.ride_body_x_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">返回骑乘实体的身体俯仰world-rotation，否则返回 0.0。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回骑乘实体的身体俯仰角世界旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.ride_body_y_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the body yaw world-rotation of the ride of on an entity, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回骑乘实体的身体偏航角世界旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.ride_head_x_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the head x world-rotation of the ride of an entity, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回骑乘实体的头部 x 世界旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.ride_head_y_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes one optional argument as a parameter. Returns the head y world-rotation of the ride of an entity, else it returns 0.0. First parameter only for horses, zombie horses, skeleton horses, donkeys and mules that clamps rotation in degrees.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">将一个可选参数作为参数。返回骑乘实体的头部 y 世界旋转，否则返回 0.0。第一个参数仅适用于马、僵尸马、骷髅马、驴和骡子，用于限制以度为单位的旋转。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.rider_body_x_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the body pitch world-rotation of a valid rider at the provided index if called on an entity, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果在实体上调用，则返回有效骑手在提供的索引处的车身俯仰角世界旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.rider_body_y_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the body yaw world-rotation of a valid rider at the provided index if called on an entity, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果在实体上调用，则返回有效骑手在提供的索引处的车身偏航角世界旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.rider_head_x_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes one argument as a parameter. Returns the head x world-rotation of the rider entity at the provided index, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">将一个参数作为参数。返回骑手实体在提供的索引处的头部 x 世界旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.rider_head_y_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes one or two arguments as parameters. Returns the head y world-rotation of the rider entity at the provided index, else it returns 0.0. Horses, zombie horses, skeleton horses, donkeys and mules require a second parameter that clamps rotation in degrees.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">将一个或两个参数作为参数。返回骑手实体在提供的索引处的头部 y 世界旋转，否则返回 0.0。马、僵尸马、骷髅马、驴和骡子需要第二个参数，该参数以度为单位限制旋转。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.roll_counter</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the roll counter of the entity.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的 roll （掷骰子？）计数器。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.rotation_to_camera</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the rotation required to aim at the camera.  Requires one argument representing the rotation axis you would like (0 for x, 1 for y).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回对准摄像机所需的旋转。需要一个参数来表示你想要的旋转轴（0 代表 x，1 代表 y）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.scoreboard</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes one argument - the name of the scoreboard entry for this entity. Returns the specified scoreboard value for this entity. Available only with behavior packs.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">采用一个参数 - 此实体的记分板条目的名称。返回此实体的指定计分板值。仅适用于行为包。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.server_memory_tier</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns a number representing the server RAM memory tier, 0 = 'SuperLow', 1 = 'Low', 2 = 'Mid', 3 = 'High', or 4 = 'SuperHigh'. Available on the server side (Behavior Packs) only.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回一个表示服务器 RAM 内存层的数字，0 = 'SuperLow'、1 = 'Low'、2 = 'Mid'、3 = 'High' 或 4 = 'SuperHigh'。仅在服务器端可用 （行为包）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.shake_angle</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the shaking angle of the entity if it makes sense, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果适用，则返回实体的摇晃角度，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.shake_time</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the shake time of the entity.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的摇晃时间。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.shield_blocking_bob</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the how much the offhand shield should translate down when blocking and being hit.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回副手盾牌在格挡和被击中时应向下平移的量。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.show_bottom</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if we render the entity's bottom, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果我们渲染实体的底部，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.sit_amount</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the current sit amount of the entity.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的当前坐姿量。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.skin_id</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the entity's skin ID</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的皮肤 ID</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.sleep_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the rotation of the bed the player is sleeping on.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回玩家睡觉的床的旋转。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.sneeze_counter</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the sneeze counter of the entity.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的打喷嚏计数器。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.spellcolor</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns a struct representing the entity spell color for the specified entity. The struct contains '.r' '.g' '.b' and '.a' members, each 0.0 to 1.0. If no actor is specified, each member value will be 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回一个结构，该结构表示指定实体的法术颜色。该结构包含 '.r'、'.g'、'.b' 和 '.a' 成员，每个成员为 0.0 到 1.0。如果未指定活动对象，则每个成员值将为 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.standing_scale</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the scale of how standing up the entity is.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的站立程度的刻度。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.state_time</td>
-<td style="border-style:solid; border-width:3; padding:7px">Only valid in an animation controller. Returns the time in seconds in the current animation controller state.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">仅在动画控制器中有效。返回当前动画控制器状态中的时间（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.structural_integrity</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the structural integrity for the actor, otherwise returns 0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回活动对象的结构完整性，否则返回 0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.surface_particle_color</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the particle color for the block located in the surface below the actor (scanned up to 10 blocks down). The struct contains '.r' '.g' '.b' and '.a' members, each 0.0 to 1.0. If no actor is specified or if no surface is found, each member value is set to 0.0. Available on the Client (Resource Packs) only.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回位于活动对象下方表面的方块的粒子颜色 （向下扫描最多 10 个方块）。该结构包含 '.r'、'.g'、'.b' 和 '.a' 成员，每个成员为 0.0 到 1.0。如果未指定活动对象或未找到曲面，则每个成员值都设置为 0.0。仅在客户端 （资源包） 上可用。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.surface_particle_texture_coordinate</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the texture coordinate for generating particles for the block located in the surface below the actor (scanned up to 10 blocks down) in a struct with 'u' and 'v' keys. If no actor is specified or if no surface is found, u and v will be 0.0. Available on the Client (Resource Packs) only.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回纹理坐标，用于为位于活动对象下方表面的方块生成粒子（向下扫描最多 10 个方块），该块位于具有 'u' 和 'v' 键的结构中。如果未指定活动对象或未找到曲面，则 u 和 v 将为 0.0。仅在客户端 （资源包） 上可用。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.surface_particle_texture_size</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the texture size for generating particles for the block located in the surface below the actor (scanned up to 10 blocks down). If no actor is specified or if no surface is found, each member value will be 0.0. Available on the Client (Resource Packs) only.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回为位于活动对象下方表面的方块生成粒子的纹理大小（向下扫描最多 10 个方块）。如果未指定活动对象或未找到曲面，则每个成员值将为 0.0。仅在客户端 （资源包） 上可用。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.swell_amount</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns how swollen the entity is.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的膨胀程度。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.swelling_dir</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the swelling direction of the entity if it makes sense, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果适用，则返回实体的膨胀方向，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.swim_amount</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the amount the current entity is swimming.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回当前实体游泳的程度。。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.tail_angle</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the angle of the tail of the entity if it makes sense, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果适用，则返回实体尾部的角度，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.target_x_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the x rotation required to aim at the entity's current target if it has one, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回瞄准实体的当前目标（如果有）所需的 x 旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.target_y_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the y rotation required to aim at the entity's current target if it has one, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回瞄准实体的当前目标（如果有）所需的 y 旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.texture_frame_index</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the icon index of the experience orb.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回经验球的图标索引。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.time_of_day</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the time of day (midnight=0.0, sunrise=0.25, noon=0.5, sunset=0.75) of the dimension the entity is in.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体所在维度的一天中的时间（午夜 = 0.0，日出 = 0.25，中午 = 0.5，日落 = 0.75）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.time_since_last_vibration_detection</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the time in seconds since the last vibration detected by the actor. On errors or if no vibration has been detected yet, returns -1. Available on the Client (Resource Packs) only.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回自活动对象上次检测到振动以来的时间（以秒为单位）。出现错误或尚未检测到振动时，返回 -1。仅在客户端 （资源包） 上可用。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.time_stamp</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the current time stamp of the level</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回存档的当前时间戳</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.timer_flag_1</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if behavior.timer_flag_1 is running, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果 behavior.timer_flag_1 正在运行，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.timer_flag_2</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if behavior.timer_flag_2 is running, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果 behavior.timer_flag_2 正在运行，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.timer_flag_3</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if behavior.timer_flag_3 is running, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果 behavior.timer_flag_3 正在运行，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.total_emitter_count</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the total number of active emitters in the world.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回世界中活动发射器的总数。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.total_particle_count</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the total number of active particles in the world.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回世界中活动粒子的总数。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.trade_tier</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the trade tier of the entity if it makes sense, else it returns 0.0</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果适用，则返回实体的交易等级，否则返回 0.0</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.unhappy_counter</td>
-<td style="border-style:solid; border-width:3; padding:7px">Always returns zero. (Was originally meant to indicate Panda unhappiness but due to an early code change it has always only returned zero)</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">始终返回零。（最初是为了表示熊猫不快乐，但由于早期的代码更改，它总是只返回零）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.variant</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the entity's variant index</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的变种索引</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.vertical_speed</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the speed of the entity up or down in meters/second, where positive is up.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的上升或下降速度（以米/秒为单位），其中正数表示上升。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.walk_distance</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the total distance traveled by an entity while on the ground and not sneaking.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体在地面上非潜行时行进的总距离。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.wing_flap_position</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the wing flap position of the entity, or 0.0 if this doesn't make sense.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的翅膀拍打位置，如果不适用则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.wing_flap_speed</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the wing flap speed of the entity, or 0.0 if this doesn't make sense.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的翅膀拍打速度，如果不适用则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.yaw_speed</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the entity's yaw speed</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的偏航角速度</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
