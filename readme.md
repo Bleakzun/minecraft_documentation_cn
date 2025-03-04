@@ -20,5 +20,8 @@ minecraft基岩版文档中文翻译，文档来源：[Mojang/bedrock-samples](h
 - 本文档适合配合[MinecraftWiki](https://zh.minecraft.wiki/)和[learn.microsoft.com](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/componentlist?view=minecraft-bedrock-stable)进行查阅
 ## 注意
 - 文档**原文**就存在些许问题
-  - 例：`minecraft:equippable`中的`on_equip`和`on_unequip`的类型应该是`JSON对象`，但在文档原文中显示的类型却是`字符串`。
+
+例：
+  - `minecraft:equippable`中的`on_equip`和`on_unequip`的类型应该是`JSON对象`，但在文档原文中显示的类型却是`字符串`。
+  - 幽默Mojang在正文中会使用`<>`例如：`definitions/entity/<entity_name>.json` 但浏览器会显示为： `definitions/entity/.json`，因为浏览器会把<>和其中的内容当作HTML标签而不显示在页面上。明显<entity_name>被当作标签屏蔽了。那么这种情况我们可以用转义符`&lt;`和`&gt;`表示`<`和`>`
   - 想帮我们找出类似的其它问题？请发**Issue**
