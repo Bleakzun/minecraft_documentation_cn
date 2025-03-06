@@ -1,9 +1,9 @@
 <h1>ENTITY EVENTS DOCUMENTATION </br>Version: 1.21.50.7</h1>
 <h2><p id="Index">Index</p></h2>
 <table border="1">
-<tr> <th><a href="#This describes the structure of the Events section.">This describes the structure of the Events section.</a></th> </tr>
-<tr> <th><a href="#Overview">Overview</a></th> </tr>
-<tr> <th><a href="#Versioned Changes">Versioned Changes</a></th> </tr>
+<tr> <th><a href="#This describes the structure of the Events section.">这描述了 Events 部分的结构。</a></th> </tr>
+<tr> <th><a href="#Overview">概述</a></th> </tr>
+<tr> <th><a href="#Versioned Changes">版本化变更</a></th> </tr>
 <tr> <th><a href="#Randomize Node">Randomize Node</a></th> </tr>
 <tr> <th><a href="#Sequence Node">Sequence Node</a></th> </tr>
 <tr> <th><a href="#Trigger">Trigger</a></th> </tr>
@@ -12,18 +12,18 @@
 <tr> <th><a href="#Set Entity Property">Set Entity Property</a></th> </tr>
 <tr> <th><a href="#Queue Command">Queue Command</a></th> </tr>
 </table>
-<a href="#Index">Back to top</a>
-<h1><p id="This describes the structure of the Events section.">This describes the structure of the Events section.</p></h1>
+<a href="#Index">返回顶部</a>
+<h1><p id="This describes the structure of the Events section.">这描述了 Events 部分的结构。</p></h1>
 
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Overview">Overview</p></h1>
+<h1><p id="Overview">概述</p></h1>
 
-</br>		Entity events can be structured by a combination of 'sequence' and 'randomize' nodes.</br>		'sequence' nodes are array nodes and will execute all entries in order from first element to last.</br>		'randomize' nodes are array nodes that will pick one entry to execute, based on a weight.</br>		'filters' can also be added within 'sequence' and 'randomize' nodes to restrict execution.</br></br>		Within 'randomize' and 'sequence' nodes, you can specify a few operations.</br>		'trigger', 'filters', 'add', and 'remove'.</br>		You can read about 'filters' in the 'Filters' section of the documentation.</br>		'trigger' can be used to fire additional entity events when an event is hit.</br>		'add' can be used to add component groups to your entity.</br>		'remove' can be used to remove component groups from your entity.</br></br>		When an event is received, the effects of that event are determined immediately, but those changes</br>		are not applied to the entity until the entity ticks on the server side of the game. This means</br>		filters in later entries in a 'sequence' array won't see changes from earlier in that array.</br>		It also means that when one entity sends an event to another entity, it could take effect on the same</br>		game tick or on the next tick, depending on whether the target entity has already been updated.</br>	</br><a href="#Index">Back to top</a><br><br>
+</br>		实体事件可以通过 'sequence' 和 'randomize' 节点的组合来构建。</br>		'sequence' 节点是数组节点，将按顺序从第一个元素到最后一个元素执行所有条目。</br>		'randomize' 节点是数组节点，它们将根据权重选择一个条目来执行。</br>		也可以在 'sequence' 和 'randomize' 节点中添加 'filters' 以限制执行。</br></br>		在 'randomize' 和 'sequence ' 节点中，您可以指定一些作。</br>		'trigger'、'filters'、'add' 和 'remove'。</br>		您可以在文档的 'Filters' 部分阅读 'filters' 。</br>		'trigger' 可用于在命中事件时触发其他实体事件。</br>		'add' 可用于将组件组添加到实体中。</br>		'remove' 可用于从实体中删除组件组。</br></br>		收到事件时，将立即确定该事件的影响，但这些影响会发生变化</br>		不会应用于实体，直到实体在游戏的服务器端进行更新。这意味着</br>		'sequence' 数组中较晚条目中的过滤器不会看到该数组中较早条目的变化。</br>		这也意味着，当一个实体向另一个实体发送事件时，它可能会对同一实体生效</br>		游戏刻或下一刻，具体取决于目标实体是否已更新。</br>	</br><a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Versioned Changes">Versioned Changes</p></h1>
+<h1><p id="Versioned Changes">版本化变更</p></h1>
 
-</br>		A 'format_version' of '1.19.20' or higher is required to properly evaluate filters specified on an entity event definition</br>		at the root level of the event, that is any filter that is not underneath a 'sequence' or 'randomize' node.</br>		Content with a lower version will use the old behavior, which was to ignore root level filters.</br>	</br><a href="#Index">Back to top</a><br><br>
+</br>		需要 '1.19.20' 或更高版本的 'format_version' 才能正确评估实体事件定义上指定的过滤器</br>		在事件的根级别，即不在 'sequence' 或 'randomize' 节点下的任何过滤器。</br>		版本较低的内容将使用旧行为，即忽略根级别过滤器。</br>	</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Randomize Node">Randomize Node</p></h1>
 
@@ -38,7 +38,7 @@ Example:<br / ><textarea readonly="true" cols="42" rows="9">
     ]
   
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Sequence Node">Sequence Node</p></h1>
 
@@ -55,7 +55,7 @@ Example:<br / ><textarea readonly="true" cols="36" rows="11">
     ]
   
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Trigger">Trigger</p></h1>
 
@@ -82,7 +82,7 @@ Example:<br / ><textarea readonly="true" cols="42" rows="21">
     }
   
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Add Component Group">Add Component Group</p></h1>
 
@@ -99,7 +99,7 @@ Example:<br / ><textarea readonly="true" cols="66" rows="11">
     ]
   
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Remove Component Group">Remove Component Group</p></h1>
 
@@ -116,7 +116,7 @@ Example:<br / ><textarea readonly="true" cols="69" rows="11">
     ]
   
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Set Entity Property">Set Entity Property</p></h1>
 
@@ -128,7 +128,7 @@ Example:<br / ><textarea readonly="true" cols="36" rows="6">
     }
   
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Queue Command">Queue Command</p></h1>
 
@@ -140,5 +140,5 @@ Example:<br / ><textarea readonly="true" cols="36" rows="6">
     }
   
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
