@@ -867,11 +867,11 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.body_x_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">如果在活动对象上调用，则返回躯体俯仰旋转，否则返回 0.0。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果在活动对象上调用，则返回躯体俯仰角旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.body_y_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">如果在活动对象上调用，则返回身体偏转旋转，否则返回 0.0。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果在活动对象上调用，则返回身体偏航角旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.bone_aabb</td>
@@ -1055,7 +1055,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.get_equipped_item_name</td>
-<td style="border-style:solid; border-width:3; padding:7px">已弃用 （如果可能，请改用 query.is_item_name_any 以便以后可以在不破坏内容的情况下更改名称。）将一个可选的手槽作为参数（主手为 0 或 'main_hand'，副手为 1 或 'off_hand'），如果您想要装备的物品或当前渲染的物品的任何非零数字，则使用第二个参数（0=默认），并返回所请求插槽中物品的名称（如果未提供参数，则默认为主手），如果有， 否则返回 ''。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">已弃用 （如果可能，请改用 query.is_item_name_any 以便以后可以在不破坏内容的情况下更改名称。）将一个可选的手槽作为参数（主手为 0 或 'main_hand'，副手为 1 或 'off_hand'），如果您想要装备的物品或当前渲染的物品的任何非零数字，则使用第二个参数（0=默认），并返回所请求槽位中物品的名称（如果未提供参数，则默认为主手），如果有， 否则返回 ''。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.get_locator_offset</td>
@@ -1139,7 +1139,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.head_roll_angle</td>
-<td style="border-style:solid; border-width:3; padding:7px">如果适用，则返回实体头部的滚动角度，否则返回 0.0。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果适用，则返回实体头部的翻滚角角度，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.head_x_rotation</td>
@@ -1583,371 +1583,371 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_using_item</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is using an item, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体正在使用某个物品，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_wall_climbing</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is climbing a wall, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体正在爬墙，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.item_in_use_duration</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the amount of time an item has been in use in seconds up to the maximum duration, else 0.0 if it doesn't make sense.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回物品在最大持续时间内使用的时间（以秒为单位），否则为 0.0（如果不适用）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.item_is_charged</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes one optional hand slot as a parameter (0 or 'main_hand' for main hand, 1 or 'off_hand' for off hand), and returns 1.0 if the item is charged in the requested slot (defaulting to the main hand if no parameter is supplied), otherwise returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">将一个可选的手槽作为参数（0 或 'main_hand' 代表主手，1 或 'off_hand' 代表副手），如果物品在请求的槽中蓄力，则返回 1.0（如果未提供参数，则默认为主手），否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.item_max_use_duration</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the maximum amount of time the item can be used, else 0.0 if it doesn't make sense.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回物品可以使用的最长时间，如果不适用则为 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.item_remaining_use_duration</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the amount of time an item has left to use, else 0.0 if it doesn't make sense.Item queried is specified by the slot name 'main_hand' or 'off_hand'.Time remaining is normalized using the normalization value, only if one is given, else it is returned in seconds.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回物品剩余的使用时间，如果不适用则为 0.0。查询的物品由槽名称 'main_hand' 或 'off_hand' 指定。剩余时间使用规范化值进行规范化，仅当给定一个值时，否则以秒为单位返回。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.item_slot_to_bone_name</td>
-<td style="border-style:solid; border-width:3; padding:7px">query.item_slot_to_bone_name requires one parameter: the name of the equipment slot.  This function returns the name of the bone this entity has mapped to that slot.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">query.item_slot_to_bone_name需要一个参数：装备槽位的名称。此函数返回此实体已映射到该槽位的骨骼的名称。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.key_frame_lerp_time</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the ratio between the previous and next key frames.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回上一个和下一个关键帧之间的比率。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.last_frame_time</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the time in *seconds* of the last frame.  If an argument is passed, it is assumed to be the number of frames in the past that you wish to query.  'query.last_frame_time' (or the equivalent 'query.last_frame_time(0)') will return the frame time of the frame before the current one.  'query.last_frame_time(1)' will return the frame time of two frames ago.  Currently we store the history of the last 30 frames, although note that this may change in the future.  Passing an index more than the available data will return the oldest frame stored.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回最后一帧的时间（以秒为单位）。如果传递了参数，则假定它是您希望查询的过去帧数。'query.last_frame_time' （或等效的 'query.last_frame_time(0)'） 将返回当前帧之前的帧时间。'query.last_frame_time(1)' 将返回两帧前的帧时间。目前，我们存储最近 30 帧的历史记录，但请注意，这将在未来可能会发生变化。传递的索引超过可用数据将返回存储的最旧帧。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.last_hit_by_player</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity was last hit by the player, else it returns 0.0. If called by the client always returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体是玩家上次击中实体，则返回 1.0，否则返回 0.0。如果由客户端调用，则始终返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.lie_amount</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the lie down amount for the entity.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的躺下量。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.life_span</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the limited life span of an entity, or 0.0 if it lives forever</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的有限生命周期，如果实体永久存在，则返回 0.0</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.life_time</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the time in seconds since the current animation started, else 0.0 if not called within an animation.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回自当前动画开始以来的时间（以秒为单位），否则为 0.0（如果未在动画中调用）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.lod_index</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes an array of distances and returns the zero - based index of which range the actor is in based on distance from the camera. For example, 'query.lod_index(10, 20, 30)' will return 0, 1, or 2 based on whether the mob is less than 10, 20, or 30 units away from the camera, or it will return 3 if it is greater than 30.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">获取一个距离数组，并返回基于与摄像机的距离的活动对象所处范围的从零开始的索引。例如，'query.lod_index（10， 20， 30）' 将根据生物距离摄像机的距离是小于 10、20 还是 30 个单位返回 0、1 或 2，如果大于 30 个单位，它将返回 3。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.log</td>
-<td style="border-style:solid; border-width:3; padding:7px">debug log a value to the content log</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">debug log 内容日志的值</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.main_hand_item_max_duration</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the use time maximum duration for the main hand item if it makes sense, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果适用，则返回主手物品的最大使用时间持续时间，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.main_hand_item_use_duration</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the use time for the main hand item.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回主手部物品的使用时间。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.mark_variant</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the entity's mark variant</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的 mark variant</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.max_durability</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the max durability an item can take.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回物品的最大耐久度。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.max_health</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the maximum health of the entity, or 0.0 if it doesn't make sense to call on this entity.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的最大生命值，如果调用此实体不适用，则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.max_trade_tier</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the maximum trade tier of the entity if it makes sense, else it returns 0.0</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果适用，则返回实体的最大交易等级，否则返回 0.0</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.maximum_frame_time</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the time in *seconds* of the most expensive frame over the last 'n' frames.  If an argument is passed, it is assumed to be the number of frames in the past that you wish to query.  'query.maximum_frame_time' (or the equivalent 'query.maximum_frame_time(0)') will return the frame time of the frame before the current one.  'query.maximum_frame_time(1)' will return the maximum frame time of the previous two frames.  Currently we store the history of the last 30 frames, although note that this may change in the future.  Asking for more frames will result in only sampling the number of frames stored.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回最后 'n' 帧中开销最高的帧的时间（以秒为单位）。如果传递了参数，则假定它是您希望查询的过去帧数。'query.maximum_frame_time' （或等效的 'query.maximum_frame_time（0）'） 将返回当前帧之前的帧时间。'query.maximum_frame_time(1)' 将返回前两帧的最大帧时间。目前，我们存储最近 30 帧的历史记录，但请注意，这将在未来可能会发生变化。请求更多帧将导致仅对存储的帧数进行采样。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.minimum_frame_time</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the time in *seconds* of the least expensive frame over the last 'n' frames.  If an argument is passed, it is assumed to be the number of frames in the past that you wish to query.  'query.minimum_frame_time' (or the equivalent 'query.minimum_frame_time(0)') will return the frame time of the frame before the current one.  'query.minimum_frame_time(1)' will return the minimum frame time of the previous two frames.  Currently we store the history of the last 30 frames, although note that this may change in the future.  Asking for more frames will result in only sampling the number of frames stored.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回最后 'n' 帧中消耗最少的帧的时间（以秒为单位）。如果传递了参数，则假定它是您希望查询的过去帧数。'query.minimum_frame_time' （或等效的 'query.minimum_frame_time（0）'） 将返回当前帧之前的帧时间。'query.minimum_frame_time(1)' 将返回前两帧的最小帧时间。目前我们存储最近 30 帧的历史记录，但请注意，这将在未来可能会发生变化。请求更多帧将导致仅对存储的帧数进行采样。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.model_scale</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the scale of the current entity.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回当前实体的大小比例。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.modified_distance_moved</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the total distance the entity has moved horizontally in meters (since the entity was last loaded, not necessarily since it was originally created) modified along the way by status flags such as is_baby or on_fire.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体水平移动的以米为单位的总距离（自上次加载实体以来，不一定自最初创建以来），沿途由状态标志（如 is_baby 或 on_fire）修改。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.modified_move_speed</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the current walk speed of the entity modified by status flags such as is_baby or on_fire.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回由状态标志 （如 is_baby 或 on_fire） 修改的实体的当前行走速度。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.moon_brightness</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the brightness of the moon (FULL_MOON=1.0, WANING_GIBBOUS=0.75, FIRST_QUARTER=0.5, WANING_CRESCENT=0.25, NEW_MOON=0.0, WAXING_CRESCENT=0.25, LAST_QUARTER=0.5, WAXING_GIBBOUS=0.75).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回月亮的亮度(FULL_MOON=1.0, WANING_GIBBOUS=0.75, FIRST_QUARTER=0.5, WANING_CRESCENT=0.25, NEW_MOON=0.0, WAXING_CRESCENT=0.25, LAST_QUARTER=0.5, WAXING_GIBBOUS=0.75).</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.moon_phase</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the phase of the moon (FULL_MOON=0, WANING_GIBBOUS=1, FIRST_QUARTER=2, WANING_CRESCENT=3, NEW_MOON=4, WAXING_CRESCENT=5, LAST_QUARTER=6, WAXING_GIBBOUS=7).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回月相(FULL_MOON=0, WANING_GIBBOUS=1, FIRST_QUARTER=2, WANING_CRESCENT=3, NEW_MOON=4, WAXING_CRESCENT=5, LAST_QUARTER=6, WAXING_GIBBOUS=7).</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.movement_direction</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the specified axis of the normalized position delta of the entity.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的标准化位置增量的指定轴。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.noise</td>
-<td style="border-style:solid; border-width:3; padding:7px">Queries Perlin Noise Map</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">Queries Perlin Noise Map</br></td><!-- 未翻译 -->
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.on_fire_time</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the time that the entity is on fire, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体着火的时间，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.out_of_control</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if the entity is out of control, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体失控，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.overlay_alpha</td>
-<td style="border-style:solid; border-width:3; padding:7px">DEPRECATED (Do not use - this function is deprecated and will be removed).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">已弃用 （请勿使用 - 此函数已弃用，将被删除）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.owner_identifier</td>
-<td style="border-style:solid; border-width:3; padding:7px">DEPRECATED (Use query.is_owner_identifier_any instead if possible so names can be changed later without breaking content.) Returns the root actor identifier.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">已弃用 （如果可能，请改用 query.is_owner_identifier_any 以便以后可以在不破坏内容的情况下更改名称。）返回根角色标识符。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.player_level</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the players level if the actor is a player, otherwise returns 0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果活动对象是玩家，则返回玩家的等级，否则返回 0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.position</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the absolute position of an actor.  Takes one argument that represents the desired axis (0 == x-axis, 1 == y-axis, 2 == z-axis).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回活动对象的绝对位置。采用一个表示所需轴的参数（0 == x 轴，1 == y 轴，2 == z 轴）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.position_delta</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the position delta for an actor.  Takes one argument that represents the desired axis (0 == x-axis, 1 == y-axis, 2 == z-axis).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回活动对象的位置增量。采用一个表示所需轴的参数（0 == x 轴，1 == y 轴，2 == z 轴）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.previous_squish_value</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the previous squish value for the current entity, or 0.0 if this doesn't make sense.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回当前实体的上一个 squish （挤压，史莱姆用）值，如果不适用，则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.property</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes one argument: the name of the property on the entity. Returns the value of that property if it exists, else 0.0 if not.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">采用一个参数：实体上的属性名称。如果该属性存在，则返回该属性的值，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.relative_block_has_all_tags</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes an entity-relative position and one or more tag names, and returns either 0 or 1 based on if the block at that position has all of the tags provided.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">采用实体相对位置和一个或多个标签名称，并根据该位置的方块是否具有提供的所有标签返回 0 或 1。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.relative_block_has_any_tag</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes an entity-relative position and one or more tag names, and returns either 0 or 1 based on if the block at that position has any of the tags provided.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">采用实体相对位置和一个或多个标签名称，并根据该位置的方块是否具有提供的任何标签返回 0 或 1。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.remaining_durability</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns how much durability an item has remaining.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回物品剩余的耐久度。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.ride_body_x_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the body pitch world-rotation of the ride an entity, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回骑乘实体的身体俯仰角世界旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.ride_body_y_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the body yaw world-rotation of the ride of on an entity, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回骑乘实体的身体偏航角世界旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.ride_head_x_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the head x world-rotation of the ride of an entity, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回骑乘实体的头部 x 世界旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.ride_head_y_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes one optional argument as a parameter. Returns the head y world-rotation of the ride of an entity, else it returns 0.0. First parameter only for horses, zombie horses, skeleton horses, donkeys and mules that clamps rotation in degrees.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">将一个可选参数作为参数。返回骑乘实体的头部 y 世界旋转，否则返回 0.0。第一个参数仅适用于马、僵尸马、骷髅马、驴和骡子，用于限制以度为单位的旋转。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.rider_body_x_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the body pitch world-rotation of a valid rider at the provided index if called on an entity, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果在实体上调用，则返回有效骑手在提供的索引处的车身俯仰角世界旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.rider_body_y_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the body yaw world-rotation of a valid rider at the provided index if called on an entity, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果在实体上调用，则返回有效骑手在提供的索引处的车身偏航角世界旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.rider_head_x_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes one argument as a parameter. Returns the head x world-rotation of the rider entity at the provided index, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">将一个参数作为参数。返回骑手实体在提供的索引处的头部 x 世界旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.rider_head_y_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes one or two arguments as parameters. Returns the head y world-rotation of the rider entity at the provided index, else it returns 0.0. Horses, zombie horses, skeleton horses, donkeys and mules require a second parameter that clamps rotation in degrees.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">将一个或两个参数作为参数。返回骑手实体在提供的索引处的头部 y 世界旋转，否则返回 0.0。马、僵尸马、骷髅马、驴和骡子需要第二个参数，该参数以度为单位限制旋转。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.roll_counter</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the roll counter of the entity.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的 roll （掷骰子？）计数器。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.rotation_to_camera</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the rotation required to aim at the camera.  Requires one argument representing the rotation axis you would like (0 for x, 1 for y).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回对准摄像机所需的旋转。需要一个参数来表示你想要的旋转轴（0 代表 x，1 代表 y）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.scoreboard</td>
-<td style="border-style:solid; border-width:3; padding:7px">Takes one argument - the name of the scoreboard entry for this entity. Returns the specified scoreboard value for this entity. Available only with behavior packs.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">采用一个参数 - 此实体的记分板条目的名称。返回此实体的指定计分板值。仅适用于行为包。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.server_memory_tier</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns a number representing the server RAM memory tier, 0 = 'SuperLow', 1 = 'Low', 2 = 'Mid', 3 = 'High', or 4 = 'SuperHigh'. Available on the server side (Behavior Packs) only.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回一个表示服务器 RAM 内存层的数字，0 = 'SuperLow'、1 = 'Low'、2 = 'Mid'、3 = 'High' 或 4 = 'SuperHigh'。仅在服务器端可用 （行为包）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.shake_angle</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the shaking angle of the entity if it makes sense, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果适用，则返回实体的摇晃角度，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.shake_time</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the shake time of the entity.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的摇晃时间。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.shield_blocking_bob</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the how much the offhand shield should translate down when blocking and being hit.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回副手盾牌在格挡和被击中时应向下平移的量。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.show_bottom</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if we render the entity's bottom, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果我们渲染实体的底部，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.sit_amount</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the current sit amount of the entity.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的当前坐姿量。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.skin_id</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the entity's skin ID</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的皮肤 ID</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.sleep_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the rotation of the bed the player is sleeping on.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回玩家睡觉的床的旋转。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.sneeze_counter</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the sneeze counter of the entity.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的打喷嚏计数器。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.spellcolor</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns a struct representing the entity spell color for the specified entity. The struct contains '.r' '.g' '.b' and '.a' members, each 0.0 to 1.0. If no actor is specified, each member value will be 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回一个结构，该结构表示指定实体的法术颜色。该结构包含 '.r'、'.g'、'.b' 和 '.a' 成员，每个成员为 0.0 到 1.0。如果未指定活动对象，则每个成员值将为 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.standing_scale</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the scale of how standing up the entity is.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的站立程度的刻度。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.state_time</td>
-<td style="border-style:solid; border-width:3; padding:7px">Only valid in an animation controller. Returns the time in seconds in the current animation controller state.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">仅在动画控制器中有效。返回当前动画控制器状态中的时间（以秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.structural_integrity</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the structural integrity for the actor, otherwise returns 0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回活动对象的结构完整性，否则返回 0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.surface_particle_color</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the particle color for the block located in the surface below the actor (scanned up to 10 blocks down). The struct contains '.r' '.g' '.b' and '.a' members, each 0.0 to 1.0. If no actor is specified or if no surface is found, each member value is set to 0.0. Available on the Client (Resource Packs) only.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回位于活动对象下方表面的方块的粒子颜色 （向下扫描最多 10 个方块）。该结构包含 '.r'、'.g'、'.b' 和 '.a' 成员，每个成员为 0.0 到 1.0。如果未指定活动对象或未找到曲面，则每个成员值都设置为 0.0。仅在客户端 （资源包） 上可用。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.surface_particle_texture_coordinate</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the texture coordinate for generating particles for the block located in the surface below the actor (scanned up to 10 blocks down) in a struct with 'u' and 'v' keys. If no actor is specified or if no surface is found, u and v will be 0.0. Available on the Client (Resource Packs) only.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回纹理坐标，用于为位于活动对象下方表面的方块生成粒子（向下扫描最多 10 个方块），该块位于具有 'u' 和 'v' 键的结构中。如果未指定活动对象或未找到曲面，则 u 和 v 将为 0.0。仅在客户端 （资源包） 上可用。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.surface_particle_texture_size</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the texture size for generating particles for the block located in the surface below the actor (scanned up to 10 blocks down). If no actor is specified or if no surface is found, each member value will be 0.0. Available on the Client (Resource Packs) only.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回为位于活动对象下方表面的方块生成粒子的纹理大小（向下扫描最多 10 个方块）。如果未指定活动对象或未找到曲面，则每个成员值将为 0.0。仅在客户端 （资源包） 上可用。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.swell_amount</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns how swollen the entity is.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的膨胀程度。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.swelling_dir</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the swelling direction of the entity if it makes sense, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果适用，则返回实体的膨胀方向，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.swim_amount</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the amount the current entity is swimming.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回当前实体游泳的程度。。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.tail_angle</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the angle of the tail of the entity if it makes sense, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果适用，则返回实体尾部的角度，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.target_x_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the x rotation required to aim at the entity's current target if it has one, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回瞄准实体的当前目标（如果有）所需的 x 旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.target_y_rotation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the y rotation required to aim at the entity's current target if it has one, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回瞄准实体的当前目标（如果有）所需的 y 旋转，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.texture_frame_index</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the icon index of the experience orb.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回经验球的图标索引。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.time_of_day</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the time of day (midnight=0.0, sunrise=0.25, noon=0.5, sunset=0.75) of the dimension the entity is in.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体所在维度的一天中的时间（午夜 = 0.0，日出 = 0.25，中午 = 0.5，日落 = 0.75）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.time_since_last_vibration_detection</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the time in seconds since the last vibration detected by the actor. On errors or if no vibration has been detected yet, returns -1. Available on the Client (Resource Packs) only.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回自活动对象上次检测到振动以来的时间（以秒为单位）。出现错误或尚未检测到振动时，返回 -1。仅在客户端 （资源包） 上可用。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.time_stamp</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the current time stamp of the level</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回存档的当前时间戳</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.timer_flag_1</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if behavior.timer_flag_1 is running, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果 behavior.timer_flag_1 正在运行，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.timer_flag_2</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if behavior.timer_flag_2 is running, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果 behavior.timer_flag_2 正在运行，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.timer_flag_3</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns 1.0 if behavior.timer_flag_3 is running, else it returns 0.0.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果 behavior.timer_flag_3 正在运行，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.total_emitter_count</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the total number of active emitters in the world.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回世界中活动发射器的总数。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.total_particle_count</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the total number of active particles in the world.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回世界中活动粒子的总数。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.trade_tier</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the trade tier of the entity if it makes sense, else it returns 0.0</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果适用，则返回实体的交易等级，否则返回 0.0</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.unhappy_counter</td>
-<td style="border-style:solid; border-width:3; padding:7px">Always returns zero. (Was originally meant to indicate Panda unhappiness but due to an early code change it has always only returned zero)</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">始终返回零。（最初是为了表示熊猫不快乐，但由于早期的代码更改，它总是只返回零）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.variant</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the entity's variant index</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的变种索引</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.vertical_speed</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the speed of the entity up or down in meters/second, where positive is up.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的上升或下降速度（以米/秒为单位），其中正数表示上升。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.walk_distance</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the total distance traveled by an entity while on the ground and not sneaking.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体在地面上非潜行时行进的总距离。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.wing_flap_position</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the wing flap position of the entity, or 0.0 if this doesn't make sense.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的翅膀拍打位置，如果不适用则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.wing_flap_speed</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the wing flap speed of the entity, or 0.0 if this doesn't make sense.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的翅膀拍打速度，如果不适用则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.yaw_speed</td>
-<td style="border-style:solid; border-width:3; padding:7px">Returns the entity's yaw speed</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的偏航角速度</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
