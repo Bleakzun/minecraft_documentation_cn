@@ -1,15 +1,15 @@
 <h1>ENTITY EVENTS DOCUMENTATION </br>Version: 1.21.50.7</h1>
-<h2><p id="Index">Index</p></h2>
+<h2><p id="Index">索引</p></h2>
 <table border="1">
 <tr> <th><a href="#This describes the structure of the Events section.">这描述了 Events 部分的结构。</a></th> </tr>
 <tr> <th><a href="#Overview">概述</a></th> </tr>
 <tr> <th><a href="#Versioned Changes">版本化变更</a></th> </tr>
 <tr> <th><a href="#Randomize Node">Randomize Node</a></th> </tr>
 <tr> <th><a href="#Sequence Node">Sequence Node</a></th> </tr>
-<tr> <th><a href="#Trigger">Trigger</a></th> </tr>
-<tr> <th><a href="#Add Component Group">Add Component Group</a></th> </tr>
-<tr> <th><a href="#Remove Component Group">Remove Component Group</a></th> </tr>
-<tr> <th><a href="#Set Entity Property">Set Entity Property</a></th> </tr>
+<tr> <th><a href="#Trigger">触发器</a></th> </tr>
+<tr> <th><a href="#Add Component Group">添加组件组</a></th> </tr>
+<tr> <th><a href="#Remove Component Group">删除组件组</a></th> </tr>
+<tr> <th><a href="#Set Entity Property">设置实体属性</a></th> </tr>
 <tr> <th><a href="#Queue Command">Queue Command</a></th> </tr>
 </table>
 <a href="#Index">返回顶部</a>
@@ -27,8 +27,8 @@
 
 <h1><p id="Randomize Node">Randomize Node</p></h1>
 
-</br>		The 'randomize' node is an array node that will pick one entry to execute, based on a weight.</br>		If no weight is specified, a node will have a weight of 1.0.</br>		If you add a weight of 4.0 in one node, and 8.0 in another, then those nodes will have a 33.33% (4 / (4 + 8)) and 66.66% (8 / (4 + 8)) chance of executing, respectively.</br>	</br><h2></h2>
-Example:<br / ><textarea readonly="true" cols="42" rows="9">
+</br>		'randomize' 节点是一个数组节点，它将根据权重选择一个要执行的条目。</br>		如果未指定权重，则节点的权重将为 1.0。</br>		如果您在一个节点中添加权重 4.0，在另一个节点中添加权重 8.0，则这些节点将分别有 33.33% (4 / (4 + 8)) 和 66.66% (8 / (4 + 8)) 的执行机会。</br>	</br><h2></h2>
+例：<br / ><textarea readonly="true" cols="42" rows="9">
 
     "randomize": [
       {
@@ -43,7 +43,7 @@ Example:<br / ><textarea readonly="true" cols="42" rows="9">
 <h1><p id="Sequence Node">Sequence Node</p></h1>
 
 <h2></h2>
-Example:<br / ><textarea readonly="true" cols="36" rows="11">
+例：<br / ><textarea readonly="true" cols="36" rows="11">
 
     "sequence": [
       {
@@ -57,10 +57,10 @@ Example:<br / ><textarea readonly="true" cols="36" rows="11">
 </textarea> </br>
 <a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Trigger">Trigger</p></h1>
+<h1><p id="Trigger">触发器</p></h1>
 
-Triggers additional entity events when hit. For example, you could use a randomize node in minecraft:entity_spawned to choose either an adult or baby event for adding component groups.</br><h2></h2>
-Example:<br / ><textarea readonly="true" cols="42" rows="21">
+命中时触发其他实体事件。例如，您可以使用 minecraft：entity_spawned 中的 randomize 节点来选择成人或婴儿事件来添加组件组。</br><h2></h2>
+例：<br / ><textarea readonly="true" cols="42" rows="21">
 
     "sample:spawn_adult": {
       // add adult component groups
@@ -84,10 +84,10 @@ Example:<br / ><textarea readonly="true" cols="42" rows="21">
 </textarea> </br>
 <a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Add Component Group">Add Component Group</p></h1>
+<h1><p id="Add Component Group">添加组件组</p></h1>
 
-Adds component groups to the current entity. These groups must be defined in the 'component_groups' section of the file. As entities can only have one component of each type active, any components in a group that is being added will replace previously added components. Additionally, adding a component group that is already active will cause those components to be re-initialized. For some types of components like minecraft:is_baby, re-initializing an already active component has no effect, but for other component types the associated logic will start over. For example, an already-added minecraft:timer that is added again will start its timing logic over.</br><h2></h2>
-Example:<br / ><textarea readonly="true" cols="66" rows="11">
+将组件组添加到当前实体。这些组必须在文件的 'component_groups' 部分中定义。由于实体只能有每种类型的一个组件处于活动状态，因此正在添加的组中的任何组件都将替换以前添加的组件。此外，添加已处于活动状态的组件组将导致这些组件重新初始化。对于某些类型的组件，如 minecraft:is_baby，重新初始化已经激活的组件没有效果，但对于其他组件类型，关联的逻辑将重新开始。例如，一个已经添加的 minecraft:timer 如果再次添加，它将重新开始其计时逻辑。</br><h2></h2>
+例：<br / ><textarea readonly="true" cols="66" rows="11">
 
     "sequence": [
       {
@@ -101,10 +101,10 @@ Example:<br / ><textarea readonly="true" cols="66" rows="11">
 </textarea> </br>
 <a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Remove Component Group">Remove Component Group</p></h1>
+<h1><p id="Remove Component Group">删除组件组</p></h1>
 
-Removes component groups from the current entity. This can be any group you have defined in the 'component_groups' section of the file.</br><h2></h2>
-Example:<br / ><textarea readonly="true" cols="69" rows="11">
+从当前实体中删除组件组。这可以是您在文件的 'component_groups' 部分中定义的任何组。</br><h2></h2>
+例：<br / ><textarea readonly="true" cols="69" rows="11">
 
     "sequence": [
       {
@@ -118,10 +118,10 @@ Example:<br / ><textarea readonly="true" cols="69" rows="11">
 </textarea> </br>
 <a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Set Entity Property">Set Entity Property</p></h1>
+<h1><p id="Set Entity Property">设置实体属性</p></h1>
 
-Sets the value of an entity property. The property must be defined in the 'properties' section of the file. </br><h2></h2>
-Example:<br / ><textarea readonly="true" cols="36" rows="6">
+设置实体属性的值。必须在文件的 'properties' 部分中定义该属性。</br><h2></h2>
+例：<br / ><textarea readonly="true" cols="36" rows="6">
 
     "set_property": {
       "minecraft:has_nectar": false
@@ -132,8 +132,8 @@ Example:<br / ><textarea readonly="true" cols="36" rows="6">
 
 <h1><p id="Queue Command">Queue Command</p></h1>
 
-Queues a command to be run on the entity. The command will run within the next tick unless the entity has been removed.</br><h2></h2>
-Example:<br / ><textarea readonly="true" cols="36" rows="6">
+将要在实体上运行的命令排队。该命令将在下一刻内运行，除非该实体已被删除。</br><h2></h2>
+例：<br / ><textarea readonly="true" cols="36" rows="6">
 
     "queue_command": {
       "command": "say I have died!"
