@@ -20,8 +20,8 @@
 <tr> <td> <a href="#minecraft:mountain_parameters - top_slide settings"> minecraft:mountain_parameters - top_slide settings</a> </tr> </td>
 <tr> <td> <a href="#minecraft:multinoise_generation_rules"> minecraft:multinoise_generation_rules</a> </tr> </td>
 <tr> <td> <a href="#minecraft:overworld_generation_rules"> minecraft:overworld_generation_rules</a> </tr> </td>
-<tr> <td> <a href="#minecraft:overworld_generation_rules - Weighted biome names settings"> minecraft:overworld_generation_rules - Weighted biome names settings</a> </tr> </td>
-<tr> <td> <a href="#minecraft:overworld_generation_rules - Weighted climate categories settings"> minecraft:overworld_generation_rules - Weighted climate categories settings</a> </tr> </td>
+<tr> <td> <a href="#minecraft:overworld_generation_rules - Weighted biome names settings"> minecraft:overworld_generation_rules - 加权生物群系名称设置</a> </tr> </td>
+<tr> <td> <a href="#minecraft:overworld_generation_rules - Weighted climate categories settings"> minecraft:overworld_generation_rules - 加权气候类别设置</a> </tr> </td>
 <tr> <td> <a href="#minecraft:overworld_height"> minecraft:overworld_height</a> </tr> </td>
 <tr> <td> <a href="#minecraft:surface_material_adjustments"> minecraft:surface_material_adjustments</a> </tr> </td>
 <tr> <td> <a href="#minecraft:surface_material_adjustments - surface adjustment materials settings"> minecraft:surface_material_adjustments - surface adjustment materials settings</a> </tr> </td>
@@ -307,25 +307,25 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">ash</td>
-<td style="border-style:solid; border-width:3; padding:7px">Float</td>
+<td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">灰烬沉淀视觉效果的密度</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">blue_spores</td>
-<td style="border-style:solid; border-width:3; padding:7px">Float</td>
+<td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">蓝色孢子沉淀视觉效果的密度</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">downfall</td>
-<td style="border-style:solid; border-width:3; padding:7px">Float</td>
+<td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">降水对颜色和方块变化的影响程度</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">red_spores</td>
-<td style="border-style:solid; border-width:3; padding:7px">Float</td>
+<td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">蓝色孢子沉淀视觉效果的密度（应该是红色，原文不知道为什么是写的蓝色）</br></td>
 </tr>
@@ -337,13 +337,13 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">temperature</td>
-<td style="border-style:solid; border-width:3; padding:7px">Float</td>
+<td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">温度会影响许多视觉和行为方面，包括积雪和冰的生成、海绵的干燥以及天空颜色。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">white_ash</td>
-<td style="border-style:solid; border-width:3; padding:7px">Float</td>
+<td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">白色灰烬沉淀视觉效果的密度</br></td>
 </tr>
@@ -403,7 +403,7 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">bryce_pillars</td>
-<td style="border-style:solid; border-width:3; padding:7px">Boolean</td>
+<td style="border-style:solid; border-width:3; padding:7px">布尔值</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">台地是否生成带有柱子</br></td>
 </tr>
@@ -427,7 +427,7 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">has_forest</td>
-<td style="border-style:solid; border-width:3; padding:7px">Boolean</td>
+<td style="border-style:solid; border-width:3; padding:7px">布尔值</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">在高海拔地区放置粗糙的泥土和草</br></td>
 </tr>
@@ -472,7 +472,7 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">peaks_factor</td>
-<td style="border-style:solid; border-width:3; padding:7px">Float</td>
+<td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">不执行任何作</br></td>
 </tr>
@@ -491,102 +491,102 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="minecraft:mountain_parameters - steep_material_adjustment settings">minecraft:mountain_parameters - steep_material_adjustment settings</p></h1>
+<h1><p id="minecraft:mountain_parameters - steep_material_adjustment settings">minecraft:mountain_parameters - steep_material_adjustment 设置</p></h1>
 
-Defines surface material for steep slopes</br><h2></h2>
+定义陡坡的表面材料</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">east_slopes</td>
-<td style="border-style:solid; border-width:3; padding:7px">Boolean</td>
+<td style="border-style:solid; border-width:3; padding:7px">布尔值</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Enable for east-facing slopes</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">启用朝东的斜坡</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">material</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Block type use as steep material</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">作为陡坡材料的方块类型</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">north_slopes</td>
-<td style="border-style:solid; border-width:3; padding:7px">Boolean</td>
+<td style="border-style:solid; border-width:3; padding:7px">布尔值</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Enable for north-facing slopes</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">启用朝北的斜坡</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">south_slopes</td>
-<td style="border-style:solid; border-width:3; padding:7px">Boolean</td>
+<td style="border-style:solid; border-width:3; padding:7px">布尔值</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Enable for south-facing slopes</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">启用朝南的斜坡</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">west_slopes</td>
-<td style="border-style:solid; border-width:3; padding:7px">Boolean</td>
+<td style="border-style:solid; border-width:3; padding:7px">布尔值</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Enable for west-facing slopes</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">启用朝西的斜坡</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="minecraft:mountain_parameters - top_slide settings">minecraft:mountain_parameters - top_slide settings</p></h1>
+<h1><p id="minecraft:mountain_parameters - top_slide settings">minecraft:mountain_parameters - top_slide 设置</p></h1>
 
-Controls the density tapering that happens at the top of the world to prevent terrain from reaching too high.</br><h2></h2>
+控制世界顶部发生的密度渐变，以防止地形过高</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">enabled</td>
-<td style="border-style:solid; border-width:3; padding:7px">Boolean</td>
+<td style="border-style:solid; border-width:3; padding:7px">布尔值</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
-<td style="border-style:solid; border-width:3; padding:7px">If false, top slide will be disabled. If true, other parameters will be taken into account.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果为 false，则 top slide 将被禁用。如果为 true，则将考虑其他参数。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:multinoise_generation_rules">minecraft:multinoise_generation_rules</p></h1>
 
-Controls how this biome is instantiated (and then potentially modified) during world generation of the nether.</br><h2></h2>
+控制此生物群系在下界世界生成期间如何实例化（然后可能被修改）。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">target_altitude</td>
-<td style="border-style:solid; border-width:3; padding:7px">Float</td>
+<td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Altitude with which this biome should be generated, relative to other biomes.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">相对于其他生物群系，此生物群系应生成的高度。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">target_humidity</td>
-<td style="border-style:solid; border-width:3; padding:7px">Float</td>
+<td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Humidity with which this biome should be generated, relative to other biomes.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">相对于其他生物群系，此生物群系生成的湿度。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">target_temperature</td>
-<td style="border-style:solid; border-width:3; padding:7px">Float</td>
+<td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Temperature with which this biome should be generated, relative to other biomes.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">相对于其他生物群系，此生物群系应以此温度生成。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">target_weirdness</td>
-<td style="border-style:solid; border-width:3; padding:7px">Float</td>
+<td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Weirdness with which this biome should be generated, relative to other biomes.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">此生物群系相对于其他生物群系的生成奇异性。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">weight</td>
-<td style="border-style:solid; border-width:3; padding:7px">Float</td>
+<td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Weight with which this biome should be generated, relative to other biomes.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">相对于其他生物群系，此生物群系的生成权重。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:overworld_generation_rules">minecraft:overworld_generation_rules</p></h1>
 
-Controls how this biome is instantiated (and then potentially modified) during world generation of the overworld.</br><h2></h2>
+控制此生物群系在主世界生成期间如何实例化（然后可能被修改）。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
@@ -594,46 +594,46 @@ Controls how this biome is instantiated (and then potentially modified) during w
 <td style="border-style:solid; border-width:3; padding:7px">generate_for_climates</td>
 <td style="border-style:solid; border-width:3; padding:7px">Array of Object of type minecraft:overworld_generation_rules - Weighted climate categories settings</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Controls the world generation climate categories that this biome can spawn for. A single biome can be associated with multiple categories with different weightings.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">控制此生物群系可以生成的世界生成气候类别。一个生物群系可以与多个类别相关联，并且每个类别可以有不同的权重。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">hills_transformation</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type minecraft:overworld_generation_rules - Weighted biome names settings</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">What biome to switch to when converting to a hilly biome</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">在转换为丘陵生物群系时要切换到的生物群系</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">mutate_transformation</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type minecraft:overworld_generation_rules - Weighted biome names settings</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">What biome to switch to when converting to a mutated biome</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">在转换为变异生物群系时要切换到的生物群系</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">river_transformation</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type minecraft:overworld_generation_rules - Weighted biome names settings</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">What biome to switch to when converting to a river biome (if not the Vanilla 'river' biome)</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">在转换为河流生物群系时要切换到的生物群系（如果不是原版的“河流”生物群系）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">shore_transformation</td>
 <td style="border-style:solid; border-width:3; padding:7px">Object of type minecraft:overworld_generation_rules - Weighted biome names settings</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">What biome to switch to when adjacent to an ocean biome</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">当与海洋生物群系相邻时要切换到的生物群系</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="minecraft:overworld_generation_rules - Weighted biome names settings">minecraft:overworld_generation_rules - Weighted biome names settings</p></h1>
+<h1><p id="minecraft:overworld_generation_rules - Weighted biome names settings">minecraft:overworld_generation_rules - 加权生物群系名称设置</p></h1>
 
-Can be just the string name of a Biome, or an array of any size. If an array, each entry can be a Biome name string, or an array of size 2, where the first entry is a Biome name and the second entry is a positive integer representing how that Biome is weighted against other entries. If no weight is provided, a weight of 1 is used.</br><a href="#Index">返回顶部</a><br><br>
+可以是生物群系的字符串名称，也可以是任意大小的数组。如果是数组，每个条目可以是生物群系名称字符串，或者是一个大小为2的数组，其中第一个条目是生物群系名称，第二个条目是一个正整数，表示该生物群系相对于其他条目的权重。如果没有提供权重，则使用权重1。</br><a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="minecraft:overworld_generation_rules - Weighted climate categories settings">minecraft:overworld_generation_rules - Weighted climate categories settings</p></h1>
+<h1><p id="minecraft:overworld_generation_rules - Weighted climate categories settings">minecraft:overworld_generation_rules - 加权气候类别设置</p></h1>
 
-An array of any size containing arrays of exactly two elements. For each contained array, the first element is a climate category string ('medium', 'warm', 'lukewarm', 'cold', or 'frozen'). The second element is a positive integer for how much that entry is weighted relative to other entries.</br><a href="#Index">返回顶部</a><br><br>
+一个任意大小的数组，其中包含的每个数组都恰好有两个元素。对于每个包含的数组，第一个元素是一个气候类别字符串（“medium”、“warm”、“lukewarm”、“cold”或“frozen”），第二个元素是一个正整数，表示该条目相对于其他条目的权重。</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:overworld_height">minecraft:overworld_height</p></h1>
 
-Noise parameters used to drive terrain height in the Overworld.</br><h2></h2>
+用于驱动主世界中地形高度的噪声参数。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
@@ -726,7 +726,7 @@ An adjustment to generated terrain, replacing blocks based on the specified sett
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">noise_frequency_scale</td>
-<td style="border-style:solid; border-width:3; padding:7px">Float</td>
+<td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">The scale to multiply by the position when accessing the noise value for the material adjustments.</br></td>
 </tr>
