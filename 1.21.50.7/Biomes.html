@@ -16,16 +16,16 @@
 <tr> <td> <a href="#minecraft:frozen_ocean_surface"> minecraft:frozen_ocean_surface</a> </tr> </td>
 <tr> <td> <a href="#minecraft:mesa_surface"> minecraft:mesa_surface</a> </tr> </td>
 <tr> <td> <a href="#minecraft:mountain_parameters"> minecraft:mountain_parameters</a> </tr> </td>
-<tr> <td> <a href="#minecraft:mountain_parameters - steep_material_adjustment settings"> minecraft:mountain_parameters - steep_material_adjustment settings</a> </tr> </td>
-<tr> <td> <a href="#minecraft:mountain_parameters - top_slide settings"> minecraft:mountain_parameters - top_slide settings</a> </tr> </td>
+<tr> <td> <a href="#minecraft:mountain_parameters - steep_material_adjustment settings"> minecraft:mountain_parameters - steep_material_adjustment 设置</a> </tr> </td>
+<tr> <td> <a href="#minecraft:mountain_parameters - top_slide settings"> minecraft:mountain_parameters - top_slide 设置</a> </tr> </td>
 <tr> <td> <a href="#minecraft:multinoise_generation_rules"> minecraft:multinoise_generation_rules</a> </tr> </td>
 <tr> <td> <a href="#minecraft:overworld_generation_rules"> minecraft:overworld_generation_rules</a> </tr> </td>
 <tr> <td> <a href="#minecraft:overworld_generation_rules - Weighted biome names settings"> minecraft:overworld_generation_rules - 加权生物群系名称设置</a> </tr> </td>
 <tr> <td> <a href="#minecraft:overworld_generation_rules - Weighted climate categories settings"> minecraft:overworld_generation_rules - 加权气候类别设置</a> </tr> </td>
 <tr> <td> <a href="#minecraft:overworld_height"> minecraft:overworld_height</a> </tr> </td>
 <tr> <td> <a href="#minecraft:surface_material_adjustments"> minecraft:surface_material_adjustments</a> </tr> </td>
-<tr> <td> <a href="#minecraft:surface_material_adjustments - surface adjustment materials settings"> minecraft:surface_material_adjustments - surface adjustment materials settings</a> </tr> </td>
-<tr> <td> <a href="#minecraft:surface_material_adjustments - surface adjustment settings"> minecraft:surface_material_adjustments - surface adjustment settings</a> </tr> </td>
+<tr> <td> <a href="#minecraft:surface_material_adjustments - surface adjustment materials settings"> minecraft:surface_material_adjustments - 表面调整材料设置</a> </tr> </td>
+<tr> <td> <a href="#minecraft:surface_material_adjustments - surface adjustment settings"> minecraft:surface_material_adjustments - 表面调整设置</a> </tr> </td>
 <tr> <td> <a href="#minecraft:surface_parameters"> minecraft:surface_parameters</a> </tr> </td>
 <tr> <td> <a href="#minecraft:swamp_surface"> minecraft:swamp_surface</a> </tr> </td>
 <tr> <td> <a href="#minecraft:tags"> minecraft:tags</a> </tr> </td>
@@ -149,7 +149,7 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:surface_material_adjustments</td>
 <td style="border-style:solid; border-width:3; padding:7px">对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">指定对地形生成中使用的方块的精细细节更改（基于噪声函数）。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">指定基于噪声函数的地形生成中使用的方块的细节变化。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:surface_parameters</td>
@@ -268,31 +268,31 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">beach_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">用于装饰海平面附近的表面的材料。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">ceiling_materials</td>
-<td style="border-style:solid; border-width:3; padding:7px">Array of Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象的数组</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">用于表面天花板的材料。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">floor_materials</td>
-<td style="border-style:solid; border-width:3; padding:7px">Array of Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象的数组</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">用于表面地面的材料。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">foundation_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">用于替换非表面实心方块的材料。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">sea_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">用于替换海平面以下的空气方块的材料。</br></td>
 </tr>
@@ -331,7 +331,7 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">snow_accumulation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Array of 2 Floats</td>
+<td style="border-style:solid; border-width:3; padding:7px">2 个浮点数的数组</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">最小和最大积雪层，每增加0.125即为另一层积雪</br></td>
 </tr>
@@ -358,37 +358,37 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">foundation_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中深层地下使用的方块类型</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">mid_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中地表下一层使用的方块类型</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">sea_floor_depth</td>
-<td style="border-style:solid; border-width:3; padding:7px">Integer</td>
+<td style="border-style:solid; border-width:3; padding:7px">整数</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制地面出现的深度，相对于世界水面水平线</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">sea_floor_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中水体的地板方块类型</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">sea_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中水体使用的方块类型</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">top_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制用于此生物群系表面的方块类型</br></td>
 </tr>
@@ -409,19 +409,19 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">clay_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">要使用的粘土块</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">foundation_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中深层地下使用的方块类型</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">hard_clay_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">使用硬化粘土块</br></td>
 </tr>
@@ -433,31 +433,31 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">mid_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中地表下一层使用的方块类型</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">sea_floor_depth</td>
-<td style="border-style:solid; border-width:3; padding:7px">Integer</td>
+<td style="border-style:solid; border-width:3; padding:7px">整数</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制地面出现的深度，相对于世界水面水平线</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">sea_floor_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中水体的地板方块类型</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">sea_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中水体使用的方块类型</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">top_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制用于此生物群系表面的方块类型</br></td>
 </tr>
@@ -478,13 +478,13 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">steep_material_adjustment</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type minecraft:mountain_parameters - steep_material_adjustment settings</td>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:mountain_parameters 类型的对象 - steep_material_adjustment 设置</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">定义陡坡的表面材料</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">top_slide</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type minecraft:mountain_parameters - top_slide settings</td>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:mountain_parameters 类型的对象 - top_slide 设置</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制世界顶部发生的密度渐变，以防止地形过高</br></td>
 </tr>
@@ -505,7 +505,7 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">作为陡坡材料的方块类型</br></td>
 </tr>
@@ -592,31 +592,31 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">generate_for_climates</td>
-<td style="border-style:solid; border-width:3; padding:7px">Array of Object of type minecraft:overworld_generation_rules - Weighted climate categories settings</td>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:overworld_generation_rules 类型的对象的数组 - 加权气候类别设置</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制此生物群系可以生成的世界生成气候类别。一个生物群系可以与多个类别相关联，并且每个类别可以有不同的权重。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">hills_transformation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type minecraft:overworld_generation_rules - Weighted biome names settings</td>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:overworld_generation_rules 类型的对象 - 加权生物群系名称设置</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">在转换为丘陵生物群系时要切换到的生物群系</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">mutate_transformation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type minecraft:overworld_generation_rules - Weighted biome names settings</td>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:overworld_generation_rules 类型的对象 - 加权生物群系名称设置</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">在转换为变异生物群系时要切换到的生物群系</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">river_transformation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type minecraft:overworld_generation_rules - Weighted biome names settings</td>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:overworld_generation_rules 类型的对象 - 加权生物群系名称设置</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">在转换为河流生物群系时要切换到的生物群系（如果不是原版的“河流”生物群系）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">shore_transformation</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type minecraft:overworld_generation_rules - Weighted biome names settings</td>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:overworld_generation_rules 类型的对象 - 加权生物群系名称设置</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">当与海洋生物群系相邻时要切换到的生物群系</br></td>
 </tr>
@@ -639,88 +639,88 @@ Minecraft 生物群系可以具有不同的地形特征。通过编写自定义�
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">noise_params</td>
-<td style="border-style:solid; border-width:3; padding:7px">Array of 2 Floats</td>
+<td style="border-style:solid; border-width:3; padding:7px">2 个浮点数的数组</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">First value is depth - more negative means deeper underwater, while more positive means higher. Second value is scale, which affects how much noise changes as it moves from the surface.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">第一个值是深度 - 负值越多表示水下越深，而越正表示越高。第二个值是比例，它影响噪声在从表面移动时的变化程度。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">noise_type</td>
 <td style="border-style:solid; border-width:3; padding:7px">"default", "default_mutated", "river", "ocean", "deep_ocean", "lowlands", "taiga", "mountains", "highlands", "extreme", "less_extreme", "beach", "stone_beach", "mushroom", "swamp"</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Specifies a preset based on a built-in setting rather than manually using noise_params</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">指定一个基于内置设置的预设，而不是手动使用噪声参数（noise_params）。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:surface_material_adjustments">minecraft:surface_material_adjustments</p></h1>
 
-Specify fine-detail changes to blocks used in terrain generation (based on a noise function).</br><h2></h2>
+指定基于噪声函数的地形生成中使用的方块的细节变化。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">adjustments</td>
-<td style="border-style:solid; border-width:3; padding:7px">Array of Object of type minecraft:surface_material_adjustments - surface adjustment settings</td>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:surface_material_adjustments 类型的对象的数组 - 表面调整设置</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">All adjustments that match the column's noise values will be applied in the order listed.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">所有匹配该列噪声值的调整将按列出的顺序应用。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="minecraft:surface_material_adjustments - surface adjustment materials settings">minecraft:surface_material_adjustments - surface adjustment materials settings</p></h1>
+<h1><p id="minecraft:surface_material_adjustments - surface adjustment materials settings">minecraft:surface_material_adjustments - 表面调整材料设置</p></h1>
 
-The specific blocks used for this surface adjustment</br><h2></h2>
+用于此表面调整的具体方块</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">foundation_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Controls the block type used deep underground in this biome when this adjustment is active.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">当此调整生效时，控制此生物群系中深层地下使用的方块类型。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">mid_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Controls the block type used in a layer below the surface of this biome when this adjustment is active.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">当此调整生效时，控制此生物群系中地表下一层使用的方块类型。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">sea_floor_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">当此调整生效时，控制此生物群系中水体的地板方块类型</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">sea_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">当此调整生效时，控制此生物群系中水体的方块类型。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">top_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px">当此调整生效时，控制用于此生物群系表面的方块类型</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="minecraft:surface_material_adjustments - surface adjustment settings">minecraft:surface_material_adjustments - surface adjustment settings</p></h1>
+<h1><p id="minecraft:surface_material_adjustments - surface adjustment settings">minecraft:surface_material_adjustments - 表面调整设置</p></h1>
 
-An adjustment to generated terrain, replacing blocks based on the specified settings.</br><h2></h2>
+对生成的地形进行调整，根据指定的设置替换方块。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">height_range</td>
-<td style="border-style:solid; border-width:3; padding:7px">Array of 2 Molang expressions</td>
+<td style="border-style:solid; border-width:3; padding:7px">2 个 Molang 表达式的数组</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Defines a range of noise values [min, max] for which this adjustment should be applied.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">定义一个噪声值范围 [min, max]，在此范围内应用此调整。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">materials</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type minecraft:surface_material_adjustments - surface adjustment materials settings</td>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:surface_material_adjustments 类型的对象 - 表面调整材质设置</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 </tr>
@@ -728,56 +728,56 @@ An adjustment to generated terrain, replacing blocks based on the specified sett
 <td style="border-style:solid; border-width:3; padding:7px">noise_frequency_scale</td>
 <td style="border-style:solid; border-width:3; padding:7px">浮点数</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">The scale to multiply by the position when accessing the noise value for the material adjustments.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">在访问材料调整的噪声值时，乘以位置的缩放比例。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">noise_range</td>
-<td style="border-style:solid; border-width:3; padding:7px">Array of 2 Floats</td>
+<td style="border-style:solid; border-width:3; padding:7px">2 个浮点数的数组</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">Defines a range of noise values [min, max] for which this adjustment should be applied.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">定义一个噪声值范围 [min, max]，在此范围内应用此调整。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:surface_parameters">minecraft:surface_parameters</p></h1>
 
-Controls the blocks used for the default Minecraft Overworld terrain generation.</br><h2></h2>
+控制用于默认 Minecraft 主世界地形生成的方块。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">foundation_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
-<td style="border-style:solid; border-width:3; padding:7px">Controls the block type used deep underground in this biome.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中深层地下使用的方块类型。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">mid_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
-<td style="border-style:solid; border-width:3; padding:7px">Controls the block type used in a layer below the surface of this biome.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中地表下一层使用的方块类型。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">sea_floor_depth</td>
-<td style="border-style:solid; border-width:3; padding:7px">Integer</td>
+<td style="border-style:solid; border-width:3; padding:7px">整数</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制地面出现的深度，相对于世界水面水平线.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">sea_floor_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中水体的地板方块类型.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">sea_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中水体使用的方块类型.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">top_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制用于此生物群系表面的方块类型.</br></td>
 </tr>
@@ -792,37 +792,37 @@ Similar to overworld_surface. Adds swamp surface details.</br><h2></h2>
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">foundation_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
-<td style="border-style:solid; border-width:3; padding:7px">Controls the block type used deep underground in this biome.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中深层地下使用的方块类型。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">mid_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
-<td style="border-style:solid; border-width:3; padding:7px">Controls the block type used in a layer below the surface of this biome.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中地表下一层使用的方块类型。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">sea_floor_depth</td>
-<td style="border-style:solid; border-width:3; padding:7px">Integer</td>
+<td style="border-style:solid; border-width:3; padding:7px">整数</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制地面出现的深度，相对于世界水面水平线.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">sea_floor_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中水体的地板方块类型.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">sea_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制此生物群系中水体使用的方块类型.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">top_material</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Block Specifier</td>
+<td style="border-style:solid; border-width:3; padding:7px">类型为方块指定器的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">控制用于此生物群系表面的方块类型.</br></td>
 </tr>
@@ -831,22 +831,22 @@ Similar to overworld_surface. Adds swamp surface details.</br><h2></h2>
 
 <h1><p id="minecraft:tags">minecraft:tags</p></h1>
 
-Attach arbitrary string tags to this biome.</br><h2></h2>
+将任意字符串标签附加到此生物群系。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">tags</td>
-<td style="border-style:solid; border-width:3; padding:7px">Array of String</td>
+<td style="border-style:solid; border-width:3; padding:7px">字符串的数组</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
-<td style="border-style:solid; border-width:3; padding:7px">Array of string tags used by other systems such as entity spawning</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">由其他系统（如实体生成）使用的字符串标签数组</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:the_end_surface">minecraft:the_end_surface</p></h1>
 
-Use default Minecraft End terrain generation.</br><a href="#Index">返回顶部</a><br><br>
+使用默认的 Minecraft 末地地形生成。</br><a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
