@@ -59,7 +59,7 @@
 
 <h2>生物群系</h2>
 
-可以使用 “biomes_client.json” 确定生物群系的迷雾设置。在每个生物群落条目中，您可以有一个名为 “fog_identifier” 的变量，并设置一个与您要用于此生物群落的雾设置相匹配的名称。</br></br>“default” 条目也可以通过这种方式设置，并将在活动雾堆栈中的生物群系条目下使用。因此，生物群系的雾设置并不会完全替换默认设置，而是在默认设置之上读取生物群系，如 “Active Fog Stack” 部分所述。</br></br>“default”生物群系条目有标签 “remove_all_prior_fog”，默认为 “false”。</br>当设置为 false 时（或未输入标签），缺少的迷雾定义将由任何填充了定义的较低资源包填充。</br>当设置为 true 时，将清除资源包中启用它的当前包之前的所有先前迷雾定义，从而有效地使当前资源包成为所有迷雾的新起点。</br></br>在每个生物群系（包括“default”）中，都有标签“inherit_from_prior_fog”，也默认为“false”。</br>当设置为 false 时（或未输入标签），当前资源包的生物群系将用自己的标签覆盖当前存储的 “fog_identifier” 标签。</br>当设置为 true 时，来自所有匹配生物群系的 “fog_identifier” 标签将被添加在一起，并为该生物群系创建一个新的合并迷雾定义。</br><a href="#Index">返回顶部</a><br><br>
+可以使用 “biomes_client.json” 确定生物群系的迷雾设置。在每个生物群系条目中，您可以有一个名为 “fog_identifier” 的变量，并设置一个与您要用于此生物群系的雾设置相匹配的名称。</br></br>“default” 条目也可以通过这种方式设置，并将在活动雾堆栈中的生物群系条目下使用。因此，生物群系的雾设置并不会完全替换默认设置，而是在默认设置之上读取生物群系，如 “Active Fog Stack” 部分所述。</br></br>“default”生物群系条目有标签 “remove_all_prior_fog”，默认为 “false”。</br>当设置为 false 时（或未输入标签），缺少的迷雾定义将由任何填充了定义的较低资源包填充。</br>当设置为 true 时，将清除资源包中启用它的当前包之前的所有先前迷雾定义，从而有效地使当前资源包成为所有迷雾的新起点。</br></br>在每个生物群系（包括“default”）中，都有标签“inherit_from_prior_fog”，也默认为“false”。</br>当设置为 false 时（或未输入标签），当前资源包的生物群系将用自己的标签覆盖当前存储的 “fog_identifier” 标签。</br>当设置为 true 时，来自所有匹配生物群系的 “fog_identifier” 标签将被添加在一起，并为该生物群系创建一个新的合并迷雾定义。</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Fog Command">Fog Command</p></h1>
 
