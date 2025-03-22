@@ -13,7 +13,7 @@
 <a href="#Index">返回顶部</a>
 <h1><p id="Texture Sets">纹理集</p></h1>
 
-Minecraft 支持基于物理的渲染 （PBR） 颜色管道（例如，用于光线追踪）。这使用更多的纹理数据，而不仅仅是“颜色”，以实现更丰富、更逼真的视觉效果。使用 PBR 方法，您可以为不同的镜面反射、发射率、法线贴图等创建图层，这超出了原版Minecraft的经典颜色管道。添加了纹理集作为为纹理资源定义多个 PBR 图层的功能。纹理集是从 json 文件驱动的数据。</br><h1><p id="Texture Set Json Schema">纹理集 Json 架构</p></h1>
+Minecraft 支持基于物理的渲染 （PBR） 颜色管道（例如，用于光线追踪）。这使用更多的纹理数据，而不仅仅是“颜色”，以实现更丰富、更逼真的视觉效果。使用 PBR 方法，您可以为不同的镜面反射、发射率、法线贴图等创建图层，这超出了原版 Minecraft 的经典颜色管道。添加了纹理集作为为纹理资源定义多个 PBR 图层的功能。纹理集是从 json 文件驱动的数据。</br><h1><p id="Texture Set Json Schema">纹理集 Json 架构</p></h1>
 
 <h2>纹理集 Json 架构</h2>
 
@@ -35,7 +35,7 @@ texture_set.json 文件可以指定多个图层。</br>图层是对纹理图像�
 
 - 1 通道图层图像或 JSON 中的单个值，用于统一高度图。</br>- 与 'normal' 图层互斥。</br><a href="#Index">返回顶部</a><br><br>
 
-<h2><p id="Metalness_emissive_roughness">Metalness_emissive_roughness（金属度_发光_粗糙度）</p></h2>
+<h2><p id="Metalness_emissive_roughness">Metalness_emissive_roughness（金属度 _ 发光 _ 粗糙度）</p></h2>
 
 - 3 通道图像（或忽略第 4 个通道的 4 通道）或统一 MER 的 3 值数组。</br>- RGB 图像将 Red 映射到 Metalness，将 Green 映射到 Emissive，将 Blue 映射到 Roughness。</br><a href="#Index">返回顶部</a><br><br>
 
@@ -43,7 +43,7 @@ texture_set.json 文件可以指定多个图层。</br>图层是对纹理图像�
 
 <h1><p id="Specifying uniform values">指定 uniform 值</p></h1>
 
-可以在 *texture_set.json 文件中指定值，而不是引用纹理集图层的纹理图像，这实际上等同于引用用相应通道的一个或多个值均匀填充的纹理图像。</br></br>json 中的值可以采用以下任何格式指定：</br>- 数字范围0到255，或者作为多通道图层的此类整数的向量。</br>- 十六进制 RGB 或 ARGB 分别用于 3 个和 4 个通道，也作为 2 个十六进制数字用于单个通道层。</br><a href="#Index">返回顶部</a><br><br>
+可以在 *texture_set.json 文件中指定值，而不是引用纹理集图层的纹理图像，这实际上等同于引用用相应通道的一个或多个值均匀填充的纹理图像。</br></br>json 中的值可以采用以下任何格式指定：</br>- 数字范围 0 到 255 ，或者作为多通道图层的此类整数的向量。</br>- 十六进制 RGB 或 ARGB 分别用于 3 个和 4 个通道，也作为 2 个十六进制数字用于单个通道层。</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Examples of *.texture_set.json files">*.texture_set.json 文件的示例</p></h1>
 
@@ -90,7 +90,7 @@ texture_set.json 文件可以指定多个图层。</br>图层是对纹理图像�
 
 <h1><p id="Invalid *.texture_set.json">无效 *.texture_set.json</p></h1>
 
-如果纹理集无效，我们将记录一个CONTENT_ERROR，并且不会使用纹理集。</br>在以下情况下，纹理集无效：</br>- Json 数据无法解析，或者不符合纹理集架构。</br>- 未指定颜色图层。需要在 .texture_set.json 中有一个颜色图层。</br>- 高度贴图和法线图层都已定义。</br>- 引用的纹理不存在于同一资源包中，或者无法解析引用的纹理。</br>- 任何图层都定义了意外数量的通道：</br>- 对于使用引用图像指定的图层：Color、MER 和 Normal 支持 3 通道或 4 通道图像;高度贴图仅支持 1 通道图像。</br>- 对于使用数字或十六进制值指定的图层：颜色支持 4 通道值;MER 支持 3 通道值;</br><a href="#Index">返回顶部</a><br><br>
+如果纹理集无效，我们将记录一个 CONTENT_ERROR ，并且不会使用纹理集。</br>在以下情况下，纹理集无效：</br>- Json 数据无法解析，或者不符合纹理集架构。</br>- 未指定颜色图层。需要在 .texture_set.json 中有一个颜色图层。</br>- 高度贴图和法线图层都已定义。</br>- 引用的纹理不存在于同一资源包中，或者无法解析引用的纹理。</br>- 任何图层都定义了意外数量的通道：</br>- 对于使用引用图像指定的图层：Color、MER 和 Normal 支持 3 通道或 4 通道图像 ; 高度贴图仅支持 1 通道图像。</br>- 对于使用数字或十六进制值指定的图层：颜色支持 4 通道值 ;MER  支持 3 通道值 ; </br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Resource Stack Behaviour">资源堆栈行为</p></h1>
 
@@ -98,7 +98,7 @@ texture_set.json 文件可以指定多个图层。</br>图层是对纹理图像�
 
 <h1><p id="Referencing Texture Resources">引用纹理资源</p></h1>
 
-如果您有重复的图像引用，文件扩展名的优先级为：.tga > .png > .jpg > .jpeg。例如：如果文件夹中同时存在 grass.png 和 grass.tga，则将选择 grass.tga。这也适用于其他数据驱动文件，例如引用纹理资源的json。</br><a href="#Index">返回顶部</a><br><br>
+如果您有重复的图像引用，文件扩展名的优先级为：.tga > .png > .jpg > .jpeg。例如：如果文件夹中同时存在 grass.png 和 grass.tga，则将选择 grass.tga。这也适用于其他数据驱动文件，例如引用纹理资源的 json 。</br><a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 

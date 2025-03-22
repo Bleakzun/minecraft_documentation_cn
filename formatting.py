@@ -4,12 +4,12 @@ from bs4 import BeautifulSoup
 
 def format_html(input_file, output_file, indent_spaces):
     try:
-        with open(input_file, 'r', encoding='utf-8') as f:
+        with open(input_file, 'r', encoding = 'utf-8') as f:
             soup = BeautifulSoup(f, 'html.parser')
 
         formatted_html = soup.prettify()
 
-        lines = formatted_html.split('\n')
+        lines          = formatted_html.split('\n')
         indented_lines = []
         current_indent = 0
 
@@ -20,7 +20,9 @@ def format_html(input_file, output_file, indent_spaces):
             if stripped_line.startswith('</'):
                 current_indent = max(0, current_indent - indent_spaces)
             indented_lines.append(' ' * current_indent + stripped_line)
-            if stripped_line.startswith('<') and not stripped_line.endswith('/>') and not stripped_line.startswith('</'):
+            if (    stripped_line. startswith('<') and
+                not stripped_line.  endswith('/>') and
+                not stripped_line.startswith('</')):
                 current_indent += indent_spaces
 
         formatted_html = '\n'.join(indented_lines)

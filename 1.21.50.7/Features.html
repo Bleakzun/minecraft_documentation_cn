@@ -73,7 +73,7 @@
 
 <h1><p id="Adding features">添加地物</p></h1>
 
-地物是从行为包的 “features” 子文件夹中的 JSON 文件中读取的。加载将强制每个文件使用一个地物;文件名和地物的名称必须匹配。地物名称可以包含 “namespace:feature_name” 形式的命名空间，以帮助将它们与其他行为包中的地物区分开来。将文件名与地物名称匹配时，不考虑此命名空间。例如，在名为 “my_tree_feature.json” 的文件中，“my_tree_feature” 和 “my_pack_name:my_tree_feature” 都是有效的标识符。如果两个行为包定义了相同的地物名称（包括命名空间），则将使用堆栈中优先级最高包中的地物。这允许用户根据需要覆盖基本地物。</br><a href="#Index">返回顶部</a><br><br>
+地物是从行为包的 “features” 子文件夹中的 JSON 文件中读取的。加载将强制每个文件使用一个地物 ; 文件名和地物的名称必须匹配。地物名称可以包含 “namespace:feature_name” 形式的命名空间，以帮助将它们与其他行为包中的地物区分开来。将文件名与地物名称匹配时，不考虑此命名空间。例如，在名为 “my_tree_feature.json” 的文件中，“my_tree_feature” 和 “my_pack_name:my_tree_feature” 都是有效的标识符。如果两个行为包定义了相同的地物名称（包括命名空间），则将使用堆栈中优先级最高包中的地物。这允许用户根据需要覆盖基本地物。</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Supported features">支持的地物</p></h1>
 
@@ -118,7 +118,7 @@
 
 <h1><p id="minecraft:beards_and_shavers">minecraft:beards_and_shavers</p></h1>
 
-'minecraft:beards_and_shavers' 将构建一个 '胡须' 或 '剃须' 空间，以便为放置地物提供一个清晰的空间。</br>如果出现以下情况，则成功：放置了胡须/剃须（这应该总是发生）。</br>如果出现以下情况，则失败：将始终返回放置位置，但不能保证内部地物放置。</br><h2></h2>
+'minecraft:beards_and_shavers' 将构建一个  ' 胡须 '  或  ' 剃须 '  空间，以便为放置地物提供一个清晰的空间。</br>如果出现以下情况，则成功：放置了胡须 / 剃须（这应该总是发生）。</br>如果出现以下情况，则失败：将始终返回放置位置，但不能保证内部地物放置。</br><h2></h2>
 示例：提供用于内部结构放置的区域<br / ><textarea readonly="true" cols="73" rows="14">
 {"code:beards_and_shavers": {
           "description": {
@@ -279,7 +279,7 @@
 
 <h1><p id="minecraft:multiface_feature">minecraft:multiface_feature</p></h1>
 
-'Minecraft:multiface_feature' 在地板/墙壁/天花板上放置一个或几个多面方块。尽管名称如此，但此地物可以放置任何方块。在放置过程中，会检查现有的世界方块，看看是否可以根据 'can_place_on' 字段中提供的列表将此地物放置在它们上面。如果未指定 'can_replace_on' 字段，则可以将 'place_block' 方块放置在任何现有方块上。</br>此地物还会尝试将 'place_block' 方块分布在放置该地物的世界中的位置。</br>成功条件：至少成功放置一个方块。</br>如果出现以下情况，则失败：所有方块放置都失败。</br><h2></h2>
+'Minecraft:multiface_feature' 在地板 / 墙壁 / 天花板上放置一个或几个多面方块。尽管名称如此，但此地物可以放置任何方块。在放置过程中，会检查现有的世界方块，看看是否可以根据 'can_place_on' 字段中提供的列表将此地物放置在它们上面。如果未指定 'can_replace_on' 字段，则可以将 'place_block' 方块放置在任何现有方块上。</br>此地物还会尝试将 'place_block' 方块分布在放置该地物的世界中的位置。</br>成功条件：至少成功放置一个方块。</br>如果出现以下情况，则失败：所有方块放置都失败。</br><h2></h2>
 示例：洞穴中的蓝色藤蔓。<br / ><textarea readonly="true" cols="49" rows="18">
 {
   "format_version": "1.13.0",
@@ -407,7 +407,7 @@
 
 <h1><p id="minecraft:scatter_feature">minecraft:scatter_feature</p></h1>
 
-'minecraft:scatter_feature' 将地物分散到整个区块中。'x'、'y' 和 'z' 字段是每个坐标的参数。请注意，坐标表示与输入位置的偏移量，而不是绝对位置。坐标可以是单个值、随机分布或解析为数值的 Molang 表达式。提供 'coordinate_eval_order' 字段是为了更精细地控制坐标分辨率（尤其是在使用 '网格' 分布时）。“iterations”控制如果“scatter_chance”检查成功，应进行多少个单独的投放。“scatter_chance”检查只进行一次，因此要么运行所有版面，要么不运行任何版面。</br>如果出现以下情况，则成功：至少有一个地物放置成功。</br>如果出现以下情况，则失败：所有地物放置都失败。</br><h2></h2>
+'minecraft:scatter_feature' 将地物分散到整个区块中。'x'、'y' 和 'z' 字段是每个坐标的参数。请注意，坐标表示与输入位置的偏移量，而不是绝对位置。坐标可以是单个值、随机分布或解析为数值的 Molang 表达式。提供 'coordinate_eval_order' 字段是为了更精细地控制坐标分辨率（尤其是在使用  ' 网格 '  分布时）。“iterations”控制如果“scatter_chance”检查成功，应进行多少个单独的投放。“scatter_chance”检查只进行一次，因此要么运行所有版面，要么不运行任何版面。</br>如果出现以下情况，则成功：至少有一个地物放置成功。</br>如果出现以下情况，则失败：所有地物放置都失败。</br><h2></h2>
 示例：将海平面上的花散布在生物群系中一半的区块中。<br / ><textarea readonly="true" cols="54" rows="23">
 {
   "format_version": "1.13.0",
@@ -2203,7 +2203,7 @@ CoordinateEvaluationOrder 枚举器，支持的值为：“xyz”、“xzy”、
 <td style="border-style:solid; border-width:3; padding:7px">operator</td>
 <td style="border-style:solid; border-width:3; padding:7px">对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">要和'value'应用的比较。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">要和 'value' 应用的比较。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">subject</td>
@@ -2265,7 +2265,7 @@ RandomDistributionType 枚举器，支持的值为：“uniform”、“gaussian
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">iterations</td>
-<td style="border-style:solid; border-width:3; padding:7px">结构 SharedTypes::Legacy::ExpressionNode类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">结构  SharedTypes::Legacy::ExpressionNode 类型的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">必填</td>
 <td style="border-style:solid; border-width:3; padding:7px">要生成的分散位置数。</br></td>
 </tr>
@@ -2273,7 +2273,7 @@ RandomDistributionType 枚举器，支持的值为：“uniform”、“gaussian
 <td style="border-style:solid; border-width:3; padding:7px">scatter_chance</td>
 <td style="border-style:solid; border-width:3; padding:7px">散布几率类型的对象</td>
 <td style="border-style:solid; border-width:3; padding:7px">自选</td>
-<td style="border-style:solid; border-width:3; padding:7px">发生此分散的概率。不评估每次迭代;要么不运行迭代，要么运行所有迭代。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">发生此分散的概率。不评估每次迭代 ; 要么不运行迭代，要么运行所有迭代。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">x</td>
