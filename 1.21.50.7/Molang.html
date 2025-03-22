@@ -41,7 +41,7 @@ Molang 是一种简单的基于表达式的语言，旨在在运行时快速、�
 
 <h1><p id="Lexical Structure">词法结构</p></h1>
 
-语言结构主要基于简单的“C”语言系列样式语法。表达式可以由一个简单的值或数学计算组成，也可以在需要更复杂的代码时由数个子表达式组成。</br></br>在简单情况下，省略句末的 ';' 并返回表达式结果。</br>在复杂情况下，多个子表达式都以分号 ';' 结尾。除非存在一个`return`语句，否则复杂表达式的返回结果将计算为`0.0`。在具有`return`语句的情况下，该语句的子表达式所计算的值将被从当前作用域中返回出去。</br><h1><p id="Case Sensitivity">区分大小写</p></h1>
+语言结构主要基于简单的“C”语言系列样式语法。表达式可以由一个简单的值或数学计算组成，也可以在需要更复杂的代码时由数个子表达式组成。</br></br>在简单情况下，省略句末的 ';' 并返回表达式结果。</br>在复杂情况下，多个子表达式都以分号 ';' 结尾。除非存在一个 `return` 语句，否则复杂表达式的返回结果将计算为 `0.0` 。在具有 `return` 语句的情况下，该语句的子表达式所计算的值将被从当前作用域中返回出去。</br><h1><p id="Case Sensitivity">区分大小写</p></h1>
 
 Molang 中的所有内容都不区分大小写，但字符串除外，它们保持提供的大小写。</br><a href="#Index">返回顶部</a><br><br>
 
@@ -97,11 +97,11 @@ Molang 中的所有内容都不区分大小写，但字符串除外，它们保�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`variable.variable_name`</td>
-<td style="border-style:solid; border-width:3; padding:7px">读取/写入一个活动对象的存储器</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">读取 / 写入一个活动对象的存储器</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`temp.variable_name`</td>
-<td style="border-style:solid; border-width:3; padding:7px">读/写临时存储</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">读 / 写临时存储</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`context.variable_name`</td>
@@ -113,7 +113,7 @@ Molang 中的所有内容都不区分大小写，但字符串除外，它们保�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`<test> ? <if true> : <if false>`</td>
-<td style="border-style:solid; border-width:3; padding:7px">三元条件运算符 - 注意：在进行版本化变更以修复它之前，不带括号的嵌套三元表达式被错误地解析（请参阅下面的'版本化变更'）</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">三元条件运算符 - 注意：在进行版本化变更以修复它之前，不带括号的嵌套三元表达式被错误地解析（请参阅下面的 ' 版本化变更 ' ）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`this`</td>
@@ -174,11 +174,11 @@ Molang 运算符按照此顺序来确定在不使用括号时首先评估哪个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">比较</td>
-<td style="border-style:solid; border-width:3; padding:7px">比较运算符 '<' '<=' '>' '>=' （参见下面的'版本化变更'）</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">比较运算符 '<' '<=' '>' '>=' （参见下面的 ' 版本化变更 ' ）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">相等性检查</td>
-<td style="border-style:solid; border-width:3; padding:7px">相等性检查运算符 '==' '！=' （请参阅下面的 '版本化变更'）</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">相等性检查运算符 '==' '！=' （请参阅下面的  ' 版本化变更 ' ）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">逻辑与</td>
@@ -190,7 +190,7 @@ Molang 运算符按照此顺序来确定在不使用括号时首先评估哪个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">三元条件</td>
-<td style="border-style:solid; border-width:3; padding:7px">使用 '? :'.当有多个三元运算符时，从右到左计算。（请参阅下面的'版本化变更'）</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">使用 '?  :'. 当有多个三元运算符时，从右到左计算。（请参阅下面的 ' 版本化变更 ' ）</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">空合并</td>
@@ -205,13 +205,13 @@ Molang 运算符按照此顺序来确定在不使用括号时首先评估哪个�
 
 <h1><p id="Variables">变量</p></h1>
 
-一共存在三种一个变量可能属于的变量生命周期：临时、实体和上下文：</br>- 临时变量（例如：`temp.moo = 1;`）是可读/可写的，并且依照C语言的规则，它们对于它们所定义在的作用域是有效的。出于性能原因，对于当前的表达式执行，它们的生存周期仍是全局的，并且可能在它们对于一个表达式所定义在的最外层作用域之外仍能返回一个有效值。请在复杂表达式中多加小心。我们将会尽快为非法访问加入内容错误。</br>- 实体变量（例如：`variable.moo = 1;`）是可读/可写的，并且会在实体的生命周期内将它的值存储在该实体上。注意，这些变量当前都不会被保存，所以退出和重新加载世界将会使它们重新初始化。同理，如果实体从世界中消失，该实体上的任何变量都将丢失。</br>- 上下文变量（例如：`context.moo`）是只读的，是在特定情况下由游戏指定的。关于何时会定义何种变量的细节可以在对应Molang表达式的应用（例如定义了暴露了哪些上下文变量的行为）的区域的文档中找到。</br><a href="#Index">返回顶部</a><br><br>
+一共存在三种一个变量可能属于的变量生命周期：临时、实体和上下文：</br>- 临时变量（例如：`temp.moo = 1;`）是可读 / 可写的，并且依照 C 语言的规则，它们对于它们所定义在的作用域是有效的。出于性能原因，对于当前的表达式执行，它们的生存周期仍是全局的，并且可能在它们对于一个表达式所定义在的最外层作用域之外仍能返回一个有效值。请在复杂表达式中多加小心。我们将会尽快为非法访问加入内容错误。</br>- 实体变量（例如：`variable.moo = 1;`）是可读 / 可写的，并且会在实体的生命周期内将它的值存储在该实体上。注意，这些变量当前都不会被保存，所以退出和重新加载世界将会使它们重新初始化。同理，如果实体从世界中消失，该实体上的任何变量都将丢失。</br>- 上下文变量（例如：`context.moo`）是只读的，是在特定情况下由游戏指定的。关于何时会定义何种变量的细节可以在对应 Molang 表达式的应用（例如定义了暴露了哪些上下文变量的行为）的区域的文档中找到。</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Values">值</p></h1>
 
 <h2></h2>
 
-</br>- 所有数值均为浮点数。</br>- 布尔值，比如活动对象旗标，都会被转换成并存储以一个要么为0.0要么为1.0的浮点值，它们分别代表false和true。</br>- 对于布尔测试，等于0.0的浮点值为false，任何不等于0.0的值为true。</br>- 对于数组下标，浮点数将采用C语言样式强制转换为整型，对于负数将钳制为零，对于过大的值将根据数组大小裹顶。</br>- 其他支持的类型包括：</br><a href="#Index">返回顶部</a><br><br>
+</br>- 所有数值均为浮点数。</br>- 布尔值，比如活动对象旗标，都会被转换成并存储以一个要么为 0.0 要么为 1.0 的浮点值，它们分别代表 false 和 true 。</br>- 对于布尔测试，等于 0.0 的浮点值为 false ，任何不等于 0.0 的值为 true 。</br>- 对于数组下标，浮点数将采用 C 语言样式强制转换为整型，对于负数将钳制为零，对于过大的值将根据数组大小裹顶。</br>- 其他支持的类型包括：</br><a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="37" rows="8">
@@ -262,7 +262,7 @@ Molang 运算符按照此顺序来确定在不使用括号时首先评估哪个�
 </table>
 <a href="#Index">返回顶部</a><br><br>
 
-举个例子...</br><a href="#Index">返回顶部</a><br><br>
+举个例子 ... </br><a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="102" rows="2">
@@ -270,7 +270,7 @@ math.cos(query.anim_time * 38) * variable.rotation_scale + variable.x * variable
 </textarea> </br>
 <a href="#Index">返回顶部</a><br><br>
 
-...也可以写成：</br><a href="#Index">返回顶部</a><br><br>
+ ... 也可以写成：</br><a href="#Index">返回顶部</a><br><br>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="72" rows="2">
@@ -290,7 +290,7 @@ math.cos(q.anim_time * 38) * variable.rotation_scale + v.x * variable.x * query.
 
 <h1><p id="Structs">结构体</p></h1>
 
-Molang的数据结构与C语言不同，它是通过具体用法隐式定义的。这样的目的是更有效地传递数据，例如传递`v.location`而非`v.x`、`v.y`和`v.z`。例如：</br><h2></h2>
+ Molang 的数据结构与 C 语言不同，它是通过具体用法隐式定义的。这样的目的是更有效地传递数据，例如传递 `v.location` 而非 `v.x` 、 `v.y` 和 `v.z` 。例如：</br><h2></h2>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="67" rows="5">
@@ -401,7 +401,7 @@ Molang 中的字符串用单引号括起来，例如：'minecraft:pig' 或 'hell
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.lerp(start, end, 0_to_1)`</td>
-<td style="border-style:solid; border-width:3; padding:7px">通过0_to_1从头到尾进行插值</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">通过 0_to_1 从头到尾进行插值</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.lerprotate(start, end, 0_to_1)`</td>
@@ -425,7 +425,7 @@ Molang 中的字符串用单引号括起来，例如：'minecraft:pig' 或 'hell
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.mod(value, denominator)`</td>
-<td style="border-style:solid; border-width:3; padding:7px">返回值/分母的余数</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回值 / 分母的余数</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">`math.pi`</td>
@@ -528,7 +528,7 @@ for_each(v.pig, query.get_nearby_entities(4, 'minecraft:pig'), {
 
 <h1><p id="Conditionals">条件符</p></h1>
 
-条件 '?' 运算符允许两种便捷的方式来实现简单的分支逻辑。</br>第一种方法是使用 '?' 本身有条件地执行表达式的一部分，例如 'A ? B`.仅当 '?' 后面的部分的计算结果为 true 布尔值时，才会运行 '?' 后面的部分。</br>第二种方法是使用 '?' 和 ':' 作为 '条件三元'，例如 'A ? B : C'.如果 '?' 之前的部分被评估为 true，则返回 ':' 之前的部分。否则，将返回之后的部分。</br> 注意：在进行版本化变更以修复它之前，没有括号的嵌套三元表达式被错误地解析（请参阅下面的“版本化变更”）。</br><h2></h2>
+条件 '?' 运算符允许两种便捷的方式来实现简单的分支逻辑。</br>第一种方法是使用 '?' 本身有条件地执行表达式的一部分，例如 'A ?  B`. 仅当 '?' 后面的部分的计算结果为 true 布尔值时，才会运行 '?' 后面的部分。</br>第二种方法是使用 '?' 和 ':' 作为  ' 条件三元 ' ，例如 'A ? B :  C'. 如果 '?' 之前的部分被评估为 true，则返回 ':' 之前的部分。否则，将返回之后的部分。</br> 注意：在进行版本化变更以修复它之前，没有括号的嵌套三元表达式被错误地解析（请参阅下面的“版本化变更”）。</br><h2></h2>
 条件示例<br / ><textarea readonly="true" cols="42" rows="6">
 
 v.should_reset_a ? { v.a = 0; }
@@ -556,7 +556,7 @@ loop(10, {
 
 <h1><p id="for_each">for_each</p></h1>
 
-'query.get_nearby_entities' （见下文） 返回一个实体数组。为了迭代它们，您可以使用以下新的内置函数 'for_each'。它需要三个参数：'for_each(&lt;variable&gt;, &lt;array&gt;&lt;expression&gt;,);'变量可以是任何变量，可以是 'temp.' 或 'variable.'，但我建议使用 'temp.' 来不污染实体的变量空间。表达式是要为数组中的每个条目执行的任何 Molang 表达式）</br><h2></h2>
+'query.get_nearby_entities' （见下文） 返回一个实体数组。为了迭代它们，您可以使用以下新的内置函数 'for_each'。它需要三个参数：'for_each(&lt;variable&gt;,  &lt;array&gt;&lt;expression&gt;,);' 变量可以是任何变量，可以是 'temp.' 或 'variable.'，但我建议使用 'temp.' 来不污染实体的变量空间。表达式是要为数组中的每个条目执行的任何 Molang 表达式）</br><h2></h2>
 <br / ><textarea readonly="true" cols="65" rows="7">
 
 "v.x = 0;
@@ -600,7 +600,7 @@ loop(10, {loop(10, {v.x = v.x + 1; (v.x > 5) ? break;});});
 
 <h1><p id="continue">continue</p></h1>
 
-'continue' 函数。目前仅支持 'loop' 和 'for_each'，这将跳到当前循环的下一次迭代。有关内部/外部循环的更多详细信息，请参阅上面的 'break' 。以下示例将导致 v.x 变为 6.0，因为一旦达到该值，将跳过增量。请注意，在这个人为的示例中，最好跳出循环，因为它比继续执行所有 10 次迭代的性能更高。</br><h2></h2>
+'continue' 函数。目前仅支持 'loop' 和 'for_each'，这将跳到当前循环的下一次迭代。有关内部 / 外部循环的更多详细信息，请参阅上面的 'break' 。以下示例将导致 v.x 变为 6.0，因为一旦达到该值，将跳过增量。请注意，在这个人为的示例中，最好跳出循环，因为它比继续执行所有 10 次迭代的性能更高。</br><h2></h2>
 
 <h3></h3>
 <br / ><textarea readonly="true" cols="24" rows="8">
@@ -675,7 +675,7 @@ return temp.moo * temp.moo + temp.baa;
 
 <h1><p id="Render Controllers">渲染控制器</p></h1>
 
-这里存在几种不同类型的表达式，其上下文暗示了哪些是允许的。与动画一样，实体访问器指的是当前实体，然而根据上下文的不同，还可以访问材质、纹理和几何体。渲染控制器中有两个部分：</br>-数组定义（可选）</br>-资源使用（必需）</br>数组定义部分允许您根据需要按资源类型创建资源数组。这些数组随后可以在资源使用部分中引用。</br><h2></h2>
+这里存在几种不同类型的表达式，其上下文暗示了哪些是允许的。与动画一样，实体访问器指的是当前实体，然而根据上下文的不同，还可以访问材质、纹理和几何体。渲染控制器中有两个部分：</br> - 数组定义（可选）</br> - 资源使用（必需）</br>数组定义部分允许您根据需要按资源类型创建资源数组。这些数组随后可以在资源使用部分中引用。</br><h2></h2>
 
 <h2><p id="Array Expressions">数组表达式</p></h2>
 
@@ -697,7 +697,7 @@ return temp.moo * temp.moo + temp.baa;
 </textarea> </br>
 <a href="#Index">返回顶部</a><br><br>
 
-请注意，数组中的所有元素必须是同一类型。例如：纹理数组必须仅包含纹理。</br></br>一个数组可以引用零个或多个数组的任意组合（如果需要，可以包括重复项）和/或零个或多个材质（同样，如果愿意，也可以包括重复项），并且您可以根据需要定义任意数量的数组，每个数组可以包含任意数量的元素。如果数组的成员中包含其他数组，这些数组的长度不需要相同。在资源使用部分中索引数组时，您可以使用数值表达式。如果结果数字为负数，则将使用零作为索引。任何非负索引都将转换为整数，并根据数组的大小进行循环：</br><h4></h4>
+请注意，数组中的所有元素必须是同一类型。例如：纹理数组必须仅包含纹理。</br></br>一个数组可以引用零个或多个数组的任意组合（如果需要，可以包括重复项）和 / 或零个或多个材质（同样，如果愿意，也可以包括重复项），并且您可以根据需要定义任意数量的数组，每个数组可以包含任意数量的元素。如果数组的成员中包含其他数组，这些数组的长度不需要相同。在资源使用部分中索引数组时，您可以使用数值表达式。如果结果数字为负数，则将使用零作为索引。任何非负索引都将转换为整数，并根据数组的大小进行循环：</br><h4></h4>
 <br / ><textarea readonly="true" cols="47" rows="2">
 index = max(0, expression_result) % array_size
 </textarea> </br>
@@ -831,7 +831,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.average_frame_time</td>
-<td style="border-style:solid; border-width:3; padding:7px">返回过去 'n' 帧的平均帧时间（以*秒*为单位）。如果传递了一个参数，则假定它是您希望查询的过去帧数。'query.average_frame_time'（或等效的 'query.average_frame_time(0)'）将返回当前帧之前的那一帧的帧时间。'query.average_frame_time(1)' 将返回前两帧的平均帧时间。目前我们存储了过去 30 帧的历史记录，但请注意，这在未来可能会发生变化。请求更多帧将仅对存储的帧数进行采样。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回过去 'n' 帧的平均帧时间（以 * 秒 * 为单位）。如果传递了一个参数，则假定它是您希望查询的过去帧数。'query.average_frame_time'（或等效的 'query.average_frame_time(0)'）将返回当前帧之前的那一帧的帧时间。'query.average_frame_time(1)' 将返回前两帧的平均帧时间。目前我们存储了过去 30 帧的历史记录，但请注意，这在未来可能会发生变化。请求更多帧将仅对存储的帧数进行采样。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.block_face</td>
@@ -855,7 +855,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.block_property</td>
-<td style="border-style:solid; border-width:3; padding:7px">（在 min_engine_version 1.20.40包中不再可用）返回关联方块的方块状态的值。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">（在 min_engine_version  1.20.40 包中不再可用）返回关联方块的方块状态的值。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.block_state</td>
@@ -875,7 +875,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.bone_aabb</td>
-<td style="border-style:solid; border-width:3; padding:7px">将骨骼的轴对齐边界框作为结构体返回，其中包含成员 '.min'、'.max'，以及每个成员的 '.x'、'.y' 和 '.z'值。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">将骨骼的轴对齐边界框作为结构体返回，其中包含成员 '.min'、'.max'，以及每个成员的 '.x'、'.y' 和  '.z' 值。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.bone_orientation_matrix</td>
@@ -883,7 +883,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.bone_orientation_trs</td>
-<td style="border-style:solid; border-width:3; padding:7px">TRS 代表平移/旋转/缩放。以骨骼名称作为参数。如果所需骨骼存在于可查询的几何体中，则返回分解为平移/旋转/缩放部分的骨骼方向矩阵，否则返回单位矩阵并抛出内容错误。返回值作为类型为 'struct' 的变量返回，成员包括 '.t'、'.r' 和 '.s'，每个成员又包含 '.x'、'.y' 和 '.z'，可以按照以下示例访问：v.my_variable = q.bone_orientation_trs('rightarm'); return v.my_variable.r.x;</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">TRS 代表平移 / 旋转 / 缩放。以骨骼名称作为参数。如果所需骨骼存在于可查询的几何体中，则返回分解为平移 / 旋转 / 缩放部分的骨骼方向矩阵，否则返回单位矩阵并抛出内容错误。返回值作为类型为 'struct' 的变量返回，成员包括 '.t'、'.r' 和 '.s'，每个成员又包含 '.x'、'.y' 和 '.z'，可以按照以下示例访问：v.my_variable = q.bone_orientation_trs('rightarm'); return v.my_variable.r.x;</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.bone_origin</td>
@@ -943,7 +943,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.cardinal_facing_2d</td>
-<td style="border-style:solid; border-width:3; padding:7px">返回忽略上/下部分的玩家的当前朝向（北 = 2.0，南 = 3.0，西 = 4.0，东 = 5.0，未定义 = 6.0）。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回忽略上 / 下部分的玩家的当前朝向（北 = 2.0，南 = 3.0，西 = 4.0，东 = 5.0，未定义 = 6.0）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.cardinal_player_facing</td>
@@ -979,7 +979,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.dash_cooldown_progress</td>
-<td style="border-style:solid; border-width:3; padding:7px">（在 min_engine_version 1.20.50 包中不再可用。）已弃用。请勿在 1.20.40 之后使用。请参阅camel.entity.json script.pre_animation，了解如何处理冲刺冷却时间的示例。如果实体可以冲刺，则返回冲刺冷却进度，否则返回 0.0。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">（在 min_engine_version 1.20.50 包中不再可用。）已弃用。请勿在 1.20.40 之后使用。请参阅 camel.entity.json  script.pre_animation，了解如何处理冲刺冷却时间的示例。如果实体可以冲刺，则返回冲刺冷却进度，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.day</td>
@@ -1055,7 +1055,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.get_equipped_item_name</td>
-<td style="border-style:solid; border-width:3; padding:7px">已弃用 （如果可能，请改用 query.is_item_name_any 以便以后可以在不破坏内容的情况下更改名称。）将一个可选的手槽作为参数（主手为 0 或 'main_hand'，副手为 1 或 'off_hand'），如果您想要装备的物品或当前渲染的物品的任何非零数字，则使用第二个参数（0=默认），并返回所请求槽位中物品的名称（如果未提供参数，则默认为主手），如果有， 否则返回 ''。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">已弃用 （如果可能，请改用 query.is_item_name_any 以便以后可以在不破坏内容的情况下更改名称。）将一个可选的手槽作为参数（主手为 0 或 'main_hand'，副手为 1 或 'off_hand'），如果您想要装备的物品或当前渲染的物品的任何非零数字，则使用第二个参数（ 0= 默认），并返回所请求槽位中物品的名称（如果未提供参数，则默认为主手），如果有， 否则返回 ''。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.get_locator_offset</td>
@@ -1071,7 +1071,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.ground_speed</td>
-<td style="border-style:solid; border-width:3; padding:7px">返回实体的地面速度（以米/秒为单位）。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的地面速度（以米 / 秒为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.had_component_group</td>
@@ -1091,7 +1091,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.has_block_property</td>
-<td style="border-style:solid; border-width:3; padding:7px">（在min_engine_version 1.20.40 包中不再可用。）如果关联的方块具有给定的块状态，则返回 1.0，否则返回 0.0。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">（在 min_engine_version  1.20.40 包中不再可用。）如果关联的方块具有给定的块状态，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.has_block_state</td>
@@ -1303,7 +1303,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_feeling_happy</td>
-<td style="border-style:solid; border-width:3; padding:7px">（在 min_engine_version 1.20.50 包中不再可用。）在 1.20.40 之后废弃。如果 behavior.timer_flag_2正在运行，则返回 1.0，否则返回 0.0。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">（在 min_engine_version 1.20.50 包中不再可用。）在 1.20.40 之后废弃。如果  behavior.timer_flag_2 正在运行，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_fire_immune</td>
@@ -1315,7 +1315,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_ghost</td>
-<td style="border-style:solid; border-width:3; padding:7px">如果实体是 ghost(原文如此)，则返回 1.0，否则返回 0.0。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">如果实体是  ghost( 原文如此 ) ，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_gliding</td>
@@ -1471,7 +1471,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_rising</td>
-<td style="border-style:solid; border-width:3; padding:7px">（在 min_engine_version 1.20.50 包中不再可用。）在 1.20.40 之后废弃。如果 behavior.timer_flag_2正在运行，则返回 1.0，否则返回 0.0。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">（在 min_engine_version 1.20.50 包中不再可用。）在 1.20.40 之后废弃。如果  behavior.timer_flag_2 正在运行，则返回 1.0，否则返回 0.0。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.is_roaring</td>
@@ -1607,7 +1607,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.item_slot_to_bone_name</td>
-<td style="border-style:solid; border-width:3; padding:7px">query.item_slot_to_bone_name需要一个参数：装备槽位的名称。此函数返回此实体已映射到该槽位的骨骼的名称。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px"> query.item_slot_to_bone_name 需要一个参数：装备槽位的名称。此函数返回此实体已映射到该槽位的骨骼的名称。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.key_frame_lerp_time</td>
@@ -1687,11 +1687,11 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.moon_brightness</td>
-<td style="border-style:solid; border-width:3; padding:7px">返回月亮的亮度(FULL_MOON=1.0, WANING_GIBBOUS=0.75, FIRST_QUARTER=0.5, WANING_CRESCENT=0.25, NEW_MOON=0.0, WAXING_CRESCENT=0.25, LAST_QUARTER=0.5, WAXING_GIBBOUS=0.75).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回月亮的亮度 (FULL_MOON=1.0,  WANING_GIBBOUS=0.75, FIRST_QUARTER=0.5, WANING_CRESCENT=0.25, NEW_MOON=0.0, WAXING_CRESCENT=0.25, LAST_QUARTER=0.5, WAXING_GIBBOUS=0.75).</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.moon_phase</td>
-<td style="border-style:solid; border-width:3; padding:7px">返回月相(FULL_MOON=0, WANING_GIBBOUS=1, FIRST_QUARTER=2, WANING_CRESCENT=3, NEW_MOON=4, WAXING_CRESCENT=5, LAST_QUARTER=6, WAXING_GIBBOUS=7).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回月相 (FULL_MOON=0,  WANING_GIBBOUS=1, FIRST_QUARTER=2, WANING_CRESCENT=3, NEW_MOON=4, WAXING_CRESCENT=5, LAST_QUARTER=6, WAXING_GIBBOUS=7).</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.movement_direction</td>
@@ -1931,7 +1931,7 @@ materials 部分指定了如何将材质映射到几何体的骨骼上。单个�
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.vertical_speed</td>
-<td style="border-style:solid; border-width:3; padding:7px">返回实体的上升或下降速度（以米/秒为单位），其中正数表示上升。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">返回实体的上升或下降速度（以米 / 秒为单位），其中正数表示上升。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.walk_distance</td>
@@ -1982,7 +1982,7 @@ Molang 使用包含每个 Molang 表达式的资源或行为包的 'manifest.jso
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">包的min_engine_version</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">包的 min_engine_version </th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.17.0</td>
 <td style="border-style:solid; border-width:3; padding:7px">添加了对版本控制更改的初始支持。（实际上不是版本化的更改）</br></td>
@@ -2001,7 +2001,7 @@ Molang 使用包含每个 Molang 表达式的资源或行为包的 'manifest.jso
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.18.10</td>
-<td style="border-style:solid; border-width:3; padding:7px">修复了条件（三元）运算符的结合性。以前嵌套的条件表达式，如`A ? B : C ? D : E`的计算结果为`(A ? B : C) ? D : E`。现在他们计算为`A ? B : (C ? D : E)`。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">修复了条件（三元）运算符的结合性。以前嵌套的条件表达式，如 `A  ? B : C ? D :  E` 的计算结果为 `(A  ? B : C) ? D : E`。现在他们计算为 `A  ? B : (C ? D : E)`。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.18.20</td>
@@ -2013,7 +2013,7 @@ Molang 使用包含每个 Molang 表达式的资源或行为包的 'manifest.jso
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.20.0</td>
-<td style="border-style:solid; border-width:3; padding:7px">修复了query.cape_flap_amount使用了错误的玩家旋转（头部旋转而不是身体旋转）的问题。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">修复了 query.cape_flap_amount 使用了错误的玩家旋转（头部旋转而不是身体旋转）的问题。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.20.10</td>
@@ -2025,7 +2025,7 @@ Molang 使用包含每个 Molang 表达式的资源或行为包的 'manifest.jso
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.20.50</td>
-<td style="border-style:solid; border-width:3; padding:7px">dash_cooldown_progress不再受支持，因为该逻辑是在动画中完成的。此外，is_scenting、is_rising 和 is_feelingHappy 查询不再可用，可以改用 timer_flag_1、timer_flag_2 和 timer_flag_3。</br></td>
+<td style="border-style:solid; border-width:3; padding:7px"> dash_cooldown_progress 不再受支持，因为该逻辑是在动画中完成的。此外，is_scenting、is_rising 和 is_feelingHappy 查询不再可用，可以改用 timer_flag_1、timer_flag_2 和 timer_flag_3。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">1.20.70</td>
