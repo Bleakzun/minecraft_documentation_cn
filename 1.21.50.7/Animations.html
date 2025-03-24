@@ -428,7 +428,7 @@
 
 <h1><p id="Upgrade from v1.7 Beta to v1.8">从 v1.7 测试版升级到 v1.8 </p></h1>
 
-当我们根据反馈整理代码和沿着路线图推进技术时，我们做出了一些变更。要升级先前的 Molang 脚本，你需要按照列出的顺序对你所有的脚本执行以下步骤：</br>1) entity.flags.foo --> query.foo</br>2) entity.member.foo --> query.foo</br>3) entity.foo --> variable.foo</br>4) params.foo --> global.foo</br> 5) 总体规律是：“query”表示正在运行脚本的实体的只读数据，而“variable”表示由用户创建的可读可写的数据。</br> 6) 我们已经采用了 snake_case 蛇形命名法来命名所有事物的名称。由于我们的游戏大小写敏感，所以只要你愿意，你依旧可以使用大写字母，但是我们建议一般情况下使用 snake_case 格式 . </br> 7) 先前设置到生物上的一些变量已经更改为 query.foo 格式。请浏览下方的更新内容列表来查看加入和更改的内容。</br><a href="#Index">返回顶部</a><br><br>
+当我们根据反馈整理代码和沿着路线图推进技术时，我们做出了一些变更。要升级先前的 Molang 脚本，你需要按照列出的顺序对你所有的脚本执行以下步骤：</br>1) entity.flags.foo --> query.foo</br>2) entity.member.foo --> query.foo</br>3) entity.foo --> variable.foo</br>4) params.foo --> global.foo</br> 5) 总体规律是：“query”表示正在运行脚本的实体的只读数据，而“variable”表示由用户创建的可读可写的数据。</br> 6) 我们已经采用了 snake_case 蛇形命名法来命名所有事物的名称。由于我们的游戏大小写敏感，所以只要你愿意，你依旧可以使用大写字母，但是我们建议一般情况下使用 snake_case 格式。</br> 7) 先前设置到生物上的一些变量已经更改为 query.foo 格式。请浏览下方的更新内容列表来查看加入和更改的内容。</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Upgrade from v1.8 Beta to v1.10">从 v1.8 测试版升级到 v1.10 </p></h1>
 
