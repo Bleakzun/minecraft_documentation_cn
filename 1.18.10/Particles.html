@@ -30,7 +30,7 @@
 <a href="#Index">返回顶部</a>
 <h1><p id="Basic Structure Overview">基本结构概述</p></h1>
 
-粒子效果由基本渲染参数和一组组件组成。组件可以按任何顺序放置。</br><h2></h2>
+粒子特效由基本渲染参数和一组组件组成。组件可以按任何顺序放置。</br><h2></h2>
 纲要：<br / ><textarea readonly="true" cols="119" rows="32">
 {
   "format_version": "1.10.0",
@@ -73,7 +73,7 @@
 
 <h1><p id="Component Concept">组件概念</p></h1>
 
-粒子系统是基于组件的。这意味着粒子效果是通过一组组件组成的。为了让效果执行某些作，您需要添加一个组件来处理效果的该方面。例如，发射器通常需要具有其生命周期的规则，因此效果应具有一个或多个生命周期组件，用于处理发射器和发射粒子的生命周期任务。</br></br>这个想法是后续可以添加新的组件，并且可以在有意义的情况下将组件组合起来以获得不同的行为。例如，一个粒子可能有一个动态组件用于移动，还有一个碰撞组件用于处理与地形的交互。</br></br>将组件视为告诉粒子系统您希望发射器或粒子做什么，而不是公开粒子参数列表并必须整理这些参数才能获得所需的行为。</br><a href="#Index">返回顶部</a><br><br>
+粒子系统是基于组件的。这意味着粒子特效是通过一组组件组成的。为了让效果执行某些作，您需要添加一个组件来处理效果的该方面。例如，发射器通常需要具有其生命周期的规则，因此效果应具有一个或多个生命周期组件，用于处理发射器和发射粒子的生命周期任务。</br></br>这个想法是后续可以添加新的组件，并且可以在有意义的情况下将组件组合起来以获得不同的行为。例如，一个粒子可能有一个动态组件用于移动，还有一个碰撞组件用于处理与地形的交互。</br></br>将组件视为告诉粒子系统您希望发射器或粒子做什么，而不是公开粒子参数列表并必须整理这些参数才能获得所需的行为。</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Current Component List">当前组件列表</p></h1>
 
@@ -216,7 +216,7 @@
 
 <h3><p id="Emitter Rate Manual component">发射器手动速率组件</p></h3>
 
-只有当游戏本身指示发射器发射时，才会发生粒子发射。这主要用于旧版粒子效果。</br><h4></h4>
+只有当游戏本身指示发射器发射时，才会发生粒子发射。这主要用于旧版粒子特效。</br><h4></h4>
 <br / ><textarea readonly="true" cols="49" rows="5">
 "minecraft:emitter_rate_manual": {
     // evaluated once per particle emitted
@@ -861,7 +861,7 @@
 
 <h1><p id="Events">事件</p></h1>
 
-事件可以在.json文件的其他地方触发，并启动新的粒子和声音效果。</br></br>粒子效果有不同的类型。如果类型是“emitter”，这将在事件的世界位置创建一个“effect”类型的发射器，以一种发射后就不管的方式。 “emitter_bound” 的工作方式类似，只是如果生成发射器绑定到一个活动对象/定位器，新的发射器将绑定到相同的活动对象/定位器。如果类型是“particle”，那么事件将在事件位置的手动发射器上发射一个粒子，如果发射器不存在，则创建它（确保使用“minecraft:emitter_rate_manual”作为生成的发射器效果）。 “particle_with_velocity” 将与“particle”做同样的事情，只是新粒子将继承生成粒子的速度。</br></br>声音效果指定了当事件触发时要播放的具体“级别声音事件”。</br></br>事件本身由一个可选的节点树和/或一个实际事件组成。当指定“sequence”时，该数组将按顺序执行，当事件触发时，每个元素都将执行。使用“random”时，将根据权重从数组中选择一个元素。</br><h2></h2>
+事件可以在.json文件的其他地方触发，并启动新的粒子和声音效果。</br></br>粒子特效有不同的类型。如果类型是“emitter”，这将在事件的世界位置创建一个“effect”类型的发射器，以一种发射后就不管的方式。 “emitter_bound” 的工作方式类似，只是如果生成发射器绑定到一个活动对象/定位器，新的发射器将绑定到相同的活动对象/定位器。如果类型是“particle”，那么事件将在事件位置的手动发射器上发射一个粒子，如果发射器不存在，则创建它（确保使用“minecraft:emitter_rate_manual”作为生成的发射器效果）。 “particle_with_velocity” 将与“particle”做同样的事情，只是新粒子将继承生成粒子的速度。</br></br>声音效果指定了当事件触发时要播放的具体“级别声音事件”。</br></br>事件本身由一个可选的节点树和/或一个实际事件组成。当指定“sequence”时，该数组将按顺序执行，当事件触发时，每个元素都将执行。使用“random”时，将根据权重从数组中选择一个元素。</br><h2></h2>
 <br / ><textarea readonly="true" cols="117" rows="32">
 
   // events block:
@@ -938,7 +938,7 @@
 
 <h1><p id="Bouncing Bubbles">弹跳气泡</p></h1>
 
-这种粒子效果会生成许多四处弹跳的气泡。</br><h2></h2>
+这种粒子特效会生成许多四处弹跳的气泡。</br><h2></h2>
 <br / ><textarea readonly="true" cols="100" rows="32">
 
 {
@@ -1049,7 +1049,7 @@
 
 <h1><p id="Mob Flame effect">生物火焰效果</p></h1>
 
-The mob flame effect is used by the Blaze when it's charging up to hurl fireballs.  This is a flipbook flame effect that rises over time.</br></br>Unlike the earlier particles, this is a regular emitter.  It is tied to an entity, thus uses the entity_aabb shape, as we want the flames to appear all over the blaze.  As the effect is tied to the charged state, the activation expression is used, tied to the EntityFlag::CHARGED entity variable.  This causes the flames to appear when the Blaze is charging, then to disappear when it isn't.</br></br>In this case, we use the texturewidth/height to make the texel "resolution" be one frame of animation, thus allowing advancement of the frames to be just 1:</br><h2></h2>
+生物火焰效果是烈焰人在蓄力投掷火球时使用的。这是一种随着时间上升的动画翻页火焰效果。</br></br>与早期的粒子不同，这是一个常规发射器。它与一个实体绑定，因此使用实体轴对齐边界框（entity_aabb）的形状，因为我们希望火焰出现在烈焰人全身。由于该效果与充能状态相关，因此使用激活表达式，与实体变量EntityFlag::CHARGED绑定。这使得火焰在烈焰人充能时出现，而在未充能时消失。</br></br>在这种情况下，我们使用纹理宽度/高度来使纹素（texel）“分辨率”为动画的一帧，从而允许帧的推进仅为1。</br><h2></h2>
 <br / ><textarea readonly="true" cols="63" rows="32">
 
 {
@@ -1112,7 +1112,7 @@ The mob flame effect is used by the Blaze when it's charging up to hurl fireball
 
 <h1><p id="Smoke particle">烟雾粒子</p></h1>
 
-This particle is the general-purpose smoke puff.  It appears on torches, furnaces, Blazes, etc.  It is a simple particle with an upward motion consisting of an upwards acceleration tempered by drag. </br></br>The main feature of this particle different from the flame particle is the flipbook texture animation.  See the details in the particle below, but the effect uses a flipbook subpart of the billboard appearance component to drive uv coordinates from frame to frame over time.</br></br>In addition, the use of texturewidth/height in the UV section of the billboard component allows referencing of UVs via texels for the flipbook:</br><h2></h2>
+这种粒子是通用的烟雾团。它出现在火把、熔炉、烈焰人等上面。它是一个简单的粒子，具有向上的运动，由向上的加速度和阻力共同作用。</br></br>这种粒子与火焰粒子的主要区别在于翻页纹理动画。具体细节见下面的粒子，但该效果使用了公告板外观组件的翻页子部分，以驱动uv坐标随时间从一帧到另一帧。</br></br>此外，在广告牌组件的UV部分使用纹理宽度/高度，允许通过 texel 引用翻页的UV坐标。</br><h2></h2>
 <br / ><textarea readonly="true" cols="121" rows="32">
 
 {
@@ -1176,61 +1176,61 @@ This particle is the general-purpose smoke puff.  It appears on torches, furnace
 
 <h1><p id="Molang integration">Molang集成</p></h1>
 
-Where it makes sense, any field can use a Molang expression. Molang expressions are strings, and are defined in the Molang documentation.  The particle system uses some special Molang variables that particle Molang expressions can use.  Additionally, custom Molang paramaters can be set in various ways and used in Molang expressions in effects.</br><h2></h2>
+在适用的地方，任何字段都可以使用 Molang 表达式。Molang 表达式是字符串，其定义详见 Molang 文档。粒子系统使用了一些特殊的 Molang 变量，这些变量可供粒子 Molang 表达式使用。此外，还可以通过多种方式设置自定义 Molang 参数，并在特效的 Molang 表达式中使用它们。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">variable.emitter_age</td>
-<td style="border-style:solid; border-width:3; padding:7px">Age since the current loop started for the emitter</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">发射器当前循环开始以来的持续时间</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">variable.emitter_lifetime</td>
-<td style="border-style:solid; border-width:3; padding:7px">How long the current loop lasts for the emitter</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">发射器当前循环的持续时间</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">variable.emitter_random_1</td>
-<td style="border-style:solid; border-width:3; padding:7px">A random from 0.0 to 1.0 that is constant for the current loop of the emitter</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">发射器当前循环中从0.0到1.0的随机值，且在当前循环中保持不变</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">variable.emitter_random_2</td>
-<td style="border-style:solid; border-width:3; padding:7px">Another random from 0.0 to 1.0 that is constant for the current loop of the emitter</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">发射器当前循环中另一个从0.0到1.0的随机值，且在当前循环中保持不变</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">variable.emitter_random_3</td>
-<td style="border-style:solid; border-width:3; padding:7px">A third random from 0.0 to 1.0 that is constant for the current loop of the emitter</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">发射器当前循环中的第三个从0.0到1.0的随机值，且在当前循环中保持不变</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">variable.emitter_random_4</td>
-<td style="border-style:solid; border-width:3; padding:7px">A fourth random from 0.0 to 1.0 that is constant for the current loop of the emitter</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">发射器当前循环中的第四个从0.0到1.0的随机值，且在当前循环中保持不变</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">variable.entity_scale</td>
-<td style="border-style:solid; border-width:3; padding:7px">When the effect is attached to an entity, this value is the scale of the entity</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">当效果附加到实体上时，这个值是实体的缩放比例</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">variable.particle_age</td>
-<td style="border-style:solid; border-width:3; padding:7px">How long the particle has lived</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">粒子已经存在的时间</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">variable.particle_lifetime</td>
-<td style="border-style:solid; border-width:3; padding:7px">How long the particle lives for</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">粒子的生命周期</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">variable.particle_random_1</td>
-<td style="border-style:solid; border-width:3; padding:7px">A random from 0.0 to 1.0 that is constant for the lifetime of the particle</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">粒子生命周期内从0.0到1.0的随机值，且在粒子生命周期内保持不变</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">variable.particle_random_2</td>
-<td style="border-style:solid; border-width:3; padding:7px">Another random from 0.0 to 1.0 that is constant for the lifetime of the particle</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">粒子生命周期内的另一个从0.0到1.0的随机值，且在粒子生命周期内保持不变</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">variable.particle_random_3</td>
-<td style="border-style:solid; border-width:3; padding:7px">A third random from 0.0 to 1.0 that is constant for the lifetime of the particle</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">粒子生命周期内的第三个从0.0到1.0的随机值，且在粒子生命周期内保持不变</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">variable.particle_random_4</td>
-<td style="border-style:solid; border-width:3; padding:7px">A fourth random from 0.0 to 1.0 that is constant for the lifetime of the particle</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">粒子生命周期内的第四个从0.0到1.0的随机值，且在粒子生命周期内保持不变</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>
@@ -1239,11 +1239,11 @@ Where it makes sense, any field can use a Molang expression. Molang expressions 
 
 <h1><p id="Namespacing">命名空间</p></h1>
 
-All particle effects should be namespaced (in their name).</br></br>Namespacing involves adding a 'name:' prefix on the effect tag.</br></br>Regular Minecraft will use the 'minecraft: prefix.  See the examples for example names.</br><a href="#Index">返回顶部</a><br><br>
+所有粒子特效都应进行命名空间划分（在其名称中）。</br></br>命名空间划分涉及在效果标签上添加“name:”前缀。</br></br>常规的 Minecraft 将使用“minecraft:”前缀。请参阅示例中的示例名称。</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="Particles Entity Integration">粒子的实体集成</p></h1>
 
-</br>One of the primary uses for emitting particles in the Bedrock engine is particles associated with entities, such as mobs.  Examples can be when the Blaze flames-up during it's attack sequence, or the Evoker's spell effect while summoning Vexes.  The goal is to allow binding and management of particle effects attached to entities.</br></br>The following concepts are important for managing particles with entities via .json:</br>- Effect lists.  These live in the resource definition of the entity's .json, along with textures, etc.  These list the effects available to the entity, with an internal entity name for the effect, and the associated effect to play.</br>- Locators.  These live in the geometry files, and specify a location in the geometry.  These locators can be associated with bones, and thus follow the bone as it animates.</br>- Animation controller-based particle management.  Using the Animation Controller state machine concept, one can trigger both fire-and-forget and sustained particle effects</br>- Animation timeline particle management.  As part of an animation .json for the entity, one can set up a timeline that triggers particle effects at specified times while the animation is playing.  Note that an actual physical animation is not needed, just the animation .json structure.</br></br>Particles that are attached to entities are intrinsically tied to those entities.  If the entity ceases to exist, the particle effects cease as well.  Emitters follow either the entity, or a locator on the entity.</br>time1/time2/etc are numerical time points, e.g. "0.0". </br></br>In this example, when the cat sits down, after 3 seconds a smoke puff is generated:</br><h2></h2>
+</br>在基岩引擎中发射粒子的主要用途之一是与实体相关的粒子，例如生物。例如，烈焰人在攻击序列中火焰燃烧，或者唤魔者在召唤恼鬼时的法术效果。目标是允许绑定和管理附加到实体的粒子特效。</br></br>通过 .json 管理与实体相关的粒子时，以下概念非常重要：</br>- 效果列表。这些位于实体的 .json 资源定义中，与纹理等一起。这些列出了实体可用的效果，包括效果的内部实体名称和要播放的关联效果。</br>- 定位器。这些位于几何文件中，指定了几何中的一个位置。这些定位器可以与骨骼关联，因此会随着骨骼的动画而移动。</br>- 通过 动画控制器（Animation Controller） 的状态机逻辑，可以实现对粒子特效的灵活控制，包括 一次性触发（Fire-and-Forget） 和 持续播放（Sustained） 两种模式</br>- 动画时间轴粒子管理。作为实体的动画.json的一部分，可以在动画播放时设置一个时间轴，在指定的时间触发粒子特效。请注意，不需要实际的物理动画，只需要动画的.json结构。</br></br>附加到实体的粒子与这些实体密切相关。如果实体不再存在，粒子特效也会停止。发射器可跟随实体整体移动，或精准追踪实体上的特定定位点（locator）。</br>time1/time2 等为数值时间点（例如 "0.0"）。</br></br>在这个示例中，当猫坐下3秒后，会生成一团烟雾效果：</br><h2></h2>
 <br / ><textarea readonly="true" cols="35" rows="25">
 
 {
@@ -1274,7 +1274,7 @@ All particle effects should be namespaced (in their name).</br></br>Namespacing 
 
 <h1><p id="Animation Controller effects">动画控制器效果</p></h1>
 
-</br>Animation controllers can specify effect events for their states.  This allows for a list of particle effects to be started upon state entry, and for those particle effects to be automatically ended when leaving the state.  For particles that don't terminate (or don't terminate prior to state transition), they will be terminated at state exit.</br></br>The schema is:</br>"particle_effects": [</br>    // array of effect events</br>]</br>The array syntax allows for more than one effect to be triggered on state entry.</br></br>An example is the Blaze's flame-up effect in it's animation controller. This animation controller has two states, "default" and "flaming".  It transitions between the two via the "query.is_charged" entity flag check.  When in the "flaming" state, the "charged_flames" effect is started (with no locator or initialization Molang expression), and is terminated when the state exits.</br><h2></h2>
+</br>动画控制器可为其状态指定特效事件。这允许在进入状态时启动一系列粒子特效，并在离开该状态时自动终止这些效果。对于不会自行结束（或在状态转换前未能结束）的粒子特效，系统将在退出状态时强制终止它们。</br></br>架构为：</br>"particle_effects": [</br>    // 效果事件的数组</br>]</br>使用数组语法可以在进入状态时触发多个特效。</br></br>以烈焰人的火焰升腾效果为例：其动画控制器包含 "default"（默认）和 "flaming"（燃烧）两种状态，通过检测实体标记 "query.is_charged"实现状态切换。当进入 "flaming" 状态时，系统将启动 "charged_flames" 粒子特效（无需定位器或 Molang 初始化表达式），并在退出该状态时自动终止该特效。</br><h2></h2>
 <br / ><textarea readonly="true" cols="47" rows="32">
 
 {
@@ -1313,18 +1313,18 @@ All particle effects should be namespaced (in their name).</br></br>Namespacing 
 
 <h1><p id="Animation Timeline effects">动画时间轴效果</p></h1>
 
-Animations can also trigger particle effects.  These are fire-and-forget effects that are tied to a timeline, when the animation hits that time point, the effect(s) are fired.</br><h2></h2>
+动画同样可以触发粒子特效。这类特效采用"一次性触发"机制，它们被绑定到时间轴上——当动画播放到特定时间点时，就会触发对应的特效。</br><h2></h2>
 <br / ><textarea readonly="true" cols="34" rows="14">
 
 "particle_effects": {
     "time1" : [
-        // array of effect events
+        // 效果事件的数组
     ],
     "time2" : [
-        // array of effect events
+        // 效果事件的数组
     ],
     "time3" : {
-      // single effect
+      // 单个效果
     }
 }
 
@@ -1333,13 +1333,13 @@ Animations can also trigger particle effects.  These are fire-and-forget effects
 
 <h1><p id="Effect Event">效果事件</p></h1>
 
-</br>Particle events in the entity have the following properties:</br>- "effect" is the effect name specified in the entity's resource definition .json (the particle effect list), this specifies what particle effect to start/play</br>- "locator" is an optional parameter that maps to a locator of the same name in the resource definition.  By specifying a locator, the emitter will follow that locator around as the entity animates, including orientation.  If this is not specified, the effect will occur at the origin of the entity.</br>- "pre_effect_script" is an optional parameter that is a Molang expression run at emitter startup time.  This can set up Molang variables, (for example 'particle color'), which can be then referred to inside the particle effect .json itself.</br><h2></h2>
+</br>实体中的粒子特效事件具有以下属性：</br>- "effect" 是在实体的资源定义 .json（粒子特效列表）中指定的特效名称，用于确定要启动/播放的具体粒子特效。</br>- "locator"（定位器）为可选参数，需对应资源定义文件中同名定位器。指定后，粒子发射器将随实体动画移动并同步该定位器的位置与朝向。若未指定，特效将在实体原点位置生成。</br>- "pre_effect_script"（预执行脚本）是可选参数，该参数为在发射器启动时运行的 Molang 表达式。它可用于初始化 Molang 变量（如"粒子颜色"），这些变量后续可在粒子特效 .json 文件中直接引用。</br><h2></h2>
 <br / ><textarea readonly="true" cols="43" rows="8">
 
 {
     "effect": "internal_name",
-    "locator": "locator_name", // optional
-    "pre_effect_script" // optional
+    "locator": "locator_name", // 自选
+    "pre_effect_script" // 自选
 }
 
 </textarea> </br>
@@ -1347,7 +1347,7 @@ Animations can also trigger particle effects.  These are fire-and-forget effects
 
 <h1><p id="Effect List">效果列表</p></h1>
 
-The effect list is a list of internal effect names to actual particle effects bindings. This is the general form for adding particle effects to an entity.  The effect list consists of a list of shorthand names to actual effects.  All references to effects will use the shorthand name in animations and animation controllers.  Note that this by itself will not cause the particle effect to appear.</br><h2></h2>
+特效列表（effect list） 是内部特效名称与实际粒子特效绑定的映射列表。这是为实体添加粒子特效的通用形式，其中包含一系列简称与实际特效的对应关系。在动画和动画控制器中，所有对特效的引用都将使用这些简称。</br><h2></h2>
 <br / ><textarea readonly="true" cols="47" rows="17">
 
 {
@@ -1375,7 +1375,7 @@ The effect list is a list of internal effect names to actual particle effects bi
 https://aka.ms/MCParticlesPack</br></br>Examples of various particles can be found in the link above.  These are examples of various stand-alone particle effects.  The particle effects provided as part of the Minecraft installation are tuned to be used with the Minecraft game, and thus do not serve as good examples.  Please refer to the examples in the pack to see various ways to utilize the particle system. </br></br>To invoke an example particle with the examples particles pack enabled, bring up the console, type "/particle name x y z" where "name" is the name of the particle effect, and x/y/z are the coordinates the particle appears at.</br></br>For example, "/particle minecraft:example_smoke_puff 0 5 0" will spawn a smoke puff at the origin of the world, 5 blocks up from the bottom of the world. </br>"/particle minecraft:example_smoke_puff ~ ~1 ~5" will create that smoke puff about 5 blocks away from the player.</br><h2>Example Effects</h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_bezier_chaincurve</td>
 <td style="border-style:solid; border-width:3; padding:7px">Demonstrates the use of a bezier chain curve in an effect</br></td>
