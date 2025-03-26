@@ -1372,85 +1372,85 @@
 
 <h1><p id="Particles Examples Pack">粒子示例包</p></h1>
 
-https://aka.ms/MCParticlesPack</br></br>Examples of various particles can be found in the link above.  These are examples of various stand-alone particle effects.  The particle effects provided as part of the Minecraft installation are tuned to be used with the Minecraft game, and thus do not serve as good examples.  Please refer to the examples in the pack to see various ways to utilize the particle system. </br></br>To invoke an example particle with the examples particles pack enabled, bring up the console, type "/particle name x y z" where "name" is the name of the particle effect, and x/y/z are the coordinates the particle appears at.</br></br>For example, "/particle minecraft:example_smoke_puff 0 5 0" will spawn a smoke puff at the origin of the world, 5 blocks up from the bottom of the world. </br>"/particle minecraft:example_smoke_puff ~ ~1 ~5" will create that smoke puff about 5 blocks away from the player.</br><h2>Example Effects</h2>
+https://aka.ms/MCParticlesPack</br></br>（使用说明）各类粒子特效示例详见上方链接，这些均为独立粒子特效的范例。需注意：Minecraft 原版安装包提供的粒子特效已针对游戏内使用进行专门优化，因此不宜直接作为参考范例。请查阅资源包中的示例文件，了解粒子系统的多种应用方式。</br></br>要在启用示例粒子包的情况下调用示例粒子，请打开控制台，键入“/particle name x y z”，其中 “name” 是粒子特效的名称，x/y/z 是粒子出现的坐标。</br></br>例如，输入指令 "/particle minecraft:example_smoke_puff 0 5 0" 将在世界原点（即世界底部上方5格处）生成一团烟雾粒子特效。</br>输入指令 "/particle minecraft:example_smoke_puff ~ ~1 ~5" 将在玩家当前位置（前方5格，上方1格处）生成烟雾粒子特效。</br><h2>示例效果</h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
 <tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_bezier_chaincurve</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates the use of a bezier chain curve in an effect</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示如何在特效中使用贝塞尔链曲线</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_beziercurve</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates the use of a bezier curve in an effect</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示如何在特效中使用贝塞尔曲线。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_bounce</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates collision detection and bouncing for particles</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示粒子碰撞检测与反弹效果的实现。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_catmullromcurve</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates the use of a catmull-rom curve in an effect</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示在特效中运用 Catmull-Rom 曲线。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_colorcurve</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates the use of a color-gradient approach to color variation in an effect</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示在特效中运用色彩梯度（color-gradient）实现颜色变化。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_colorcurve2</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates the use of a color-gradient approach with variable spacing in an effect</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示特效中采用可变间距色彩梯度（color-gradient）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_combocurve</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates the use of a variety of curves in an effect</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示如何在特效中使用各种曲线</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_directional_sphere</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates the use of directional billboard facing in an effect</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示如何在特效中使用定向公告板朝向控制。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_entity_sparkle_aabb</td>
-<td style="border-style:solid; border-width:3; padding:7px">When attached to an entity, this effect creates a sparkle effect with the rough axis-aligned bounding box around the entity</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">当该特效绑定到实体时，会在实体的大致轴对齐边界框（AABB）范围内生成闪烁粒子效果。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_entity_sparkle_box</td>
-<td style="border-style:solid; border-width:3; padding:7px">When attached to an entity, this effect creates a sparkle effect in a box around the entity</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">当该特效绑定到实体时，会在实体周围形成一个盒状区域的闪烁粒子效果。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_expire_on_contact</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates particles disappearing when colliding with the terrain</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示粒子在与地形碰撞时消失</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_flipbook</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates texture uv flipbook technique, of applying successive frames of a texture for visual animation</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示纹理UV翻页动画技术——通过连续切换纹理帧实现视觉动画效果。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_highrestitution</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates particle collision with particles gaining energy on each bounce</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示粒子碰撞效果——粒子每次弹跳时能量递增的物理模拟实现。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_linearcurve</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates a piecewise linear curve in an effect</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示特效中分段线性曲线（piecewise linear curve）的应用实现。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_particle_event_system</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates various particle events executing</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示执行各种粒子事件</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_smoke_puff</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates a general smoke puff effect</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示通用烟雾喷散（smoke puff）效果的实现方法。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_spiral</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates a parametric motion spiral effect</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示参数化螺旋运动（parametric motion spiral）特效的实现方法。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:example_watertest</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates excluding particles from various block types, in this case, particles only survive in water</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示如何从各种方块类型中排除粒子，在这种情况下，粒子只能在水中存留</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:fireworks_events_demo</td>
-<td style="border-style:solid; border-width:3; padding:7px">Demonstrates sequencing various particle effects together via events to create a fireworks effect</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">演示通过事件序列触发多种粒子效果，最终合成烟花特效的实现方法。</br></td>
 </tr>
 </table>
 <a href="#Index">返回顶部</a><br><br>

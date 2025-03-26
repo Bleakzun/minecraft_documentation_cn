@@ -1,0 +1,144 @@
+<h1>ENTITY EVENTS DOCUMENTATION </br>Version: 1.21.70.3</h1>
+<h2><p id="Index">索引</p></h2>
+<table border="1">
+<tr> <th><a href="#This describes the structure of the Events section.">这描述了 Events 部分的结构。</a></th> </tr>
+<tr> <th><a href="#Overview">概述</a></th> </tr>
+<tr> <th><a href="#Versioned Changes">版本化变更</a></th> </tr>
+<tr> <th><a href="#Randomize Node">Randomize Node</a></th> </tr>
+<tr> <th><a href="#Sequence Node">Sequence Node</a></th> </tr>
+<tr> <th><a href="#Trigger">触发器</a></th> </tr>
+<tr> <th><a href="#Add Component Group">添加组件组</a></th> </tr>
+<tr> <th><a href="#Remove Component Group">删除组件组</a></th> </tr>
+<tr> <th><a href="#Set Entity Property">设置实体属性</a></th> </tr>
+<tr> <th><a href="#Queue Command">Queue Command</a></th> </tr>
+</table>
+<a href="#Index">返回顶部</a>
+<h1><p id="This describes the structure of the Events section.">这描述了 Events 部分的结构。</p></h1>
+
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="Overview">概述</p></h1>
+
+</br>		实体事件可以通过 'sequence' 和 'randomize' 节点的组合来构建。</br>		'sequence' 节点是数组节点，将按顺序从第一个元素到最后一个元素执行所有条目。</br>		'randomize' 节点是数组节点，它们将根据权重选择一个条目来执行。</br>		也可以在 'sequence' 和 'randomize' 节点中添加 'filters' 以限制执行。</br></br>		在 'randomize' 和 'sequence ' 节点中，您可以指定一些作。</br>		'trigger'、'filters'、'add' 和 'remove'。</br>		您可以在文档的 'Filters' 部分阅读 'filters' 。</br>		'trigger' 可用于在命中事件时触发其他实体事件。</br>		'add' 可用于将组件组添加到实体中。</br>		'remove' 可用于从实体中删除组件组。</br></br>		收到事件时，将立即确定该事件的影响，但这些影响会发生变化</br>		不会应用于实体，直到实体在游戏的服务器端进行更新。这意味着</br>		'sequence' 数组中较晚条目中的过滤器不会看到该数组中较早条目的变化。</br>		这也意味着，当一个实体向另一个实体发送事件时，它可能会对同一实体生效</br>		游戏刻或下一刻，具体取决于目标实体是否已更新。</br>	</br><a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="Versioned Changes">版本化变更</p></h1>
+
+</br>		需要 '1.19.20' 或更高版本的 'format_version' 才能正确评估实体事件定义上指定的过滤器</br>		在事件的根级别，即不在 'sequence' 或 'randomize' 节点下的任何过滤器。</br>		版本较低的内容将使用旧行为，即忽略根级别过滤器。</br>	</br><a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="Randomize Node">Randomize Node</p></h1>
+
+</br>		'randomize' 节点是一个数组节点，它将根据权重选择一个要执行的条目。</br>		如果未指定权重，则节点的权重将为 1.0。</br>		如果您在一个节点中添加权重 4.0，在另一个节点中添加权重 8.0，则这些节点将分别有 33.33% (4 / (4 + 8)) 和 66.66% (8 / (4 + 8)) 的执行机会。</br>	</br><h2></h2>
+例：<br / ><textarea readonly="true" cols="42" rows="9">
+
+    "randomize": [
+      {
+        "weight": <float>
+        // actions like 'add' or 'remove'
+      }
+    ]
+  
+</textarea> </br>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="Sequence Node">Sequence Node</p></h1>
+
+<h2></h2>
+例：<br / ><textarea readonly="true" cols="36" rows="11">
+
+    "sequence": [
+      {
+        // I will execute first! c:
+      },
+      {
+        // I will execute last! :c
+      }
+    ]
+  
+</textarea> </br>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="Trigger">触发器</p></h1>
+
+命中时触发其他实体事件。例如，您可以使用 minecraft：entity_spawned 中的 randomize 节点来选择成人或婴儿事件来添加组件组。</br><h2></h2>
+例：<br / ><textarea readonly="true" cols="42" rows="21">
+
+    "sample:spawn_adult": {
+      // add adult component groups
+    },
+    "sample:spawn_baby": {
+      // add baby component groups
+    },
+    "minecraft:entity_spawned": {
+      "randomize": [
+        {
+          "weight": 50.0,
+          "trigger": "sample:spawn_adult"
+        },
+        {
+          "weight": 50.0,
+          "trigger": "sample:spawn_baby"
+        }
+      ]
+    }
+  
+</textarea> </br>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="Add Component Group">添加组件组</p></h1>
+
+将组件组添加到当前实体。这些组必须在文件的 'component_groups' 部分中定义。由于实体只能有每种类型的一个组件处于活动状态，因此正在添加的组中的任何组件都将替换以前添加的组件。此外，添加已处于活动状态的组件组将导致这些组件重新初始化。对于某些类型的组件，如 minecraft:is_baby，重新初始化已经激活的组件没有效果，但对于其他组件类型，关联的逻辑将重新开始。例如，一个已经添加的 minecraft:timer 如果再次添加，它将重新开始其计时逻辑。</br><h2></h2>
+例：<br / ><textarea readonly="true" cols="66" rows="11">
+
+    "sequence": [
+      {
+        "add": { "component_groups": [ "one" ] }
+      },
+      {
+        "add": { "component_groups": [ "two", "five", "etc.." ] }
+      }
+    ]
+  
+</textarea> </br>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="Remove Component Group">删除组件组</p></h1>
+
+从当前实体中删除组件组。这可以是您在文件的 'component_groups' 部分中定义的任何组。</br><h2></h2>
+例：<br / ><textarea readonly="true" cols="69" rows="11">
+
+    "sequence": [
+      {
+        "remove": { "component_groups": [ "one" ] }
+      },
+      {
+        "remove": { "component_groups": [ "two", "five", "etc.." ] }
+      }
+    ]
+  
+</textarea> </br>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="Set Entity Property">设置实体属性</p></h1>
+
+设置实体属性的值。必须在文件的 'properties' 部分中定义该属性。</br><h2></h2>
+例：<br / ><textarea readonly="true" cols="36" rows="6">
+
+    "set_property": {
+      "minecraft:has_nectar": false
+    }
+  
+</textarea> </br>
+<a href="#Index">返回顶部</a><br><br>
+
+<h1><p id="Queue Command">Queue Command</p></h1>
+
+将要在实体上运行的命令排队。该命令将在下一刻内运行，除非该实体已被删除。</br><h2></h2>
+例：<br / ><textarea readonly="true" cols="36" rows="6">
+
+    "queue_command": {
+      "command": "say I have died!"
+    }
+  
+</textarea> </br>
+<a href="#Index">返回顶部</a><br><br>
+

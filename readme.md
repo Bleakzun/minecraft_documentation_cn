@@ -6,6 +6,7 @@ minecraft基岩版文档中文翻译，文档来源：[Mojang/bedrock-samples](h
 - [1.18.10.4](1.18.10/Index.html)
 - [1.21.50.7](1.21.50.7/index.html)
 - [1.21.60.10](1.21.60.10/index.html)
+- [1.21.70.3](1.21.70.3/index.html)
 ## 本仓库托管的GitHub pages
 [minecraft_documentation_cn](https://bleakzun.github.io/minecraft_documentation_cn/)
 ## 贡献者
