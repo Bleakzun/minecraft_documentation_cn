@@ -1,22 +1,22 @@
 <h1>BLOCKS DOCUMENTATION </br>Version: 1.21.50.7</h1>
-<h2><p id="Index">Index</p></h2>
+<h2><p id="Index">索引</p></h2>
 <table border="1">
-<tr> <th><a href="#Blocks">Blocks</a></th> </tr>
-<tr> <td> <a href="#Block Components"> Block Components</a> </tr> </td>
-<tr> <td> <a href="#Block Definition Properties"> Block Definition Properties</a> </tr> </td>
-<tr> <td> <a href="#Block Description Properties"> Block Description Properties</a> </tr> </td>
-<tr> <td> <a href="#Block Event Responses"> Block Event Responses</a> </tr> </td>
-<tr> <td> <a href="#Block Trigger Components"> Block Trigger Components</a> </tr> </td>
+<tr> <th><a href="#Blocks">方块</a></th> </tr>
+<tr> <td> <a href="#Block Components">方块组件</a> </tr> </td>
+<tr> <td> <a href="#Block Definition Properties">方块定义属性</a> </tr> </td>
+<tr> <td> <a href="#Block Description Properties">方块描述属性</a> </tr> </td>
+<tr> <td> <a href="#Block Event Responses">方块事件响应</a> </tr> </td>
+<tr> <td> <a href="#Block Trigger Components">方块触发器组件</a> </tr> </td>
 </table>
-<a href="#Index">Back to top</a>
-<h1><p id="Blocks">Blocks</p></h1>
+<a href="#Index">返回顶部</a>
+<h1><p id="Blocks">方块</p></h1>
 
-<h1><p id="Block Components">Block Components</p></h1>
+<h1><p id="Block Components">方块组件</p></h1>
 
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Default Value</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">默认值</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">bone_visibility</td>
 <td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
@@ -56,11 +56,11 @@
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 <td style="border-style:solid; border-width:3; padding:7px">Makes your block into a custom crafting table which enables the crafting table UI and the ability to craft recipes. This component supports only "recipe_shaped" and "recipe_shapeless" typed recipes and not others like "recipe_furnace" or "recipe_brewing_mix". If there are two recipes for one item, the recipe book will pick the first that was parsed. If two input recipes are the same, crafting may assert and the resulting item may vary.</br><h3><p id="crafting_tags">crafting_tags</p></h3>
 
-Defines the tags recipes should define to be crafted on this table. Limited to 64 tags. Each tag is limited to 64 characters.</br><a href="#Index">Back to top</a><br><br>
+Defines the tags recipes should define to be crafted on this table. Limited to 64 tags. Each tag is limited to 64 characters.</br><a href="#Index">返回顶部</a><br><br>
 
 <h3><p id="table_name">table_name</p></h3>
 
-Specifies the language file key that maps to what text will be displayed in the UI of this table. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this field is omitted, the name displayed will default to the name specified in the "display_name" component. If this block has no "display_name" component, the name displayed will default to the name of the block.</br><a href="#Index">Back to top</a><br><br>
+Specifies the language file key that maps to what text will be displayed in the UI of this table. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this field is omitted, the name displayed will default to the name specified in the "display_name" component. If this block has no "display_name" component, the name displayed will default to the name of the block.</br><a href="#Index">返回顶部</a><br><br>
 
 </td>
 </tr>
@@ -97,11 +97,11 @@ Specifies the language file key that maps to what text will be displayed in the 
 <td style="border-style:solid; border-width:2; padding:8px"></td>
 <td style="border-style:solid; border-width:2; padding:8px">Optional array of objects to describe item specific block destroy speeds, each object contains an 'item' ItemDescriptor and a 'destroy_speed' float. This array currently requires UpcomingFeatures experiment to be enabled.</br><h5><p id="destroy_speed">destroy_speed</p></h5>
 
-Required.</br>A destroy speed applied while using the defined 'item'.</br><a href="#Index">Back to top</a><br><br>
+Required.</br>A destroy speed applied while using the defined 'item'.</br><a href="#Index">返回顶部</a><br><br>
 
 <h5><p id="item">item</p></h5>
 
-Required.</br>An ItemDescriptor filtering for the item used while mining.</br><a href="#Index">Back to top</a><br><br>
+Required.</br>An ItemDescriptor filtering for the item used while mining.</br><a href="#Index">返回顶部</a><br><br>
 
 </td>
 </tr>
@@ -128,13 +128,13 @@ Required.</br>An ItemDescriptor filtering for the item used while mining.</br><a
 <tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">catch_chance_modifier</td>
-<td style="border-style:solid; border-width:2; padding:8px">Integer</td>
+<td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">5</td>
 <td style="border-style:solid; border-width:2; padding:8px">A modifier affecting the chance that this block will catch flame when next to a fire. Values are greater than or equal to 0, with a higher number meaning more likely to catch on fire. For a "catch_chance_modifier" greater than 0, the fire will continue to burn until the block is destroyed (or it will burn forever if the "destroy_chance_modifier" is 0). If the "catch_chance_modifier" is 0, and the block is directly ignited, the fire will eventually burn out without destroying the block (or it will have a chance to be destroyed if "destroy_chance_modifier" is greater than 0). The default value of 5 is the same as that of Planks.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">destroy_chance_modifier</td>
-<td style="border-style:solid; border-width:2; padding:8px">Integer</td>
+<td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">20</td>
 <td style="border-style:solid; border-width:2; padding:8px">A modifier affecting the chance that this block will be destroyed by flames when on fire. Values are greater than or equal to 0, with a higher number meaning more likely to be destroyed by fire. For a "destroy_chance_modifier" of 0, the block will never be destroyed by fire, and the fire will burn forever if the "catch_chance_modifier" is greater than 0. The default value of 20 is the same as that of Planks.</br></td>
 </tr>
@@ -159,23 +159,23 @@ Required.</br>An ItemDescriptor filtering for the item used while mining.</br><a
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 <td style="border-style:solid; border-width:3; padding:7px">The description identifier of the geometry and material used to render the item of this block.</br>Experimental toggles required: Upcoming Creator Features</br><h3><p id="geometry">geometry</p></h3>
 
-[Required] The "minecraft:geometry" component that will be used for the item.</br><a href="#Index">Back to top</a><br><br>
+[Required] The "minecraft:geometry" component that will be used for the item.</br><a href="#Index">返回顶部</a><br><br>
 
 <h3><p id="material_instances">material_instances</p></h3>
 
-[Required] The "minecraft:material_instances" component that will be used for the item.</br><a href="#Index">Back to top</a><br><br>
+[Required] The "minecraft:material_instances" component that will be used for the item.</br><a href="#Index">返回顶部</a><br><br>
 
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:light_dampening</td>
-<td style="border-style:solid; border-width:3; padding:7px">Integer</td>
+<td style="border-style:solid; border-width:3; padding:7px">整数</td>
 <td style="border-style:solid; border-width:3; padding:7px">15</td>
 <td style="border-style:solid; border-width:3; padding:7px">The amount that light will be dampened when it passes through the block, in a range (0-15). Higher value means the light will be dampened more.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:light_emission</td>
-<td style="border-style:solid; border-width:3; padding:7px">Integer</td>
+<td style="border-style:solid; border-width:3; padding:7px">整数</td>
 <td style="border-style:solid; border-width:3; padding:7px">0</td>
 <td style="border-style:solid; border-width:3; padding:7px">The amount of light this block will emit in a range (0-15). Higher value means more light will be emitted.</br></td>
 </tr>
@@ -226,14 +226,14 @@ Required.</br>An ItemDescriptor filtering for the item used while mining.</br><a
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:material_instances</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 <td style="border-style:solid; border-width:3; padding:7px">The material instances for a block. Maps face or material_instance names in a geometry file to an actual material instance. You can assign a material instance object to any of these faces: "up", "down", "north", "south", "east", "west", or "*". You can also give an instance the name of your choosing such as "my_instance", and then assign it to a face by doing "north":"my_instance".</br><h3><p id="Material Instance">Material Instance</p></h3>
 
 A material instance definition to map to a material instance in a geometry file. The material instance "*" will be used for any materials that don't have a match.</br><h4></h4>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
-<tr> <th style="border-style:solid; border-width:1;">Name</th> <th style="border-style:solid; border-width:1;">Type</th> <th style="border-style:solid; border-width:1;">Default Value</th> <th style="border-style:solid; border-width:1;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">ambient_occlusion</td>
 <td style="border-style:solid; border-width:1; padding:9px">Decimal</td>
@@ -242,37 +242,37 @@ A material instance definition to map to a material instance in a geometry file.
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">face_dimming</td>
-<td style="border-style:solid; border-width:1; padding:9px">Boolean</td>
+<td style="border-style:solid; border-width:1; padding:9px">布尔值</td>
 <td style="border-style:solid; border-width:1; padding:9px">true</td>
-<td style="border-style:solid; border-width:1; padding:9px">Should this material be dimmed by the direction it's facing?</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">此材质是否应因其朝向而变暗？</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">render_method</td>
-<td style="border-style:solid; border-width:1; padding:9px">String</td>
+<td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px">opaque</td>
 <td style="border-style:solid; border-width:1; padding:9px">The render method to use. Must be one of these options:</br>"opaque" - Used for a regular block texture without an alpha layer. Does not allow for transparency or translucency.</br>"double_sided" - Used for completely disabling backface culling.</br>"blend" - Used for a block like stained glass. Allows for transparency and translucency (slightly transparent textures).</br>"alpha_test" - Used for a block like the vanilla (unstained) glass. Does not allow for translucency, only fully opaque or fully transparent textures. Also disables backface culling.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">texture</td>
-<td style="border-style:solid; border-width:1; padding:9px">String</td>
+<td style="border-style:solid; border-width:1; padding:9px">字符串</td>
 <td style="border-style:solid; border-width:1; padding:9px"></td>
-<td style="border-style:solid; border-width:1; padding:9px">Texture name for the material.</br></td>
+<td style="border-style:solid; border-width:1; padding:9px">材质的纹理名称。</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:placement_filter</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Sets rules for under what conditions the block can be placed/survive</br><h3><p id="conditions">conditions</p></h3>
+<td style="border-style:solid; border-width:3; padding:7px">设置在何种条件下该方块可以被放置或存活</br><h3><p id="conditions">conditions（条件）</p></h3>
 
-List of conditions where the block can be placed/survive. Limited to 64 conditions.</br><h4></h4>
+使该方块可以被放置或存活的条件的列表，仅限 64 个条件。</br><h4></h4>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:1;">
-<tr> <th style="border-style:solid; border-width:1;">Name</th> <th style="border-style:solid; border-width:1;">Type</th> <th style="border-style:solid; border-width:1;">Default Value</th> <th style="border-style:solid; border-width:1;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:1;">名称</th> <th style="border-style:solid; border-width:1;">类型</th> <th style="border-style:solid; border-width:1;">默认值</th> <th style="border-style:solid; border-width:1;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:1; padding:9px">allowed_faces</td>
 <td style="border-style:solid; border-width:1; padding:9px">Array</td>
@@ -307,7 +307,7 @@ List of conditions where the block can be placed/survive. Limited to 64 conditio
 </td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 </td>
 </tr>
@@ -443,23 +443,23 @@ List of conditions where the block can be placed/survive. Limited to 64 conditio
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 <td style="border-style:solid; border-width:3; padding:7px">The block's translation, rotation and scale with respect to the center of its world position</br><h3><p id="rotation">rotation</p></h3>
 
-The block's rotation in increments of 90 degrees</br><a href="#Index">Back to top</a><br><br>
+The block's rotation in increments of 90 degrees</br><a href="#Index">返回顶部</a><br><br>
 
 <h3><p id="rotation_pivot">rotation_pivot</p></h3>
 
-The point to apply rotation around</br><a href="#Index">Back to top</a><br><br>
+The point to apply rotation around</br><a href="#Index">返回顶部</a><br><br>
 
 <h3><p id="scale">scale</p></h3>
 
-The block's scale</br><a href="#Index">Back to top</a><br><br>
+The block's scale</br><a href="#Index">返回顶部</a><br><br>
 
 <h3><p id="scale_pivot">scale_pivot</p></h3>
 
-The point to apply scale around</br><a href="#Index">Back to top</a><br><br>
+The point to apply scale around</br><a href="#Index">返回顶部</a><br><br>
 
 <h3><p id="translation">translation</p></h3>
 
-The block's translation</br><a href="#Index">Back to top</a><br><br>
+The block's translation</br><a href="#Index">返回顶部</a><br><br>
 
 </td>
 </tr>
@@ -470,23 +470,23 @@ The block's translation</br><a href="#Index">Back to top</a><br><br>
 <td style="border-style:solid; border-width:3; padding:7px">Specifies that a unit cube is to be used with tessellation.</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Block Definition Properties">Block Definition Properties</p></h1>
+<h1><p id="Block Definition Properties">方块定义属性</p></h1>
 
-These properties are part of the Block Definition. This helps the system determine how to parse and initialize this block.</br><h2></h2>
+这些属性是方块定义的一部分。这有助于系统确定如何解析和初始化该方块。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Default Value</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">默认值</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">format_version</td>
-<td style="border-style:solid; border-width:3; padding:7px">String</td>
+<td style="border-style:solid; border-width:3; padding:7px">字符串</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Specifies the version of the game this entity was made in. If the version is lower than the current version, any changes made to the entity in the vanilla version will be applied to it.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">指定制作该实体的游戏的版本。如果该版本比当前版本低，则任何对原版版本中的实体做出的变更都将应用到它身上。</br></td>
 </tr>
 </table>
-<h2>Code Example</h2>
-Example<br / ><textarea readonly="true" cols="66" rows="20">
+<h2>代码示例</h2>
+示例<br / ><textarea readonly="true" cols="66" rows="20">
 {
   "format_version": "1.21.50",
   "minecraft:block": {
@@ -507,340 +507,340 @@ Example<br / ><textarea readonly="true" cols="66" rows="20">
   }
 }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Block Description Properties">Block Description Properties</p></h1>
+<h1><p id="Block Description Properties">方块描述属性</p></h1>
 
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Default Value</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">默认值</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">identifier</td>
-<td style="border-style:solid; border-width:3; padding:7px">String</td>
+<td style="border-style:solid; border-width:3; padding:7px">字符串</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">The identifier for this block. The name must include a namespace and must not use the Minecraft namespace unless overriding a Vanilla block.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">该方块的标识符。该名称必须包含一个命名空间，而且除非想要覆写一个原版方块，否则不可以使用minecraft命名空间。</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Block Event Responses">Block Event Responses</p></h1>
+<h1><p id="Block Event Responses">方块事件响应</p></h1>
 
-Event responses for block trigger components.</br><h2></h2>
+方块触发器组件的事件响应。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Default Value</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">默认值</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">add_mob_effect</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Apply mob effect to target.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">将生物效果应用到目标对象。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">amplifier</td>
-<td style="border-style:solid; border-width:2; padding:8px">Integer</td>
+<td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The amplifier for the mob effect.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">该生物效果的倍率。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">duration</td>
-<td style="border-style:solid; border-width:2; padding:8px">Decimal</td>
+<td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The duration of the mob effect.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">该生物效果的持续时间。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">effect</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The mob effect to apply.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要应用的生物效果。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target</td>
-<td style="border-style:solid; border-width:2; padding:8px">Minecraft Filter</td>
+<td style="border-style:solid; border-width:2; padding:8px">Minecraft 过滤器</td>
 <td style="border-style:solid; border-width:2; padding:8px">self</td>
-<td style="border-style:solid; border-width:2; padding:8px">The target context to execute against.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要对其执行的目标对象上下文。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">damage</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Deals damage to the target.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">对该目标对象结算伤害。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">amount</td>
-<td style="border-style:solid; border-width:2; padding:8px">Integer</td>
+<td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The amount of damage to deal.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要结算的伤害的数量。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">mob_amount</td>
-<td style="border-style:solid; border-width:2; padding:8px">Integer</td>
+<td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
 <td style="border-style:solid; border-width:2; padding:8px">The amount of damage to deal if held by a mob.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target</td>
-<td style="border-style:solid; border-width:2; padding:8px">Minecraft Filter</td>
+<td style="border-style:solid; border-width:2; padding:8px">Minecraft 过滤器</td>
 <td style="border-style:solid; border-width:2; padding:8px">self</td>
-<td style="border-style:solid; border-width:2; padding:8px">The target context to execute against.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要对其执行的目标对象上下文。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">type</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The type of damage to deal.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要结算的伤害的类型。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">decrement_stack</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Decrement item stack.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">自减物品堆叠。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">die</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Kill target. If target is self and this is run from a block then destroy the block.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">杀死目标对象。如果目标对象是self且该事件运行自一个方块，则摧毁该方块。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target</td>
-<td style="border-style:solid; border-width:2; padding:8px">Minecraft Filter</td>
+<td style="border-style:solid; border-width:2; padding:8px">Minecraft 过滤器</td>
 <td style="border-style:solid; border-width:2; padding:8px">self</td>
-<td style="border-style:solid; border-width:2; padding:8px">The target context to execute against.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要对其执行的目标对象上下文。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">play_effect</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Spawns a particle effect relative to target position.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">相对于目标对象的位置生成一个粒子特效。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">data</td>
-<td style="border-style:solid; border-width:2; padding:8px">Integer</td>
+<td style="border-style:solid; border-width:2; padding:8px">整数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0</td>
-<td style="border-style:solid; border-width:2; padding:8px">Particle data value.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">粒子数据值。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">effect</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The name of the particle effect to create.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要创建的粒子特效的名称。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target</td>
-<td style="border-style:solid; border-width:2; padding:8px">Minecraft Filter</td>
+<td style="border-style:solid; border-width:2; padding:8px">Minecraft 过滤器</td>
 <td style="border-style:solid; border-width:2; padding:8px">self</td>
-<td style="border-style:solid; border-width:2; padding:8px">The target context to execute against.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要对其执行的目标对象上下文。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">play_sound</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Play a sound relative to target position.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">相对于目标对象的位置播放一个声音。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">sound</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The name of the sound to play.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要播放的声音的名称。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target</td>
-<td style="border-style:solid; border-width:2; padding:8px">Minecraft Filter</td>
+<td style="border-style:solid; border-width:2; padding:8px">Minecraft 过滤器</td>
 <td style="border-style:solid; border-width:2; padding:8px">self</td>
-<td style="border-style:solid; border-width:2; padding:8px">The target context to execute against.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要对其执行的目标对象上下文。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">remove_mob_effect</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Removes mob effect from target.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">从目标对象上移除生物效果。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">effect</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The mob effect to remove. Use 'all' to remove all mob effects from target.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要移除的生物效果。使用 'all' 以从目标对象上移除所有生物效果。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target</td>
-<td style="border-style:solid; border-width:2; padding:8px">Minecraft Filter</td>
+<td style="border-style:solid; border-width:2; padding:8px">Minecraft 过滤器</td>
 <td style="border-style:solid; border-width:2; padding:8px">self</td>
-<td style="border-style:solid; border-width:2; padding:8px">The target context to execute against.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要对其执行的目标对象上下文。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">run_command</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Triggers a slash command or a list of slash commands.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">触发一个斜杠命令或一个斜杠命令的列表。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">command</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Slash command to run.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要运行的斜杠命令。</br></td>
 </tr>
 <tr>
-<td style="border-style:solid; border-width:2; padding:8px">command array</td>
-<td style="border-style:solid; border-width:2; padding:8px">Array</td>
+<td style="border-style:solid; border-width:2; padding:8px">command 数组</td>
+<td style="border-style:solid; border-width:2; padding:8px">数组</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">List of slash commands to run.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要运行的斜杠命令的列表。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target</td>
-<td style="border-style:solid; border-width:2; padding:8px">Minecraft Filter</td>
+<td style="border-style:solid; border-width:2; padding:8px">Minecraft 过滤器</td>
 <td style="border-style:solid; border-width:2; padding:8px">self</td>
-<td style="border-style:solid; border-width:2; padding:8px">The target context to execute against.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要对其执行的目标对象上下文。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">set_block</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Sets this block to another block type.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">要将该方块设置为另一个方块类型。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">block_type</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The type of block to set.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要设置的方块的类型。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">set_block_at_pos</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Sets a block relative to this block to another block type.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">将相对于该方块的一个方块设置为另一个方块类型。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">block_offset</td>
-<td style="border-style:solid; border-width:2; padding:8px">Vector [a, b, c]</td>
+<td style="border-style:solid; border-width:2; padding:8px">向量 [a, b, c]</td>
 <td style="border-style:solid; border-width:2; padding:8px">[0.0, 0.0, 0.0]</td>
-<td style="border-style:solid; border-width:2; padding:8px">The offset from the block's center.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">从该方块的中心的偏移量。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">block_type</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The type of block to set.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要设置的方块的类型。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">set_block_state</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Sets a block state on this block.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">在该方块上设置一个方块状态。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">state</td>
 <td style="border-style:solid; border-width:2; padding:8px">Molang</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Block state to set on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要在该方块上设置的方块状态。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">spawn_loot</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Spawn loot from block.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">从方块生成一次战利品。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">table</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">File path, relative to the Behavior Pack's path, to the loot table file.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">相对于行为包的路径到该战利品表文件的文件路径</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">swing</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Event causes the actor to swing.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">可以造成活动对象挥摆的事件</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">teleport</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Teleport target randomly around destination point.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">将目标对象随机传送到目的地点周围。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">avoid_water</td>
-<td style="border-style:solid; border-width:2; padding:8px">Boolean</td>
+<td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Determines if the teleport avoids putting the target in water.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">确定该次传送是否避免将目标对象放置在水中。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">destination</td>
-<td style="border-style:solid; border-width:2; padding:8px">Vector [a, b, c]</td>
+<td style="border-style:solid; border-width:2; padding:8px">向量 [a, b, c]</td>
 <td style="border-style:solid; border-width:2; padding:8px">[0.0, 0.0, 0.0]</td>
-<td style="border-style:solid; border-width:2; padding:8px">Origin destination of the teleport.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">该次传送的原始目的地。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">land_on_block</td>
-<td style="border-style:solid; border-width:2; padding:8px">Boolean</td>
+<td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
 <td style="border-style:solid; border-width:2; padding:8px">true</td>
-<td style="border-style:solid; border-width:2; padding:8px">Determines if the teleport places the target on a block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">确定该次传送是否将目标对象放置在一个方块上。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">max_range</td>
-<td style="border-style:solid; border-width:2; padding:8px">Vector [a, b, c]</td>
+<td style="border-style:solid; border-width:2; padding:8px">向量 [a, b, c]</td>
 <td style="border-style:solid; border-width:2; padding:8px">[8.0, 8.0, 8.0]</td>
-<td style="border-style:solid; border-width:2; padding:8px">Max range the target can teleport relative to the origin destination.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">该目标对象能够相对于原始目的地传送的最大范围。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target</td>
-<td style="border-style:solid; border-width:2; padding:8px">Minecraft Filter</td>
+<td style="border-style:solid; border-width:2; padding:8px">Minecraft 过滤器</td>
 <td style="border-style:solid; border-width:2; padding:8px">self</td>
-<td style="border-style:solid; border-width:2; padding:8px">The target context to execute against.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要对其执行的目标对象上下文。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">transform_item</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Transforms item into another item.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">将物品转化为另一个物品。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">transform</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">Name of the item it should transform into</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">该物品应当转化为的物品的名称。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 </table>
-<h2>Code Example</h2>
+<h2>代码示例</h2>
 Event Response Example<br / ><textarea readonly="true" cols="61" rows="22">
 
     "minecraft:block": {
@@ -864,211 +864,211 @@ Event Response Example<br / ><textarea readonly="true" cols="61" rows="22">
       }
     }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Block Trigger Components">Block Trigger Components</p></h1>
+<h1><p id="Block Trigger Components">方块触发器组件</p></h1>
 
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Default Value</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">默认值</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:on_fall_on</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Describes event for this block.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">描述了该方块的事件。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">condition</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The condition of event to be executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要执行在该方块上的事件的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">event</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The event executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">执行在该方块上的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">min_fall_distance</td>
-<td style="border-style:solid; border-width:2; padding:8px">Decimal</td>
+<td style="border-style:solid; border-width:2; padding:8px">小数</td>
 <td style="border-style:solid; border-width:2; padding:8px">0.0</td>
-<td style="border-style:solid; border-width:2; padding:8px">The minimum distance in blocks that an actor needs to fall to trigger this event.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">一个活动对象想要触发该事件所需下落的最小距离（以方块为单位）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px">self</td>
-<td style="border-style:solid; border-width:2; padding:8px">The target of event executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">执行在该方块上的事件的目标对象。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:on_interact</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Describes event for this block.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">描述了该方块的事件。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">condition</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The condition of event to be executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要执行在该方块上的事件的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">event</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The event executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">执行在该方块上的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px">self</td>
-<td style="border-style:solid; border-width:2; padding:8px">The target of event executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">执行在该方块上的事件的目标对象。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:on_placed</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Describes event for this block.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">描述了该方块的事件。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">condition</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The condition of event to be executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要执行在该方块上的事件的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">event</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The event executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">执行在该方块上的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px">self</td>
-<td style="border-style:solid; border-width:2; padding:8px">The target of event executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">执行在该方块上的事件的目标对象。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:on_player_destroyed</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Describes event for this block.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">描述了该方块的事件。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">condition</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The condition of event to be executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要执行在该方块上的事件的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">event</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The event executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">执行在该方块上的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px">self</td>
-<td style="border-style:solid; border-width:2; padding:8px">The target of event executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">执行在该方块上的事件的目标对象。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:on_player_placing</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Describes event for this block.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">描述了该方块的事件。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">condition</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The condition of event to be executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要执行在该方块上的事件的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">event</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The event executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">执行在该方块上的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px">self</td>
-<td style="border-style:solid; border-width:2; padding:8px">The target of event executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">执行在该方块上的事件的目标对象。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:on_step_off</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Describes event for this block.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">描述了该方块的事件。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">condition</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The condition of event to be executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要执行在该方块上的事件的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">event</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The event executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">执行在该方块上的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px">self</td>
-<td style="border-style:solid; border-width:2; padding:8px">The target of event executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">执行在该方块上的事件的目标对象。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:on_step_on</td>
-<td style="border-style:solid; border-width:3; padding:7px">JSON Object</td>
+<td style="border-style:solid; border-width:3; padding:7px">JSON 对象</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
-<td style="border-style:solid; border-width:3; padding:7px">Describes event for this block.</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Default Value</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<td style="border-style:solid; border-width:3; padding:7px">描述了该方块的事件。</br><table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">默认值</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">condition</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The condition of event to be executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">要执行在该方块上的事件的条件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">event</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px"></td>
-<td style="border-style:solid; border-width:2; padding:8px">The event executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">执行在该方块上的事件。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">target</td>
-<td style="border-style:solid; border-width:2; padding:8px">String</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串</td>
 <td style="border-style:solid; border-width:2; padding:8px">self</td>
-<td style="border-style:solid; border-width:2; padding:8px">The target of event executed on the block.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">执行在该方块上的事件的目标对象。</br></td>
 </tr>
 </table>
 </td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
