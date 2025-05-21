@@ -1,16 +1,16 @@
 <h1>ENTITY TIMELINE EVENTS DOCUMENTATION </br>Version: 1.21.80.3</h1>
-<h2><p id="Index">Index</p></h2>
+<h2><p id="Index">索引</p></h2>
 <table border="1">
-<tr> <th><a href="#Animation Controller Events">Animation Controller Events</a></th> </tr>
-<tr> <th><a href="#Animation Events">Animation Events</a></th> </tr>
-<tr> <th><a href="#Animation Notes">Animation Notes</a></th> </tr>
-<tr> <th><a href="#Events">Events</a></th> </tr>
-<tr> <th><a href="#General Notes">General Notes</a></th> </tr>
+<tr> <th><a href="#Animation Controller Events">动画控制器事件</a></th> </tr>
+<tr> <th><a href="#Animation Events">动画事件</a></th> </tr>
+<tr> <th><a href="#Animation Notes">动画注释</a></th> </tr>
+<tr> <th><a href="#Events">事件</a></th> </tr>
+<tr> <th><a href="#General Notes">总注解</a></th> </tr>
 </table>
-<a href="#Index">Back to top</a>
-<h1><p id="Animation Controller Events">Animation Controller Events</p></h1>
+<a href="#Index">返回顶部</a>
+<h1><p id="Animation Controller Events">动画控制器事件</p></h1>
 
-</br>Animation controllers can trigger events on entry or exit of a state.  Events to trigger on state entry go in the "on_entry" section, those on exit go in the "on_exit" section.</br><h2></h2>
+</br>动画控制器可以在进入或退出状态时触发事件。在状态进入时触发的事件位于 “on_entry” 部分，退出时触发的事件位于 “on_exit” 部分。</br><h2></h2>
 <br / ><textarea readonly="true" cols="105" rows="23">
 
 {
@@ -35,11 +35,11 @@
 }
 
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Animation Events">Animation Events</p></h1>
+<h1><p id="Animation Events">动画事件</p></h1>
 
-</br>Animations can have a timeline dedicated to events. The "timeline" section contains the event timeline list.  Below there are various examples where particular times can trigger a single event, or an array of events:</br><h2></h2>
+</br>动画可以具有专用于事件的时间轴。“timeline” 部分包含事件时间轴列表。以下是特定时间可以触发单个事件或事件数组的各种示例：</br><h2></h2>
 <br / ><textarea readonly="true" cols="68" rows="32">
 
 {
@@ -75,11 +75,11 @@
 }
 
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Animation Notes">Animation Notes</p></h1>
+<h1><p id="Animation Notes">动画注释</p></h1>
 
-</br>Entity events occur in animations, which normally occur on the client (via resource packs), but can also occur on the server (via behavior packs). As the server side of the game has no visual aspects to it, obviously no bone-based animations can occur.  However, a traditional animation is basically a timeline of events, with the events being bone positions for an animated visual rig that moves the entity's visual shape around.  The mechanisms for the Bedrock animation system are state machines (Animation Controllers), and timelines (Animations).  These concepts apply directly to the triggering of events, thus the animation system can execute on the server (minus the visual aspects), with the intent of driving entity events. </br></br>To use entity events on the server (in a behavior pack), add animation controllers and animations to a behavior pack just as you would to a resource pack.  Add animation and animation controllers to an "animations" section in the description field of an entity.  These animations and animation controllers will run on the server just as if they were on the client in a resource pack.  Add the "scripts" section with an "animate" subsection to specify which animations/animation-controllers to have run.</br></br>Client side (resource pack) events do not require special setup as the client side entities usually already have animations and animation controllers in place.  Just add your events where you need them in animations or animation controllers.</br><h2></h2>
+</br>实体事件发生在动画中，通常发生在客户端上（通过资源包），但也可能发生在服务器上（通过行为包）。由于游戏的服务器端没有视觉方面，因此显然不会出现基于骨骼的动画。 但是，旧版动画基本上是事件的时间轴，事件是动画视觉绑定的骨骼位置，用于移动实体的视觉形状。 基岩版动画系统的机制是状态机 （Animation Controllers） 和时间轴 （Animations）。 这些概念直接应用于事件的触发，因此动画系统可以在服务器上执行（不包括视觉方面），目的是驱动实体事件。</br></br>要在服务器上（在行为包中）使用实体事件，请像向资源包添加动画控制器和动画一样，将动画控制器和动画添加到行为包中。 将动画和动画控制器添加到实体描述字段中的 “animations” 部分。 这些动画和动画控制器将在服务器上运行，就像它们在资源包中的客户端上运行一样。 添加带有 “animate” 子部分的 “scripts” 部分，以指定要运行的动画/动画控制器。</br></br>客户端 （资源包） 事件不需要特殊设置，因为客户端实体通常已经具有动画和动画控制器。 只需在动画或动画控制器中将事件添加到需要的位置即可。</br><h2></h2>
 <br / ><textarea readonly="true" cols="106" rows="30">
 
 {
@@ -111,11 +111,11 @@
 }
 
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Events">Events</p></h1>
+<h1><p id="Events">事件</p></h1>
 
-</br>Events consist of three categories, all represented by a string:</br>- Entity events</br>- Slash Commands</br>- Molang Expressions</br></br>In detail:</br></br>Entity Events: Server side (behavior packs) only.  Currently, we only support entity events to self, and these take the form "@s event".  These are events declared in the events section of the entity definition file.  For example, in the cat.json, "minecraft:ageable_grow_up" event causes the kitten to grow up.  This would take the form of "@s minecraft:ageable_grow_up"</br></br>Slash commands: Server side (behavior packs) only.  Any slash command can be invoked, such as "/particle minecraft:example_smoke_puff ~ ~ ~".  The assumed entity for the slash command is the invoking entity, so this particular slash command will spawn a smoke puff effect at the entity's location.</br></br>Molang Expressions: This executes a Molang expression.  The primary usage is to set Molang variables that can be used later.  For example, a state transition might be looking at a particluar Molang variable, and this expression could change that variable.  A particle effect on the entity might change color due to Molang variables that the effect uses for color tints.  An animation to move an arm might use a Molang variable that was set by an animation event.</br><h2></h2>
+</br>事件由三个类别组成，均由字符串表示：</br>- Entity events（实体事件）</br>- Slash Commands（斜杠命令）</br>- Molang Expressions（MoLang表达式）</br></br>详细地：</br></br>实体事件：仅限服务端（行为包）。目前，我们只支持实体事件 self，这些事件采用 “@s event” 的形式。这些是在实体定义文件的 events 部分中声明的事件。例如，在cat.json中，“minecraft:ageable_grow_up”事件会导致小猫长大。这将采用 “@s minecraft:ageable_grow_up” 的形式</br></br>斜杠命令：仅限服务端（行为包）。可以调用任何斜杠命令，例如 “/particle minecraft:example_smoke_puff ~ ~ ~”。斜杠命令的假定实体是调用实体，因此此特定斜杠命令将在实体的位置生成烟雾喷气效果。</br></br>Molang 表达式：这将执行 Molang 表达式。主要用途是设置以后可以使用的 Molang 变量。例如，状态转换可能正在查看一个特定的 Molang 变量，而此表达式可能会更改该变量。实体上的粒子特效可能会因效果用于颜色色调的 Molang 变量而更改颜色。用于移动手臂的动画可能会使用由动画事件设置的 Molang 变量。</br><h2></h2>
 <br / ><textarea readonly="true" cols="95" rows="12">
 
 // entity event (behavior packs only), put the particular event name after the @s
@@ -129,9 +129,9 @@
 "variable.something_to_set = 3;"
 
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="General Notes">General Notes</p></h1>
+<h1><p id="General Notes">总注解</p></h1>
 
-</br>This document contains details for driving various events via entity .json data.  Entity events can go in both behavior and resource packs.  Behavior packs use the same animations and animation controllers setup that are used in resource packs, albeit with a different method in the entity .json itself to activate the animations.</br></br>Entity events are a way to drive gameplay and entity state changes in the Bedrock engine.  These events can typically include slash commands (behavior packs only), entity events (e.g. become an adult), and Molang expressions (e.g. set the Molang variable "variable.foo" to 3 on a particular entity).  Animations and Animation controllers provide a method for driving state machines and timelines for an entity.  For example, a particular animation controller could be in a particular state, and running a particular animation, and we want events triggered when entering/exiting that state.  Alternately, an "animation" could be running, and we wish to fire off events during that animation.  The entity event timeline mechanic makes this possible.</br><a href="#Index">Back to top</a><br><br>
+</br>本文档包含通过实体.json数据驱动各种事件的详细信息。实体事件可以进入行为包和资源包。行为包使用与资源包中相同的动画和动画控制器设置，尽管实体.json本身使用不同的方法来激活动画。</br></br>实体事件是在 Bedrock 引擎中推动游戏和实体状态更改的一种方式。这些事件通常可以包括斜杠命令（仅限行为包）、实体事件（例如，成为成年人）和 Molang 表达式（例如，在特定实体上将 Molang 变量 “variable.foo” 设置为 3）。Animation 和 Animation controllers 提供了一种驱动实体的状态机和时间轴的方法。例如，特定的动画控制器可能处于特定状态，并运行特定的动画，我们希望在进入/退出该状态时触发事件。或者，一个 “animation” 可能正在运行，我们希望在该动画期间触发事件。实体事件时间线机制使这成为可能。</br><a href="#Index">返回顶部</a><br><br>
 

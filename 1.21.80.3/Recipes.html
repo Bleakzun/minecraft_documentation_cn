@@ -1,5 +1,5 @@
 <h1>RECIPES DOCUMENTATION </br>Version: 1.21.80.3</h1>
-<h2><p id="Index">Index</p></h2>
+<h2><p id="Index">索引</p></h2>
 <table border="1">
 <tr> <th><a href="#Recipes">Recipes</a></th> </tr>
 <tr> <td> <a href="#Furnace Recipe"> Furnace Recipe</a> </tr> </td>
@@ -10,33 +10,33 @@
 <tr> <td> <a href="#Smithing Transform Recipe"> Smithing Transform Recipe</a> </tr> </td>
 <tr> <td> <a href="#Smithing Trim Recipe"> Smithing Trim Recipe</a> </tr> </td>
 </table>
-<a href="#Index">Back to top</a>
+<a href="#Index">返回顶部</a>
 <h1><p id="Recipes">Recipes</p></h1>
 
-Recipes are setup in Json files under the behavior_packs /'name of pack'/ recipes directory.</br>Recipe JSON files have different structures dependent on their type.</br><h1><p id="Furnace Recipe">Furnace Recipe</p></h1>
+配方在 behavior_packs /'name of pack'/ recipes 目录下的 Json 文件中设置。</br>配方 JSON 文件具有不同的结构，具体取决于其类型。</br><h1><p id="Furnace Recipe">熔炉配方</p></h1>
 
-Represents a furnace recipe for a furnace.'Input' items will burn and transform into items specified in 'output'.</br><h2></h2>
+表示熔炉的熔炉配方。'input' 物品将燃烧并转化为 'output' 中指定的物品。</br><h2></h2>
 
-<h2><p id="Parameters">Parameters</p></h2>
+<h2><p id="Parameters">参数</p></h2>
 
 <h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">input</td>
-<td style="border-style:solid; border-width:2; padding:8px">item names</td>
-<td style="border-style:solid; border-width:2; padding:8px">Items used as input for the furnace recipe.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">物品名称</td>
+<td style="border-style:solid; border-width:2; padding:8px">用作熔炉配方输入的物品。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">output</td>
-<td style="border-style:solid; border-width:2; padding:8px">item names</td>
-<td style="border-style:solid; border-width:2; padding:8px">Items used as output for the furnace recipe.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">物品名称</td>
+<td style="border-style:solid; border-width:2; padding:8px">用作熔炉配方输出的物品。</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h2>Furnace Recipe Example:</h2>
+<h2>熔炉配方示例:</h2>
 <br / ><textarea readonly="true" cols="60" rows="16">
 {
 "format_version": "1.12",
@@ -56,40 +56,40 @@ Represents a furnace recipe for a furnace.'Input' items will burn and transform 
 </textarea> </br>
 <br><br>
 
-<h1><p id="Potion Brewing Container Recipe">Potion Brewing Container Recipe</p></h1>
+<h1><p id="Potion Brewing Container Recipe">药水容器酿造配方</p></h1>
 
-Represents a Potion Brewing Container Recipe.</br><h2></h2>
+代表药水容器酿造配方。</br><h2></h2>
 
-<h2><p id="Parameters">Parameters</p></h2>
+<h2><p id="Parameters">参数</p></h2>
 
 <h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">input</td>
-<td style="border-style:solid; border-width:2; padding:8px">potion</td>
-<td style="border-style:solid; border-width:2; padding:8px">input potion used in the brewing container recipe.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">药水</td>
+<td style="border-style:solid; border-width:2; padding:8px">药水容器酿造配方中输入的药水</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">output</td>
-<td style="border-style:solid; border-width:2; padding:8px">potion</td>
-<td style="border-style:solid; border-width:2; padding:8px">output potion from the brewing container recipe.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">药水</td>
+<td style="border-style:solid; border-width:2; padding:8px">药水容器酿造配方中输出的药水</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">reagent</td>
-<td style="border-style:solid; border-width:2; padding:8px">item</td>
-<td style="border-style:solid; border-width:2; padding:8px">item used in the brewing container recipe with the input potion.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">物品</td>
+<td style="border-style:solid; border-width:2; padding:8px">和输入药水一同放入酿造台中的物品</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">tags</td>
-<td style="border-style:solid; border-width:2; padding:8px">array of strings</td>
-<td style="border-style:solid; border-width:2; padding:8px">Item used in a Brewing Container Recipe.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串的数组</td>
+<td style="border-style:solid; border-width:2; padding:8px">表示配方在哪里被使用</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h2>Potion Brewing Container Recipe Example:</h2>
+<h2>药水容器酿造配方示例:</h2>
 <br / ><textarea readonly="true" cols="48" rows="15">
 {
 "format_version": "1.12",
@@ -108,40 +108,40 @@ Represents a Potion Brewing Container Recipe.</br><h2></h2>
 </textarea> </br>
 <br><br>
 
-<h1><p id="Potion Brewing Mix">Potion Brewing Mix</p></h1>
+<h1><p id="Potion Brewing Mix">药水混合酿造配方</p></h1>
 
-Represents a Potion Brewing Mix.</br><h2></h2>
+代表药水混合酿造配方</br><h2></h2>
 
-<h2><p id="Parameters">Parameters</p></h2>
+<h2><p id="Parameters">参数</p></h2>
 
 <h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">input</td>
-<td style="border-style:solid; border-width:2; padding:8px">potion</td>
-<td style="border-style:solid; border-width:2; padding:8px">input potion used on the brewing stand.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">药水</td>
+<td style="border-style:solid; border-width:2; padding:8px">酿造台中输入的药水</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">output</td>
-<td style="border-style:solid; border-width:2; padding:8px">potion</td>
-<td style="border-style:solid; border-width:2; padding:8px">output potion from mixing the input potion with the reagent on the brewing stand.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">药水</td>
+<td style="border-style:solid; border-width:2; padding:8px">将输入的药水与酿造台上的酿造材料混合后输出的药水。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">reagent</td>
-<td style="border-style:solid; border-width:2; padding:8px">item</td>
-<td style="border-style:solid; border-width:2; padding:8px">item used to mix with the input potion.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">物品</td>
+<td style="border-style:solid; border-width:2; padding:8px">用于与输入药水混合的物品。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">tags</td>
-<td style="border-style:solid; border-width:2; padding:8px">array of strings</td>
-<td style="border-style:solid; border-width:2; padding:8px">Item used to make a brewing mix.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串的数组</td>
+<td style="border-style:solid; border-width:2; padding:8px">表示配方在哪里被使用</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h2>Potion Brewing Mix Example:</h2>
+<h2>药水混合酿造配方示例:</h2>
 <br / ><textarea readonly="true" cols="54" rows="15">
 {
 "format_version": "1.12",
@@ -160,50 +160,50 @@ Represents a Potion Brewing Mix.</br><h2></h2>
 </textarea> </br>
 <br><br>
 
-<h1><p id="Shaped Recipe">Shaped Recipe</p></h1>
+<h1><p id="Shaped Recipe">有序配方</p></h1>
 
-Represents a shaped crafting recipe for a crafting table.</br>The key used in the pattern may be any single character except the 'space' character, which is reserved for empty slots in a recipe.</br><h2></h2>
+表示工作台上的有序合成配方。</br>模式中使用的键可以是除 '空格' 字符以外的任何单个字符，该字符是为配方中的空槽保留的。</br><h2></h2>
 
-<h2><p id="Parameters">Parameters</p></h2>
+<h2><p id="Parameters">参数</p></h2>
 
 <h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">assume_symmetry</td>
-<td style="border-style:solid; border-width:2; padding:8px">boolean</td>
-<td style="border-style:solid; border-width:2; padding:8px">determines if the recipe should assume symmetry or not.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">布尔值</td>
+<td style="border-style:solid; border-width:2; padding:8px">确定配方是否应采用对称性。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">key</td>
-<td style="border-style:solid; border-width:2; padding:8px">array of key and item pairs</td>
-<td style="border-style:solid; border-width:2; padding:8px">patten key character mapped to item names.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">键和物品对的数组</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符映射到物品名称。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">pattern</td>
-<td style="border-style:solid; border-width:2; padding:8px">array of strings</td>
-<td style="border-style:solid; border-width:2; padding:8px">characters that represent a pattern to be defined by keys.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串的数组</td>
+<td style="border-style:solid; border-width:2; padding:8px">字符，这些字符表示要由键定义的模式。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">priority</td>
-<td style="border-style:solid; border-width:2; padding:8px">integer</td>
-<td style="border-style:solid; border-width:2; padding:8px">Item used as output for the furnace recipe.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">整数</td>
+<td style="border-style:solid; border-width:2; padding:8px">用作配方输出的物品</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">result</td>
-<td style="border-style:solid; border-width:2; padding:8px">array of item names</td>
-<td style="border-style:solid; border-width:2; padding:8px">when input items match the pattern then these items are the result.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">物品名的数组</td>
+<td style="border-style:solid; border-width:2; padding:8px">配方的输出结果。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">tags</td>
-<td style="border-style:solid; border-width:2; padding:8px">array of strings</td>
-<td style="border-style:solid; border-width:2; padding:8px">Item used as input for the furnace recipe.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串的数组</td>
+<td style="border-style:solid; border-width:2; padding:8px">表示配方在哪里被使用</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h2>Shaped Recipe Example:</h2>
+<h2>有序配方示例:</h2>
 <br / ><textarea readonly="true" cols="40" rows="27">
 {
 "format_version": "1.12",
@@ -234,40 +234,40 @@ Represents a shaped crafting recipe for a crafting table.</br>The key used in th
 </textarea> </br>
 <br><br>
 
-<h1><p id="Shapeless Recipe">Shapeless Recipe</p></h1>
+<h1><p id="Shapeless Recipe">无序配方</p></h1>
 
-Represents a shapeless crafting recipe.</br><h2></h2>
+表示工作台上的无序合成配方。</br><h2></h2>
 
-<h2><p id="Parameters">Parameters</p></h2>
+<h2><p id="Parameters">参数</p></h2>
 
 <h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">ingredients</td>
-<td style="border-style:solid; border-width:2; padding:8px">array of item names</td>
-<td style="border-style:solid; border-width:2; padding:8px">items used as input (without a shape) for the recipe.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">物品名的数组</td>
+<td style="border-style:solid; border-width:2; padding:8px">用作无序配方的输入的物品。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">priority</td>
-<td style="border-style:solid; border-width:2; padding:8px">integer</td>
-<td style="border-style:solid; border-width:2; padding:8px">Item used as output for the furnace recipe.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">整数</td>
+<td style="border-style:solid; border-width:2; padding:8px">用作配方输出的物品</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">result</td>
-<td style="border-style:solid; border-width:2; padding:8px">array of item names</td>
-<td style="border-style:solid; border-width:2; padding:8px">these items are the result.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">物品名的数组</td>
+<td style="border-style:solid; border-width:2; padding:8px">配方的输出结果。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">tags</td>
-<td style="border-style:solid; border-width:2; padding:8px">array of strings</td>
-<td style="border-style:solid; border-width:2; padding:8px">Item used as input for the furnace recipe.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串的数组</td>
+<td style="border-style:solid; border-width:2; padding:8px">表示配方在哪里被使用</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h2>Shapeless Recipe Example:</h2>
+<h2>无序配方示例</h2>
 <br / ><textarea readonly="true" cols="52" rows="19">
 {
 "format_version": "1.12",
@@ -290,45 +290,45 @@ Represents a shapeless crafting recipe.</br><h2></h2>
 </textarea> </br>
 <br><br>
 
-<h1><p id="Smithing Transform Recipe">Smithing Transform Recipe</p></h1>
+<h1><p id="Smithing Transform Recipe">锻造转化（锻造升级）配方</p></h1>
 
-Represents a Smithing Transform Recipe for the Smithing Table.</br>This recipe transforms an item into another one, while retaining its properties.</br><h2></h2>
+表示锻造台的锻造转化配方</br>此配方会将一个物品转换为另一个物品，同时保留其属性。</br><h2></h2>
 
-<h2><p id="Parameters">Parameters</p></h2>
+<h2><p id="Parameters">参数</p></h2>
 
 <h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">addition</td>
-<td style="border-style:solid; border-width:2; padding:8px">item name</td>
-<td style="border-style:solid; border-width:2; padding:8px">The material needed to perform the transform operation. In case of stackable items, only 1 item is consumed. The only accepted item is "minecraft:netherite_ingot". Items must have the "minecraft:transform_materials" tag to be accepted into the respective UI slot.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">物品名称</td>
+<td style="border-style:solid; border-width:2; padding:8px">执行升级操作所需的材质。在可堆叠物品的情况下，只消耗 1 件物品。唯一接受的物品是 "minecraft:netherite_ingot"。物品必须带有 "minecraft:transform_materials" 标签才能被放到相应的 UI 槽中。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">base</td>
-<td style="border-style:solid; border-width:2; padding:8px">item name</td>
-<td style="border-style:solid; border-width:2; padding:8px">The item to transform. Its properties will be copied to "result". The only accepted items are armor and tools. Items must have the "minecraft:transformable_items" tag to be accepted into the respective UI slot.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">物品名称</td>
+<td style="border-style:solid; border-width:2; padding:8px">要转换的物品。其属性将被复制到 “result” 中。唯一接受的物品是盔甲和工具。物品必须带有 "minecraft:transformable_items" 标签才能被放到相应的 UI 槽中。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">result</td>
-<td style="border-style:solid; border-width:2; padding:8px">item name</td>
-<td style="border-style:solid; border-width:2; padding:8px">The item to transform to.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">物品名称</td>
+<td style="border-style:solid; border-width:2; padding:8px">要转换为的物品。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">tags</td>
-<td style="border-style:solid; border-width:2; padding:8px">array of strings</td>
-<td style="border-style:solid; border-width:2; padding:8px">The crafting stations the recipe is compatible with. The only accepted value is "smithing_table".</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串的数组</td>
+<td style="border-style:solid; border-width:2; padding:8px">与配方兼容的工作方块。唯一接受的值是 “smithing_table”。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">template</td>
-<td style="border-style:solid; border-width:2; padding:8px">item name</td>
-<td style="border-style:solid; border-width:2; padding:8px">The template needed to perform the transform operation. In case of stackable items, only 1 item is consumed. Items must have the "minecraft:transform_templates" tag to be accepted into the respective UI slot.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">物品名称</td>
+<td style="border-style:solid; border-width:2; padding:8px">执行转换操作所需的模板。在可堆叠物品的情况下，只消耗 1 件物品。物品必须带有 “minecraft:transform_templates” 标签才能被放到相应的 UI 槽中。</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h2>Smithing Transform Recipe Example:</h2>
+<h2>锻造转化（锻造升级）配方示例:</h2>
 <br / ><textarea readonly="true" cols="64" rows="16">
 {
  "format_version": "1.12",
@@ -348,40 +348,40 @@ Represents a Smithing Transform Recipe for the Smithing Table.</br>This recipe t
 </textarea> </br>
 <br><br>
 
-<h1><p id="Smithing Trim Recipe">Smithing Trim Recipe</p></h1>
+<h1><p id="Smithing Trim Recipe">锻造装饰配方</p></h1>
 
-Represents a Smithing Trim Recipe for the Smithing Table.</br>This recipe applies a colored trim pattern to an item, while preserving its other properties.</br><h2></h2>
+表示锻造台的锻造装饰配方</br>此配方将彩色装饰图案应用于物品，同时保留其其他属性。</br><h2></h2>
 
-<h2><p id="Parameters">Parameters</p></h2>
+<h2><p id="Parameters">参数</p></h2>
 
 <h3></h3>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:2;">
-<tr> <th style="border-style:solid; border-width:2;">Name</th> <th style="border-style:solid; border-width:2;">Type</th> <th style="border-style:solid; border-width:2;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:2;">名称</th> <th style="border-style:solid; border-width:2;">类型</th> <th style="border-style:solid; border-width:2;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">addition</td>
-<td style="border-style:solid; border-width:2; padding:8px">item name or item tag</td>
-<td style="border-style:solid; border-width:2; padding:8px">The material needed to perform the trim operation. It defines the color in which the pattern will be applied to the item. In case of stackable items, only 1 item is consumed. Items must have the "minecraft:trim_materials" tag to be accepted into the respective UI slot.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">物品名称或物品标签</td>
+<td style="border-style:solid; border-width:2; padding:8px">执行装饰操作所需的材料。它定义将图案应用于物品的颜色。在可堆叠物品的情况下，只消耗 1 件物品。物品必须带有 “minecraft:trim_materials” 标签才能被接受到相应的 UI 槽中。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">base</td>
-<td style="border-style:solid; border-width:2; padding:8px">item name or item tag</td>
-<td style="border-style:solid; border-width:2; padding:8px">The item to trim. Its properties will be preserved. The only accepted items are armors. Items must have the "minecraft:trimmable_armors" tag to be accepted into the respective UI slot.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">物品名称或物品标签</td>
+<td style="border-style:solid; border-width:2; padding:8px">要装饰的物品。其属性将被保留。唯一接受的物品是盔甲。物品必须带有 “minecraft:trimmable_armors” 标签才能被接受到相应的 UI 槽中。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">tags</td>
-<td style="border-style:solid; border-width:2; padding:8px">array of strings</td>
-<td style="border-style:solid; border-width:2; padding:8px">The crafting stations the recipe is compatible with. The only accepted value is "smithing_table".</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">字符串的数组</td>
+<td style="border-style:solid; border-width:2; padding:8px">与配方兼容的工作方块。唯一接受的值是 “smithing_table”。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:2; padding:8px">template</td>
-<td style="border-style:solid; border-width:2; padding:8px">item name or item tag</td>
-<td style="border-style:solid; border-width:2; padding:8px">The template needed to perform the trim operation. It defines the pattern which will be applied to the item. In case of stackable items, only 1 item is consumed. Items must have the "minecraft:trim_templates" tag to be accepted into the respective UI slot.</br></td>
+<td style="border-style:solid; border-width:2; padding:8px">物品名称或物品标签</td>
+<td style="border-style:solid; border-width:2; padding:8px">执行装饰操作所需的模板。它定义将应用于物品的样式。在可堆叠物品的情况下，只消耗 1 件物品。物品必须带有 “minecraft:trim_templates” 标签才能被接受到相应的 UI 槽中。</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h2>Smithing Trim Recipe Example:</h2>
+<h2>锻造装饰配方示例:</h2>
 <br / ><textarea readonly="true" cols="72" rows="15">
 {
  "format_version": "1.12",

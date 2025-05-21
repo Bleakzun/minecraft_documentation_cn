@@ -1,54 +1,54 @@
 <h1>TEXTURE SETS DOCUMENTATION </br>Version: 1.21.80.3</h1>
-<h2><p id="Index">Index</p></h2>
+<h2><p id="Index">索引</p></h2>
 <table border="1">
-<tr> <th><a href="#Texture Sets">Texture Sets</a></th> </tr>
-<tr> <td> <a href="#Texture Set Json Schema"> Texture Set Json Schema</a> </tr> </td>
-<tr> <td> <a href="#Layers"> Layers</a> </tr> </td>
-<tr> <td> <a href="#Specifying uniform values"> Specifying uniform values</a> </tr> </td>
-<tr> <td> <a href="#Examples of *.texture_set.json files"> Examples of *.texture_set.json files</a> </tr> </td>
-<tr> <td> <a href="#Invalid *.texture_set.json"> Invalid *.texture_set.json</a> </tr> </td>
-<tr> <td> <a href="#Resource Stack Behaviour"> Resource Stack Behaviour</a> </tr> </td>
-<tr> <td> <a href="#Referencing Texture Resources"> Referencing Texture Resources</a> </tr> </td>
+<tr> <th><a href="#Texture Sets">纹理集</a></th> </tr>
+<tr> <td> <a href="#Texture Set Json Schema">纹理集 Json 架构</a> </tr> </td>
+<tr> <td> <a href="#Layers"> Layers（图层）</a> </tr> </td>
+<tr> <td> <a href="#Specifying uniform values">指定 uniform 值</a> </tr> </td>
+<tr> <td> <a href="#Examples of *.texture_set.json files">*.texture_set.json 文件的示例</a> </tr> </td>
+<tr> <td> <a href="#Invalid *.texture_set.json">无效 *.texture_set.json</a> </tr> </td>
+<tr> <td> <a href="#Resource Stack Behaviour">资源堆栈行为</a> </tr> </td>
+<tr> <td> <a href="#Referencing Texture Resources">引用纹理资源</a> </tr> </td>
 </table>
-<a href="#Index">Back to top</a>
-<h1><p id="Texture Sets">Texture Sets</p></h1>
+<a href="#Index">返回顶部</a>
+<h1><p id="Texture Sets">纹理集</p></h1>
 
-Minecraft supports a Physically Based Rendering (PBR) color pipeline (e.g. used for Ray Tracing). 		This uses more texture data than simply 'color' to enable richer, more realistic visuals. 		With the PBR approach, you can have layers for different specular reflections, emissivity, normal maps, etc. which goes beyond the Classic color pipeline for Vanilla Minecraft. 		Texture Sets have been added as the feature for defining multiple PBR layers for a texture resource. Texture sets are data driven from json files.</br><h1><p id="Texture Set Json Schema">Texture Set Json Schema</p></h1>
+Minecraft 支持基于物理的渲染 （PBR） 颜色管道（例如，用于光线追踪）。这使用更多的纹理数据，而不仅仅是“颜色”，以实现更丰富、更逼真的视觉效果。使用 PBR 方法，您可以为不同的镜面反射、发射率、法线贴图等创建图层，这超出了原版Minecraft的经典颜色管道。添加了纹理集作为为纹理资源定义多个 PBR 图层的功能。纹理集是从 json 文件驱动的数据。</br><h1><p id="Texture Set Json Schema">纹理集 Json 架构</p></h1>
 
-<h2>Texture Set Json Schema</h2>
+<h2>纹理集 Json 架构</h2>
 
-```</br>--------</br>{</br>    version "format_version"</br>    object "minecraft:texture_set"</br>    {</br>        color "color" : opt // Fill RGBA channels of a textureset layer with the specified values in an array or hex string</br>        string "color" : opt // The texture name of a textureset layer</br>        string "normal" : opt // The texture name of a textureset layer</br>        string "heightmap" : opt // The texture name of a textureset layer</br>        color "metalness_emissive_roughness" : opt // Fill RGB channels of a textureset layer with the specified values in an array or hex string</br>        string "metalness_emissive_roughness" : opt // The texture name of a textureset layer</br>    }</br>}</br></br>----------</br>```</br><a href="#Index">Back to top</a><br><br>
+```</br>--------</br>{</br>    version "format_version"</br>    object "minecraft:texture_set"</br>    {</br>        color "color" : opt // 使用数组或十六进制字符串中的指定值填充纹理集图层的 RGBA 通道</br>        string "color" : opt // 纹理集图层的纹理名称</br>        string "normal" : opt // 纹理集图层的纹理名称</br>        string "heightmap" : opt // 纹理集图层的纹理名称</br>        color "metalness_emissive_roughness" : opt // 使用数组或十六进制字符串中的指定值填充纹理集图层的 RGB 通道</br>        string "metalness_emissive_roughness" : opt // 纹理集图层的纹理名称</br>    }</br>}</br></br>----------</br>```</br><a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Layers">Layers</p></h1>
+<h1><p id="Layers">Layers（图层）</p></h1>
 
-A texture_set.json file may specify several layers.</br>Layers are references to texture image resources. they can also be defined in .json as values for uniform solid values as an alternative to referencing texture images in a pack.</br></br><h2></h2>
+texture_set.json 文件可以指定多个图层。</br>图层是对纹理图像资源的引用。它们也可以在 .json 中定义为 Uniform Solid 值的值，作为在包中引用纹理图像的替代方法。</br></br><h2></h2>
 
-<h2><p id="Color">Color</p></h2>
+<h2><p id="Color">Color（颜色）</p></h2>
 
-- This is an RGB 3-channel image (defaults to uniform alpha of 1.0), or an RGBA 4-channel image, or a 4 value array for a uniform color with alpha.</br>- This is the only required layer.</br>- It is the only layer used by the Classic pipeline.</br>- Typically there is lighting baked in the color image.</br><a href="#Index">Back to top</a><br><br>
+- 这是 RGB 3 通道图像（默认为统一 Alpha 为 1.0），或 RGBA 4 通道图像，或具有 Alpha 的统一颜色的 4 值数组。</br>- 这是唯一必需的图层。</br>- 它是经典通道使用的唯一图层。</br>- 通常，彩色图像中会烘焙光照。</br><a href="#Index">返回顶部</a><br><br>
 
 <h2><p id="Normal">Normal</p></h2>
 
-- 3-channel normal map image (or 4-channel where the 4th channel is ignored).</br>- Mutually exclusive with the `heightmap` layer.</br><a href="#Index">Back to top</a><br><br>
+- 3 通道法线贴图图像（或忽略第 4 个通道的 4 通道）。</br>- 与 'heightmap' 图层互斥。</br><a href="#Index">返回顶部</a><br><br>
 
-<h2><p id="Heightmap">Heightmap</p></h2>
+<h2><p id="Heightmap">Heightmap（高度贴图）</p></h2>
 
-- 1-channel layer image or a single value in json for a uniform heightmap.</br>- Mutually exclusive with the `normal` layer.</br><a href="#Index">Back to top</a><br><br>
+- 1 通道图层图像或 JSON 中的单个值，用于统一高度图。</br>- 与 'normal' 图层互斥。</br><a href="#Index">返回顶部</a><br><br>
 
-<h2><p id="Metalness_emissive_roughness">Metalness_emissive_roughness</p></h2>
+<h2><p id="Metalness_emissive_roughness">Metalness_emissive_roughness（金属度_发光_粗糙度）</p></h2>
 
-- 3-channel image (or 4-channel where the 4th channel is ignored) or a 3 value array for a uniform MER.</br>- RGB images map Red to Metalness, Green to Emissive, and Blue to Roughness.</br><a href="#Index">Back to top</a><br><br>
+- 3 通道图像（或忽略第 4 个通道的 4 通道）或统一 MER 的 3 值数组。</br>- RGB 图像将 Red 映射到 Metalness，将 Green 映射到 Emissive，将 Blue 映射到 Roughness。</br><a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
-<h1><p id="Specifying uniform values">Specifying uniform values</p></h1>
+<h1><p id="Specifying uniform values">指定 uniform 值</p></h1>
 
-Instead of referencing a texture image for a Texture Set layer, values can instead be specified in the *texture_set.json file,			which is effectively the equivalent to referencing a texture image filled uniformly with that value or values for the respective channels.</br></br>The values in the json can be specified in any of the following formats:</br>- 0 to 255 numeric range, or as a vector of such integers for a multi-channel layer.</br>- Hexadecimal RGB or ARGB for 3 and 4 channels respectively, also as 2 hex digits for a single channel layer.</br><a href="#Index">Back to top</a><br><br>
+可以在 *texture_set.json 文件中指定值，而不是引用纹理集图层的纹理图像，这实际上等同于引用用相应通道的一个或多个值均匀填充的纹理图像。</br></br>json 中的值可以采用以下任何格式指定：</br>- 数字范围0到255，或者作为多通道图层的此类整数的向量。</br>- 十六进制 RGB 或 ARGB 分别用于 3 个和 4 个通道，也作为 2 个十六进制数字用于单个通道层。</br><a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Examples of *.texture_set.json files">Examples of *.texture_set.json files</p></h1>
+<h1><p id="Examples of *.texture_set.json files">*.texture_set.json 文件的示例</p></h1>
 
 <h2></h2>
-All the layer values can be mixed and match with references to image textures, hexadecimal and numerical values.
+所有图层值都可以混合，并与图像纹理、十六进制和数值的引用匹配。
 <br / ><textarea readonly="true" cols="56" rows="11">
 
         {
@@ -61,7 +61,7 @@ All the layer values can be mixed and match with references to image textures, h
         }
         
 </textarea> </br>
-This example uses referenced images that exist in the same folder. It uses a normal and MER map.
+此示例使用存在于同一文件夹中的引用图像。它使用法线贴图和 MER 贴图。
 <br / ><textarea readonly="true" cols="67" rows="11">
 
         {
@@ -74,7 +74,7 @@ This example uses referenced images that exist in the same folder. It uses a nor
         }
         
 </textarea> </br>
-You could also specify values of textures using numerical or hexadecimal values.
+您还可以使用数字或十六进制值指定纹理的值。
 <br / ><textarea readonly="true" cols="63" rows="10">
 
         {
@@ -86,19 +86,19 @@ You could also specify values of textures using numerical or hexadecimal values.
         }
         
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Invalid *.texture_set.json">Invalid *.texture_set.json</p></h1>
+<h1><p id="Invalid *.texture_set.json">无效 *.texture_set.json</p></h1>
 
-If a Texture Set is invalid, we'll log a CONTENT_ERROR and the Texture Set will not be used.</br>A Texture Set is invalid if:</br>- Json data cannot be parsed, or doesn't meet the Texture Set schema.</br>- Color layer is not specified. Having a color layer in the .texture_set.json is required.</br>- Both heightmap and normal layers are defined.</br>- If a referenced texture does not exist in the same resource pack or the referenced texture cannot be parsed.</br>- Any layer is defined with an unexpected number of channels:</br>  - For layers that are specified with referenced images: Color, MER, and Normal support 3 or 4 channel images;		Heightmap support 1-channel images only.</br>  - For layers that are specified with numerical or hexadecimal values: Color support 4-channel values;		MER support 3-channel values;</br><a href="#Index">Back to top</a><br><br>
+如果纹理集无效，我们将记录一个CONTENT_ERROR，并且不会使用纹理集。</br>在以下情况下，纹理集无效：</br>- Json 数据无法解析，或者不符合纹理集架构。</br>- 未指定颜色图层。需要在 .texture_set.json 中有一个颜色图层。</br>- 高度贴图和法线图层都已定义。</br>- 引用的纹理不存在于同一资源包中，或者无法解析引用的纹理。</br>- 任何图层都定义了意外数量的通道：</br>- 对于使用引用图像指定的图层：Color、MER 和 Normal 支持 3 通道或 4 通道图像;高度贴图仅支持 1 通道图像。</br>- 对于使用数字或十六进制值指定的图层：颜色支持 4 通道值;MER 支持 3 通道值;</br><a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Resource Stack Behaviour">Resource Stack Behaviour</p></h1>
+<h1><p id="Resource Stack Behaviour">资源堆栈行为</p></h1>
 
-- Texture Set definitions can only reference images that exist in the same resource pack as the definition.</br>- Texture images in higher priority resource packs do not override a Texture Set's reference to a texture in its own pack.</br>- In the resource pack stack, Texture Set definitions for the same texture resource don't get merged. The higher priority pack's Texture Set definition will override the lower priority one.</br><a href="#Index">Back to top</a><br><br>
+- 纹理集定义只能引用与定义相同的资源包中存在的图像。</br>- 较高优先级资源包中的纹理图像不会覆盖纹理集对其自身包中纹理的引用。</br>- 在资源包堆栈中，同一纹理资源的纹理集定义不会合并。优先级较高的包的纹理集定义将覆盖优先级较低的纹理集定义。</br><a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Referencing Texture Resources">Referencing Texture Resources</p></h1>
+<h1><p id="Referencing Texture Resources">引用纹理资源</p></h1>
 
-The priority of file extensions, in case you have duplicate image references, is: .tga > .png > .jpg > .jpeg. For example: 			if grass.png and grass.tga both exist in the folder, grass.tga will be chosen. This also applies to other data driven files, like actor json referencing a texture resource.</br><a href="#Index">Back to top</a><br><br>
+如果您有重复的图像引用，文件扩展名的优先级为：.tga > .png > .jpg > .jpeg。例如：如果文件夹中同时存在 grass.png 和 grass.tga，则将选择 grass.tga。这也适用于其他数据驱动文件，例如引用纹理资源的json。</br><a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
