@@ -1,10 +1,10 @@
 <h1>FEATURES DOCUMENTATION </br>Version: 1.21.80.3</h1>
-<h2><p id="Index">Index</p></h2>
+<h2><p id="Index">索引</p></h2>
 <table border="1">
-<tr> <th><a href="#Overview">Overview</a></th> </tr>
-<tr> <th><a href="#JSON format">JSON format</a></th> </tr>
-<tr> <th><a href="#Adding features">Adding features</a></th> </tr>
-<tr> <th><a href="#Supported features">Supported features</a></th> </tr>
+<tr> <th><a href="#Overview">概述</a></th> </tr>
+<tr> <th><a href="#JSON format">JSON 格式</a></th> </tr>
+<tr> <th><a href="#Adding features">添加地物</a></th> </tr>
+<tr> <th><a href="#Supported features">支持的地物</a></th> </tr>
 <tr> <td> <a href="#minecraft:aggregate_feature"> minecraft:aggregate_feature</a> </tr> </td>
 <tr> <td> <a href="#minecraft:sequence_feature"> minecraft:sequence_feature</a> </tr> </td>
 <tr> <td> <a href="#minecraft:beards_and_shavers"> minecraft:beards_and_shavers</a> </tr> </td>
@@ -30,29 +30,29 @@
 <tr> <td> <a href="#minecraft:tree_feature"> minecraft:tree_feature</a> </tr> </td>
 <tr> <td> <a href="#minecraft:vegetation_patch_feature"> minecraft:vegetation_patch_feature</a> </tr> </td>
 <tr> <td> <a href="#minecraft:weighted_random_feature"> minecraft:weighted_random_feature</a> </tr> </td>
-<tr> <th><a href="#Attaching features">Attaching features</a></th> </tr>
-<tr> <th><a href="#Feature rules">Feature rules</a></th> </tr>
-<tr> <th><a href="#Feature rule schema">Feature rule schema</a></th> </tr>
-<tr> <td> <a href="#Coordinate Evaluation Order"> Coordinate Evaluation Order</a> </tr> </td>
-<tr> <td> <a href="#Coordinate Range"> Coordinate Range</a> </tr> </td>
-<tr> <td> <a href="#Feature Rule Conditions"> Feature Rule Conditions</a> </tr> </td>
-<tr> <td> <a href="#Feature Rule Definition"> Feature Rule Definition</a> </tr> </td>
-<tr> <td> <a href="#Feature Rule Description"> Feature Rule Description</a> </tr> </td>
-<tr> <td> <a href="#Filter Group"> Filter Group</a> </tr> </td>
-<tr> <td> <a href="#Filter Test"> Filter Test</a> </tr> </td>
-<tr> <td> <a href="#Random Distribution Type"> Random Distribution Type</a> </tr> </td>
-<tr> <td> <a href="#Scatter Chance"> Scatter Chance</a> </tr> </td>
-<tr> <td> <a href="#Scatter Params"> Scatter Params</a> </tr> </td>
+<tr> <th><a href="#Attaching features">附加地物</a></th> </tr>
+<tr> <th><a href="#Feature rules">地物规则</a></th> </tr>
+<tr> <th><a href="#Feature rule schema">地物规则架构</a></th> </tr>
+<tr> <td> <a href="#Coordinate Evaluation Order"> Coordinate Evaluation Order（坐标评估顺序）</a> </tr> </td>
+<tr> <td> <a href="#Coordinate Range">Coordinate Range（坐标范围）</a> </tr> </td>
+<tr> <td> <a href="#Feature Rule Conditions"> Feature Rule Conditions（地物规则条件）</a> </tr> </td>
+<tr> <td> <a href="#Feature Rule Definition"> Feature Rule Definition（地物规则定义）</a> </tr> </td>
+<tr> <td> <a href="#Feature Rule Description"> Feature Rule Description（地物规则描述）</a> </tr> </td>
+<tr> <td> <a href="#Filter Group"> Filter Group（过滤器组）</a> </tr> </td>
+<tr> <td> <a href="#Filter Test"> Filter Test（过滤器测试）</a> </tr> </td>
+<tr> <td> <a href="#Random Distribution Type"> Random Distribution Type（随机分布类型）</a> </tr> </td>
+<tr> <td> <a href="#Scatter Chance"> Scatter Chance（散布几率）</a> </tr> </td>
+<tr> <td> <a href="#Scatter Params"> Scatter Params（散布参数）</a> </tr> </td>
 </table>
-<a href="#Index">Back to top</a>
-<h1><p id="Overview">Overview</p></h1>
+<a href="#Index">返回顶部</a>
+<h1><p id="Overview">概述</p></h1>
 
-Features are decorations scattered throughout the world. Things such as trees, plants, flowers, springs, ore, and coral are all features. Basically, if it isn't the terrain or a mob, it's probably a feature!</br>Features can be standalone or composed of multiple sub-features. In practice, most features in Minecraft are defined as a chain of two or more features. These chains typically end with features that place blocks in the world. Other feature types control flow such as conditional, sequential, or random distribution.</br><a href="#Index">Back to top</a><br><br>
+地物是散布在世界各地的装饰品。树木、植物、花朵、泉水、矿石和珊瑚等事物都是地物。基本上，如果它不是地形或生物，它可能是一个地物！</br>地物可以是独立的，也可以由多个子地物组成。在实践中，Minecraft 中的大多数地物都定义为两个或多个地物的链。这些链通常以在世界中放置方块的地物结束。其他地物类型控制流程，例如条件分布、顺序分布或随机分布。</br><a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="JSON format">JSON format</p></h1>
+<h1><p id="JSON format">JSON 格式</p></h1>
 
-All features must specify the version that they target via the "format_version" field. The remainder of the data is contained in independet JSON sub-objects for each supported feature type. These feature types define the behavior of the feature and include properties specific to that behavior. To be valid, a definition must include exactly one of these type objects. See the full feature schema below for additional details and the full list of supported feature types.</br><h2></h2>
-Here is a sample feature<br / ><textarea readonly="true" cols="49" rows="16">
+所有地物都必须通过 “format_version” 字段指定其目标版本。其余数据包含在每个受支持地物类型的独立 JSON 子对象中。这些地物类型定义地物的行为，并包含特定于该行为的属性。要有效，定义必须恰好包含这些类型对象之一。有关更多详细信息和受支持地物类型的完整列表，请参阅下面的完整地物架构。</br><h2></h2>
+这是一个地物示例<br / ><textarea readonly="true" cols="49" rows="16">
 {
   "format_version": "1.13.0",
   "minecraft:ore_feature": {
@@ -69,18 +69,18 @@ Here is a sample feature<br / ><textarea readonly="true" cols="49" rows="16">
   }
 }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Adding features">Adding features</p></h1>
+<h1><p id="Adding features">添加地物</p></h1>
 
-Features are read from JSON files in the "features" subfolder of behavior packs. Loading enforces one feature per file; the file name and the name of the feature must match. Feature names can include a namespace of the form "namespace:feature_name" to help distinguish them from features that may be in other behavior packs. This namespace is not considered when matching the filename to the feature name. For example, in a file called "my_tree_feature.json" both "my_tree_feature" and "my_pack_name:my_tree_feature" would be valid identifiers. If two behavior packs define the same feature name (including namespace), then the feature from the highest pack in the stack will be used. This allows users to override base features if desired.</br><a href="#Index">Back to top</a><br><br>
+地物是从行为包的 “features” 子文件夹中的 JSON 文件中读取的。加载将强制每个文件使用一个地物;文件名和地物的名称必须匹配。地物名称可以包含 “namespace:feature_name” 形式的命名空间，以帮助将它们与其他行为包中的地物区分开来。将文件名与地物名称匹配时，不考虑此命名空间。例如，在名为 “my_tree_feature.json” 的文件中，“my_tree_feature” 和 “my_pack_name:my_tree_feature” 都是有效的标识符。如果两个行为包定义了相同的地物名称（包括命名空间），则将使用堆栈中优先级最高包中的地物。这允许用户根据需要覆盖基本地物。</br><a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Supported features">Supported features</p></h1>
+<h1><p id="Supported features">支持的地物</p></h1>
 
 <h1><p id="minecraft:aggregate_feature">minecraft:aggregate_feature</p></h1>
 
-'minecraft:aggregate_feature' places a collection of features in an arbitary order. All features in the collection use the same input position. Features should not depend on each other, as there is no guarantee on the order the features will be placed.</br>Succeeds if: At lease one feature is placed successfully.</br>Fails if: All features fail to be placed.</br><h2></h2>
-Example use: scattering multiple different plants around a monument.<br / ><textarea readonly="true" cols="60" rows="14">
+'minecraft:aggregate_feature' 将一系列地物按任意顺序排列。集合中的所有地物都使用相同的输入位置。地物不应相互依赖，因为无法保证地物放置的顺序。</br>如果出现以下情况，则成功：至少成功放置了一个地物。</br>如果出现以下情况，则失败：无法放置所有地物。</br><h2></h2>
+示例：在纪念碑周围散布多种不同的植物。<br / ><textarea readonly="true" cols="60" rows="14">
 {
   "format_version": "1.13.0",
   "minecraft:aggregate_feature": {
@@ -95,12 +95,12 @@ Example use: scattering multiple different plants around a monument.<br / ><text
   }
 }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:sequence_feature">minecraft:sequence_feature</p></h1>
 
-'minecraft:sequence_feature' places a collection of features sequentially, in the order they appear in data. The output position of the previous feature is used as the input position for the next. For example, a tree feature is placed at (0, 0, 0) and places blocks up to (0, 10, 0). The next feature in the sequence begins at (0, 10, 0).</br>Succeeds if: All features in the sequence are successfully placed.</br>Fails if: Any feature in the sequence fails to be placed. Features that have not yet been placed at the time of failure are skipped.</br><h2></h2>
-Example use: Scattering fruit throughout the canopy of a tree.<br / ><textarea readonly="true" cols="59" rows="13">
+'minecraft:sequence_feature' 按照它们在数据中出现的顺序依次放置一组地物。前一个地物的输出位置将用作下一个地物的输入位置。例如，树地物放置在 （0，0，0） 处，并放置最多 （0，10，0） 的方块。序列中的下一个地物从 （0，10，0） 开始。</br>成功条件：已成功放置序列中的所有地物。</br>如果出现以下情况，则失败：序列中的任何地物未能放置。在失败时尚未放置的地物将被跳过。</br><h2></h2>
+示例：将水果散布在树冠上。<br / ><textarea readonly="true" cols="59" rows="13">
 {
   "format_version": "1.13.0",
   "minecraft:sequence_feature": {
@@ -114,12 +114,12 @@ Example use: Scattering fruit throughout the canopy of a tree.<br / ><textarea r
   }
 }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:beards_and_shavers">minecraft:beards_and_shavers</p></h1>
 
-'minecraft:beards_and_shavers' will build a 'beard' or 'shave' out space so as to provide a clear space for a feature to place.</br>Succeeds if: a beard/shave is made (this should always happen).</br>Fails if: will always return placement pos, but interior feature placement not guaranteed.</br><h2></h2>
-Example use: provides an area for interior structure placement<br / ><textarea readonly="true" cols="73" rows="14">
+'minecraft:beards_and_shavers' 将构建一个 '胡须' 或 '剃须' 空间，以便为放置地物提供一个清晰的空间。</br>如果出现以下情况，则成功：放置了胡须/剃须（这应该总是发生）。</br>如果出现以下情况，则失败：将始终返回放置位置，但不能保证内部地物放置。</br><h2></h2>
+示例：提供用于内部结构放置的区域<br / ><textarea readonly="true" cols="73" rows="14">
 {"code:beards_and_shavers": {
           "description": {
             "identifier": "..."
@@ -134,12 +134,12 @@ Example use: provides an area for interior structure placement<br / ><textarea r
           "beard_raggedness_max": 0.3
         }}
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:cave_carver_feature">minecraft:cave_carver_feature</p></h1>
 
-'minecraft:cave_carver_feature' carves a cave through the world in the current chunk, and in every chunk around the current chunk in an 8 radial pattern.This feature will also only work when placed specifically in the pass "pregeneration_pass".</br><h2></h2>
-Example use: Carve caves normally.<br / ><textarea readonly="true" cols="68" rows="12">
+'Minecraft:cave_carver_feature' 在当前区块中穿过世界，并在当前区块周围的每个区块中以 8 径向模式雕刻一个洞穴。此地物也仅在专门放置在通道 “pregeneration_pass” 中时有效。</br><h2></h2>
+示例：正常雕刻洞穴。<br / ><textarea readonly="true" cols="68" rows="12">
 {
       "format_version": "1.13.0",
         "minecraft:cave_carver_feature": {
@@ -152,12 +152,12 @@ Example use: Carve caves normally.<br / ><textarea readonly="true" cols="68" row
         }
       }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:conditional_list">minecraft:conditional_list</p></h1>
 
-'minecraft:conditional_list' Places the first suitable feature within a collection.</br>These conditional features will be evaluated in order.</br>Succeeds if: A condition is successfully resolved.</br>Fails if: No condition is successfully resolved.</br><h2></h2>
-Example use: assigning a feature to an expression<br / ><textarea readonly="true" cols="68" rows="9">
+'minecraft:conditional_list' 将第一个合适的地物放在集合中。</br>将按顺序评估这些条件地物。</br>如果出现以下情况，则成功：条件已成功解决。</br>如果出现以下情况，则失败：未成功解决任何条件。</br><h2></h2>
+示例：为表达式分配地物<br / ><textarea readonly="true" cols="68" rows="9">
 "conditional_features" : [
             { 
               "places_feature" : "minecraft:some_feature_or_other",
@@ -167,12 +167,12 @@ Example use: assigning a feature to an expression<br / ><textarea readonly="true
           "early_out_scheme": "placement_success"
         
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:fossil_feature">minecraft:fossil_feature</p></h1>
 
-'minecraft:fossil_feature' generates a skeletal structure composed of bone blocks and parametric ore blocks.Succeeds if: The fossil is placed.</br>Fails if: The fossil is not placed because it overlaps with another structure or because its bounding box has too many corners occupied by air or fluid.</br><h2></h2>
-Example use: Fossil composed of bone blocks and coal ore blocks.<br / ><textarea readonly="true" cols="53" rows="11">
+'Minecraft:fossil_feature' 生成一个由骨块和参数化矿石块组成的骨骼结构。<br>如果出现以下情况，则成功：放置化石。</br>在以下情况下失败：未放置化石，因为它与其他结构重叠，或者因为其边界框的角太多，被空气或流体占据。</br><h2></h2>
+示例：由骨块和煤矿石块组成的化石。<br / ><textarea readonly="true" cols="53" rows="11">
 {
           "format_version": "1.13.0",
           "minecraft:fossil_feature": {
@@ -184,12 +184,12 @@ Example use: Fossil composed of bone blocks and coal ore blocks.<br / ><textarea
           }
         }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:geode_feature">minecraft:geode_feature</p></h1>
 
-'minecraft:geode_feature' generates a rock formation to simulate a geode. Each layer of, and block within, the geode can be replaced. Succeeds if: At least one block within the geode is placed.</br>Fails if: All blocks within the geode fail to be placed.</br><h2></h2>
-Example use: Diamond geodes with emerald blocks inside and obsidian on the outside.<br / ><textarea readonly="true" cols="54" rows="32">
+'Minecraft:geode_feature' 生成岩层以模拟水晶洞。水晶洞的每一层和其中的方块都可以替换。<br>成功条件：在晶洞中至少放置一个方块。</br>如果出现以下情况，则失败：无法放置水晶洞中的所有方块。</br><h2></h2>
+示例：内部有绿宝石块，外部有黑曜石的钻石晶洞。<br / ><textarea readonly="true" cols="54" rows="32">
 {
   "format_version": "1.13.0",
   "minecraft:geode_feature": {
@@ -227,12 +227,12 @@ Example use: Diamond geodes with emerald blocks inside and obsidian on the outsi
   }
 }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:growing_plant_feature">minecraft:growing_plant_feature</p></h1>
 
-'minecraft:growing_plant_feature' places a growing plant in the world. A growing plant is a column that is anchored either to the ceiling or the floor, based on its growth direction.</br>The growing plant has a body and a head, where the head is the tip of the plant, and the body consists of the remainder blocks.</br>This feature can be used to define growing plants with variable body and head blocks, e.g. Cave Vines.</br><h2></h2>
-Example use: Defining a growing plant feature with variable body and head blocks and height distribution.<br / ><textarea readonly="true" cols="53" rows="25">
+'Minecraft:growing_plant_feature' 在世界上放置了一棵正在生长的植物。生长植物是根据其生长方向锚定在天花板或地板上的柱子。</br>生长中的植物有一个主体和一个头部，其中头部是植物的尖端，主体由其余的方块组成。</br>此地物可用于定义具有可变“主体方块”和“头部方块”的生长植物，例如发光浆果。</br><h2></h2>
+示例：定义具有可变主体和头部方块以及高度分布的生长植物地物。<br / ><textarea readonly="true" cols="53" rows="25">
 {
   "format_version": "1.13.0",
   "minecraft:growing_plant_feature": {
@@ -258,12 +258,12 @@ Example use: Defining a growing plant feature with variable body and head blocks
   }
 }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:nether_cave_carver_feature">minecraft:nether_cave_carver_feature</p></h1>
 
-'minecraft:nether_cave_carver_feature' carves a cave through the Nether in the current chunk, and in every chunk around the current chunk in an 8 radial pattern.This feature will also only work when placed specifically in the pass "pregeneration_pass".</br><h2></h2>
-Example use: Carve nether caves normally.<br / ><textarea readonly="true" cols="63" rows="11">
+'minecraft:nether_cave_carver_feature' 在当前区块的下界中凿出一个洞穴，并在当前区块周围的每个区块中以 8 个径向模式凿出一个洞穴。此地物也仅在专门放置在通道 “pregeneration_pass” 中时有效。</br><h2></h2>
+示例：正常雕刻下界洞穴。<br / ><textarea readonly="true" cols="63" rows="11">
 {
       "format_version": "1.13.0",
         "minecraft:nether_cave_carver_feature": {
@@ -275,12 +275,12 @@ Example use: Carve nether caves normally.<br / ><textarea readonly="true" cols="
         }
       }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:multiface_feature">minecraft:multiface_feature</p></h1>
 
-'minecraft:multiface_feature' places one or a few multiface blocks on floors/walls/ceilings. Despite the name, any block can be placed by this feature. During placement, existing world blocks are checked to see if this feature can be placed on them based on the list provided in the 'can_place_on' field. If no 'can_replace_on' field is specified, the 'place_block' block can be placed on any existing block.</br>This feature will also try to spread the 'place_block' block around the location in world the feature is placed.</br>Succeeds if: At least one block is successfully placed.</br>Fails if: All block placements fail.</br><h2></h2>
-Example use: Blue vines in caves.<br / ><textarea readonly="true" cols="49" rows="18">
+'Minecraft:multiface_feature' 在地板/墙壁/天花板上放置一个或几个多面方块。尽管名称如此，但此地物可以放置任何方块。在放置过程中，会检查现有的世界方块，看看是否可以根据 'can_place_on' 字段中提供的列表将此地物放置在它们上面。如果未指定 'can_replace_on' 字段，则可以将 'place_block' 方块放置在任何现有方块上。</br>此地物还会尝试将 'place_block' 方块分布在放置该地物的世界中的位置。</br>成功条件：至少成功放置一个方块。</br>如果出现以下情况，则失败：所有方块放置都失败。</br><h2></h2>
+示例：洞穴中的蓝色藤蔓。<br / ><textarea readonly="true" cols="49" rows="18">
 {
   "format_version": "1.13.0",
   "minecraft:multiface_feature": {
@@ -299,12 +299,12 @@ Example use: Blue vines in caves.<br / ><textarea readonly="true" cols="49" rows
   }
 }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:ore_feature">minecraft:ore_feature</p></h1>
 
-'minecraft:ore_feature' places a vein of blocks to simulate ore deposits. Despite the name, any block can be placed by this feature. During placement, existing world blocks are checked to see if they can be replaced by the new ore block based on the list provided in the 'may_replace' field of a 'replace_rules' entry. If no 'may_replace' field is specified in a 'replace_rule' entry, the ore block can replace any existing block.</br>Succeeds if: At least one ore block is successfully placed.</br>Fails if: All ore block placements fail.</br><h2></h2>
-Example use: Malachite ore in different materials.<br / ><textarea readonly="true" cols="56" rows="30">
+'Minecraft:ore_feature' 放置了一条矿脉来模拟矿床。尽管名称如此，但此地物可以放置任何方块。在放置过程中，会检查现有的世界方块，看看它们是否可以根据 'replace_rules' 条目的 'may_replace' 字段中提供的列表被新的矿石方块替换。如果在 'replace_rule' 条目中没有指定 'may_replace' 字段，则矿石方块可以替换任何现有方块。</br>成功条件：至少成功放置了一个矿石方块。</br>在以下情况下失败：所有矿石方块放置都失败。</br><h2></h2>
+示例：不同材质的孔雀石矿石（malachite_ore）。<br / ><textarea readonly="true" cols="56" rows="30">
 {
   "format_version": "1.13.0",
   "minecraft:ore_feature": {
@@ -335,7 +335,7 @@ Example use: Malachite ore in different materials.<br / ><textarea readonly="tru
   }
 }
 </textarea> </br>
-Example use: Oil deposits in the sand.<br / ><textarea readonly="true" cols="50" rows="18">
+示例：沙子中的石油沉积物。<br / ><textarea readonly="true" cols="50" rows="18">
 {
   "format_version": "1.13.0",
   "minecraft:ore_feature": {
@@ -354,12 +354,12 @@ Example use: Oil deposits in the sand.<br / ><textarea readonly="true" cols="50"
   }
 }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:partially_exposed_blob_feature">minecraft:partially_exposed_blob_feature</p></h1>
 
-'minecraft:partially_exposed_blob_feature' generates a blob of the specified block with the specified dimensions For the most part the blob is embedded in the specified surface, however a single side is allowed to be exposed.</br><h2></h2>
-Example use: Blobs of Magma blocks partially embedded in the floors of flooded caves.<br / ><textarea readonly="true" cols="57" rows="13">
+'minecraft:partially_exposed_blob_feature' 生成具有指定尺寸的指定方块的团簇，在大多数情况下该团簇嵌入到指定的表面中，但允许暴露单个面。</br><h2></h2>
+示例：嵌入被淹没的洞穴地板中的岩浆块。<br / ><textarea readonly="true" cols="57" rows="13">
 {
     "format_version": "1.13.0",
     "minecraft:partially_exposed_blob_feature": {
@@ -373,12 +373,12 @@ Example use: Blobs of Magma blocks partially embedded in the floors of flooded c
     }
   }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:rect_layout">minecraft:rect_layout</p></h1>
 
-'minecraft:rect_layout' scans the surface of a Chunk, calling place() on the surface of each block column.</br>Succeeds if: A Feature is successfully placed within a Chunk.</br>Fails if: No Feature could be placed within a Chunk.</br><h2></h2>
-Example use: Scans the surface of a chunk and places a feature if able<br / ><textarea readonly="true" cols="46" rows="16">
+'minecraft:rect_layout' 扫描区块的表面，在每个方块列的表面上调用 place（）。</br>成功条件：地物已成功放置在区块中。</br>如果出现以下情况，则失败：无法在区块中放置任何地物。</br><h2></h2>
+示例：扫描方块的表面并在可能的情况下放置一个地物<br / ><textarea readonly="true" cols="46" rows="16">
 
       {
         "ratio_of_empty_space": 0.5,
@@ -395,20 +395,20 @@ Example use: Scans the surface of a chunk and places a feature if able<br / ><te
       }
     
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:scan_surface">minecraft:scan_surface</p></h1>
 
-'minecraft:scan_surface' scans the surface of a Chunk, calling place() on the surface of each block column.</br>Succeeds if: A Feature was successfully placed during the scan.</br>Fails if: No Feature was placed during the course of the scan.</br><h2></h2>
-Example use: Scans the surface of a chunk and places a feature if able<br / ><textarea readonly="true" cols="50" rows="2">
+'minecraft:scan_surface' 扫描区块的表面，在每个方块列的表面上调用 place（）。</br>成功条件：在扫描期间成功放置了地物。</br>如果出现以下情况，则失败：在扫描过程中未放置任何地物。</br><h2></h2>
+示例：扫描区块的表面并在可能的情况下放置一个地物<br / ><textarea readonly="true" cols="50" rows="2">
 {"scan_surface_feature": "example:apple_feature"}
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:scatter_feature">minecraft:scatter_feature</p></h1>
 
-'minecraft:scatter_feature' scatters a feature throughout a chunk. The 'x', 'y', and 'z' fields are per-coordinate parameters. Note that coordinates represent an offset from the input position, not an absolute position. Coordinates may be a single value, a random distribution, or Molang expression that resolves to a numeric value. The 'coordinate_eval_order' field is provided for finer control of coordinate resolution (particularly when using the 'grid' distribution). 'iterations' controls how many individual placements should occur if the 'scatter_chance' check succeeds. The 'scatter_chance' check happens once, so either all placements will run or none will.</br>Succeeds if: At least one feature placement succeeds.</br>Fails if: All feature placements fail.</br><h2></h2>
-Example use: Scattering flowers at sea level across half the chunks in a biome.<br / ><textarea readonly="true" cols="54" rows="23">
+'minecraft:scatter_feature' 将地物分散到整个区块中。'x'、'y' 和 'z' 字段是每个坐标的参数。请注意，坐标表示与输入位置的偏移量，而不是绝对位置。坐标可以是单个值、随机分布或解析为数值的 Molang 表达式。提供 'coordinate_eval_order' 字段是为了更精细地控制坐标分辨率（尤其是在使用 '网格' 分布时）。“iterations”控制如果“scatter_chance”检查成功，应进行多少个单独的投放。“scatter_chance”检查只进行一次，因此要么运行所有版面，要么不运行任何版面。</br>如果出现以下情况，则成功：至少有一个地物放置成功。</br>如果出现以下情况，则失败：所有地物放置都失败。</br><h2></h2>
+示例：将海平面上的花散布在生物群系中一半的区块中。<br / ><textarea readonly="true" cols="54" rows="23">
 {
   "format_version": "1.13.0",
   "minecraft:scatter_feature": {
@@ -432,16 +432,16 @@ Example use: Scattering flowers at sea level across half the chunks in a biome.<
   }
 }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:sculk_patch_feature">minecraft:sculk_patch_feature</p></h1>
 
-Feature type 'minecraft:sculk_patch_feature' has not yet been documented.</br><a href="#Index">Back to top</a><br><br>
+地物类型“minecraft:sculk_patch_feature”尚未记录。</br><a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:search_feature">minecraft:search_feature</p></h1>
 
-'minecraft:search_feature' sweeps a volume searching for a valid placement location for its referenced feature. The 'search_volume' field specifies the axis-aligned bounding box that defines the boundaries of the search. The search sweeps along the axis defined by the 'search_axis' field, layer by layer. For example, if 'search_axis' = '-x', blocks with greater x values will be checked before blocks with lower x values. Each layer is searched from the bottom-left to the top-right before moving to the next layer along the axis. By default, only one valid position must be found, but this can be altered by specifying the 'required_successes' field. If fewer than the required successes are found, no placement will occur.</br>Succeeds if: The number of valid positions is equal to the value specified by 'required_successes'.</br>Fails if: The number of valid positions is less than the value specified by 'required_successes'.</br><h2></h2>
-Example use: Attaching apples to a tree canopy<br / ><textarea readonly="true" cols="56" rows="16">
+'minecraft:search_feature' 扫描一个卷，为其引用的地物搜索有效的放置位置。'search_volume' 字段指定定义搜索边界的轴对齐边界框。搜索将沿 'search_axis' 字段定义的轴逐层扫描。例如，如果 'search_axis' = '-x'，则 x 值较大的块将在 x 值较小的块之前被检查。在沿轴移动到下一层之前，将从左下角到右上角搜索每层。默认情况下，只能找到一个有效位置，但这可以通过指定 'required_successes' 字段来更改。如果找到的成功数少于所需的成功数，则不会发生放置。</br>如果出现以下情况，则成功：有效位置的数量等于 'required_successes' 指定的值。</br>如果出现以下情况，则失败：有效位置的数量小于 'required_successes' 指定的值。</br><h2></h2>
+示例：将苹果连接到树冠上<br / ><textarea readonly="true" cols="56" rows="16">
 {
   "format_version": "1.13.0",
   "minecraft:search_feature": {
@@ -458,12 +458,12 @@ Example use: Attaching apples to a tree canopy<br / ><textarea readonly="true" c
   }
 }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:single_block_feature">minecraft:single_block_feature</p></h1>
 
-'minecraft:single_block_feature' places a single block in the world. The 'places_block' field supports a single block or a list of weighted blocks, where the weight defines how likely it is for that block to be selected. The 'may_attach_to' and 'may_replace' fields are allowlists which specify where the block can be placed. If these fields are omitted, the block can be placed anywhere. The 'may_not_attach_to' field is a denylist that specifies what blocks can't be close to the placement location. The 'randomize_rotation' field will randomize the block's cardinal orientation. The block's internal survivability and placement rules can optionally be enforced with the 'enforce_survivability_rules' and 'enforce_placement_rules' fields. These rules are specified per-block and are typically designed to produce high quality gameplay or natural behavior. However, enabling this enforcement may make it harder to debug placement failures.</br>Succeeds if: The block is successfully placed in the world.</br>Fails if: The block fails to be placed.</br><h2></h2>
-Example use: Placing a single pumpkin or carved pumpkin block where carved pumpkins are less likely to appear.<br / ><textarea readonly="true" cols="53" rows="32">
+'Minecraft:single_block_feature' 在世界中放置一个方块。'places_block' 字段支持单个方块或加权方块列表，其中权重定义该方块被选中的可能性。'may_attach_to' 和 'may_replace' 字段是允许列表，用于指定可以放置阻止的位置。如果省略这些字段，则可以将块放置在任何位置。'may_not_attach_to' 字段是一个拒绝列表，用于指定哪些方块不能靠近放置位置。'randomize_rotation' 字段将随机化方块的基数方向。方块的内部生存能力和放置规则可以选择使用 'enforce_survivability_rules' 和 'enforce_placement_rules' 字段来强制执行。这些规则是按方块指定的，通常旨在生成高质量的游戏或自然行为。但是，启用此强制可能会使调试放置失败变得更加困难。</br>如果出现以下情况，则成功：方块已成功放置在世界中。</br>如果出现以下情况，则失败 ：放置方块失败。</br><h2></h2>
+示例：将单个南瓜或雕刻南瓜放置在雕刻南瓜不太可能出现的地方。<br / ><textarea readonly="true" cols="53" rows="32">
 {
   "format_version": "1.21.40",
   "minecraft:single_block_feature": {
@@ -502,12 +502,12 @@ Example use: Placing a single pumpkin or carved pumpkin block where carved pumpk
   }
 }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:snap_to_surface_feature">minecraft:snap_to_surface_feature</p></h1>
 
-'minecraft:snap_to_surface_feature' snaps the y-value of a feature placement pos to the floor or the ceiling within the provided 'vertical_search_range'. The placement biome is preserved. If the snap position goes outside of the placement biome, placement will fail.</br><h2></h2>
-Example use: Define a feature that snaps the 'cave_vine_feature' to the ceiling.<br / ><textarea readonly="true" cols="71" rows="17">
+Minecraft:snap_to_surface_feature' 将地物放置 pos 的 y 值捕捉到提供的 'vertical_search_range' 内的地板或天花板。放置生物群系被保留。如果对齐位置超出放置生物群系，则放置将失败。</br><h2></h2>
+示例：定义一个将“cave_vine_feature”捕捉到天花板的地物。<br / ><textarea readonly="true" cols="71" rows="17">
 {
         "format_version": "1.13.0",
         "minecraft:snap_to_surface_feature": {
@@ -525,12 +525,12 @@ Example use: Define a feature that snaps the 'cave_vine_feature' to the ceiling.
         }
       }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:structure_template_feature">minecraft:structure_template_feature</p></h1>
 
-'minecraft:structure_template_feature' places a structure in the world. The structure must be stored as a .mcstructure file in the "structures" subdirectory of a behavior pack. It is possible to reference structures that are part of other behavior packs, they do not need to come from the same behavior pack as this feature. Constraints can be defined to specify where the structure is allowed to be placed. During placement, the feature will search for a position within the 'adjustment_radius' that satisfies all constraints. If none are found, the structure will not be placed.</br>Succeeds if: The structure is placed in the world.</br>Fails if: The structure fails to be placed within the world.</br><h2></h2>
-Example use: Place a hot air balloon structure that "floats" in the air.<br / ><textarea readonly="true" cols="54" rows="20">
+'Minecraft:structure_template_feature' 在世界中放置了一个结构。该结构必须作为 .mcstructure 文件存储在行为包的 “structures” 子目录中。可以引用属于其他行为包的结构，它们不需要来自与此地物同一个行为包。可以定义条件以指定允许放置结构的位置。在放置过程中，该地物将在 'adjustment_radius' 中搜索满足所有条件的位置。如果未找到，则不会放置结构。</br>如果出现以下情况，则成功：结构被放置在世界中。</br>如果出现以下情况，则失败：无法将结构放置在世界中。</br><h2></h2>
+示例：放置一个“漂浮”在空中的热气球结构。<br / ><textarea readonly="true" cols="54" rows="20">
 {
   "format_version": "1.13.0",
   "minecraft:structure_template_feature": {
@@ -551,12 +551,12 @@ Example use: Place a hot air balloon structure that "floats" in the air.<br / ><
   }
 }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:surface_relative_threshold_feature">minecraft:surface_relative_threshold_feature</p></h1>
 
-'minecraft:surface_relative_threshold_feature' determines whether the provided position is below the estimated surface level of the world, and places a feature if so.If the provided position is above configured surface or the surface is not available, placement will fail. This feature only works for Overworld generators using world generation 1.18 or later.</br><h2></h2>
-Example use: Define a feature that places the 'underwater_magma_snap_to_surface_feature', if the given position is at least two blocks below estimated surface level.<br / ><textarea readonly="true" cols="74" rows="11">
+'minecraft:surface_relative_threshold_feature' 确定提供的位置是否低于世界的预估的地表高度，如果低于，则放置一个地物。如果提供的位置位于配置的表面上方或表面不可用，则放置将失败。此地物仅适用于使用世界生成 1.18 或更高版本的主世界生成器。</br><h2></h2>
+示例：定义一个放置 'underwater_magma_snap_to_surface_feature' 的地物，如果给定位置至少比预估的地表高度低两个方块。<br / ><textarea readonly="true" cols="74" rows="11">
 {
   "format_version": "1.13.0",
   "minecraft:surface_relative_threshold_feature": {
@@ -568,12 +568,12 @@ Example use: Define a feature that places the 'underwater_magma_snap_to_surface_
   }
 }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:underwater_cave_carver_feature">minecraft:underwater_cave_carver_feature</p></h1>
 
-'minecraft:underwater_cave_carver_feature' carves a cave through the world in the current chunk, and in every chunk around the current chunk in an 8 radial pattern.This feature will specifically target creating caves only below sea level.</br>This feature will also only work when placed specifically in the pass "pregeneration_pass".</br><h2></h2>
-Example use: Carve caves normally.<br / ><textarea readonly="true" cols="68" rows="12">
+'Minecraft:underwater_cave_carver_feature' 在当前区块中穿过世界，并在当前区块周围的每个区块中以 8 个径向模式雕刻一个洞穴。此地物将专门针对仅在海平面以下创建洞穴。</br>此地物也仅在专门放置在通道 “pregeneration_pass” 中时有效。</br><h2></h2>
+示例：正常雕刻洞穴。<br / ><textarea readonly="true" cols="68" rows="12">
 {
       "format_version": "1.13.0",
         "minecraft:underwater_cave_carver_feature": {
@@ -586,12 +586,12 @@ Example use: Carve caves normally.<br / ><textarea readonly="true" cols="68" row
         }
       }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:tree_feature">minecraft:tree_feature</p></h1>
 
-'minecraft:tree_feature' will place a tree in the world. A tree consists of a column that is anchored to a base block with set parameters for what it can be placed on and canopy that extends from the column.</br>Trees support multiple types of canopies, trunks, and roots. Trees will only grow in certain biomes if the 'may_grow_on' property includes the blocks commonly found on the surface of that biome.</br>Succeeds if: The tree is placed in the world.</br>Fails if: The tree fails to be placed within the world.</br><h2></h2>
-Example use: Azalea tree.<br / ><textarea readonly="true" cols="56" rows="32">
+'Minecraft:tree_feature' 将在世界中放置一棵树。一棵树由一根锚定在基座上的柱子组成，该柱子具有设置的参数来放置它，以及从柱子延伸的树冠。</br>树木支持多种类型的树冠、树干和根。树木只会在某些生物群系中生长，前提是 'may_grow_on' 属性包括该生物群系表面常见的方块。</br>如果出现以下情况，则成功：树被放置在世界中。</br>如果出现以下情况，则失败：无法将树放置在世界中。</br><h2></h2>
+示例：杜鹃花树。<br / ><textarea readonly="true" cols="56" rows="32">
 {
         "format_version": "1.13.0",
         "minecraft:tree_feature": {
@@ -692,12 +692,12 @@ Example use: Azalea tree.<br / ><textarea readonly="true" cols="56" rows="32">
         }
       }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:vegetation_patch_feature">minecraft:vegetation_patch_feature</p></h1>
 
-'minecraft:vegetation_patch_feature' scatters a vegetation feature in an area. The vegetation feature’s appearance can be modified by adjusting the radius and depth that it will generate.</br>Succeeds if: At least one ground base block was placed.</br>Fails if: No ground base blocks were placed.</br><h2></h2>
-Example: A pool of clay with dripleaves.<br / ><textarea readonly="true" cols="70" rows="32">
+'minecraft:vegetation_patch_feature' 在一个区域中散布植被地物。可以通过调整植被地物将生成的半径和深度来修改植被地物的外观。</br>在以下情况下成功：至少放置了一个 ground base block。</br>如果出现以下情况，则失败：未放置地面基座方块。</br><h2></h2>
+示例：带有垂滴叶的粘土池。<br / ><textarea readonly="true" cols="70" rows="32">
 {
         "format_version": "1.13.0",
         "minecraft:vegetation_patch_feature": {
@@ -736,12 +736,12 @@ Example: A pool of clay with dripleaves.<br / ><textarea readonly="true" cols="7
         }
       }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h1><p id="minecraft:weighted_random_feature">minecraft:weighted_random_feature</p></h1>
 
-'minecraft:weighted_random_feature' randomly selects and places a feature based on a weight value. Weights are relative, with higher values making selection more likely.</br>Succeeds if: The selected feature is placed.</br>Fails if: The selected feature fails to be placed.</br><h2></h2>
-Example use: Selecting and placing a variant of a flower.<br / ><textarea readonly="true" cols="52" rows="15">
+'minecraft:weighted_random_feature' 根据权重值随机选择并放置一个地物。权重是相对的，值越高，选择的可能性就越大。</br>如果出现以下情况，则成功：放置所选地物。</br>如果出现以下情况，则失败：无法放置所选地物。</br><h2></h2>
+示例：选择并放置花朵的变种。<br / ><textarea readonly="true" cols="52" rows="15">
 {
   "format_version": "1.13.0",
   "minecraft:weighted_random_feature": {
@@ -757,10 +757,10 @@ Example use: Selecting and placing a variant of a flower.<br / ><textarea readon
   }
 }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <h2>Feature schema</h2>
-Here is the complete feature schema<br / ><textarea readonly="true" cols="192" rows="32">
+这是完整的地物架构<br / ><textarea readonly="true" cols="192" rows="32">
   {
       version "format_version"
       object "minecraft:aggregate_feature" : opt
@@ -1972,14 +1972,14 @@ Here is the complete feature schema<br / ><textarea readonly="true" cols="192" r
 </textarea> </br>
 <br><br>
 
-<h1><p id="Attaching features">Attaching features</p></h1>
+<h1><p id="Attaching features">附加地物</p></h1>
 
-Features must be attached to at least one biome in order to show up in the world. During world generation, biomes attempt to place their attached features chunk-by-chunk. Features can be attached via a feature rule definition</br><a href="#Index">Back to top</a><br><br>
+地物必须附加到至少一个生物群系才能显示在世界中。在世界生成过程中，生物群系会尝试逐块放置其附着的地物。可以通过地物规则定义附加地物</br><a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Feature rules">Feature rules</p></h1>
+<h1><p id="Feature rules">地物规则</p></h1>
 
-Feature rules are separate JSON definition files found in the "feature_rules" subfolder of behavior packs. Feature rules follow the same filename rules as features. Each feature rule controls exactly one feature and serves as the root of a chain of feature data. To attach a feature to a biome with a feature rule, the "conditions" object must include the "minecraft:biome_filter" field. This is a list of filter tests that are performed on each biome to determine if the feature should be attached. Most relevant is the "has_biome_tag" test.</br><h2></h2>
-Here is a sample feature rule<br / ><textarea readonly="true" cols="69" rows="32">
+地物规则是单独的 JSON 定义文件，位于行为包的 “feature_rules” 子文件夹中。地物规则遵循与地物相同的文件名规则。每个地物规则只控制一个地物，并用作地物数据链的根。要使用地物规则将地物附加到生物群系，“conditions”对象必须包含 “minecraft:biome_filter” 字段。这是对每个生物群系执行的过滤器测试列表，用于确定是否应附加该地物。最相关的是 “has_biome_tag” 测试。</br><h2></h2>
+下面是一个地物规则示例<br / ><textarea readonly="true" cols="69" rows="32">
 {
   "format_version": "1.13.0",
   "minecraft:feature_rules": {
@@ -2020,363 +2020,363 @@ Here is a sample feature rule<br / ><textarea readonly="true" cols="69" rows="32
   }
 }
 </textarea> </br>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Feature rule schema">Feature rule schema</p></h1>
+<h1><p id="Feature rule schema">地物规则架构</p></h1>
 
-<h1><p id="Coordinate Evaluation Order">Coordinate Evaluation Order</p></h1>
+<h1><p id="Coordinate Evaluation Order">Coordinate Evaluation Order（坐标评估顺序）</p></h1>
 
-CoordinateEvaluationOrder enumerator, supported values are: "xyz", "xzy", "yxz", "yzx", "zxy", "zyx".</br><h2></h2>
+CoordinateEvaluationOrder 枚举器，支持的值为：“xyz”、“xzy”、“yxz”、“yzx”、“zxy”、“zyx”。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必选？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">xyz</td>
 <td style="border-style:solid; border-width:3; padding:7px">"xyz", "xzy", "yxz", "yzx", "zxy", "zyx"</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">xzy</td>
 <td style="border-style:solid; border-width:3; padding:7px">"xyz", "xzy", "yxz", "yzx", "zxy", "zyx"</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">yxz</td>
 <td style="border-style:solid; border-width:3; padding:7px">"xyz", "xzy", "yxz", "yzx", "zxy", "zyx"</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">yzx</td>
 <td style="border-style:solid; border-width:3; padding:7px">"xyz", "xzy", "yxz", "yzx", "zxy", "zyx"</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">zxy</td>
 <td style="border-style:solid; border-width:3; padding:7px">"xyz", "xzy", "yxz", "yzx", "zxy", "zyx"</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">zyx</td>
 <td style="border-style:solid; border-width:3; padding:7px">"xyz", "xzy", "yxz", "yzx", "zxy", "zyx"</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Coordinate Range">Coordinate Range</p></h1>
+<h1><p id="Coordinate Range">Coordinate Range（坐标范围）</p></h1>
 
-Represents the scatter distrubution over a coordinate (x/y/z), can also be built by an expression.</br><h2></h2>
+表示坐标 （x/y/z） 上的散射分布，也可以通过表达式构建。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">distribution</td>
 <td style="border-style:solid; border-width:3; padding:7px">"uniform", "gaussian", "inverse_gaussian", "triangle", "fixed_grid", "jittered_grid"</td>
-<td style="border-style:solid; border-width:3; padding:7px">Required</td>
-<td style="border-style:solid; border-width:3; padding:7px">Type of distribution. Supported distributions are defined by "Random Distribution Type".</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">分布类型。支持的分布由 “Random Distribution Type” 定义。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">extent</td>
-<td style="border-style:solid; border-width:3; padding:7px">Array</td>
-<td style="border-style:solid; border-width:3; padding:7px">Required</td>
-<td style="border-style:solid; border-width:3; padding:7px">Lower and upper bound (inclusive) of the scatter range, as an offset from the input point to scatter around.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">数组</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">散布范围的下限和上限（包括）作为要从输入点到散布的偏移量。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">grid_offset</td>
-<td style="border-style:solid; border-width:3; padding:7px">Integer</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">When the distribution type is grid, defines the offset along this axis.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">整数</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">当分布类型为 grid 时，定义沿此轴的偏移。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">step_size</td>
-<td style="border-style:solid; border-width:3; padding:7px">Integer</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">When the distribution type is grid, defines the distance between steps along this axis.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">整数</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">当分布类型为 grid 时，定义沿此轴的阶梯之间的距离。</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Feature Rule Conditions">Feature Rule Conditions</p></h1>
+<h1><p id="Feature Rule Conditions">Feature Rule Conditions（地物规则条件）</p></h1>
 
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">minecraft:biome_filter</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">List of filter tests to determine which biomes this rule will attach to.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">过滤组类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">用于确定此规则将附加到哪些生物群系的过滤器测试列表。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">placement_pass</td>
-<td style="border-style:solid; border-width:3; padding:7px">String</td>
-<td style="border-style:solid; border-width:3; padding:7px">Required</td>
-<td style="border-style:solid; border-width:3; padding:7px">When the feature should be placed relative to others. Earlier passes in the list are guaranteed to occur before later passes. Order is not guaranteed within each pass.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">字符串</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">何时应相对于其他地物放置地物。保证列表中较早的传递发生在较晚的传递之前。不保证每次通过的顺序。</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Feature Rule Definition">Feature Rule Definition</p></h1>
+<h1><p id="Feature Rule Definition">Feature Rule Definition（地物规则定义）</p></h1>
 
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">conditions</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Feature Rule Conditions</td>
-<td style="border-style:solid; border-width:3; padding:7px">Required</td>
-<td style="border-style:solid; border-width:3; padding:7px">Parameters to control where and when the feature will be placed.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">地物规则条件类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">用于控制地物放置位置和时间的参数。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">description</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Feature Rule Description</td>
-<td style="border-style:solid; border-width:3; padding:7px">Required</td>
-<td style="border-style:solid; border-width:3; padding:7px">Identifier for the Feature Rule and Feture to place.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">地物规则描述类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">要放置的地物规则和地物的标识符。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">distribution</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Scatter Params</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">Parameters controlling the initial scatter of the feature.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">散布参数类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">控制地物初始散布的参数。</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Feature Rule Description">Feature Rule Description</p></h1>
+<h1><p id="Feature Rule Description">Feature Rule Description（地物规则描述）</p></h1>
 
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">identifier</td>
-<td style="border-style:solid; border-width:3; padding:7px">String</td>
-<td style="border-style:solid; border-width:3; padding:7px">Required</td>
-<td style="border-style:solid; border-width:3; padding:7px">The name of this feature rule in the format 'namespace_name:rule_name'. 'rule_name' must match the filename.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">字符串</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">此地物规则的名称，格式为 'namespace_name:rule_name'。'rule_name' 必须与文件名匹配。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">places_feature</td>
-<td style="border-style:solid; border-width:3; padding:7px">String</td>
-<td style="border-style:solid; border-width:3; padding:7px">Required</td>
-<td style="border-style:solid; border-width:3; padding:7px">Named reference to the feature controlled by this rule.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">字符串</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">对此规则控制的地物的命名引用。</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Filter Group">Filter Group</p></h1>
+<h1><p id="Filter Group">Filter Group（过滤器组）</p></h1>
 
-Filters allow data objects to specify test criteria which allows their use. Filters can be defined by a single object of type (Filter Test), an array of tests, collection groups, or a combination of these objects.</br><h2></h2>
+过滤器允许数据对象指定允许其使用的测试条件。过滤器可以由单个对象 （Filter Test）、测试数组、集合组或这些对象的组合来定义。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">AND</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">Evaluates all tests in the group, all must pass in order for the group to pass.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">过滤组类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">评估在组中的所有测试，所有测试都必须通过才能使组通过。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">NOT</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">Evaluates all tests in the group, all must fail in order for the group to pass.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">过滤组类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">评估在组中的所有测试，所有测试都必须失败才能使组通过。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">OR</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">Evaluates tests in the group, one or more must pass in order for the group to pass.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">过滤组类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">评估在组中的所有测试，必须通过一个或多个才能使组通过。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">all</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">Evaluates all tests in the group, all must pass in order for the group to pass.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">过滤组类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">评估在组中的所有测试，所有测试都必须通过才能使组通过。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">all_of</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">Evaluates all tests in the group, all must pass in order for the group to pass.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">过滤组类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">评估在组中的所有测试，所有测试都必须通过才能使组通过。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">any</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">Evaluates tests in the group, one or more must pass in order for the group to pass.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">过滤组类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">评估在组中的所有测试，必须通过一个或多个才能使组通过。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">any_of</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">Evaluates tests in the group, one or more must pass in order for the group to pass.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">过滤组类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">评估在组中的所有测试，必须通过一个或多个才能使组通过。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">none_of</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Filter Group</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">Evaluates all tests in the group, all must fail in order for the group to pass.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">过滤组类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">评估在组中的所有测试，所有测试都必须失败才能使组通过。</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Filter Test">Filter Test</p></h1>
+<h1><p id="Filter Test">Filter Test（过滤器测试）</p></h1>
 
 <h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">domain</td>
-<td style="border-style:solid; border-width:3; padding:7px">Boolean or Integer or Float or String</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">The domain the test should be performed in.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">布尔值 或 整数 或 浮点数 或 字符串</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">应在其中执行测试的域。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">operator</td>
-<td style="border-style:solid; border-width:3; padding:7px">Boolean or Integer or Float or String</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">The comparison to apply with 'value'.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">布尔值 或 整数 或 浮点数 或 字符串</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">要和'value'应用的比较。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">subject</td>
-<td style="border-style:solid; border-width:3; padding:7px">Boolean or Integer or Float or String</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">The subject of this filter test.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">布尔值 或 整数 或 浮点数 或 字符串</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">此过滤器测试的主题。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">test</td>
-<td style="border-style:solid; border-width:3; padding:7px">String</td>
-<td style="border-style:solid; border-width:3; padding:7px">Required</td>
-<td style="border-style:solid; border-width:3; padding:7px">The name of the test to apply.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">字符串</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">要应用的测试的名称。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">value</td>
-<td style="border-style:solid; border-width:3; padding:7px">Boolean or Integer or Float or String</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">The value being compared with the test.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">布尔值 或 整数 或 浮点数 或 字符串</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">与测试进行比较的值。</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Random Distribution Type">Random Distribution Type</p></h1>
+<h1><p id="Random Distribution Type">Random Distribution Type（随机分布类型）</p></h1>
 
-RandomDistributionType enumerator, supported values are: "uniform", "gaussian", "inverse_gaussian", "triangle", "fixed_grid", "jittered_grid".</br><h2></h2>
+RandomDistributionType 枚举器，支持的值为：“uniform”、“gaussian”、“inverse_gaussian”、“triangle”、“fixed_grid”、“jittered_grid”。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必选？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">fixed_grid</td>
 <td style="border-style:solid; border-width:3; padding:7px">"uniform", "gaussian", "inverse_gaussian", "triangle", "fixed_grid", "jittered_grid"</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">gaussian</td>
 <td style="border-style:solid; border-width:3; padding:7px">"uniform", "gaussian", "inverse_gaussian", "triangle", "fixed_grid", "jittered_grid"</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">inverse_gaussian</td>
 <td style="border-style:solid; border-width:3; padding:7px">"uniform", "gaussian", "inverse_gaussian", "triangle", "fixed_grid", "jittered_grid"</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">jittered_grid</td>
 <td style="border-style:solid; border-width:3; padding:7px">"uniform", "gaussian", "inverse_gaussian", "triangle", "fixed_grid", "jittered_grid"</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">triangle</td>
 <td style="border-style:solid; border-width:3; padding:7px">"uniform", "gaussian", "inverse_gaussian", "triangle", "fixed_grid", "jittered_grid"</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">uniform</td>
 <td style="border-style:solid; border-width:3; padding:7px">"uniform", "gaussian", "inverse_gaussian", "triangle", "fixed_grid", "jittered_grid"</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
 <td style="border-style:solid; border-width:3; padding:7px"></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Scatter Chance">Scatter Chance</p></h1>
+<h1><p id="Scatter Chance">Scatter Chance（散布几率）</p></h1>
 
-Scatter probability represented by an expression or an object with a numerator and denominator.</br><h2></h2>
+由表达式或具有分子和分母的对象表示的散布概率。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">denominator</td>
-<td style="border-style:solid; border-width:3; padding:7px">Integer</td>
-<td style="border-style:solid; border-width:3; padding:7px">Required</td>
-<td style="border-style:solid; border-width:3; padding:7px">Denominator for scatter probability.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">整数</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">散布概率的分母。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">numerator</td>
-<td style="border-style:solid; border-width:3; padding:7px">Integer</td>
-<td style="border-style:solid; border-width:3; padding:7px">Required</td>
-<td style="border-style:solid; border-width:3; padding:7px">Numerator for scatter probability.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">整数</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">散布概率的分子。</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
-<h1><p id="Scatter Params">Scatter Params</p></h1>
+<h1><p id="Scatter Params">Scatter Params（散布参数）</p></h1>
 
-Controls the scatter distribution of a particular object.</br><h2></h2>
+控制特定对象的散布分布。</br><h2></h2>
 
 <table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
-<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Type</th> <th style="border-style:solid; border-width:3;">Required?</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr> <th style="border-style:solid; border-width:3;">名称</th> <th style="border-style:solid; border-width:3;">类型</th> <th style="border-style:solid; border-width:3;">必填？</th> <th style="border-style:solid; border-width:3;">描述</th> </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">coordinate_eval_order</td>
 <td style="border-style:solid; border-width:3; padding:7px">"xyz", "xzy", "yxz", "yzx", "zxy", "zyx"</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">The order in which coordinates will be evaluated. Should be used when a coordinate depends on another. If omitted, defaults to "xzy". Supported orders are defined by "Coordinate Evaluation Order".</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">坐标的计算顺序。当一个坐标依赖于另一个坐标时，应使用。如果省略，则默认为 “xzy”。支持的顺序由 “Coordinate Evaluation Order” 定义。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">iterations</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type struct SharedTypes::Legacy::ExpressionNode</td>
-<td style="border-style:solid; border-width:3; padding:7px">Required</td>
-<td style="border-style:solid; border-width:3; padding:7px">Number of scattered positions to generate.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">结构 SharedTypes::Legacy::ExpressionNode类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">要生成的分散位置数。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">scatter_chance</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Scatter Chance</td>
-<td style="border-style:solid; border-width:3; padding:7px">Optional</td>
-<td style="border-style:solid; border-width:3; padding:7px">Probability that this scatter will occur. Not evaluated each iteration; either no iterations will run, or all will.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">散布几率类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">自选</td>
+<td style="border-style:solid; border-width:3; padding:7px">发生此分散的概率。不评估每次迭代;要么不运行迭代，要么运行所有迭代。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">x</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Coordinate Range</td>
-<td style="border-style:solid; border-width:3; padding:7px">Required</td>
-<td style="border-style:solid; border-width:3; padding:7px">Distribution for the coordinate (evaluated each iteration).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">坐标范围类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">坐标的分布（每次迭代评估）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">y</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Coordinate Range</td>
-<td style="border-style:solid; border-width:3; padding:7px">Required</td>
-<td style="border-style:solid; border-width:3; padding:7px">Distribution for the coordinate (evaluated each iteration).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">坐标范围类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">坐标的分布（每次迭代评估）。</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">z</td>
-<td style="border-style:solid; border-width:3; padding:7px">Object of type Coordinate Range</td>
-<td style="border-style:solid; border-width:3; padding:7px">Required</td>
-<td style="border-style:solid; border-width:3; padding:7px">Distribution for the coordinate (evaluated each iteration).</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">坐标范围类型的对象</td>
+<td style="border-style:solid; border-width:3; padding:7px">必填</td>
+<td style="border-style:solid; border-width:3; padding:7px">坐标的分布（每次迭代评估）。</br></td>
 </tr>
 </table>
-<a href="#Index">Back to top</a><br><br>
+<a href="#Index">返回顶部</a><br><br>
 
 <br><br>
 
